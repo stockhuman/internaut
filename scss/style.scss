@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+/******************************************************************
+Theme Name: Your theme name here
+Theme URI: 
+Description: 
+Author: Michael Hemingway
+Author URI: http://www.mikemingway.com
+Version: 4.0
+License: GNU General Public License & MIT
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Sass
+******************************************************************/
+
+@import 
+	'utils/utilities'; // Grabs all files in folder
+
+@import
+	'base/normalize',
+	'base/base',
+	'base/typography';
+
+@import
+	'layout/spacing',
+	'layout/nav',
+	'layout/grid';
+
+@import
+	// 'sections/content', add as you will for each individual page or prj section.
+	'sections/home';
+
+@import
+	'components/buttons',
+	'components/code',
+	'components/forms',
+	'components/lists',
+	'components/images',
+	'components/tables';

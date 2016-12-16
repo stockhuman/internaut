@@ -1,0 +1,54 @@
+//
+// helpers classes
+// --------------------------------------------------
+.noselect {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.hidden {
+    display: none!important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+.no-overflow{
+	overflow: hidden;
+}
+// TEXT ALIGN
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-justify {
+    text-align: justify;
+}

@@ -1,0 +1,77 @@
+$brand-dark: #5F7CB2;
+$brand: #880015;
+$brand-light: #FFE9BA;
+$brand-hover: #B29E71;
+$white: #FFFFFF;
+$black: #000000;
+$gray-darker: #111;
+$gray-dark: #6c767f;
+$gray: #616161;
+$gray-light: #979797;
+$gray-lighter: #f2f2f2;
+
+// update to something better suited
+.login h1 a {
+    background: url("../images/login-logo.png") top center no-repeat;
+    width: 326px;
+    height: 67px;
+    text-indent: -9999px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    display: block;
+}
+
+body.login {
+    background-color: $gray-darker;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+    background-color: $brand-dark;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+    border-color: darken($brand-dark, 20%);
+    background-color: darken($brand-dark, 20%);
+}
+
+.login #login_error,
+.login .message {
+    border-left: 4px solid $brand-dark;
+}
+
+input[type=checkbox]:checked:before {
+    color: $brand-dark;
+}
+
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus {
+    border-color: lighten($brand-dark, 20%);
+}
+
+.wp-core-ui .button-primary {
+    border-color: lighten($brand-dark, 20%) $brand-dark $brand-dark;
+}
+
+input#wp-submit.button-primary:focus {
+    box-shadow: 0 1px 0 darken($brand-dark, 20%),0 0 2px 1px $gray-darker;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover {
+  color: $brand-hover;
+}
