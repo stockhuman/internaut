@@ -1,31 +1,24 @@
 <?php get_header(); ?>
-			
-	<div id="content">
 
-		<div id="inner-content" class="row">
-	
-			<main id="main" class="large-8 medium-8 columns" role="main">
+	<main id="main" class="" role="main">
 
-				<article id="content-not-found">
-				
-					<header class="article-header">
-						<h1><?php _e( 'Epic 404 - Article Not Found', 'arthemwp' ); ?></h1>
-					</header> <!-- end article header -->
-			
-					<section class="entry-content">
-						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'arthemwp' ); ?></p>
-					</section> <!-- end article section -->
+		<article id="content-not-found">
 
-					<section class="search">
-					    <p><?php get_search_form(); ?></p>
-					</section> <!-- end search section -->
-			
-				</article> <!-- end article -->
-	
-			</main> <!-- end #main -->
+			<header class="article-header">
+				<h1><?php _e( 'Epic 404 - Article Not Found', 'arthemwp' ); ?></h1>
+			</header> <!-- end article header -->
 
-		</div> <!-- end #inner-content -->
+			<section class="entry-content">
+				<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'arthemwp' ); ?></p>
+			</section> <!-- end article section -->
 
-	</div> <!-- end #content -->
+			<section class="search">
+			    <p><?php get_search_form(); ?></p>
+			</section> <!-- end search section -->
+
+		</article> <!-- end article -->
+
+	</main> <!-- end #main -->
+
 
 <?php get_footer(); ?>

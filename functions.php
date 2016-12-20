@@ -12,7 +12,7 @@ require_once(get_template_directory().'/functions/enqueue-scripts.php');
 require_once(get_template_directory().'/functions/menu.php');
 
 // Register sidebars/widget areas
-// require_once(get_template_directory().'/functions/sidebar.php');s
+// require_once(get_template_directory().'/functions/sidebar.php');
 
 // Makes WordPress comments suck less
 // require_once(get_template_directory().'/functions/comments.php');

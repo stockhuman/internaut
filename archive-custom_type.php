@@ -1,32 +1,26 @@
 <?php get_header(); ?>
 
-	<div id="content">
 
-		<div id="inner-content" class="row">
+  <main id="main" class="large-8 medium-8 columns" role="main">
 
-		    <main id="main" class="large-8 medium-8 columns" role="main">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<!-- To see additional archive styles, visit the /parts directory -->
+		<?php get_template_part( 'parts/loop', 'archive' ); ?>
 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+	<?php endwhile; ?>
 
-				<?php endwhile; ?>
+		<?php arthem_page_navi(); ?>
 
-					<?php arthem_page_navi(); ?>
+	<?php else : ?>
 
-				<?php else : ?>
+		<?php get_template_part( 'parts/content', 'missing' ); ?>
 
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
+	<?php endif; ?>
 
-				<?php endif; ?>
+  </main> <!-- end #main -->
 
-		    </main> <!-- end #main -->
+  <?php get_sidebar(); ?>
 
-		    <?php get_sidebar(); ?>
-
-		</div> <!-- end #inner-content -->
-
-	</div> <!-- end #content -->
 
 <?php get_footer(); ?>

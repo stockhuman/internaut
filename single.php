@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" class="cd-content" role="main">
+<main id="main" class="" role="main">
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

@@ -2,8 +2,8 @@
 
 /******************************************************************
 Theme Name: Your theme name here
-Theme URI: 
-Description: 
+Theme URI:
+Description:
 Author: Michael Hemingway
 Author URI: http://www.mikemingway.com
 Version: 4.0
@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Sass
 ******************************************************************/
 
-@import 
+@import
 	'utils/utilities'; // Grabs all files in folder
 
 @import
@@ -28,6 +28,10 @@ Tags: Sass
 @import
 	// 'sections/content', add as you will for each individual page or prj section.
 	'sections/home';
+
+@import
+	'UX/animations',
+	'UX/preloader';
 
 @import
 	'components/buttons',

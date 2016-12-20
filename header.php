@@ -41,11 +41,18 @@
 		<!-- Drop Google Analytics here -->
 		<!-- end analytics -->
 
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
 	</head>
 
 	<body <?php body_class(); ?>>
+    <div id="preloader"></div>
+    <div class="innie"></div>
+    <div class="outie"></div>
 		<header class="header" role="banner">
 
 		</header>
-    
+
     <?php get_template_part( 'parts/nav' ); ?>

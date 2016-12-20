@@ -3,6 +3,7 @@ Thumbs.db
 ehthumbs.db
 
 /node_modules
+/assets/js/vendor/
 
 # Folder config file
 Desktop.ini
