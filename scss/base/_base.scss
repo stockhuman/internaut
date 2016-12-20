@@ -17,14 +17,26 @@ body {
 	-moz-font-feature-settings: "liga", "kern";
 	text-rendering: optimizelegibility;
 	font-weight: $normal;
-	color: $white;
-	background: $gray-darker;
+	color: $black;
+	background: $white;
+	scrollbar-base-color: $black;
 	&.disable-scroll {
 		height: 100%;
 		width: 100%;
 		overflow: hidden;
 		background: $brand;
 	}
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: $black;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 1px;
+  background:  $white;
 }
 
 ::-moz-selection {

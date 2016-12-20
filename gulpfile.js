@@ -14,7 +14,7 @@ gulp.task('sass', function () {
 			browserSync.notify(err.message, 3000); // Display error in the browser
 			this.emit('end'); // Prevent gulp from catching the error and exiting the watch process
 		})) // Using gulp-sass
-		.pipe(gulp.dest('app/css/'))
+		.pipe(gulp.dest('assets/css/'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
@@ -23,17 +23,15 @@ gulp.task('sass', function () {
 // does browser live-reloading
 gulp.task('browserSync', function () {
 	browserSync.init({
-		server: {
-			baseDir: 'app'
-		},
+		proxy: 'http://localhost:8888/WPdev/'
 	});
 });
 
 
 gulp.task('watch', ['browserSync', 'sass'], function () {
 	gulp.watch('scss/**/*.scss', ['sass']);
-	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
+	gulp.watch('*.php', browserSync.reload);
+	gulp.watch('assets/js/**/*.js', browserSync.reload);
 });
 
 // stop old version of gulp watch from running when you modify the gulpfile
