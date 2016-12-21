@@ -24,7 +24,7 @@ input {
         display: inline-block;
         height: 38px;
         padding: 0 30px;
-        color: $secondary-color;
+        color: $secondary;
         text-align: center;
         font-size: 11px;
         font-weight: 600;
@@ -43,31 +43,31 @@ input {
 
 .button:hover,
 button:hover {
-    color: $light-grey;
+    color: $gray-light;
     background-color: lighten($black, 10.3%);
-    border-color: lighten($dark-grey, 10.3%);
+    border-color: lighten($gray-dark, 10.3%);
     outline: 0;
 }
 
 input {
     &[type="submit"]:hover, &[type="reset"]:hover, &[type="button"]:hover {
-        color: $dark-grey;
-        border-color: lighten($dark-grey, 33.3%);
+        color: $gray-dark;
+        border-color: lighten($gray-dark, 33.3%);
         outline: 0;
     }
 }
 
 .button:focus,
 button:focus {
-    color: $dark-grey;
-    border-color: lighten($dark-grey, 33.3%);
+    color: $gray-dark;
+    border-color: lighten($gray-dark, 33.3%);
     outline: 0;
 }
 
 input {
     &[type="submit"]:focus, &[type="reset"]:focus, &[type="button"]:focus {
-        color: $dark-grey;
-        border-color: lighten($dark-grey, 33.3%);
+        color: $gray-dark;
+        border-color: lighten($gray-dark, 33.3%);
         outline: 0;
     }
 }
@@ -75,15 +75,15 @@ input {
 .button.button-primary,
 button.button-primary {
     color: #fff;
-    background-color: $primary-color;
-    border-color: $primary-color;
+    background-color: $brand;
+    border-color: $brand;
 }
 
 input {
     &[type="submit"].button-primary, &[type="reset"].button-primary, &[type="button"].button-primary {
         color: #fff;
-        background-color: $primary-color;
-        border-color: $primary-color;
+        background-color: $brand;
+        border-color: $brand;
     }
 }
 

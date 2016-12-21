@@ -1,6 +1,6 @@
-$brand-dark: #5F7CB2;
+$secondary: #5F7CB2;
 $brand: #880015;
-$brand-light: #FFE9BA;
+$brand: #FFE9BA;
 $brand-hover: #B29E71;
 $white: #FFFFFF;
 $black: #000000;
@@ -26,21 +26,21 @@ body.login {
 }
 
 body.login div#login form#loginform p.submit input#wp-submit {
-    background-color: $brand-dark;
+    background-color: $secondary;
 }
 
 body.login div#login form#loginform p.submit input#wp-submit:hover {
-    border-color: darken($brand-dark, 20%);
-    background-color: darken($brand-dark, 20%);
+    border-color: darken($secondary, 20%);
+    background-color: darken($secondary, 20%);
 }
 
 .login #login_error,
 .login .message {
-    border-left: 4px solid $brand-dark;
+    border-left: 4px solid $secondary;
 }
 
 input[type=checkbox]:checked:before {
-    color: $brand-dark;
+    color: $secondary;
 }
 
 input[type=checkbox]:focus,
@@ -61,15 +61,15 @@ input[type=url]:focus,
 input[type=week]:focus,
 select:focus,
 textarea:focus {
-    border-color: lighten($brand-dark, 20%);
+    border-color: lighten($secondary, 20%);
 }
 
 .wp-core-ui .button-primary {
-    border-color: lighten($brand-dark, 20%) $brand-dark $brand-dark;
+    border-color: lighten($secondary, 20%) $secondary $secondary;
 }
 
 input#wp-submit.button-primary:focus {
-    box-shadow: 0 1px 0 darken($brand-dark, 20%),0 0 2px 1px $gray-darker;
+    box-shadow: 0 1px 0 darken($secondary, 20%),0 0 2px 1px $gray-darker;
 }
 
 .login #backtoblog a:hover, .login #nav a:hover {

@@ -1,15 +1,16 @@
 <?php get_header(); ?>
 
+  <div class="container">
+    <main id="main" class="" role="main">
 
-  <main id="main" class="" role="main">
+  	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <?php get_template_part( 'parts/loop', 'page' ); ?>
 
-    <?php get_template_part( 'parts/loop', 'page' ); ?>
+    <?php endwhile; endif; ?>
 
-  <?php endwhile; endif; ?>
-
-	</main> <!-- end #main -->
+  	</main> <!-- end #main -->
+  </div>
 
 	<?php get_sidebar(); ?>
 

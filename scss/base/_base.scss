@@ -21,6 +21,7 @@ body {
 	color: $black;
 	background: $white;
 	scrollbar-base-color: black;
+  touch-action: manipulation;
 	&.disable-scroll {
 		height: 100%;
 		width: 100%;
@@ -49,4 +50,8 @@ body {
 ::selection {
 	background: $brand;
 	color: $white;
+}
+
+#background {
+	border: inset 
 }

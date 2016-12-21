@@ -44,14 +44,14 @@ input {
   &[type="tel"]:focus,
   &[type="url"]:focus,
   &[type="password"]:focus {
-    border: 1px solid $primary-color;
+    border: 1px solid $brand;
     outline: 0;
   }
 }
 
 textarea:focus,
 select:focus {
-  border: 1px solid $primary-color;
+  border: 1px solid $brand;
   outline: 0;
 }
 

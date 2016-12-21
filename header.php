@@ -51,8 +51,12 @@
     <div id="preloader"></div>
     <div class="innie"></div>
     <div class="outie"></div>
+
+    <div id="background"></div>
+
 		<header class="header" role="banner">
 
 		</header>
 
     <?php get_template_part( 'parts/nav' ); ?>
+    <!-- end of transition elements, header and nav -->

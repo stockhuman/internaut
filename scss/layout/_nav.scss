@@ -1,0 +1,18 @@
+#nav-main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background: $brand;
+  z-index: map-get($z-index, 'nav');
+  @include transform(translate3D(-100%,0,0));
+  ul { // inner nav
+    text-align: right;
+    list-style: none;
+    text-decoration: none;
+  }
+  &.nav-is-open {
+    
+  }
+}
