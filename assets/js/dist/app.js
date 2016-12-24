@@ -14,18 +14,24 @@
   Navigation
 */
 
-(function () {
-  'use strict';
-  
-}());
-
-/*
-
-*/
-
-// smoothState
 (function ($) {
-	"use strict";
+	'use strict';
+
+	var toggle = document.getElementById('nav-toggle'),
+		nav = document.getElementById('nav-main');
+
+	toggle.addEventListener('click', function () {
+		document.body.classList.toggle('nav-is-open');
+	});
+
+	//if (document.body.classList.contains('nav-is-open')) {
+		$(nav).mouseleave(function () {
+			document.body.classList.toggle('nav-is-open');
+		});
+	//}
+
+	// smoothState
+
 	var options = {
 			prefetch: true,
 			cacheLength: 2,
@@ -56,10 +62,11 @@
 
 	$('.menu-item a').click(function (e) {
 		e.preventDefault();
-		var content = $('#content').smoothState().data('smoothState');
-		var href = $(this).attr('href');
+		var content = $('#main').smoothState().data('smoothState'),
+		href = $(this).attr('href');
 		content.load(href);
 	});
+
 
 }(jQuery));
 

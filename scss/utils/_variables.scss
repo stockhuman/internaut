@@ -1,3 +1,6 @@
+
+
+
 // NAVIGATION
 // -Whatever you need-
 
@@ -60,12 +63,12 @@ $medium: 500;
 $bold: 700;
 $extra-bold: 900;
 
-$font-size-base: 16;
-$font-size-large: 18;
-$font-size-small: 11;
+$font-size-base: 21;
+$font-size-large: 25;
+$font-size-small: 16;
 
-$font-size-h1: 130;
-$font-size-h1-medium: 110;
+$font-size-h1: 70;
+$font-size-h1-medium: 30;
 $font-size-h2: 24;
 $font-size-h3: 20;
 $font-size-h4: 18;
@@ -103,27 +106,15 @@ $easeInOutExpo:  cubic-bezier(1.000, 0.000, 0.000, 1.000);
 $easeInOutCirc:  cubic-bezier(0.785, 0.135, 0.150, 0.860);
 $easeInOutBack:  cubic-bezier(0.680, 0, 0.265, 1);
 
-// Variables from Skeleton
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-//Grid Variables
-$container-width: 960px !default;
-$container-width-larger-than-mobile: 85% !default;
-$container-width-larger-than-phablet: 80% !default;
-$total-columns: 12 !default;
-$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
-$column-margin: 4% !default; // space between columns
-
 // Misc
-$global-radius: 4px !default;
+// -------------------------
 
+$global-radius: 1px !default;
+$global-padding: 2rem;
 
-///
-/// Creates a list of global breakpoints
-///
-/// @example scss - Creates a single breakpoint with the label `phone`
-///  $breakpoints: ('phone': 320px);
-///
+// Breakpoints
+// -------------------------
+
 $breakpoints: (
   'phone': 320px,
 	'phablet': 550px,
@@ -142,6 +133,13 @@ $media-expressions: (
   'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
 ) !default;
 
+//Grid Variables
+$container-width: 960px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 4% !default; // space between columns
 
 ///
 /// Defines a number to be added or subtracted from each unit when declaring breakpoints with exclusive intervals

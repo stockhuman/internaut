@@ -1,4 +1,8 @@
-<a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+<div id="nav-toggle">
+	<p>
+		Menu
+	</p>
+</div>
 <nav id="nav-main">
 		<?php arthem_nav(); ?>
 </nav>

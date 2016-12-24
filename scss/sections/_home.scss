@@ -1,0 +1,19 @@
+#musings-feed, #work-feed {
+  @include media('>tablet') {
+    padding: $global-padding;
+    position: absolute;
+    width: 50%;
+  }
+}
+
+#musings-feed {
+  @include media('>tablet') {
+    margin-left: 50%;
+  }
+}
+
+.article-header {
+  // a {
+  //   text-decoration: none;
+  // }
+}

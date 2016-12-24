@@ -1,0 +1,66 @@
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<title>background repeat tester</title>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('input').bind('click change', function(){
+			$('#tester').css({
+				backgroundRepeat: $('input[data-attribute="background-repeat"]:checked').val(),
+				backgroundPosition: $('input[name="background-position-x"]').val() + '%' + ' ' + $('input[name="background-position-y"]').val()+ '%'
+			});
+			$('pre').text("background-position: " + $('input[data-attribute="background-repeat"]:checked').val() + "\n" + 'background-position: ' + $('input[name="background-position-x"]').val() + '%' + ' ' + $('input[name="background-position-y"]').val()+ '%')
+			$('input.background-position').each(function(){
+				$(this).siblings('span').html($(this).val() + '%');
+			})
+		});
+		$('input:first').trigger('change');
+	});
+	</script>
+</head>
+<body>
+
+
+<div id="tester">
+
+</div>
+<style type="text/css">
+div#tester {
+	background-image: url(file:///C:/Users/Mike/Downloads/cardboard-flat.png);
+	width: 80vw;
+	height: 90vh;
+	background-color: #eee;
+}
+</style>
+
+<form action="">
+
+	<p>
+
+	Repeat:
+		<label><input type="radio" name="background-repeat" data-attribute="background-repeat" value="repeat" checked>repeat</label><br>
+		<label><input type="radio" name="background-repeat" data-attribute="background-repeat" value="no-repeat" >no-repeat</label><br>
+		<label><input type="radio" name="background-repeat" data-attribute="background-repeat" value="repeat-x">repeat-x</label><br>
+		<label><input type="radio" name="background-repeat" data-attribute="background-repeat" value="repeat-y">repeat-y</label>
+	</p>
+	<p>
+
+	<label>X: <span></span><input name="background-position-x" class="background-position" type="range" min="0" max="100" step="25" value="0"></label>
+	</p>
+	<p>
+	<label>Y: <span></span><input name="background-position-y" class="background-position" type="range" min="0" max="100" step="25" value="0"></label>
+	</p>
+
+	<pre id="code">
+
+	</pre>
+
+
+</form>
+
+
+
+
+</body>
+</html>

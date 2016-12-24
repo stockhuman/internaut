@@ -1,24 +1,33 @@
 <?php get_header(); ?>
 
   <div class="container">
+
     <main id="main" class="" role="main">
 
-      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <!-- work category section -->
+    <section id="work-feed">
+      <? $args = array( 'category_name' => 'work' );
+        $loop = new WP_Query( $args );
+        if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-  		<!-- To see additional archive styles, visit the /parts directory -->
-  		<?php get_template_part( 'parts/loop', 'archive' ); ?>
+    		<?php get_template_part( 'parts/loop', 'archive' ); ?>
 
-  	<?php endwhile; ?>
+    	<?php endwhile; else : get_template_part( 'parts/content', 'missing' ); endif; ?>
+    </section>
 
-  		<?php //arthem_page_navi(); ?>
+    <!-- musings category feed -->
+    <section id="musings-feed">
+      <? $args = array( 'category_name' => 'musings' );
+        $loop = new WP_Query( $args );
+        if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-  	<?php else : ?>
+        <?php get_template_part( 'parts/loop', 'archive' ); ?>
 
-  		<?php get_template_part( 'parts/content', 'missing' ); ?>
-
-  	<?php endif; ?>
+      <?php endwhile; else : get_template_part( 'parts/content', 'missing' ); endif; ?>
+    </section>
 
     </main> <!-- end #main -->
+    
   </div>
 
 <?php get_footer(); ?>

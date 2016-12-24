@@ -52,6 +52,27 @@ body {
 	color: $white;
 }
 
+// Main site elements
+#background, #border {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	pointer-events: none;
+}
+
 #background {
-	border: inset 
+	background-image: url(../images/img-noise-361x370.png);
+	z-index: 0;
+}
+
+#border {
+	border: solid $global-padding $black;
+	z-index: map-get($z-index, 'nav')-1;
+}
+
+#main {
+	background: $white;
+	padding: $global-padding;
 }
