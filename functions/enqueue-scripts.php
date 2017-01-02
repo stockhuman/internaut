@@ -16,8 +16,8 @@ function site_scripts() {
 
   // VENDOR - concat on release
   wp_enqueue_script( 'restive-js', get_template_directory_uri() . '/assets/js/vendor/restive/dist/restive.min.js', array( 'jquery' ), '', true );
-
   wp_enqueue_script( 'smoothstate-js', get_template_directory_uri() . '/assets/js/vendor/smoothstate/jquery.smoothState.min.js', array( 'jquery' ), '', true );
+  wp_enqueue_script( 'masonry-js', get_template_directory_uri() . '/assets/js/vendor/masonry.pkgd.min.js', array( 'jquery' ), '', true );
 
   // APP
   wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/dist/app.min.js', array( 'jquery' ), '', true );

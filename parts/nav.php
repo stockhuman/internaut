@@ -4,5 +4,5 @@
 	</p>
 </div>
 <nav id="nav-main">
-		<?php arthem_nav(); ?>
+		<?php mhem_nav(); ?>
 </nav>

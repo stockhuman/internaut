@@ -1,5 +1,5 @@
 <?php
-/* arthem Custom Post Type Example
+/* mhem Custom Post Type Example
 This page walks you through creating 
 a custom post type and taxonomies. You
 can edit this one or copy the following code 
@@ -19,21 +19,21 @@ function custom_post_example() {
 	register_post_type( 'custom_type', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Custom Types', 'arthemwp'), /* This is the Title of the Group */
-			'singular_name' => __('Custom Post', 'arthemwp'), /* This is the individual type */
-			'all_items' => __('All Custom Posts', 'arthemwp'), /* the all items menu item */
-			'add_new' => __('Add New', 'arthemwp'), /* The add new menu item */
-			'add_new_item' => __('Add New Custom Type', 'arthemwp'), /* Add New Display Title */
-			'edit' => __( 'Edit', 'arthemwp' ), /* Edit Dialog */
-			'edit_item' => __('Edit Post Types', 'arthemwp'), /* Edit Display Title */
-			'new_item' => __('New Post Type', 'arthemwp'), /* New Display Title */
-			'view_item' => __('View Post Type', 'arthemwp'), /* View Display Title */
-			'search_items' => __('Search Post Type', 'arthemwp'), /* Search Custom Type Title */ 
-			'not_found' =>  __('Nothing found in the Database.', 'arthemwp'), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __('Nothing found in Trash', 'arthemwp'), /* This displays if there is nothing in the trash */
+			'name' => __('Custom Types', 'mhemwp'), /* This is the Title of the Group */
+			'singular_name' => __('Custom Post', 'mhemwp'), /* This is the individual type */
+			'all_items' => __('All Custom Posts', 'mhemwp'), /* the all items menu item */
+			'add_new' => __('Add New', 'mhemwp'), /* The add new menu item */
+			'add_new_item' => __('Add New Custom Type', 'mhemwp'), /* Add New Display Title */
+			'edit' => __( 'Edit', 'mhemwp' ), /* Edit Dialog */
+			'edit_item' => __('Edit Post Types', 'mhemwp'), /* Edit Display Title */
+			'new_item' => __('New Post Type', 'mhemwp'), /* New Display Title */
+			'view_item' => __('View Post Type', 'mhemwp'), /* View Display Title */
+			'search_items' => __('Search Post Type', 'mhemwp'), /* Search Custom Type Title */ 
+			'not_found' =>  __('Nothing found in the Database.', 'mhemwp'), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __('Nothing found in Trash', 'mhemwp'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is the example custom post type', 'arthemwp' ), /* Custom Type Description */
+			'description' => __( 'This is the example custom post type', 'mhemwp' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -70,16 +70,16 @@ function custom_post_example() {
     	array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
     	array('hierarchical' => true,     /* if this is true, it acts like categories */             
     		'labels' => array(
-    			'name' => __( 'Custom Categories', 'arthemwp' ), /* name of the custom taxonomy */
-    			'singular_name' => __( 'Custom Category', 'arthemwp' ), /* single taxonomy name */
-    			'search_items' =>  __( 'Search Custom Categories', 'arthemwp' ), /* search title for taxomony */
-    			'all_items' => __( 'All Custom Categories', 'arthemwp' ), /* all title for taxonomies */
-    			'parent_item' => __( 'Parent Custom Category', 'arthemwp' ), /* parent title for taxonomy */
-    			'parent_item_colon' => __( 'Parent Custom Category:', 'arthemwp' ), /* parent taxonomy title */
-    			'edit_item' => __( 'Edit Custom Category', 'arthemwp' ), /* edit custom taxonomy title */
-    			'update_item' => __( 'Update Custom Category', 'arthemwp' ), /* update title for taxonomy */
-    			'add_new_item' => __( 'Add New Custom Category', 'arthemwp' ), /* add new title for taxonomy */
-    			'new_item_name' => __( 'New Custom Category Name', 'arthemwp' ) /* name title for taxonomy */
+    			'name' => __( 'Custom Categories', 'mhemwp' ), /* name of the custom taxonomy */
+    			'singular_name' => __( 'Custom Category', 'mhemwp' ), /* single taxonomy name */
+    			'search_items' =>  __( 'Search Custom Categories', 'mhemwp' ), /* search title for taxomony */
+    			'all_items' => __( 'All Custom Categories', 'mhemwp' ), /* all title for taxonomies */
+    			'parent_item' => __( 'Parent Custom Category', 'mhemwp' ), /* parent title for taxonomy */
+    			'parent_item_colon' => __( 'Parent Custom Category:', 'mhemwp' ), /* parent taxonomy title */
+    			'edit_item' => __( 'Edit Custom Category', 'mhemwp' ), /* edit custom taxonomy title */
+    			'update_item' => __( 'Update Custom Category', 'mhemwp' ), /* update title for taxonomy */
+    			'add_new_item' => __( 'Add New Custom Category', 'mhemwp' ), /* add new title for taxonomy */
+    			'new_item_name' => __( 'New Custom Category Name', 'mhemwp' ) /* name title for taxonomy */
     		),
     		'show_admin_column' => true, 
     		'show_ui' => true,
@@ -93,16 +93,16 @@ function custom_post_example() {
     	array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
     	array('hierarchical' => false,    /* if this is false, it acts like tags */                
     		'labels' => array(
-    			'name' => __( 'Custom Tags', 'arthemwp' ), /* name of the custom taxonomy */
-    			'singular_name' => __( 'Custom Tag', 'arthemwp' ), /* single taxonomy name */
-    			'search_items' =>  __( 'Search Custom Tags', 'arthemwp' ), /* search title for taxomony */
-    			'all_items' => __( 'All Custom Tags', 'arthemwp' ), /* all title for taxonomies */
-    			'parent_item' => __( 'Parent Custom Tag', 'arthemwp' ), /* parent title for taxonomy */
-    			'parent_item_colon' => __( 'Parent Custom Tag:', 'arthemwp' ), /* parent taxonomy title */
-    			'edit_item' => __( 'Edit Custom Tag', 'arthemwp' ), /* edit custom taxonomy title */
-    			'update_item' => __( 'Update Custom Tag', 'arthemwp' ), /* update title for taxonomy */
-    			'add_new_item' => __( 'Add New Custom Tag', 'arthemwp' ), /* add new title for taxonomy */
-    			'new_item_name' => __( 'New Custom Tag Name', 'arthemwp' ) /* name title for taxonomy */
+    			'name' => __( 'Custom Tags', 'mhemwp' ), /* name of the custom taxonomy */
+    			'singular_name' => __( 'Custom Tag', 'mhemwp' ), /* single taxonomy name */
+    			'search_items' =>  __( 'Search Custom Tags', 'mhemwp' ), /* search title for taxomony */
+    			'all_items' => __( 'All Custom Tags', 'mhemwp' ), /* all title for taxonomies */
+    			'parent_item' => __( 'Parent Custom Tag', 'mhemwp' ), /* parent title for taxonomy */
+    			'parent_item_colon' => __( 'Parent Custom Tag:', 'mhemwp' ), /* parent taxonomy title */
+    			'edit_item' => __( 'Edit Custom Tag', 'mhemwp' ), /* edit custom taxonomy title */
+    			'update_item' => __( 'Update Custom Tag', 'mhemwp' ), /* update title for taxonomy */
+    			'add_new_item' => __( 'Add New Custom Tag', 'mhemwp' ), /* add new title for taxonomy */
+    			'new_item_name' => __( 'New Custom Tag Name', 'mhemwp' ) /* name title for taxonomy */
     		),
     		'show_admin_column' => true,
     		'show_ui' => true,

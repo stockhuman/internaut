@@ -76,8 +76,11 @@
 
 (function ($) {
   'use strict';
-  $(document).ready(function(){
 
+  $(document).ready(function(){
+    // masonry
+    $('#work-feed').masonry();
+    
     // preloader animation
     $('#preloader').addClass('loaded');
 
@@ -85,4 +88,6 @@
     window.setTimeout(function(){ $('#preloader').addClass('hidden'); },1500);
 
   });
+
+
 }(jQuery));

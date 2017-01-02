@@ -6,10 +6,10 @@
 					
 	<section class="entry-content" itemprop="articleBody">
 		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
-		<?php the_content('<button class="tiny">' . __( 'Read more...', 'arthemwp' ) . '</button>'); ?>
+		<?php the_content('<button class="tiny">' . __( 'Read more...', 'mhemwp' ) . '</button>'); ?>
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
-    	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'arthemtheme') . '</span> ', ', ', ''); ?></p>
+    	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'mhemtheme') . '</span> ', ', ', ''); ?></p>
 	</footer> <!-- end article footer -->				    						
 </article> <!-- end article -->

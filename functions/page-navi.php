@@ -1,6 +1,6 @@
 <?php
 // Numeric Page Navi (built into the theme by default)
-function arthem_page_navi($before = '', $after = '') {
+function mhem_page_navi($before = '', $after = '') {
 	global $wpdb, $wp_query;
 	$request = $wp_query->request;
 	$posts_per_page = intval(get_query_var('posts_per_page'));
@@ -32,11 +32,11 @@ function arthem_page_navi($before = '', $after = '') {
 	}
 	echo $before.'<nav class="page-navigation"><ul class="pagination">'."";
 	if ($start_page >= 2 && $pages_to_show < $max_page) {
-		$first_page_text = __( 'First', 'arthemwp' );
+		$first_page_text = __( 'First', 'mhemwp' );
 		echo '<li><a href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
 	}
 	echo '<li>';
-	previous_posts_link( __('Previous', 'arthemwp') );
+	previous_posts_link( __('Previous', 'mhemwp') );
 	echo '</li>';
 	for($i = $start_page; $i  <= $end_page; $i++) {
 		if($i == $paged) {
@@ -46,10 +46,10 @@ function arthem_page_navi($before = '', $after = '') {
 		}
 	}
 	echo '<li>';
-	next_posts_link( __('Next', 'arthemwp'), 0 );
+	next_posts_link( __('Next', 'mhemwp'), 0 );
 	echo '</li>';
 	if ($end_page < $max_page) {
-		$last_page_text = __( 'Last', 'arthemwp' );
+		$last_page_text = __( 'Last', 'mhemwp' );
 		echo '<li><a href="'.get_pagenum_link($max_page).'" title="'.$last_page_text.'">'.$last_page_text.'</a></li>';
 	}
 	echo '</ul></nav>'.$after."";

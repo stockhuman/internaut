@@ -2,13 +2,13 @@
 // Register menus
 register_nav_menus(
 	array(
-		'nav-main' => __( 'The Main Menu', 'arthemwp' ),   // Main nav in header
-		'footer-links' => __( 'Footer Links', 'arthemwp' ) // Secondary nav in footer
+		'nav-main' => __( 'The Main Menu', 'mhemwp' ),   // Main nav in header
+		'footer-links' => __( 'Footer Links', 'mhemwp' ) // Secondary nav in footer
 	)
 );
 
 // The Off Canvas Menu
-function arthem_nav() {
+function mhem_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'menu_class' => 'nav-main-content',       // Adding custom nav class
@@ -28,10 +28,10 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Footer Menu
-function arthem_footer_links() {
+function mhem_footer_links() {
     wp_nav_menu(array(
     	'container' => 'false',                         // Remove nav container
-    	'menu' => __( 'Footer Links', 'arthemwp' ),   	// Nav name
+    	'menu' => __( 'Footer Links', 'mhemwp' ),   	// Nav name
     	'menu_class' => 'menu',      					// Adding custom nav class
     	'theme_location' => 'footer-links',             // Where it's located in the theme
       'depth' => 0,                                   // Limit the depth of the nav
@@ -40,7 +40,7 @@ function arthem_footer_links() {
 } /* End Footer Menu */
 
 // Header Fallback Menu
-function arthem_main_nav_fallback() {
+function mhem_main_nav_fallback() {
 		wp_page_menu( array(
 			'show_home' => true,
 	  	'menu_class' => '',      						// Adding custom nav class
@@ -54,7 +54,7 @@ function arthem_main_nav_fallback() {
 }
 
 // Footer Fallback Menu
-function arthem_footer_links_fallback() {
+function mhem_footer_links_fallback() {
 	/* You can put a default here if you like */
 }
 

@@ -1,7 +1,7 @@
 <?php
 	
 // Adding WP Functions & Theme Support
-function arthem_theme_support() {
+function mhem_theme_support() {
 
 	// Add WP Thumbnail Support
 	add_theme_support( 'post-thumbnails' );
@@ -40,8 +40,8 @@ function arthem_theme_support() {
 	); 
 	
 	// Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
-	$GLOBALS['content_width'] = apply_filters( 'arthem_theme_support', 1200 );	
+	$GLOBALS['content_width'] = apply_filters( 'mhem_theme_support', 1200 );	
 	
 } /* end theme support */
 
-add_action( 'after_setup_theme', 'arthem_theme_support' );
+add_action( 'after_setup_theme', 'mhem_theme_support' );

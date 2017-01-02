@@ -38,6 +38,8 @@
 
 		<?php wp_head(); ?>
 
+    <link href="https://fonts.googleapis.com/css?family=Lato|Nunito" rel="stylesheet">
+
 		<!-- Drop Google Analytics here -->
 		<!-- end analytics -->
 

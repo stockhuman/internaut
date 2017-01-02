@@ -1,6 +1,6 @@
 <?php
 // Comment Layout
-function arthem_comments($comment, $args, $depth) {
+function mhem_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class('panel'); ?>>
 		<div class="media-object">
@@ -14,13 +14,13 @@ function arthem_comments($comment, $args, $depth) {
 							// create variable
 							$bgauthemail = get_comment_author_email();
 						?>
-						<?php printf(__('%s', 'arthemwp'), get_comment_author_link()) ?> on
-						<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'arthemwp')); ?> </a></time>
-						<?php edit_comment_link(__('(Edit)', 'arthemwp'),'  ','') ?>
+						<?php printf(__('%s', 'mhemwp'), get_comment_author_link()) ?> on
+						<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'mhemwp')); ?> </a></time>
+						<?php edit_comment_link(__('(Edit)', 'mhemwp'),'  ','') ?>
 					</header>
 					<?php if ($comment->comment_approved == '0') : ?>
 						<div class="alert alert-info">
-							<p><?php _e('Your comment is awaiting moderation.', 'arthemwp') ?></p>
+							<p><?php _e('Your comment is awaiting moderation.', 'mhemwp') ?></p>
 						</div>
 					<?php endif; ?>
 					<section class="comment_content clearfix">

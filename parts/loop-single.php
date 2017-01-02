@@ -11,8 +11,8 @@
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'arthemwp' ), 'after'  => '</div>' ) ); ?>
-		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'arthemwp' ) . '</span> ', ', ', ''); ?></p>	
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mhemwp' ), 'after'  => '</div>' ) ); ?>
+		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'mhemwp' ) . '</span> ', ', ', ''); ?></p>	
 	</footer> <!-- end article footer -->
 						
 	<?php comments_template(); ?>	

@@ -1,19 +1,54 @@
+
+// ARRANGED BY Z-INDEX
 #musings-feed, #work-feed {
+  float: left;
+  position: absolute;
+
   @include media('>tablet') {
-    padding: $global-padding;
-    position: absolute;
-    width: 50%;
+  width: 50%;
+
   }
 }
 
 #musings-feed {
+  text-transform: uppercase;
+
+  h2 {
+    margin-bottom: 0.2rem;
+    padding-right: $global-padding;
+
+  }
+  a{
+        color: $secondary;
+  }
+  .byline {
+    color: $gray-dark;
+    @include font-size(12);
+  }
   @include media('>tablet') {
+    padding: $global-padding;
     margin-left: 50%;
   }
 }
-
+#work-feed {
+}
 .article-header {
   // a {
   //   text-decoration: none;
   // }
+}
+
+// home projects grid
+
+.grid-item {
+  width: 50%;
+  .item-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    h2 {
+      margin-bottom: 0;
+    }
+  }
 }

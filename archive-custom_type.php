@@ -10,7 +10,7 @@
 
 	<?php endwhile; ?>
 
-		<?php arthem_page_navi(); ?>
+		<?php mhem_page_navi(); ?>
 
 	<?php else : ?>
 

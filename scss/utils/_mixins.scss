@@ -1,7 +1,7 @@
 // MIXINS
 @mixin font-size($font-size) {
     font-size: $font-size +px;
-    font-size: ($font-size / $font-size-base)*1rem;
+    font-size: ($font-size / $font-size-base) *1rem;
 }
 
 @mixin center-block {

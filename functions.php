@@ -11,6 +11,9 @@ require_once(get_template_directory().'/functions/enqueue-scripts.php');
 // Register custom menus and menu walkers
 require_once(get_template_directory().'/functions/menu.php');
 
+// Register customizer
+require_once(get_template_directory().'/functions/customizer.php');
+
 // Register sidebars/widget areas
 // require_once(get_template_directory().'/functions/sidebar.php');
 

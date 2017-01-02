@@ -2,14 +2,15 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 0;
+  left: 0;
   right: 0;
+  bottom: 0;
   background: $brand;
   z-index: map-get($z-index, 'nav');
-  @include transform(translate3D(100%,0,0));
+  @include transform(translate3D(0,100%,0));
   transition: transform $easeOutQuad .3s;
   ul { // inner nav
-    text-align: right;
+    text-align: center;
     list-style: none;
     @include transform(translateY(40vh));
   }
@@ -24,36 +25,35 @@
   .nav-is-open &{
     @include transform(translate3D(0,0,0));
   }
-
-  @include media('>phone') {
-    width: 80vw;
-  }
-  @include media('>phablet') {
-    width: 33vw;
-  }
-  @include media('>desktop') {
-    width: 20vw;
-  }
 }
 
 #nav-toggle {
+  text-align: center;
   position: fixed;
-  right: 40px;
-  top: 50vh;
+  width: 100%;
+  bottom: -$global-padding;
   cursor: pointer;
-  color: $brand;
   z-index: map-get($z-index, 'nav');
-  // p {
-  //   @include transform(rotateX(90deg));
-  // }
+  p {
+    text-transform: uppercase;
+    color: $secondary;
+  }
 }
 
 
 
 // other nav elements
 .home-link {
+  color: $gray-light;
+  text-transform: uppercase;
   position: fixed;
+  padding: $global-padding/4;
   top: 0;
-  left: 5%;
+  left: 7%;
   z-index: map-get($z-index, 'nav')+1;
+  transition: color .2s $easeInOutSine;
+  &:hover {
+    text-decoration: none;
+    color: $black;
+  }
 }

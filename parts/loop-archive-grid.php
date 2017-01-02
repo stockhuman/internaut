@@ -23,7 +23,7 @@ $grid_columns = 4; ?>
 				</header> <!-- end article header -->	
 								
 				<section class="entry-content" itemprop="articleBody">
-					<?php the_content('<button class="tiny">' . __( 'Read more...', 'arthemwp' ) . '</button>'); ?> 
+					<?php the_content('<button class="tiny">' . __( 'Read more...', 'mhemwp' ) . '</button>'); ?> 
 				</section> <!-- end article section -->
 								    							
 			</article> <!-- end article -->

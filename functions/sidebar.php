@@ -1,10 +1,10 @@
 <?php
 // SIDEBARS AND WIDGETIZED AREAS
-function arthem_register_sidebars() {
+function mhem_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'arthemwp'),
-		'description' => __('The first (primary) sidebar.', 'arthemwp'),
+		'name' => __('Sidebar 1', 'mhemwp'),
+		'description' => __('The first (primary) sidebar.', 'mhemwp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -13,8 +13,8 @@ function arthem_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'offcanvas',
-		'name' => __('Offcanvas', 'arthemwp'),
-		'description' => __('The offcanvas sidebar.', 'arthemwp'),
+		'name' => __('Offcanvas', 'mhemwp'),
+		'description' => __('The offcanvas sidebar.', 'mhemwp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -31,8 +31,8 @@ function arthem_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'arthemwp'),
-		'description' => __('The second (secondary) sidebar.', 'arthemwp'),
+		'name' => __('Sidebar 2', 'mhemwp'),
+		'description' => __('The second (secondary) sidebar.', 'mhemwp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
