@@ -38,7 +38,7 @@
 
 		<?php wp_head(); ?>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato|Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:900|PT+Serif" rel="stylesheet">
 
 		<!-- Drop Google Analytics here -->
 		<!-- end analytics -->
@@ -53,11 +53,6 @@
     <div id="preloader"></div>
     <div class="innie"></div>
     <div class="outie"></div>
-
-    <div id="border"></div>
-    <div id="background"></div>
-
-		<header class="header" role="banner"><a class="home-link" href="<?php echo home_url(); ?>" id="home-link"><?php bloginfo('name'); ?></a></header>
 
     <?php get_template_part( 'parts/nav' ); ?>
     <!-- end of transition elements, header and nav -->

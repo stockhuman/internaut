@@ -1,54 +1,80 @@
-
-// ARRANGED BY Z-INDEX
-#musings-feed, #work-feed {
-  float: left;
-  position: absolute;
-
-  @include media('>tablet') {
-  width: 50%;
-
-  }
+main {
+  min-height: 90vh;
+  margin-top: 6rem;
 }
 
-#musings-feed {
-  text-transform: uppercase;
+// main grid
 
-  h2 {
-    margin-bottom: 0.2rem;
-    padding-right: $global-padding;
-
-  }
-  a{
-        color: $secondary;
-  }
-  .byline {
-    color: $gray-dark;
-    @include font-size(12);
-  }
-  @include media('>tablet') {
-    padding: $global-padding;
-    margin-left: 50%;
-  }
-}
-#work-feed {
-}
-.article-header {
-  // a {
-  //   text-decoration: none;
-  // }
-}
-
-// home projects grid
-
-.grid-item {
-  width: 50%;
-  .item-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    h2 {
-      margin-bottom: 0;
+.grid {
+  margin-left: 33%;
+  padding-right: 33%;
+  width: 100%;
+  .grid-item {
+    width: 50%;
+    img {
+      width: 100%;
     }
   }
+}
+
+.grid-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  opacity: 0;
+  font-family: 'Muli', sans-serif;
+  background-image: url('../images/loader-loop.gif');
+  &:hover {
+    opacity: 1;
+  }
+
+  .item-title, .item-tagline {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 40px;
+    left: 160px
+  }
+  .item-tagline {
+    bottom: 10px;
+  }
+
+  .item-number {
+    padding: 1rem;
+    font-size: 120px;
+    margin-left: -50px;
+    position: absolute;
+    bottom: 30px;
+    color: black;
+    background: white;
+  }
+}
+
+@media screen and (max-width:520px) {
+  .grid-item-overlay {
+
+    font-family: 'Muli', sans-serif;
+    background-image: url('../images/loader-loop.gif');
+
+    .item-title, .item-tagline {
+      text-transform: uppercase;
+      position: static;
+      margin-left: 2rem;
+    }
+    .item-tagline {
+      display: none;
+    }
+
+    .item-number {
+      padding: 1rem;
+      font-size: 20px;
+      margin-left: -40px;
+      position: absolute;
+      bottom: 30px;
+      color: black;
+      background: white;
+    }
+  }
+
 }

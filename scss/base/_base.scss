@@ -19,7 +19,7 @@ body {
 	text-rendering: optimizelegibility;
 	font-weight: $normal;
 	color: $black;
-	background: $white;
+	background-image: url('../images/checker-light.png');
 	scrollbar-base-color: black;
   touch-action: manipulation;
 	&.disable-scroll {

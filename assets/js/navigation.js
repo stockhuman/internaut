@@ -5,48 +5,52 @@
 (function ($) {
 	'use strict';
 
-	var toggle = document.getElementById('nav-toggle'),
-		nav = document.getElementById('nav-main');
+	'use strict';
+	  $(document).ready(function(){
+	    // init masonry
+	    $('.grid').masonry({transitionDuration: 0});
 
-	toggle.addEventListener('click', function () {
-		document.body.classList.toggle('nav-is-open');
-	});
+	    // color theory
+	    $('.grid-item').each(function(){
+	      $(this).find('.grid-item-overlay').css('background', $(this).attr('data-base'));
+	      $(this).find('.grid-item-overlay').css('color', $(this).attr('data-highlight'));
+	    });
 
-	//if (document.body.classList.contains('nav-is-open')) {
-		$(nav).mouseleave(function () {
-			document.body.classList.toggle('nav-is-open');
-		});
-	//}
+	  });
 
-	// smoothState
 
-	var options = {
-			prefetch: true,
-			cacheLength: 2,
-			debug: true,
-			onStart: {
-				duration: 250, // Duration of our animation
-				render: function ($container) {
-					// Add your CSS animation reversing class
-					$container.addClass('is-exiting');
+	  $('#main').smoothState({
+	    onAfter: function() {
+	      $('.grid').masonry({transitionDuration: 0});
 
-					// Restart your animation
-					smoothState.restartCSSAnimations();
-				}
-			},
-			onReady: {
-				duration: 0,
-				render: function ($container, $newContent) {
-					// Remove your CSS animation reversing class
-					$container.removeClass('is-exiting');
+	      // color theory
+	      $('.grid-item').each(function(){
+	        $(this).find('.grid-item-overlay').css('background', $(this).attr('data-base'));
+	        $(this).find('.grid-item-overlay').css('color', $(this).attr('data-highlight'));
+	      });
+	    }
+	  });
 
-					// Inject the new content
-					$container.html($newContent);
 
-				}
-			}
-		},
-		smoothState = $('#main').smoothState(options).data('smoothState');
+	  // navigation
+
+	  function toggleNav() {
+	    if (document.body.classList.contains('nav-is-open')) {
+	      $('#nav-toggle').css('color', 'black');
+	      document.body.classList.remove('nav-is-open');
+	    } else {
+	      document.body.classList.add('nav-is-open');
+	      $('#nav-toggle').css('color', 'white');
+	    }
+	  }
+	  $('#nav-toggle').click(function(){
+	    toggleNav();
+	  });
+
+	  $('#nav-main').mouseleave(function(){
+	    toggleNav();
+	  });
+
 
 	$('.menu-item a').click(function (e) {
 		e.preventDefault();

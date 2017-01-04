@@ -1,59 +1,65 @@
-#nav-main {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: $brand;
-  z-index: map-get($z-index, 'nav');
-  @include transform(translate3D(0,100%,0));
-  transition: transform $easeOutQuad .3s;
-  ul { // inner nav
-    text-align: center;
-    list-style: none;
-    @include transform(translateY(40vh));
-  }
-  .menu-item {
-    padding:0 $global-padding 0;
-
-    a {
-      text-decoration: none;
-      color: currentColor;
-    }
-  }
-  .nav-is-open &{
-    @include transform(translate3D(0,0,0));
-  }
-}
 
 #nav-toggle {
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  bottom: -$global-padding;
-  cursor: pointer;
-  z-index: map-get($z-index, 'nav');
-  p {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
     text-transform: uppercase;
-    color: $secondary;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 30;
+    font-family: 'Muli', sans-serif;
+    border-bottom: 4px currentColor solid;
+    padding: 0 0 6px;
+    background: white;
+    &:hover {
+        border-bottom: 4px white solid;
+    }
+}
+
+#nav-main {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 44vw;
+  transition: transform .3s ease;
+  transform: translate(120%, 0);
+  z-index: 30;
+  background: $brand;
+  height: 100%;
+  box-shadow: -4px 0px 49px -12px rgba(0, 0, 0, 0.42);
+  ul {
+    list-style: none;
+    padding: 1rem;
+    transform: translateY(30vh);
+    li a {
+      text-decoration: none;
+      color: white;
+      padding: 1.2rem;
+      font-size: 50px;
+      font-family: 'Muli', sans-serif;
+      &:hover {
+          text-decoration: underline;
+      }
+    }
   }
 }
 
+.nav-is-open #nav-main {
+    transform: translate(0, 0);
+}
 
-
-// other nav elements
-.home-link {
-  color: $gray-light;
-  text-transform: uppercase;
-  position: fixed;
-  padding: $global-padding/4;
-  top: 0;
-  left: 7%;
-  z-index: map-get($z-index, 'nav')+1;
-  transition: color .2s $easeInOutSine;
-  &:hover {
-    text-decoration: none;
-    color: $black;
+@media screen and (max-width: 600px) {
+  #nav-main {
+    width: 80vw;
+    ul {
+      transform: translateY(25vh);
+      li {
+        margin-bottom: 1rem;
+        a {
+          padding: 2rem;
+          font-size: 30px;
+        }
+      }
+    }
   }
 }

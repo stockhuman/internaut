@@ -8,7 +8,7 @@
   $(document).ready(function(){
     // masonry
     $('#work-feed').masonry();
-    
+
     // preloader animation
     $('#preloader').addClass('loaded');
 

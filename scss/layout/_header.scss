@@ -1,0 +1,52 @@
+#global-header {
+  transform: rotate(-90deg);
+  position: fixed;
+  left: -470px;
+  top: 30vh;
+  display: block;
+  background: $brand;
+  height: 40px;
+  z-index: 30;
+  h1 {
+    text-transform: uppercase;
+    font-size: 10vh;
+    font-family: 'Muli', sans-serif;
+  }
+}
+
+@media screen and (max-width:896px) {
+  #global-header {
+    left: -370px;
+    h1 {
+      font-size: 8vh;
+    }
+  }
+}
+
+
+@media screen and (max-width:726px) {
+  #global-header {
+    left: -270px;
+    h1 {
+      font-size: 6vh;
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+  #global-header {
+    left: -170px;
+    h1 {
+      font-size: 6vh;
+    }
+  }
+}
+
+@media screen and (max-width:420px) {
+  #global-header {
+    left: -170px;
+    h1 {
+      font-size: 35px;
+    }
+  }
+}

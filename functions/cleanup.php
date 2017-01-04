@@ -18,7 +18,7 @@ function mhem_start() {
     add_filter('gallery_style', 'mhem_gallery_style');
 
     // adding sidebars to Wordpress
-    add_action( 'widgets_init', 'mhem_register_sidebars' );
+    //add_action( 'widgets_init', 'mhem_register_sidebars' );
 
     // cleaning up excerpt
     add_filter('excerpt_more', 'mhem_excerpt_more');

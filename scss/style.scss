@@ -21,14 +21,13 @@ Tags: Sass
 	'base/typography';
 
 @import
-	'layout/spacing',
+	'layout/header',
 	'layout/nav',
-	'layout/main',
-	'layout/grid';
+	'layout/footer';
 
 @import
-	// 'sections/content', add as you will for each individual page or prj section.
-	'sections/home';
+	'sections/home',
+	'sections/page';
 
 @import
 	'UX/animations',

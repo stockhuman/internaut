@@ -23,12 +23,12 @@ $z-index:(
 // Brand colors
 // -------------------------
 
-$brand:         rgba(201, 54, 38, 1);
+$brand:         blue;
 $secondary: 		rgba(2, 47, 81, 1);
 $tertiary:			rgba(242, 232, 220, 1);
 
-$white :        rgba(211, 211, 211, 1);
-$black :        rgba(7, 17, 8, 1);
+$white :        white;
+$black :        black;
 
 $gray-darker:   #181818;
 $gray-dark:     #6c767f;
@@ -51,7 +51,7 @@ $google-color:   #dd4b39;
 // Typography
 // -------------------------
 
-$font-stack: 					 'Lato', sans-serif;
+$font-stack: 					 'PT Serif', serif;
 $font-heading:         'Nunito', sans-serif;
 $font-sans-serif:      'Lato', sans-serif;
 $font-sans-serif-bold: 'Lato', sans-serif;
@@ -63,7 +63,7 @@ $medium: 500;
 $bold: 700;
 $extra-bold: 900;
 
-$font-size-base: 20;
+$font-size-base: 22;
 $font-size-large: 25;
 $font-size-small: 16;
 
