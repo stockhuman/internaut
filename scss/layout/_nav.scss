@@ -5,7 +5,7 @@
     right: 1rem;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 16px;
+    @include font-size(22);
     z-index: 30;
     font-family: 'Muli', sans-serif;
     border-bottom: 4px currentColor solid;
@@ -29,18 +29,19 @@
   box-shadow: -4px 0px 49px -12px rgba(0, 0, 0, 0.42);
   ul {
     list-style: none;
-    padding: 1rem;
     transform: translateY(30vh);
-    li a {
+     .menu-item {
+       padding: 0.5rem;
+      a {
       text-decoration: none;
       color: white;
-      padding: 1.2rem;
       font-size: 50px;
       font-family: 'Muli', sans-serif;
       &:hover {
           text-decoration: underline;
       }
     }
+  }
   }
 }
 

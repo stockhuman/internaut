@@ -1,16 +1,15 @@
 main {
   min-height: 90vh;
   margin-top: 6rem;
+  width: 100%;
 }
 
 // main grid
 
 .grid {
-  margin-left: 33%;
-  padding-right: 33%;
-  width: 100%;
+  padding-left: 33%;
   .grid-item {
-    width: 50%;
+    width: auto;
     img {
       width: 100%;
     }
@@ -34,7 +33,9 @@ main {
     text-transform: uppercase;
     position: absolute;
     bottom: 40px;
-    left: 160px
+    left: 160px;
+    color: $white;
+    background: $black;
   }
   .item-tagline {
     bottom: 10px;

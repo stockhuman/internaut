@@ -5,6 +5,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
       <!-- Icons & Favicons -->
@@ -31,7 +32,7 @@
     		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     	<![endif]-->
 
-    	<meta name="theme-color" content="#121212">
+    	<meta name="theme-color" content="#0000FF">
 	  <?php } ?>
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
