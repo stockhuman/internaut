@@ -8,7 +8,7 @@
   height: 100%;
   opacity: 1;
   @include transition(all 800ms cubic-bezier(0.86, 0, 0.07, 1));
-  background-color: $secondary;
+  background-color: $brand;
   background-position: center;
   background-image: url(../images/loader-loop.gif);
   &.loaded {

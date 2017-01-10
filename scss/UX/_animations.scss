@@ -1,7 +1,28 @@
-.innie {
+.innie, .outie {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include transform(translateX(-100%));
+
 
 }
 
-.outie {
+.innie {
+  background: $secondary;
+  transition: transform .5s $easeInCubic;
+  transition-delay: .3s;
+}
 
+.outie {
+  background: $tertiary;
+  transition: transform .2s $easeInCubic;
+}
+
+.is-loading {
+  .innie, .outie {
+    @include transform(translateX(0));
+  }
 }

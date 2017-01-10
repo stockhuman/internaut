@@ -12,7 +12,8 @@
     padding: 0 0 6px;
     background: white;
     &:hover {
-        border-bottom: 4px white solid;
+      background: yellow;
+      border-bottom: 4px white solid;
     }
 }
 
@@ -20,7 +21,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  width: 44vw;
+  width: 80vw;
   transition: transform .3s ease;
   transform: translate(120%, 0);
   z-index: 30;
@@ -30,18 +31,19 @@
   ul {
     list-style: none;
     transform: translateY(30vh);
+    padding-left: 2rem;
      .menu-item {
-       padding: 0.5rem;
-      a {
-      text-decoration: none;
-      color: white;
-      font-size: 50px;
-      font-family: 'Muli', sans-serif;
-      &:hover {
-          text-decoration: underline;
-      }
+        padding: 0.5rem;
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 50px;
+          font-family: 'Muli', sans-serif;
+          &:hover {
+              text-decoration: underline;
+          }
+        }
     }
-  }
   }
 }
 
@@ -49,9 +51,9 @@
     transform: translate(0, 0);
 }
 
-@media screen and (max-width: 600px) {
+@include media('>tablet') {
   #nav-main {
-    width: 80vw;
+    width: 40vw;
     ul {
       transform: translateY(25vh);
       li {
