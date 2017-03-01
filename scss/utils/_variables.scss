@@ -2,7 +2,14 @@
 
 
 // NAVIGATION
-// -Whatever you need-
+$navPad   : 0.5rem;
+$navWidth : 3.5rem; // 55px
+
+// ---
+$navWidthExpanded : 30rem;
+
+// computed
+$navIconSize : $navWidth/2;
 
 
 // Z-Index
@@ -20,23 +27,30 @@ $z-index:(
 	'super'  : 70
 );
 
-// Brand colors
+// Colors
 // -------------------------
 
-$brand:         blue;
-$secondary: 		yellow;
-$tertiary:			red;
+// General definitions
 
 $white :        white;
 $black :        black;
 
 $gray-darker:   #181818;
-$gray-dark:     #6c767f;
+$gray-dark:     #3b444c;
 $gray:          #616161;
 $gray-light:    #979797;
 $gray-lighter:  #f2f2f2;
 
+// Brand Colors
+
+$brand:         blue;
+$secondary: 		yellow;
+$tertiary:			red;
+
 // UI Associations
+
+$background-color: $gray-lighter;
+$nav-default-color: $gray-dark;
 
 $border-color:	$gray-light;
 $link-color: 	  $brand;
@@ -120,7 +134,7 @@ $breakpoints: (
 	'phablet': 550px,
   'tablet': 768px,
   'desktop': 1024px,
-	'ultrawide': 1200px
+	'ultrawide': 1920px
 ) !default;
 
 $media-expressions: (

@@ -30,8 +30,8 @@ gulp.task('sass', function () {
 // similarly to the sass tast, scripts compiles and concatinates js files and reloads the browser
 gulp.task('scripts', function() {
 	// script paths
-	var jsSources = 'assets/js/*.js',
-	    jsDist = 'assets/js/dist/';
+	var jsSources = 'js/*.js',
+	    jsDist = 'assets/js/';
 
   return gulp.src(jsSources)
     .pipe(concat('app.js'))
@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
 			console.error(err.message);
 			browserSync.notify(err.message, 3000); // Display error in the browser
 			this.emit('end'); // Prevent gulp from catching the error and exiting the watch process
-		})) 
+		}))
 		.pipe(gulp.dest(jsDist))
 		.pipe(browserSync.reload({
 			stream: true
@@ -52,14 +52,14 @@ gulp.task('scripts', function() {
 // change to appropriate WordPress install directory
 gulp.task('browserSync', function () {
 	browserSync.init({
-		proxy: 'http://localhost:8888/WPdev/'
+		proxy: 'http://localhost/michaelhemingway/'
 	});
 });
 
 // watches files for changes, adjust accordingly
 gulp.task('watch', ['browserSync', 'sass'], function () {
 	gulp.watch('scss/**/*.scss', ['sass']);
-	gulp.watch('assets/js/**/*.js', ['scripts']);
+	gulp.watch('js/*.js', ['scripts']);
 	gulp.watch('*.php', browserSync.reload);
 	gulp.watch('*.html', browserSync.reload);
 });

@@ -1,0 +1,22 @@
+
+
+.container {
+  position: absolute;
+  top: $navPad;
+  right: $navPad;
+  left: $navPad;
+
+  color: inherit;
+}
+
+@include media('>tablet') {
+  .container {
+    left: $navWidth + $navPad*2;
+  }
+}
+
+@include media('>ultrawide') {
+  .container {
+    left: $navWidthExpanded + $navPad*2;
+  }
+}

@@ -1,36 +1,19 @@
-<?php get_header(); ?>
+<?php define("ROOT", __DIR__.":3000" ."/"); // change according to port if necessary ?>
 
-  <main id="main" class="" role="main">
+<?php include("parts/head.php"); ?>
+<?php include("parts/nav.php"); ?>
 
-    <header id="global-header">
-        <h1>Michael Hemingway</h1>
-    </header>
+<main id="main">
+  <div id="content" class="container home">
+    <h1>hey</h1>
+    <h2>hey</h2>
+    <h3>hey</h3>
+    <h4>hey</h4>
+    <h5>hey</h5>
+    <h6>hey</h6>
+    <br>
+    <p>it's me.</p>
+  </div>
+</main>
 
-  <!-- work category section -->
-  <section id="work-feed" class="grid">
-    <? $args = array( 'category_name' => 'work' );
-
-      $loop = new WP_Query( $args );
-
-      if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();
-
-      $count_posts = $loop->current_post + 1; ?>
-
-      <article id="post-<?php the_ID(); ?>" <?php post_class('grid-item'); ?>>
-        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-
-          <div class="grid-item-overlay">
-            <h2 class="item-title"><?php the_title(); ?></h2>
-            <span class="item-number">0<?php echo $count_posts; ?></span>
-          </div>
-          <?php the_post_thumbnail('large'); ?>
-        </a>
-      </article>
-
-  	<?php endwhile; else : get_template_part( 'parts/content', 'missing' ); endif; ?>
-  </section>
-
-  </main> <!-- end #main -->
-
-
-<?php get_footer(); ?>
+<?php include("parts/footer.php"); ?>

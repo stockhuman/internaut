@@ -18,26 +18,28 @@ Tags: Sass
 @import
 	'base/normalize',
 	'base/base',
+	'base/fonts',
 	'base/typography';
 
 @import
-	'layout/header',
-	'layout/nav',
-	'layout/footer';
+	'nav/nav';
 
 @import
-	'sections/home',
-	'sections/page';
+	'layout/layout';
 
+// @import
+// 	'sections/home',
+// 	'sections/page';
+//
+// @import
+// 	'UX/animations',
+// 	'UX/preloader';
+//
 @import
-	'UX/animations',
-	'UX/preloader';
-
-@import
-	'components/buttons',
+// 	'components/buttons',
 	'components/links',
-	'components/code',
-	'components/forms',
-	'components/lists',
-	'components/images',
-	'components/tables';
+// 	'components/code',
+// 	'components/forms',
+// 	'components/lists',
+	'components/media';
+// 	'components/tables';

@@ -1,0 +1,20 @@
+.projects{
+  text-align: center;
+  padding-bottom: $navWidth;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+.portfolio-item {
+  width: 100%;
+  padding: 3em;
+  &:hover {
+    border: 2px solid black;
+  }
+}
+
+@include media('>tablet'){
+  .portfolio-item {
+    width: 25%;
+  }
+}

@@ -19,7 +19,7 @@ body {
 	text-rendering: optimizelegibility;
 	font-weight: $normal;
 	color: $black;
-	background-image: url('../images/checker-light.png');
+	background: $background-color;
 	scrollbar-base-color: black;
   touch-action: manipulation;
 	&.disable-scroll {
@@ -32,13 +32,13 @@ body {
 // styles the scrollbar on supported browsers (chrome & webkit-based, IE)
 ::-webkit-scrollbar-thumb:vertical {
   height: 10px;
-  background-color: $black;
+  background-color: $nav-default-color;
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
   height: 1px;
-  background:  $white;
+  background: $background-color;
 }
 
 ::-moz-selection {

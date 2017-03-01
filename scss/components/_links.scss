@@ -1,8 +1,24 @@
-// links
-
 a {
+  color: inherit;
   text-decoration: none;
+}
+article p > a {
+  position: relative;
+  font-style: italic;
   &:hover {
-    text-decoration: underline;
+    &::before {
+      max-width: 100%;
+    }
+  }
+  &::before {
+    transition: max-width .2s ease;
+    position: absolute;
+    content: '';
+    background: black;
+    bottom: -1px;
+    height: 2px;
+
+    max-width: 20px;
+    width: 100%;
   }
 }
