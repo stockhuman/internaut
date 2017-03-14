@@ -9,7 +9,8 @@ $(function() {
 
  function navColors() {
 
-   console.log($('article.page').attr('data-base'));
+   console.log('data-base: ' + $('article.page').attr('data-base'));
+	 console.log('data-highlight: ' + $('article.page').attr('data-highlight'));
 
    if ($('article.page').attr('data-base') != (undefined)) {
      bg = $('article.page').attr('data-base');

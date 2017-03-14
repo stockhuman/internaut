@@ -1,0 +1,31 @@
+{
+	"index" : {
+		"title"        : "MHEM",
+		"description"  : "home",
+		"items"        : [
+				{
+					"img"  : "/assets/img/pcovers/cover.png",
+				  "link" : "/projects/the-plant"
+				},
+				{
+					"img"  : "",
+					"link" : ""
+				}
+		]
+	},
+
+	"work" : {
+		"title"        : "Projects",
+		"description"  : "doot"
+	},
+
+	"about" : {
+		"title"        : "About",
+		"description"  : "doot"
+	},
+
+	"404" : {
+		"title"        : "404",
+		"description"  : "doot"
+	}
+}

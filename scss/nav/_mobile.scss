@@ -17,12 +17,11 @@
 
 #nav-home-icon {
   position: absolute;
-  padding: $navPad;
-
-  img {
-    // fix this image
-    padding-top: ($navPad);
+	padding: 0 $navPad $navPad $navPad;
+  svg {
     max-width: $navWidth - ($navPad * 2);
+		max-height: $navWidth;
+		path {fill: currentColor;}
   }
 }
 

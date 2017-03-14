@@ -1,0 +1,17 @@
+!= partial("../_includes/head")
+
+body
+	!= partial("../_includes/nav")
+
+	main#main
+		#content.container.page
+			if (cover != '')
+				header.cover
+					img(src="/assets/img/pcovers/#{ cover }" alt="")
+				article(data-base=data_base, data-highlight=data_highlight).page
+					!= yield
+			else
+				!= yield
+			
+
+!= partial("../_includes/footer")

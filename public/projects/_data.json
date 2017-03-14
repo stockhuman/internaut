@@ -1,0 +1,26 @@
+{
+	"globals" : {
+		"title" : "MHEM"
+	},
+
+	"the-plant" : {
+		"title"          : "The Plant",
+		"description"    : "",
+		"data_base"      : "#f0f0f0",
+		"data_highlight" : "#000000",
+		"cover"          : "theplantbanner.jpg"
+	},
+	"5ft25" : {
+		"title"          : "MHEM",
+		"description"    : "home",
+		"data_base"      : "#f0f0f0",
+		"data_highlight" : "#000000",
+		"cover"          : "cover.png"
+	},
+	"intervals-ii" : {
+		"title"          : "MHEM",
+		"description"    : "home",
+		"data_base"      : "#f0f0f0",
+		"data_highlight" : "#000000"
+	}
+}
