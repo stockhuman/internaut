@@ -4,12 +4,19 @@
 		"description"  : "home",
 		"items"        : [
 				{
-					"img"  : "/assets/img/pcovers/cover.png",
-				  "link" : "/projects/the-plant"
+					"img"  : "/assets/img/home/5ft25cover.png",
+				  "link" : "/projects/5ft25",
+					"desc" : "Web | 2016"
 				},
 				{
-					"img"  : "",
-					"link" : ""
+					"img"  : "/assets/img/home/theplantcover.jpg",
+					"link" : "/projects/the-plant",
+					"desc" : "Web | 2015"
+				},
+				{
+					"img"  : "/assets/img/home/archcover.jpg",
+					"link" : "/projects/intervals-ii",
+					"desc" : ""
 				}
 		]
 	},
@@ -24,8 +31,18 @@
 		"description"  : "doot"
 	},
 
+	"writing" : {
+		"title"        : "Writing",
+		"description"  : "doot"
+	},
+
+	"contact" : {
+		"title"        : "Contact",
+		"description"  : "doot"
+	},
+
 	"404" : {
 		"title"        : "404",
-		"description"  : "doot"
+		"description"  : "There's nothing here!"
 	}
 }

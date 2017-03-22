@@ -37,6 +37,8 @@
   top: $navPad*2.1;
   font-weight: 200;
   left: 65px; // width of logo - parameterize
+	transition: opacity .3s ease-in-out;
+	opacity: 0;
 }
 
 #nav-inner {

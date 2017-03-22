@@ -8,10 +8,6 @@ $(function() {
  var bg, accent;
 
  function navColors() {
-
-   console.log('data-base: ' + $('article.page').attr('data-base'));
-	 console.log('data-highlight: ' + $('article.page').attr('data-highlight'));
-
    if ($('article.page').attr('data-base') != (undefined)) {
      bg = $('article.page').attr('data-base');
      accent = $('article.page').attr('data-highlight');
@@ -44,14 +40,25 @@ $(function() {
   * smoothState
   */
   $('#main').smoothState({
+
+    onStart : {
+      duration: 450,
+      // Alterations to the page
+      render: function () {
+        // Quickly toggles a class and restarts css animations
+        $('body').toggleClass('is-exiting');
+      }
+    },
+
     onAfter: function () {
       navColors();
       resetNav();
+      $('body').toggleClass('is-exiting');
     }
   });
 
   // add nav links to smoothState
-  $(".nav-list-item a").click(function(e) {
+  $(".nav-list-item a, #nav-home-icon").click(function(e) {
     e.preventDefault();
     var c = $("#main").smoothState().data("smoothState"),
         l = $(this).attr("href");

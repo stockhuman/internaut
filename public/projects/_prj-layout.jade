@@ -1,0 +1,12 @@
+!= partial("../_includes/head")
+
+body
+	!= partial("../_includes/nav")
+
+	main#main
+		#content.container.page
+			!= yield
+		
+			
+
+!= partial("../_includes/footer")

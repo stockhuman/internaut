@@ -1,1 +1,24 @@
+@keyframes navToggle {
+	0% {
+    left: 30px;
+  }
+  100% {
+    left: 12px;
+  }
+}
 
+#transitioner {
+  @extend #nav-main;
+  transition-duration: .31s;
+  box-shadow: none;
+  display: none;
+  @include media('>tablet') {
+    display: block;
+  }
+}
+
+.is-exiting {
+  #transitioner {
+    width: 100%;
+  }
+}

@@ -1,26 +1,29 @@
 {
-	"globals" : {
-		"title" : "MHEM"
+	"index" : {
+		"title" : "MHEM",
+		"description" : "",
+		"layout": "_prj-layout"
 	},
 
 	"the-plant" : {
 		"title"          : "The Plant",
-		"description"    : "",
-		"data_base"      : "#f0f0f0",
-		"data_highlight" : "#000000",
-		"cover"          : "theplantbanner.jpg"
+		"description"    : "Dawson College's Official online student newspaper",
+		"data_base"      : "#ffffff",
+		"data_highlight" : "#18422e",
+		"cover"          : "theplant-2.png"
 	},
 	"5ft25" : {
 		"title"          : "MHEM",
 		"description"    : "home",
 		"data_base"      : "#f0f0f0",
 		"data_highlight" : "#000000",
-		"cover"          : "cover.png"
+		"cover"          : "5ft25.jpg"
 	},
 	"intervals-ii" : {
 		"title"          : "MHEM",
 		"description"    : "home",
 		"data_base"      : "#f0f0f0",
-		"data_highlight" : "#000000"
+		"data_highlight" : "#000000",
+		"cover" : ""
 	}
 }

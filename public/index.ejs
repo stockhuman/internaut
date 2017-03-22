@@ -1,7 +1,24 @@
-<div id="content" class="container home">
+<div id="content" class="container projects">
+	<img src="/assets/img/home/home.png" alt="">
+	<%# 
+	<h1>The best</h1>%>
+
 	<% for ( var i = 0; i < items.length; i ++)  { %>
-			<a href="<%= items[i].link %>" class='home-item'>
-          <img src="<%= items[i].img %>" />
+			<a href="<%= items[i].link %>" class='portfolio-item'>
+					<div class="pi-img">
+						<img src="<%= items[i].img %>" />
+						<div class="border"></div>
+					</div>
+
+					<% var srcTit = items[i].link.split("/");
+						 var title = srcTit.pop();
+						 title = title.replace(/-/g, ' '); %>
+
+					<div class="title">
+						<h2><%= title %></h2>
+						<h4><%= items[i].desc %></h4>
+					</div>
+
       </a>
 	<% } %>
 </div>

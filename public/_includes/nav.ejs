@@ -1,3 +1,5 @@
+<div id="transitioner"></div>
+
 <nav id="nav-main">
   <div id="nav-home-icon">
     <a href="/">
@@ -8,7 +10,7 @@
 			</svg>
     </a>
   </div>
-  <div id="nav-title">Nav Title</div>
+  <div id="nav-title"><%= current.path[0] %></div>
   <div id="nav-inner">
     <ul class="nav-list-container">
       <li class="nav-list-item">
@@ -18,15 +20,15 @@
         </a>
       </li>
       <li class="nav-list-item">
-        <a href="/work">
+        <a href="/projects">
           <i class="icon-work"></i>
           <p class="nav-link-text">Works</p>
         </a>
       </li>
       <li class="nav-list-item">
-        <a href="/writing">
+        <a href="/collection">
           <i class="icon-blog"></i>
-          <p class="nav-link-text">Writing</p>
+          <p class="nav-link-text">Collection</p>
         </a>
       </li>
       <li class="nav-list-item">
@@ -36,7 +38,7 @@
         </a>
       </li>
       <li class="nav-list-item">
-        <a href="">
+        <a href="/contact">
           <i class="icon-contact"></i>
           <p class="nav-link-text">Contact</p>
         </a>
@@ -55,15 +57,34 @@
     <ul class="nav-social-container">
 
       <li class="nav-social-link">
-        <a href="">
+        <a href="https://www.facebook.com/MichaelHemingwayPhoto/">
           <i class="fa fa-facebook"></i>
         </a>
       </li>
 
-      <li class="nav-social-link"><a href=""><i class="fa fa-instagram"></i></a></li>
-      <li class="nav-social-link"><a href=""><i class="fa fa-twitter"></i></a></li>
-      <li class="nav-social-link"><a href=""><i class="fa fa-behance"></i></a></li>
-      <li class="nav-social-link"><a href=""><i class="fa fa-soundcloud"></i></a></li>
+      <li class="nav-social-link">
+        <a href="https://www.instagram.com/mikemingway/">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+
+      <li class="nav-social-link">
+        <a href="https://twitter.com/mikemingway">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+
+      <li class="nav-social-link">
+        <a href="https://www.behance.net/Fromaggio">
+          <i class="fa fa-behance"></i>
+        </a>
+      </li>
+
+      <li class="nav-social-link">
+        <a href="https://soundcloud.com/michael-hemingway">
+          <i class="fa fa-soundcloud"></i>
+        </a>
+      </li>
     </ul>
   </div>
 </nav>

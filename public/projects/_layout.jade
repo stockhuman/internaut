@@ -7,11 +7,16 @@ body
 		#content.container.page
 			if (cover != '')
 				header.cover
-					img(src="/assets/img/pcovers/#{ cover }" alt="")
+					img(src="/assets/img/work/covers/#{ cover }" alt="")
 				article(data-base=data_base, data-highlight=data_highlight).page
 					!= yield
 			else
 				!= yield
+				
+			nav.project-nav
+				a.project-nav-next(electric-draggable)
+					h4 next project
+					p.project-nav-title electric blue
 			
 
 != partial("../_includes/footer")
