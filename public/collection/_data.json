@@ -1,6 +1,7 @@
 {
 	"index" : {
-		"title"        : "MHEM",
-		"description"  : "home"
+		"title"        : "Collection",
+		"description"  : "the odds and ends",
+		"layout"       : "_index-layout"
 	}
 }

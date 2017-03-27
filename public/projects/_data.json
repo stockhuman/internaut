@@ -13,8 +13,8 @@
 		"cover"          : "theplant-2.png"
 	},
 	"5ft25" : {
-		"title"          : "MHEM",
-		"description"    : "home",
+		"title"          : "5ft25",
+		"description"    : "A custom photography-centered WordPress theme",
 		"data_base"      : "#f0f0f0",
 		"data_highlight" : "#000000",
 		"cover"          : "5ft25.jpg"

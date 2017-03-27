@@ -8,9 +8,18 @@
 }
 
 #transitioner {
-  @extend #nav-main;
+  position: fixed;
+  z-index: map-get($z-index, 'nav');
+  background: $white; // change for currentColor?
+
+  transition-property: width;
   transition-duration: .31s;
-  box-shadow: none;
+
+  top: $navPad;
+  bottom: $navPad;
+  left: $navPad;
+  width: $navWidth;
+
   display: none;
   @include media('>tablet') {
     display: block;

@@ -1,0 +1,35 @@
+<%
+
+// declare the data array found in ./_data.json
+const data = public.projects._data;
+
+// traverse the iterable
+for (let prop in data) {
+
+	let i = Object.keys(data).indexOf(prop);
+
+	if (current.source == prop) {
+		var prev = Object.keys(data)[i - 1],
+			next = Object.keys(data)[i + 1];
+
+        %> <nav class="project-nav"> <%
+            // check for and display link to previous page
+            if (prev != 'index') { %>
+                <a href="/projects/<%= prev %>" data-hint="<%= data[prev].data_highlight %>" class="project-nav-next">
+                    <h4>Previous</h4>
+                    <p class="project-nav-title"><%= data[prev].title %></p>
+                </a>
+            <% }
+            // check for and display link to next page
+            if (next) { %>
+                <a href="/projects/<%= next %>" data-hint="<%= data[next].data_highlight %>" class="project-nav-prev">
+                    <h4>Next</h4>
+                    <p class="project-nav-title"><%= data[next].title %></p>
+                </a>
+            <% } %>
+
+        </nav> <%
+    }
+}
+
+%>

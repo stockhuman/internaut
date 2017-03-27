@@ -17,6 +17,7 @@ $(function() {
    }
 
    $('#nav-main').css('background', bg);
+	 $('#transitioner').css('background', bg);
    $('#nav-main').css('color', accent);
 
    $('#nav-toggle span').each(function() {
@@ -31,16 +32,15 @@ $(function() {
     }
   }
 
-
- $(document).ready(function() {
-   navColors();
- });
+  // Load the colors on fresh page
+  $(document).ready(function() {
+    navColors();
+  });
 
   /**
   * smoothState
   */
   $('#main').smoothState({
-
     onStart : {
       duration: 450,
       // Alterations to the page
@@ -53,6 +53,11 @@ $(function() {
     onAfter: function () {
       navColors();
       resetNav();
+      if ((window.location.href.indexOf("collection") > -1)) {
+        $('body').addClass('collection');
+      } else {
+        $('body').removeClass('collection');
+      }
       $('body').toggleClass('is-exiting');
     }
   });

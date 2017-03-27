@@ -1,0 +1,9 @@
+.collection {
+	background: #00824E;
+
+	h1 {
+		background-color: #dedede;
+		padding-left: 1rem;
+		@include font-size(40);
+	}
+}
