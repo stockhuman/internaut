@@ -3,8 +3,8 @@
 body
 	!= partial("../_includes/nav")
 
-	main#main
-		#content.container.page
+	#container.container
+		main#content.page
 			if (cover != '')
 				header.cover
 					img(src="/assets/img/work/covers/#{ cover }" alt="")
@@ -13,5 +13,6 @@ body
 					!= partial("../_includes/projectNav")	
 			else
 				!= yield		
+				!= partial("../_includes/footer")
+	!= partial("../_includes/scripts")
 
-!= partial("../_includes/footer")

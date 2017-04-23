@@ -1,0 +1,84 @@
+.home {
+	text-align: center;
+	padding-bottom: $navWidth;
+}
+
+// namespace "pi" : portfolio-item
+.home-item {
+	width: 100%;
+	margin: 3rem;
+	user-select: none;
+	.hi-img {
+		position: relative;
+		overflow: hidden;
+
+		img {
+			transition: transform 3s linear;
+		}
+
+		.border {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			border: 1px solid #000;
+			opacity: 0;
+			transition: all .2s ease;
+		}
+	}
+	.title {
+		bottom: 0;
+		left: 50%;
+		padding-top: 4em;
+		transform: translate(-50%,0);
+		position: relative;
+		h2 {
+			position: relative;
+			margin-bottom: 0.4rem;
+		}
+		h4 {
+			font-family: monospace;
+			@include font-size(19);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 2em;
+			left: 50%;
+			width: 2.5em;
+			border-top: 1px solid #000;
+			transform: translateX(-50%) rotate(90deg);
+		}
+	}
+
+	&:hover {
+		img { transform: scale(1.1); }
+		.border {
+			top: 1.5em;
+			left: 1.5em;
+			bottom: 1.5em;
+			right: 1.5em;
+			opacity: 1;
+		}
+	}
+}
+
+
+@include media('>tablet') {
+	.home-item {
+		display: inline-block;
+		width: 40%;
+		float: left;
+		&:nth-of-type(even) {
+			float: right;
+		}
+	}
+}
+
+@include media('>ultrawide') {
+	.home-item {
+		width: 40%;
+		padding-bottom: 4rem;
+	}
+}

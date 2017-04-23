@@ -1,77 +1,86 @@
 
 // Cover (featured image)
 header.cover {
-
+	svg {
+		max-height: 80vh;
+	}
 }
 
 .page-title {
-  text-align: center;
+	text-align: center;
+	margin-top: $navWidth;
 }
 
 article.page {
-  max-width: 700px;
-  padding: $navWidth/3;
-  margin: 0 auto;
-  @include font-size(28);
-  color: lighten($black, 17%);
-  line-height: 1.4;
-  padding-bottom: $navWidth;
-  figure {
-    overflow: hidden;
-    padding: $navWidth 0 $navWidth 0;
-    margin: 0 -1.6rem 0 -1.6rem; // magic number...
-  }
+	max-width: 700px;
+	padding: $navWidth/3;
+	margin: 0 auto;
+	@include font-size(28);
+	color: lighten($black, 17%);
+	line-height: 1.4;
+	padding-bottom: $navWidth;
+	figure {
+		overflow: hidden;
+		padding: $navWidth 0 $navWidth 0;
+		margin: 0 -1.6rem 0 -1.6rem; // magic number...
+	}
 }
 
 .project-nav {
-  align-self: flex-end;
-  width: 100%;
+	align-self: flex-end;
+	width: 100%;
 
-  .project-nav-next {
-    position: absolute;
-    right: 2rem;
-    padding: 2rem;
-    text-align: center;
-    margin-bottom: 8rem;
-    border: solid 2px $gray-darker;
-    h4 {
-      margin: .3rem;
-    }
-  }
+	.project-nav-next, .project-nav-prev {
+		width: calc(50% - 4px);
+		padding: 2rem;
+		margin: 4rem 2px;
+		text-align: center;
+		margin-bottom: 4rem;
+		border: solid 2px $gray-darker;
+		h4 {
+			margin: .3rem;
+		}
+	}
+	.project-nav-next {
+		float: left;
+	}
+	.project-nav-prev {
+		float: right;
+	}
 }
 
 @include media('>tablet') {
-  article.page{
-    padding: $navWidth;
+	article.page{
+		padding: $navWidth;
 		figure {
 			margin: 0 -15% 0 -15%; // magic number...
 		}
-  }
+	}
 }
 
 @include media(">ultrawide") {
 
-  .container.page{
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-  }
+	#content.page{
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+	}
 
-  .cover {
-    position: fixed;
-    // flex-grow: 3;
-    width: 33%;
-    height: calc(100vh - 1rem);
-    object-fit: cover;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+	.cover {
+		position: fixed;
+		// flex-grow: 3;
+		width: 33%;
+		height: calc(100vh - 1rem);
+		object-fit: cover;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 
-  article.page {
-    flex-grow: 3;
-    margin-right: 50%;
-  }
+	article.page {
+		flex-grow: 3;
+		margin-right: 50%;
+	}
 }

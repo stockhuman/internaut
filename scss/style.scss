@@ -1,16 +1,5 @@
 @charset 'utf-8';
 
-/******************************************************************
-Theme Name: Your theme name here
-Theme URI:
-Description:
-Author: Michael Hemingway
-Author URI: http://www.mikemingway.com
-Version: 4.0
-License: GNU General Public License & MIT
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: Sass
-******************************************************************/
 
 @import
 	'utils/utilities'; // Grabs all files in folder
@@ -27,19 +16,13 @@ Tags: Sass
 @import
 	'layout/layout';
 
-// @import
-// 	'sections/home',
-// 	'sections/page';
-//
-// @import
-// 	'UX/animations',
-// 	'UX/preloader';
-//
 @import
-// 	'components/buttons',
+	'sections/home',
+	'sections/projects',
+	'sections/about',
+	'sections/collection';
+
+@import
 	'components/links',
-// 	'components/code',
 	'components/forms',
-// 	'components/lists',
 	'components/media';
-// 	'components/tables';

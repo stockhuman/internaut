@@ -1,0 +1,13 @@
+!= partial("../../_includes/head")
+
+body
+	!= partial("../../_includes/nav")
+
+	#container.container
+		main#content
+			article(data-base=data_base, data-highlight=data_highlight).page
+				h1=title
+				!= yield
+				!= partial("../../_includes/footer")
+
+	!= partial("../../_includes/scripts")

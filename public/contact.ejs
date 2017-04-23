@@ -1,9 +1,74 @@
-<div id="content" class="container about">
+<main id="content" class="page contact">
 	<header class="cover">
 			<svg viewBox="0 0 100 100"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><circle class="cls-1" cx="35" cy="65" r="9"/><circle class="cls-1" cx="65" cy="35" r="9"/><line class="cls-1" x1="41" y1="59" x2="58.5" y2="41.5"/></svg>
 	</header>
-	<article class="page about" data-base="darkblue">
-		<textarea name="name" rows="8"></textarea>
+	<article class="page contact" data-base="darkblue">
+
+		<p></p>
+
+		<form id="contact-form" class="no-smoothState" action="mailer.php">
+			<textarea id="form-message" name="message" rows="8" placeholder="Message" required></textarea>
+			<input  id="form-name" name="name" type="text"  placeholder="Name">
+			<input  id="form-email" name="email" type="email"  placeholder="Email" required>
+			<input  id="form-honey" name="sbh"  type="text"  placeholder="leave me blank">
+			<button id="form-submit" type="submit">Boop!</button>
+		</form>
+
+		<div class="form-info"></div>
 	</article>
+
+	<script type="text/javascript">
+		// scary javascript inline stuff
+
+		(function() {
+			document.getElementById('form-honey').style.display = 'none';
+
+			var form = document.getElementById('contact-form'),
+					text = document.getElementById('form-message'),
+					name = document.getElementById('form-name'),
+					msgs = document.getElementById('form-info');
+
+			if (window.jQuery) {
+
+				$(form).on('submit', function(e){
+					e.preventDefault();
+				});
+
+				var formData = $(form).serialize();
+
+				// submit the form
+				$.ajax({
+					type: 'POST',
+					url: $(form).attr('action'),
+					data: formData
+
+				}).done(function(response) {
+					// Make sure that the formMessages div has the 'success' class.
+					$(msgs).removeClass('error');
+					$(msgs).addClass('success');
+
+					// Set the message text.
+					$(msgs).text(response);
+
+					// Clear the form.
+					$('#name').val('');
+					$('#email').val('');
+					$('#message').val('');
+
+				}).fail(function(data) {
+					// Make sure that the formMessages div has the 'error' class.
+					$(msgs).removeClass('success');
+					$(msgs).addClass('error');
+
+					// Set the message text.
+					if (data.responseText !== '') {
+						$(msgs).text(data.responseText);
+					} else {
+						$(msgs).text('Oops! An error occured and your message could not be sent.');
+					}
+				});
+			}
+		}());
+	</script>
 
 </div>

@@ -3,9 +3,10 @@
 body.collection
 	!= partial("../_includes/nav")
 
-	main#main
-		#content.container
+	#container.container
+		main#content
 			article(data-base="#11051b", data-highlight="#ffffff").page
 				!= yield
+				!= partial("../_includes/footer")
 
-!= partial("../_includes/footer")
+	!= partial("../_includes/scripts")

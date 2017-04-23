@@ -1,7 +1,31 @@
+form {
+	display: flex;
+	flex-flow: wrap;
+}
+
 textarea {
+	flex-grow: 5;
   display: block;
   height: auto;
   width: 100%;
-  resize: horizontal;
-  padding: 1rem;
+  resize: vertical;
 }
+
+input, textarea, button {
+	padding: 1rem;
+	margin: 0.5em 0;
+	border-radius: 2px;
+	border: 1px transparent solid;
+	&:focus {
+		border: 1px blue solid;
+	}
+}
+
+input {
+	width: 50%;
+}
+
+button[type=submit] {
+	width: 50%;
+}
+

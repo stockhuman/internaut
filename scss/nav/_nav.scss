@@ -20,3 +20,21 @@
 		}
 	}
 }
+
+// small mobile screens
+@media screen and (max-height: 480px) {
+
+	.nav-is-open {
+		.nav-list-item a i {
+	    font-size: 3rem;
+		}
+	}
+
+	#nav-main {
+  	height: $navWidth/1.2;
+	}
+	#nav-toggle {
+	  bottom:-5px;
+  }
+}
+

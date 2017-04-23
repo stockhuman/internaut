@@ -6,8 +6,7 @@
   box-shadow: 0 0 26px 1px rgba(0,0,0,0.28);
 
   transition-property: height, width, background, color;
-  transition-duration: 0.25s, 0.45s, 1s, 2s;
-  // transition-timing-function: $easeInQuart;
+  transition-duration: 0.45s, 0.5s, 1s, 2s;
 
   height: $navWidth;
   bottom: 0;
@@ -27,7 +26,6 @@
 
 #nav-social,
 #nav-title {
-  visibility: hidden;
   width: 100%;
   z-index: 2;
 }
@@ -37,7 +35,7 @@
   top: $navPad*2.1;
   font-weight: 200;
   left: 65px; // width of logo - parameterize
-	transition: opacity .3s ease-in-out;
+	transition: opacity .3s ease;
 	opacity: 0;
 }
 
@@ -55,11 +53,9 @@
 
   a {
     text-decoration: none;
-    display: flex;
 
     i { // img?
       display: block;
-      align-self: flex-start;
       font-size: $navIconSize;
     }
   }
@@ -67,7 +63,6 @@
 
 .nav-list-container {
   padding: 0;
-  flex-wrap: wrap;
 
   display: table-cell;
   text-align: center;
@@ -95,6 +90,7 @@
 
 #nav-social {
   z-index: 2;
+  visibility: hidden;
   position: absolute;
   bottom: 0;
   right: 0;

@@ -1,0 +1,20 @@
+.collection {
+	background: #00824E;
+
+
+	h1 {
+		background-color: #dedede;
+		padding-left: 1rem;
+		@include font-size(40);
+	}
+
+	article {
+		font-family: monospace;
+		h3 {
+			color: #dedede;
+			line-height: 1.2;
+			letter-spacing: 0;
+			margin-bottom: 1rem;
+		}
+	}
+}

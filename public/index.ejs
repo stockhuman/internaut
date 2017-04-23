@@ -1,11 +1,12 @@
-<div id="content" class="container projects">
-	<img src="/assets/img/home/home.png" alt="">
-	<%# 
-	<h1>The best</h1>%>
+<main id="content" class="home">
+	<a href="/about" class="home-banner">
+		<img src="/assets/img/home/home.png" alt="" >
+	</a>
+	
 
 	<% for ( var i = 0; i < items.length; i ++)  { %>
-			<a href="<%= items[i].link %>" class='portfolio-item'>
-					<div class="pi-img">
+			<a href="<%= items[i].link %>" class='home-item'>
+					<div class="hi-img">
 						<img src="<%= items[i].img %>" />
 						<div class="border"></div>
 					</div>
@@ -21,4 +22,4 @@
 
       </a>
 	<% } %>
-</div>
+</main>

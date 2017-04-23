@@ -23,22 +23,22 @@
 
 	"work" : {
 		"title"        : "Projects",
-		"description"  : "doot"
+		"description"  : "All my works, ye mighty."
 	},
 
 	"about" : {
 		"title"        : "About",
-		"description"  : "doot"
+		"description"  : "The man, the myth and the legend. Michael Hemingway is a photographer, multimedia artist and web developer most days."
 	},
 
 	"writing" : {
 		"title"        : "Writing",
-		"description"  : "doot"
+		"description"  : "Collected journals, musings and the like."
 	},
 
 	"contact" : {
 		"title"        : "Contact",
-		"description"  : "doot"
+		"description"  : "Email me"
 	},
 
 	"404" : {

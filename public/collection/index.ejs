@@ -1,1 +1,22 @@
 <h1>The Collection</h1>
+
+<div class="">
+
+
+	<%# display all posts by category %>
+	<% 
+	const content = public.collection.writing;
+
+	for (var i = 1; i <  content._contents.length; i++) { 
+
+		var str = content._contents[i];
+		var sub = str.substring(0, str.length - 5); // remove .html
+
+		%>
+
+		<h3><a href="/collection/writing/<%= sub %>"><%= i-1 + " " + content._contents[i] %></a></h3>
+		<p><%= content._data[sub].description %></p>
+
+	<% } // end loop %>
+
+</div>

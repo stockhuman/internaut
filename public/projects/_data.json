@@ -10,20 +10,35 @@
 		"description"    : "Dawson College's Official online student newspaper",
 		"data_base"      : "#ffffff",
 		"data_highlight" : "#18422e",
-		"cover"          : "theplant-2.png"
+		"cover"          : "the-plant.png",
+		"category"       : "web",
+		"year"           : "2015"
 	},
 	"5ft25" : {
 		"title"          : "5ft25",
 		"description"    : "A custom photography-centered WordPress theme",
 		"data_base"      : "#f0f0f0",
 		"data_highlight" : "#000000",
-		"cover"          : "5ft25.jpg"
+		"cover"          : "5ft25.jpg",
+		"category"       : "web",
+		"year"           : "2016"
 	},
 	"intervals-ii" : {
-		"title"          : "MHEM",
-		"description"    : "home",
+		"title"          : "Intervals II",
+		"description"    : "",
 		"data_base"      : "#f0f0f0",
 		"data_highlight" : "#000000",
-		"cover" : ""
+		"cover"          : "",
+		"category"       : "web",
+		"year"           : "2016"
+	},
+	"bitmap" : {
+		"title"          : "Bitmap",
+		"description"    : "",
+		"data_base"      : "#0000ff",
+		"data_highlight" : "#ffffff",
+		"cover"          : "bitmap.png",
+		"category"       : "web",
+		"year"           : "2016"
 	}
 }
