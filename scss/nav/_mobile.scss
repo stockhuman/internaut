@@ -4,6 +4,7 @@
   background: $nav-default-color; // change for currentColor?
   color: white;
   box-shadow: 0 0 26px 1px rgba(0,0,0,0.28);
+  border-radius: 2px;
 
   transition-property: height, width, background, color;
   transition-duration: 0.45s, 0.5s, 1s, 2s;

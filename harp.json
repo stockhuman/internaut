@@ -1,8 +1,7 @@
 {
 	"globals" : {
-		"title": "MHEM",
-		"url": "http://github.com/kennethormandy/hb-simurai"
-	},
-	"domains" : []
-
+		"title": "MH",
+		"description": "",
+		"cover": "default.png"
+	}
 }

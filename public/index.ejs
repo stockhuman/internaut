@@ -12,11 +12,11 @@
 					</div>
 
 					<% var srcTit = items[i].link.split("/");
-						 var title = srcTit.pop();
-						 title = title.replace(/-/g, ' '); %>
+						 var linkTitle = srcTit.pop();
+						 linkTitle = linkTitle.replace(/-/g, ' '); %>
 
 					<div class="title">
-						<h2><%= title %></h2>
+						<h2><%= linkTitle %></h2>
 						<h4><%= items[i].desc %></h4>
 					</div>
 

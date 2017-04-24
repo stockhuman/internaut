@@ -1,0 +1,7 @@
+!= partial("_includes/head")
+	body
+		!= partial("_includes/nav")
+		#container.container
+			!= yield
+			!= partial("_includes/footer")
+		!= partial("_includes/scripts")

@@ -1,6 +1,6 @@
 != partial("../../_includes/head")
 
-body
+body.collection
 	!= partial("../../_includes/nav")
 
 	#container.container
@@ -8,6 +8,6 @@ body
 			article(data-base=data_base, data-highlight=data_highlight).page
 				h1=title
 				!= yield
-				!= partial("../../_includes/footer")
+		!= partial("../../_includes/footer")
 
 	!= partial("../../_includes/scripts")

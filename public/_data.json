@@ -1,29 +1,29 @@
 {
 	"index" : {
-		"title"        : "MHEM",
-		"description"  : "home",
+		"title"        : "MH",
+		"description"  : "test",
 		"items"        : [
-				{
-					"img"  : "/assets/img/home/5ft25cover.png",
-				  "link" : "/projects/5ft25",
-					"desc" : "Web | 2016"
-				},
-				{
-					"img"  : "/assets/img/home/theplantcover.jpg",
-					"link" : "/projects/the-plant",
-					"desc" : "Web | 2015"
-				},
-				{
-					"img"  : "/assets/img/home/archcover.jpg",
-					"link" : "/projects/intervals-ii",
-					"desc" : ""
-				}
+			{
+				"img"  : "/assets/img/home/5ft25cover.png",
+			  "link" : "/projects/5ft25",
+				"desc" : "Web | 2016"
+			},
+			{
+				"img"  : "/assets/img/home/theplantcover.jpg",
+				"link" : "/projects/the-plant",
+				"desc" : "Web | 2015"
+			},
+			{
+				"img"  : "/assets/img/home/archcover.jpg",
+				"link" : "/projects/intervals-ii",
+				"desc" : "Photo | 2014"
+			},
+			{
+				"img"  : "/assets/img/home/bitmapcover.jpg",
+				"link" : "/projects/bitmap",
+				"desc" : "Code | 2017"
+			}
 		]
-	},
-
-	"work" : {
-		"title"        : "Projects",
-		"description"  : "All my works, ye mighty."
 	},
 
 	"about" : {
@@ -31,9 +31,9 @@
 		"description"  : "The man, the myth and the legend. Michael Hemingway is a photographer, multimedia artist and web developer most days."
 	},
 
-	"writing" : {
-		"title"        : "Writing",
-		"description"  : "Collected journals, musings and the like."
+	"this-site" : {
+		"title"        : "The Site",
+		"description"  : "Details about the creation of michaelhemingway.com and other technical things"
 	},
 
 	"contact" : {

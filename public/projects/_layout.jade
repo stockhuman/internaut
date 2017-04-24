@@ -8,11 +8,12 @@ body
 			if (cover != '')
 				header.cover
 					img(src="/assets/img/work/covers/#{ cover }" alt="")
+					!= partial("../_includes/projectNav")	
 				article(data-base=data_base, data-highlight=data_highlight).page
 					!= yield
-					!= partial("../_includes/projectNav")	
 			else
-				!= yield		
-				!= partial("../_includes/footer")
+				!= yield
+
+			!= partial("../_includes/footer")
 	!= partial("../_includes/scripts")
 

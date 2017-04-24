@@ -1,3 +1,7 @@
+	<header class="cover">
+		<svg viewBox="0 0 100 100"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><title>Writing</title><line class="cls-1" x1="27" y1="36.5" x2="27" y2="43.5"/><line class="cls-1" x1="26.5" y1="36.5" x2="73.5" y2="36.5"/><line class="cls-1" x1="27" y1="46.5" x2="27" y2="53.5"/><line class="cls-1" x1="26.5" y1="46.5" x2="73.5" y2="46.5"/><line class="cls-1" x1="27" y1="56.5" x2="27" y2="63.5"/><line class="cls-1" x1="26.5" y1="56.5" x2="73.5" y2="56.5"/></svg>
+	</header>
+
 <h1>The Collection</h1>
 
 <div class="">
@@ -7,14 +11,14 @@
 	<% 
 	const content = public.collection.writing;
 
-	for (var i = 1; i <  content._contents.length; i++) { 
+	for (var i = 0; i <  content._contents.length; i++) { 
 
 		var str = content._contents[i];
 		var sub = str.substring(0, str.length - 5); // remove .html
 
 		%>
 
-		<h3><a href="/collection/writing/<%= sub %>"><%= i-1 + " " + content._contents[i] %></a></h3>
+		<h3><a href="/collection/writing/<%= sub %>"><%= i + " " + content._contents[i] %></a></h3>
 		<p><%= content._data[sub].description %></p>
 
 	<% } // end loop %>

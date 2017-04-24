@@ -6,19 +6,22 @@ header.cover {
 	}
 }
 
+// little ul with descriptors
 .page-title {
-	text-align: center;
 	margin-top: $navWidth;
+	margin-bottom: $navWidth;
 }
 
-article.page {
-	max-width: 700px;
-	padding: $navWidth/3;
+article.page {	
+	max-width: 740px;
+	padding: 0 20px 0 20px;
 	margin: 0 auto;
 	@include font-size(28);
 	color: lighten($black, 17%);
-	line-height: 1.4;
+	line-height: 1.5;
 	padding-bottom: $navWidth;
+
+	// images
 	figure {
 		overflow: hidden;
 		padding: $navWidth 0 $navWidth 0;
@@ -27,60 +30,70 @@ article.page {
 }
 
 .project-nav {
-	align-self: flex-end;
 	width: 100%;
+	display: flex;
+	position: relative;
+	text-align: center;
+	color: darken($gray-lighter, 20%);
 
-	.project-nav-next, .project-nav-prev {
-		width: calc(50% - 4px);
-		padding: 2rem;
-		margin: 4rem 2px;
-		text-align: center;
-		margin-bottom: 4rem;
-		border: solid 2px $gray-darker;
-		h4 {
-			margin: .3rem;
+	a[class^='project-nav-'] {
+		padding: $navWidth/3;
+		width: 25%;
+		// border-left: 1px solid $gray-light;
+		margin-bottom: 0;
+		border-bottom: 1px darken($gray-lighter, 5%) solid;
+		transition: color .2s;
+		&:hover {
+			color: $gray;
 		}
 	}
-	.project-nav-next {
-		float: left;
+
+	.project-nav-next, .project-nav-prev {
+		transition: background .2s ease;
+		&:hover {
+			background: darken($gray-lighter, 5%);
+		}
 	}
+
+	.project-nav-next {
+		&::after {
+			float: right;
+			content: ">";
+		}
+	}
+
 	.project-nav-prev {
-		float: right;
+		&::before {
+			float: left;
+			content: "<";
+		}
+
+	}
+	.project-nav-year {
+		border-right: 1px darken($gray-lighter, 5%) solid;
+	}
+	.project-nav-cat {
+		border-right: 1px darken($gray-lighter, 5%) solid;
+		border-left:  1px darken($gray-lighter, 5%) solid;
+	}
+	&.no-next {}
+	&.no-prev {
+		margin-left: 25%;
 	}
 }
 
 @include media('>tablet') {
 	article.page{
-		padding: $navWidth;
-		figure {
-			margin: 0 -15% 0 -15%; // magic number...
+		figure img {
+			border-radius: 2px; // add a rounded corner when the image doesn't size edge to edge
 		}
 	}
 }
 
-@include media(">ultrawide") {
-
-	#content.page{
-		display: flex;
-		flex-direction: row-reverse;
-		flex-wrap: wrap;
-	}
-
-	.cover {
-		position: fixed;
-		// flex-grow: 3;
-		width: 33%;
-		height: calc(100vh - 1rem);
-		object-fit: cover;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+@include media('>desktop') {
+	article.page{
+		figure {
+			margin: 0 -15% 0 -15%; // magic number...
 		}
-	}
-
-	article.page {
-		flex-grow: 3;
-		margin-right: 50%;
 	}
 }

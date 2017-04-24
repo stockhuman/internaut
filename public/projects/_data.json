@@ -1,10 +1,10 @@
 {
 	"index" : {
-		"title" : "MHEM",
-		"description" : "",
+		"title" : "MH",
+		"description" : "test",
 		"layout": "_prj-layout"
 	},
-
+	
 	"the-plant" : {
 		"title"          : "The Plant",
 		"description"    : "Dawson College's Official online student newspaper",
@@ -38,7 +38,16 @@
 		"data_base"      : "#0000ff",
 		"data_highlight" : "#ffffff",
 		"cover"          : "bitmap.png",
-		"category"       : "web",
-		"year"           : "2016"
+		"category"       : "code",
+		"year"           : "2017"
+	},
+	"pasta" : {
+		"title"          : "Pasta",
+		"description"    : "",
+		"data_base"      : "#191900",
+		"data_highlight" : "#999900",
+		"cover"          : "pasta.jpg",
+		"category"       : "game",
+		"year"           : "2017"
 	}
 }

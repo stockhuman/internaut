@@ -1,6 +1,6 @@
 .collection {
 	background: #00824E;
-
+	// background-image: url(../img/ui/textile.jpg);
 
 	h1 {
 		background-color: #dedede;
@@ -15,6 +15,25 @@
 			line-height: 1.2;
 			letter-spacing: 0;
 			margin-bottom: 1rem;
+			a {
+				position: relative;
+				&:hover {
+					&::before {
+						max-width: 100%;
+					}
+				}
+				&::before {
+					transition: max-width .2s ease;
+					position: absolute;
+					content: '';
+					background: #dedede;
+					bottom: -1px;
+					height: 2px;
+
+					max-width: 13px;
+					width: 100%;
+				}
+			}
 		}
 	}
 }

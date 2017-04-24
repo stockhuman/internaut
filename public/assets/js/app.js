@@ -8,21 +8,24 @@ $(function() {
  var bg, accent;
 
  function navColors() {
-	 if ($('article.page').attr('data-base') != (undefined)) {
-		 bg = $('article.page').attr('data-base');
-		 accent = $('article.page').attr('data-highlight');
-	 } else {
-		 bg = '#3b444c';
-		 accent = '#fff';
-	 }
+		if ($('article.page').attr('data-base') != (undefined)) {
+			bg = $('article.page').attr('data-base');
+			accent = $('article.page').attr('data-highlight');
+		} else {
+			bg = '#3b444c';
+			accent = '#fff';
+		}
 
-	 $('#nav-main').css('background', bg);
-	 $('#transitioner').css('background', bg);
-	 $('#nav-main').css('color', accent);
+		$('#nav-main').css('background', bg);
+		$('#transitioner').css('background', bg);
+		$('#nav-main').css('color', accent);
 
-	 $('#nav-toggle span').each(function() {
-		 $(this).css('background', accent);
-	 });
+		$('#nav-toggle span').each(function() {
+			$(this).css('background', accent);
+		});
+
+		$('meta[name=theme-color]').remove();
+		$('head').append('<meta name="theme-color" content="'+bg+'">');
 	}
 
 	function resetNav() {
@@ -76,14 +79,32 @@ $(function() {
 
 
 (function ($) {
-  'use strict';
+	'use strict';
 
-  // 
-  $('.isotope').isotope({
-  	itemSelector: '.item',
-  	columnWidth: '.project',
-  	percentPosition: true
-  });
+	var url = document.URL, 
+			sort = '*';
+
+	// function parseQuery(qstr) {
+	// 	var query = {};
+	// 	var a = (qstr[0] === '?' ? qstr.substr(1) : qstr).split('&');
+	// 	for (var i = 0; i < a.length; i++) {
+	// 			var b = a[i].split('=');
+	// 			query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
+	// 	}
+	// 	return query;
+	// }
+
+	// the projects page
+	$('.isotope').isotope({
+		itemSelector: '.item',
+		columnWidth: '.project',
+		percentPosition: true
+	});
+
+	// $(window).on('load', function () {
+	// 	console.log(parseQuery('date'));
+	// });
+
 
 }(jQuery));
 

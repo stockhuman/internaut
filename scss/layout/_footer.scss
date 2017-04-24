@@ -1,4 +1,14 @@
 footer {
-	// position: absolute;
-	// bottom : $navPad;
+	background: darken($gray-lighter, 5%);
+	border-radius: 2px;
+	padding: $navWidth;
+	margin-bottom: $navPad + $navWidth;
+	color: $gray;
+}
+
+// adjust for the nav being at the bottom in mobile
+@include media('>tablet') {
+	footer {
+		margin-bottom: $navPad;
+	}
 }

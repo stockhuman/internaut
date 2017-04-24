@@ -1,0 +1,60 @@
+<main id="content" class="page about">
+	<header class="cover">
+		<svg viewBox="0 0 100 100">
+			<path d="M60,26v20H40V26H60 M61,25H39v22h22V25z"/>
+			<path d="M39,53v20H19V53H39 M40,52H18v22h22V52z"/>
+			<path d="M81,53v20H61V53H81 M82,52H60v22h22V52z"/>
+			<rect x="39" y="48" width="22" height="1"/>
+			<rect x="18" y="50" width="64" height="1"/>
+		</svg>
+	</header>
+	<article class="page about" data-base="#6f6f6f" data-highlight="#555">
+		<p>I spent far too long in the planning phase.</p>
+
+		<figure>
+			<img src="/assets/img/other/site-0.jpg">
+			<img src="/assets/img/other/site-1.jpg">
+			<img src="/assets/img/other/site-2.jpg">
+			<img src="/assets/img/other/site-3.jpg">
+			<img src="/assets/img/other/site-4.jpg">
+			<img src="/assets/img/other/site-5.jpg">
+			<img src="/assets/img/other/site-6.jpg">
+			<img src="/assets/img/other/site-7.jpg">
+			<img src="/assets/img/other/site-8.jpg">
+		</figure>
+
+		<p>Quite the adventure, isn't it?</p>
+
+		<p>This site is built using the now-abandoned static site generator <a href="http://harpjs.com">harp</a>. Thankfully, it still works! I can write all my pages in markdown, or ejs, jade, stylus and a bunch of other preprocessors. I compile the whole thing into a folder and bingo. The entire site in a folder. No live anything.</p>
+
+		<p>The idea to go for a static site build was mostly born of curiosity, and I'd also grown a little tired with the needless complexity introduced by wordpress as a CMS for something so simple as a portfolio site.</p>
+
+		<p>I miss the front-end, but hey.</p>
+	</article>
+	<style type="text/css">
+		#nav-main {color: white !important;}
+		#nav-inner {
+			animation: colorchange 50s; 
+			-webkit-animation: colorchange 50s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes colorchange
+		{
+			0%   {background: red;}
+			25%  {background: yellow;}
+			50%  {background: blue;}
+			75%  {background: green;}
+			100% {background: red;}
+		}
+
+		@-webkit-keyframes colorchange {
+			0%   {background: red;}
+			25%  {background: yellow;}
+			50%  {background: blue;}
+			75%  {background: green;}
+			100% {background: red;}
+		}
+	</style>
+
+</main>
