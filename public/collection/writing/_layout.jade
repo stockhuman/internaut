@@ -5,8 +5,9 @@ body.collection
 
 	#container.container
 		main#content
-			article(data-base=data_base, data-highlight=data_highlight).page
-				h1=title
+			article(data-base="#11051b", data-highlight="#ffffff").page.item
+				h2=title
+				hr
 				!= yield
 		!= partial("../../_includes/footer")
 

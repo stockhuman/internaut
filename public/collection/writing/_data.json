@@ -1,18 +1,12 @@
 {
-	"index" : {
-		"title" : "writing",
-		"description": "All my writing"
-	},
-	"test" : {
-		"title" : "test",
-		"description": "Just seeing if this all works"
-	},
-	"test-2" : {
-		"title" : "test 2",
-		"description": "electric boogaloo"
-	},
-	"crawford-quote" : {
-		"title" : "Beads",
-		"description": "hey"
-	}
+	"index"          : { "title" : "writing" },
+	"eliza"          : { "title" : "ELIZA"    },
+	"idealist"       : { "title" : "Idealist"  },
+	"crawford-quote" : { "title" : "Beads"   },
+	"rosie" : { "title" : "Rosie Senarios"   },
+	"roguelike" : { "title" : "Permalife"   },
+	"bathesda" : {"title" : "Bathesda"},
+	"assorted-ideas" : {"title" : "Assorted Ideas"},
+	"links" : {"title" : "HD links"},
+	"cold-sticks" : {"title" : "The Straight, Cold Sticks"}
 }

@@ -1,39 +1,62 @@
 .collection {
 	background: #00824E;
-	// background-image: url(../img/ui/textile.jpg);
 
 	h1 {
 		background-color: #dedede;
-		padding-left: 1rem;
 		@include font-size(40);
+		font-family: monospace;
+		padding: 2px 0 2px 8px;
 	}
 
-	article {
-		font-family: monospace;
-		h3 {
-			color: #dedede;
-			line-height: 1.2;
-			letter-spacing: 0;
-			margin-bottom: 1rem;
-			a {
-				position: relative;
-				&:hover {
-					&::before {
-						max-width: 100%;
-					}
-				}
-				&::before {
-					transition: max-width .2s ease;
-					position: absolute;
-					content: '';
-					background: #dedede;
-					bottom: -1px;
-					height: 2px;
+	h2 {
+		@include font-size(60);
+		padding-bottom: 1rem;
+	}
+	// article proper
+	article.item {
+		min-height: 100vh;
+		max-width: 100%;
+		margin-bottom: $navPad;
+		padding-top: 4em;
+		background: #dedede;
+		border-radius: 2px;
+		&>* {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		p {
+			padding-top: 2em;
+		}
+	}
 
-					max-width: 13px;
-					width: 100%;
+	// display list on the front page
+	h3 {
+		color: #dedede;
+		line-height: 1.2;
+		letter-spacing: 0;
+		margin-bottom: 1rem;
+		a {
+			position: relative;
+			&:hover {
+				&::before {
+					max-width: 100%;
 				}
+			}
+			&::before {
+				transition: max-width .2s ease;
+				position: absolute;
+				content: '';
+				background: #dedede;
+				bottom: -1px;
+				height: 2px;
+
+				max-width: 13px;
+				width: 100%;
 			}
 		}
 	}
+}
+
+.collection-list {
+	font-family: monospace;
 }

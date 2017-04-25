@@ -4,23 +4,16 @@
 
 <h1>The Collection</h1>
 
-<div class="">
-
+<div class="collection-list">
 
 	<%# display all posts by category %>
-	<% 
-	const content = public.collection.writing;
+	<% var i = 0;
 
-	for (var i = 0; i <  content._contents.length; i++) { 
+	for (var slug in public.collection.writing._data) {
 
-		var str = content._contents[i];
-		var sub = str.substring(0, str.length - 5); // remove .html
+		if (slug != 'index') { // skip the index %>
 
-		%>
+		<h3><a href="/collection/writing/<%= slug %>"><%= i + " ~~ " + slug  %></a></h3>
 
-		<h3><a href="/collection/writing/<%= sub %>"><%= i + " " + content._contents[i] %></a></h3>
-		<p><%= content._data[sub].description %></p>
-
-	<% } // end loop %>
-
+	<% i += 1; }} // end loop %>
 </div>
