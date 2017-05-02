@@ -1,12 +1,13 @@
 {
-	"index"          : { "title" : "writing" },
-	"eliza"          : { "title" : "ELIZA"    },
-	"idealist"       : { "title" : "Idealist"  },
-	"crawford-quote" : { "title" : "Beads"   },
-	"rosie" : { "title" : "Rosie Senarios"   },
-	"roguelike" : { "title" : "Permalife"   },
-	"bathesda" : {"title" : "Bathesda"},
-	"assorted-ideas" : {"title" : "Assorted Ideas"},
-	"links" : {"title" : "HD links"},
-	"cold-sticks" : {"title" : "The Straight, Cold Sticks"}
+	"index"               : { "title" : "writing" },
+	"links"               : { "title" : "HD links" },
+	"catalina"            : { "title" : "My time spent learning of the Catalina N5593V" },
+	"eliza"          			: { "title" : "ELIZA"    },
+	"idealist"      			: { "title" : "Idealist"  },
+	"crawford-quote" 			: { "title" : "Beads"   },
+	"rosie" 							: { "title" : "Rosie Senarios" },
+	"roguelike" 					: { "title" : "Permalife" },
+	"bathesda" 						: { "title" : "Bathesda" },
+	"assorted-ideas" 			: { "title" : "Assorted Ideas" },
+	"cold-sticks" 				: { "title" : "The Straight, Cold Sticks" }
 }

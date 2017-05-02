@@ -1,7 +1,7 @@
 {
 	"index" : {
 		"title" : "MH",
-		"description" : "test",
+		"description" : "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
 		"layout": "_prj-layout"
 	},
 	
@@ -32,9 +32,18 @@
 		"category"       : "web",
 		"year"           : "2016"
 	},
+	"campaign-trail" : {
+		"title"          : "Campaign Trail",
+		"description"    : "",
+		"data_base"      : "#b20000",
+		"data_highlight" : "#ffffff",
+		"cover"          : "campaign-trail.png",
+		"category"       : "game",
+		"year"           : "2016"
+	},
 	"bitmap" : {
 		"title"          : "Bitmap",
-		"description"    : "",
+		"description"    : "Glitched and processed images, done in Processing & the like",
 		"data_base"      : "#0000ff",
 		"data_highlight" : "#ffffff",
 		"cover"          : "bitmap.png",
@@ -49,5 +58,32 @@
 		"cover"          : "pasta.jpg",
 		"category"       : "game",
 		"year"           : "2017"
+	},
+	"vaporwave" : {
+		"title"          : "Bad Samples",
+		"description"    : "",
+		"data_base"      : "",
+		"data_highlight" : "",
+		"cover"          : "vaporwave.png",
+		"category"       : "audio",
+		"year"           : "2017"
+	},
+	"spain" : {
+		"title"          : "Spain & Back Again",
+		"description"    : "Images from San Fermin, Bilbao and elesewhere. My photography from that most beautiful country.",
+		"data_base"      : "#000000",
+		"data_highlight" : "#FFFFFF",
+		"cover"          : "spain.png",
+		"category"       : "photography",
+		"year"           : "2014"
+	},
+	"moon" : {
+		"title"          : "Moon",
+		"description"    : "Collected illustrations from my brief stint as a Photoshop painter.",
+		"data_base"      : "",
+		"data_highlight" : "",
+		"cover"          : "moon.png",
+		"category"       : "illustration",
+		"year"           : "2015"
 	}
 }

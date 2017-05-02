@@ -14,7 +14,6 @@ navIsOpen = false;
 			navIcons  = document.getElementsByClassName('nav-list-container')[0];
 
 	function toggleNav () {
-		navAnimation();
 		// nav is open, close it
 		if (bodyClass.contains('nav-is-open')) {
 			navIsOpen = false;
@@ -24,19 +23,6 @@ navIsOpen = false;
 			bodyClass.add('nav-is-open');
 		}
 	}
-
-
-	function navAnimation () {
-		// if (window.jQuery) {
-		// 	$(navIcons).animate({
-		// 		opacity: 0;
-		// 	}, 500)
-		// 	.animate({
-		// 		opacity: 1;
-		// 	}, 500);
-		// }
-	}
-
 
 	// Interaction
 

@@ -1,0 +1,31 @@
+<main id="content" class="page">
+	<article class="page about">
+		<% 
+
+			function formatTime(time) {
+				return Math.ceil(time / (1000*3600*24));
+			}
+
+			// compute how long I have to live
+			var birth = new Date("4/24/1997");
+			var death = new Date("4/24/2077");
+
+			var lifeTime = Math.abs(death.getTime() - birth.getTime());
+			var lifeDays = formatTime(lifeTime);
+
+			var DDC = formatTime(death) - formatTime(birth); // formatted to 29000
+
+			var life = formatTime(new Date(Date.now()).getTime()) - formatTime(birth);
+			%>
+
+			<progress value="<%= life %>" max="<%= DDC %>" class="page-title"></progress>
+
+			<h2 class="text-center"><%= life %> / <%= DDC%></h2>
+	</article>
+</main>
+
+<style>
+	progress[value] {
+		width: 100%;
+	}
+</style>

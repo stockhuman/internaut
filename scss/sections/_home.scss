@@ -1,7 +1,13 @@
 .home {
 	text-align: center;
 	padding-bottom: $navWidth;
-	overflow: auto; // check out this hack!
+
+	/* Check out this hack! 
+	 * --
+	 * This thing adds a unscrollable scrollbar to edge,
+	 * but fixes content collapsing on chrome, (w/o scrollbars)
+	 */
+	overflow: auto;
 }
 
 // namespace "pi" : portfolio-item
@@ -82,4 +88,13 @@
 		width: 40%;
 		padding-bottom: 4rem;
 	}
+}
+
+#home-canvas {
+	// position: relative;
+}
+
+#home-canvas-overlay {
+	overflow: hidden;
+	transform-origin: 0% 0% 0;
 }

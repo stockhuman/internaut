@@ -1,7 +1,7 @@
 {
 	"index" : {
 		"title"        : "MH",
-		"description"  : "test",
+		"description"  : "This is Michael Hemingway's personal site, and a repository for all those collected digital ideosyncracies.",
 		"items"        : [
 			{
 				"img"  : "/assets/img/home/5ft25cover.png",
@@ -22,6 +22,11 @@
 				"img"  : "/assets/img/home/bitmapcover.jpg",
 				"link" : "/projects/bitmap",
 				"desc" : "Code | 2017"
+			},
+			{
+				"img"  : "/assets/img/home/campaigntrailcover.jpg",
+				"link" : "/projects/campaign-trail",
+				"desc" : "Game | 2016"
 			}
 		]
 	},
@@ -44,5 +49,9 @@
 	"404" : {
 		"title"        : "404",
 		"description"  : "There's nothing here!"
+	},
+	"life" : {
+		"title"        : "Life",
+		"description"  : "It's not a waiting game"
 	}
 }

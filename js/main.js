@@ -1,30 +1,19 @@
+/**
+ * Michael Hemingway
+ * (c) 2017
+ *
+ *
+ */
 
-(function ($) {
+
+(function () {
 	'use strict';
 
-	var url = document.URL, 
-			sort = '*';
-
-	// function parseQuery(qstr) {
-	// 	var query = {};
-	// 	var a = (qstr[0] === '?' ? qstr.substr(1) : qstr).split('&');
-	// 	for (var i = 0; i < a.length; i++) {
-	// 			var b = a[i].split('=');
-	// 			query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
-	// 	}
-	// 	return query;
-	// }
-
-	// the projects page
-	$('.isotope').isotope({
-		itemSelector: '.item',
-		columnWidth: '.project',
-		percentPosition: true
+	// add console text
+	window.addEventListener("load", function (event) {
+		var c = 'color: #bada55; background: #222;';
+		console.log('%c ( ͠° ͟ʖ ͡°)', c);
+		console.log('%c Nothing to see here.', c);
 	});
 
-	// $(window).on('load', function () {
-	// 	console.log(parseQuery('date'));
-	// });
-
-
-}(jQuery));
+}());

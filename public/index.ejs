@@ -1,9 +1,15 @@
 <main id="content" class="home">
-	<a href="/about" class="home-banner">
-		<img src="/assets/img/home/home.png" alt="" >
+	<div class="home-banner">
+		<canvas id="home-canvas">
+			<img src="/assets/img/home/home.png">
+		</canvas>
+		<div id="home-canvas-overlay">
+			<h1>It me, Michael</h1>
+			<p>Doot doot</p>
+		</div>
 	</a>
 	
-
+	<%# Display the curated collection of links %>
 	<% for ( var i = 0; i < items.length; i ++)  { %>
 			<a href="<%= items[i].link %>" class='home-item'>
 					<div class="hi-img">
@@ -23,3 +29,5 @@
       </a>
 	<% } %>
 </main>
+
+<script src="/assets/js/lib/three.min.js"></script>
