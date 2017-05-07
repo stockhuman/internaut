@@ -2,12 +2,15 @@
  * The fluff elements, UI pizzaz.
  */
 
-$(function() {
- 'use strict';
+(function($) {
+	'use strict';
 
- var bg, accent;
+	// avoid deprecated synchronous call (http://stackoverflow.com/questions/24639335/)
+	$.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
 
- function navColors() {
+	var bg, accent;
+
+	function navColors() {
 		if ($('article.page').attr('data-base') != (undefined)) {
 			bg = $('article.page').attr('data-base');
 			accent = $('article.page').attr('data-highlight');

@@ -1,0 +1,119 @@
+<main id="content" class="page">
+
+<style>
+	button { width: 100%; }
+	.generated {
+		margin-top: 1rem;
+		text-align: center;
+		padding: 2rem;
+		border-radius: 2px;
+	}
+	#mechanics.generated {
+		background-color: #F58F84;
+		color: #fff;
+	}
+	#theme.generated {
+		background-color: #407A52;
+		color: #fff;
+	}
+</style>
+
+
+	<header class="cover">
+			<svg id="doot" viewbox="0 0 100 100"></svg>
+	</header>
+	<article class="page" data-base="#FF8936">
+		<h1>Game Mechanics Generator</h1>
+		<button id="mechBtn">Generate Mechanics</button>
+		<button id="themeBtn">Generate Theme</button>
+		<p id="mechanics"></p>
+		<p id="theme"></p>
+	</article>
+
+	<!-- Generate SVG -->
+	<script>
+
+		onload = document.onclick = function() {
+			document.getElementById('doot').innerHTML = '';
+			spawn(Math.floor(Math.random()*8)+4)
+		}
+
+		function spawn(points) {
+			var star = document.getElementById('doot');
+
+			for ( i = 0 ; i < points ; i++ ) {
+
+				var path = document.createElementNS('http://www.w3.org/2000/svg','path'),
+						line = '',
+						hCen = 50,
+						vCen = 50,
+						degrees = 360/points,
+						angle = degrees*i,
+						shortEdge = vCen>hCen?vCen-hCen+30:30
+				line += 'm'+hCen+','+vCen+' '
+				line += 'L'+vCen/Date.now()+','+shortEdge*Math.random()*3+' '
+				line += 'l'+hCen+','+shortEdge+' '
+				line += 'L'+vCen/Math.random()*5+','+shortEdge*5+' '
+				line += 'L'+(hCen+degrees*Math.PI)+','+(vCen-points+Math.PI/degrees)+' '
+				path.setAttributeNS(null,'d',line)
+				path.setAttributeNS(null,'fill','none')
+				path.setAttributeNS(null,'stroke-linecap','square')
+				path.setAttributeNS(null,'stroke','#1D697C')
+				path.setAttributeNS(null,'stroke-width',2)
+				path.setAttributeNS(null,'transform','rotate('+360/points*i+','+hCen+','+vCen+')')
+				star.appendChild(path)
+			}
+
+		}
+
+		setInterval(function() { 
+			document.getElementById('doot').innerHTML = '';
+			spawn(Math.floor(Math.random()*8)+4);
+		}, 3000);
+	</script>
+
+	<!-- Generate the damn mechanics -->
+	<script type="text/javascript">
+		var mechBtn = document.getElementById('mechBtn'),
+				themeBtn = document.getElementById('themeBtn'),
+				mechp = document.getElementById('mechanics'),
+				themep = document.getElementById('theme');
+
+		mechBtn.addEventListener('click', generateMechanics);
+		themeBtn.addEventListener('click', generateTheme);
+
+		function clear (element) {
+			element.className = '';
+			element.innerHTML = '';
+		}
+
+		function generateMechanics () {
+			var a = mechDict.action[Math.floor(Math.random()*mechDict.action.length)];
+			var b = mechDict.noun[Math.floor(Math.random()*mechDict.noun.length)];
+			var c = mechDict.adverb[Math.floor(Math.random()*mechDict.adverb.length)];
+			mechp.innerHTML = a + " " + b + " " + c + ".";
+
+			mechp.className = "generated";
+		}
+
+		function generateTheme () {
+			var a = themeDict.adj[Math.floor(Math.random()*themeDict.adj.length)];
+			var b = themeDict.noun[Math.floor(Math.random()*themeDict.noun.length)];
+
+			themep.innerHTML = a + " " + b + ".";
+			themep.className = "generated";
+		}
+
+		var mechDict = {
+			action : ["Destroy", "Create", "Navigate", "Seek out", "Explore", "Race", "Break", "Identify", "Protect", "Govern", "Find", "Escape", "Solve puzzles about", "Platform across", "Shoot", "Discover how to communicate with", "Strategically balance", "Endlessly escape", "Terraform", "Escort", "Chase", "Fight", "Question", "Manage scarce resources for"],
+			noun   : ["houses", "spaces", "people", "a ship", "enemies", "the game narrative", "personal histories", "a hidden objective", "your partner", "your lover", "the king", "a common item", "your father", "a strange creature", "an unknown force", "nothing", "planets", "crowds", "a ball pit", "the countryside", "microscopic things", "a hidden mechanic", "frightening experiences", "an NPC", "the base"],
+			adverb : ["as fast as possible", "without sound", "without traditional controls", "under a time limit", "without being seen", "using text commands", "using combos", "with only dialogue", "with sex", "with RNG", "as efficiently as possible", "with excessive force", "forever", "with bad physics", "with only one control", "with a friend", "with an online community", "before the AI does"]
+		};
+
+		var themeDict = {
+			adj : ["Large", "Small", "Immaterial", "A Tweet about", "YouTube", "Sad", "Seemingly infinite supplies of", "Strange", "Furry", "Majestic", "Atmospheric", "Eternal", "Inner city", "Moody", "Historical", "Future", "Jewish", "Odd", "Transient", "Mute", "Lonely", "Contemplative", "Immature", "Religious"],
+			noun: ["moths", "giants", "lovers", "feet", "politics", "strife", "small towns", "friends", "music", "cuisine", "extraterrestrials", "ghosts", "liberals", "conservatives", "elves", "anarchists", "animals", "rich people", "losers", "drama", "prisoners", "individuals", "groups", "cooks", "dentists", "politicians", "mothers", "fathers", "brothers", "pets", "armies", "ants", "schools", "rare pokemon", "pop culture", "invasions", "minimalism"]
+		};
+	</script>
+
+</div>

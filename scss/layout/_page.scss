@@ -42,7 +42,7 @@ article.page {
 
 	a[class^='project-nav-'] {
 		padding: $navWidth/3;
-		width: 25%;
+		width: 50%;
 		// border-left: 1px solid $gray-light;
 		margin-bottom: 0;
 		border-bottom: 1px darken($gray-lighter, 5%) solid;
@@ -72,8 +72,12 @@ article.page {
 			float: left;
 			content: "<";
 		}
-
 	}
+
+	.project-nav-year, .project-nav-cat {
+		display: none;
+	}
+
 	.project-nav-year {
 		border-right: 1px darken($gray-lighter, 5%) solid;
 	}
@@ -83,7 +87,9 @@ article.page {
 	}
 	&.no-next {}
 	&.no-prev {
-		margin-left: 25%; // there's a problem with firefox
+		.project-nav-next {
+			float: right;
+		}
 	}
 }
 
@@ -92,6 +98,12 @@ article.page {
 		figure img {
 			border-radius: 2px; // add a rounded corner when the image doesn't size edge to edge
 		}
+	}
+	.project-nav a[class^='project-nav-'] {
+		width: 25%;
+	}
+	.project-nav .project-nav-year, .project-nav .project-nav-cat {
+		display: block;
 	}
 }
 

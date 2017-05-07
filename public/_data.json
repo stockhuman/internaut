@@ -52,6 +52,10 @@
 	},
 	"life" : {
 		"title"        : "Life",
-		"description"  : "It's not a waiting game"
+		"description"  : ""
+	},
+	"gamegen" : {
+		"title"        : "Game Mechanics Generator",
+		"description"  : "Generate game mechanics, for FLOP and other game dev projects"
 	}
 }

@@ -1,7 +1,7 @@
 .collection {
 	background: #00824E;
 
-	h1 {
+	h1, h4 {
 		background-color: #dedede;
 		@include font-size(40);
 		font-family: monospace;
@@ -11,6 +11,11 @@
 	h2 {
 		@include font-size(60);
 		padding-bottom: 1rem;
+	}
+
+	h4 {
+		margin-top: 3rem;
+		@include font-size(28);
 	}
 	// article proper
 	article.item {

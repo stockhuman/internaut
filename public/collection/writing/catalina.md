@@ -14,7 +14,11 @@ The original craft, [whose images I've rehosted here](https://www.pinterest.com/
 
 Another great write-up can be found [here](http://www.artificialowl.net/2009/07/abandoned-catalina-seaplane-50-years.html), nad it uses many of Ken's images. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IT1L6zmEI24" frameborder="0" allowfullscreen></iframe>
+<figure>
+	<div class="full-width-video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/IT1L6zmEI24" frameborder="0" allowfullscreen></iframe>
+	</div>
+</figure>
 
 To [quote Ken](http://kendo1938.bravesites.com/catalina-pby-n5593v), it suffered a tragic fate.
 

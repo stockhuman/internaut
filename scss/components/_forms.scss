@@ -21,8 +21,20 @@ input, textarea, button {
 	}
 }
 
-input {
-	width: 50%;
+#contact-form input {
+	width: 100%;
+}
+
+@include media('>tablet') {
+	#contact-form {
+		display: flex;
+		flex-flow: row wrap;
+		input {
+			width: calc(50% - 2px);
+			&:nth-of-type(1){margin-right: 2px;}
+			&:nth-of-type(2){margin-left: 2px;}
+		}
+	}
 }
 
 button[type=submit] {

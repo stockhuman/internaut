@@ -21,5 +21,167 @@
 	</article>
 
 <script>
-function Transition(){var a,b,c,d,e,f,k,g=2,h=60,i=20,j=0;this.initialize=function(){a=document.getElementById("canvas"),b=a.getContext("2d"),c=window.innerWidth,d=window.innerHeight,e=c/2,f=d/2,a.width=c,a.height=d,m(),a.addEventListener("click",p,!1);setInterval(o,20)};var m=function(){k=new n;var d,c=k;for(d=0;d<i;d++)c.ang=d*i,c.vang=1,c.r=10,c.vr=0,c.x=e,c.y=f,d!=i-1&&(c.next=new n,c=c.next)},n=function(){this.ang,this.vang,this.r,this.vr,this.x,this.y,this.next},o=function(){for(var a=0,c=k;c;)if(a++,c.r>400)c=c.next;else{var d=Math.random();if(d<.1)c.vang=0,c.vr=g;else if(d<.2)c.vang=-g,c.vr=0;else if(d<.3)c.vang=g,c.vr=0;else if(d<.304&&j<h){var i=new n;i.ang=c.ang,0==c.ang?i.vang=0:i.vang=Math.random()<.5?-1:1,i.r=c.r,0==c.vang?i.vr=1:i.vr=0,i.x=c.x,i.y=c.y,i.next=c.next,c.next=i}var l=c.ang+c.vang;c.r=c.r+c.vr;var m=Math.PI/180*l,o=c.r*Math.cos(m),p=c.r*Math.sin(m),q=Math.sqrt(o*o+p*p),r=Math.PI/180*(l-(l-c.ang)/2),s=q*Math.cos(r),t=q*Math.sin(r);b.beginPath(),b.strokeStyle="#000000",b.moveTo(c.x,c.y),b.quadraticCurveTo(s+e,t+f,o+e,p+f),b.stroke(),b.closePath(),c.x=o+e,c.y=p+f,c.ang=l,c=c.next}j=a},p=function(a){a.preventDefault(),b.fillStyle="rgba(255, 255, 255, 1.0)",b.beginPath(),b.rect(0,0,c,d),b.closePath(),b.fill(),m()}}var app=new Transition;app.initialize();
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var dipRect = canvas.getBoundingClientRect();
+
+var c = {}
+var cw = canvas.width = Math.round(devicePixelRatio * dipRect.right)
+                - Math.round(devicePixelRatio * dipRect.left);;
+c.x = cw / 2;
+var ch = canvas.height = Math.round(devicePixelRatio * dipRect.bottom)
+                - Math.round(devicePixelRatio * dipRect.top);
+
+canvas.style.width = "100%";
+canvas.style.height = "100%";
+c.y = ch / 2;
+
+var frames = 0
+var rad = Math.PI / 180;
+
+var grid = [];
+var next = [];
+var t = 1;
+// diffusion vars
+var dA = .8;
+var dB = .35;
+var feed = .055,
+  k = .062; // k == kill rate
+
+for (var x = 0; x < cw; x += 1) {
+  grid[x] = [];
+  next[x] = [];
+  for (var y = 0; y < ch; y += 1) {
+    grid[x][y] = [];
+    grid[x][y][0] = 1;
+    grid[x][y][1] = 0;
+
+    next[x][y] = [];
+    next[x][y][0] = 1;
+    next[x][y][1] = 0;
+  }
+}
+
+function Seed() {
+ /* var seed = {
+    x: randomIntFromInterval(20, cw-20),
+    y: randomIntFromInterval(20, cw-20)
+  }
+  console.log(seed)
+  for (var i = seed.x; i < seed.x + 10; i += 1) {
+    for (var j = seed.y; j < seed.y + 10; j += 1) {
+      if(grid[i][j]){grid[i][j][1] = 1;}
+    }
+  }
+  */
+ 
+  for( var i = 0; i < 360; i+=15){
+  for(var j = 40; j < 50; j++){
+  var x = ~~(c.x + j*Math.cos(i*rad));
+  var y = ~~(c.y + j*Math.sin(i*rad));
+  grid[x][y][1] = 1;
+  }
+}
+ /* 
+ var n = 3;
+for(var i= 0; i< 1260;i++){
+	var t = i*rad;
+	r =  n * t;
+	x = ~~(c.x + r*Math.cos(t));
+	y = ~~(c.y + r*Math.sin(t));
+	grid[x][y][1] = 1;
+} 
+*/ 
+}
+
+for (var r = 0; r < 5; r++) {
+  Seed();
+}
+
+function Draw() {
+  requestId = window.requestAnimationFrame(Draw);
+  frames++;
+
+  for (var x = 1; x < cw - 1; x += 1) {
+    for (var y = 1; y < ch - 1; y += 1) {
+    
+      var a = grid[x][y][0];
+      var b = grid[x][y][1];
+      next[x][y][0] = (a + (dA * laplace(x, y, 0)) - (a * b * b) + (feed * (1 - a))) * t;
+      next[x][y][1] = (b + (dB * laplace(x, y, 1)) + (a * b * b) - ((k + feed) * b)) * t;
+     
+    }
+  
+  }
+
+  var imgData = ctx.createImageData(cw, ch);
+  var pixels = imgData.data;
+  for (var x = 1; x < cw - 1; x += 1) {
+    for (var y = 1; y < ch - 1; y += 1) {
+      var a = next[x][y][0];
+      var b = next[x][y][1];
+      var d = ~~((a - b) * 255);
+
+      var red = normalizeColor(55 - d);
+      var green = normalizeColor(155 - d);
+      var blue = normalizeColor(255 - d);
+
+      var pix = (x + y * cw) * 4;
+      pixels[pix + 0] = red;
+      pixels[pix + 1] = green;
+      pixels[pix + 2] = blue;
+      pixels[pix + 3] = 255;
+    }
+  }
+  ctx.putImageData(imgData, 0, 0);
+
+  swap();
+
+}
+
+requestId = window.requestAnimationFrame(Draw);
+
+function swap() {
+  var temp = grid;
+  grid = next;
+  next = temp;
+}
+
+function laplace(x, y, zo) {
+  /*
+  |.05 |.2|.05|
+  | .2 |-1| .2|
+  |.05 |.2|.05|
+  */
+
+  var m = .2;
+  var r = .05;
+  var sum = 0;
+  sum += grid[x][y][zo] * -1; // the center
+  sum += grid[x - 1][y][zo] * m; // to the left
+  sum += grid[x + 1][y][zo] * m; // to the right
+  sum += grid[x][y + 1][zo] * m; // above
+  sum += grid[x][y - 1][zo] * m; // below
+  sum += grid[x - 1][y - 1][zo] * r; // top left
+  sum += grid[x + 1][y - 1][zo] * r; // top right
+  sum += grid[x - 1][y + 1][zo] * r; // bottom left
+  sum += grid[x + 1][y + 1][zo] * r; // bottom right
+
+  return sum;
+}
+
+function normalizeColor(c) {
+  if (c < 0) {
+    return 0;
+  } else if (c > 255) {
+    return 255;
+  } else {
+    return ~~c
+  }
+}
+
+function randomIntFromInterval(mn, mx) {
+  return ~~(Math.random() * (mx - mn + 1) + mn);
+}
+
 </script>

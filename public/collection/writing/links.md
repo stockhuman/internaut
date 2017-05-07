@@ -31,6 +31,8 @@
 [![MERCE ISOSURFACE](http://www.flong.com/storage/images/projects/merce.jpg)](http://www.flong.com/projects/merce/ "Merce's Isosurface")
 
 <figure>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C7HL5wYqAbU" frameborder="0" allowfullscreen></iframe>
+	<div class="full-width-video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/C7HL5wYqAbU" frameborder="0" allowfullscreen></iframe>
+	</div>
 </figure>
 

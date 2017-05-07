@@ -16,14 +16,15 @@ var ambientLight;
 // environment variables
 var windowW = window.innerWidth;
 var windowH = window.innerHeight;
+var mx = 0;
+var my = 0;
+var mX, mY; // computed half-mouse
+
+var initialDeviceOrientation;
 
 // copy (Hi, I'm Michael text)
 var copy = document.getElementById('home-canvas-overlay');
 
-// The cool home canvas
-if (window.location.pathname == '/') {
-	init();
-}
 
 // sets up the scene
 function init () {
@@ -32,8 +33,6 @@ function init () {
 
 	// set position here so if js fails, it still looks good.
 	copy.style.position = 'absolute';
-	copy.style.left = canvas.width / 2 + "px";
-	copy.style.top = canvas.height / 2 + "px";
 
 	// Try to grab the standard context. If it fails, fallback to experimental.
 	gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
@@ -64,19 +63,7 @@ function render () {
 
 function update () {
 
-	const radius = 1;
 
-	if (mx > windowW / 2) {
-		camera.rotation.y -= 0.01 * normalize(mx, windowW/2, -windowW/2);
-	} else {
-		camera.rotation.y += 0.01 * normalize(mx, windowW/2, windowW);
-	}
-
-	if (my < windowH / 2) {
-		camera.rotation.x -= 0.01 * normalize(my, windowH/2, -windowH/2);
-	} else {
-		camera.rotation.x += 0.01 * normalize(my, windowH/2, windowH);
-	}
 	
 	camera.updateMatrix();
 
@@ -85,6 +72,7 @@ function update () {
 			"rotateX(" +       camera.rotation.x
 			+"rad) rotateY(" + camera.rotation.y
 			+"rad) translate3D(-50%, -50%, 0)";
+
 }
 
 function build () {
@@ -92,13 +80,12 @@ function build () {
 	// set up three js
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera( 75, windowW / windowH, 0.1, 1000 );
-	renderer = new THREE.WebGLRenderer( { canvas: canvas, antialias: true } );
-	renderer.setSize( windowW, windowH );
+	renderer = new THREE.WebGLRenderer( { canvas: canvas, antialias: false } );
 
-	// env
-	scene.fog = new THREE.Fog(0xffffff, 10, 3000);
-	scene.fog.color.setHSL( 0.51, 0.6, 0.6 );
-	ambientLight = new THREE.AmbientLight(0xbbbbbb);
+	renderer.setSize( windowW, windowH );
+	// renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
+	copy.style.left = canvas.width / 2 + "px";
+	copy.style.top = canvas.height / 2 + "px";
 
 	// geometry
 	buildShapes();
@@ -147,24 +134,29 @@ function buildShapes () {
 		scene.add( mesh );
 	}
 
-	var plane = new THREE.PlaneGeometry(400, 400); // HDHJUDHJGDJHDJHDJHDJHDJ
-
+	// me
+	var planegeo = new THREE.PlaneGeometry(512, 512);
+	var planetex = new THREE.TextureLoader().load('/assets/img/ui/me.jpg');
+	var planemat = new THREE.MeshBasicMaterial( {map: planetex } );
+	var plane = new THREE.Mesh(planegeo, planemat);
+	plane.position.z = -990;
+	plane.position.y = 400;
+	scene.add(plane);
 }
-
 
 // UTILS
 // ============================================
 
 function normalize (val, min, max) { return (val - min) / (max - min); }
 
-var mx = null;
-var my = null;
-
 document.addEventListener('mousemove', onMouseUpdate, false);
 document.addEventListener('mouseenter', onMouseUpdate, false);
 function onMouseUpdate(e) {
 	mx = e.pageX;
 	my = e.pageY;
+
+	mX = mx - windowW;
+	mY = my - windowH;
 }
 
 function getMouseX() { return x; }
@@ -184,6 +176,27 @@ function onWindowResize(){
 
 	renderer.setSize( windowW, windowH );
 }
+
+window.addEventListener("devicemotion", handleMotion, true);
+function handleMotion() {
+	// var betaTilt = initialDeviceOrientation.beta - window.deviceOrientation.beta;
+	// var gammaTilt = initialDeviceOrientation.gamma - window.deviceOrientation.gamma;
+
+	// if (gammaTilt < 45 && gammaTilt > -45) {
+	// 	camera.position.x += (gammaTilt * 4 - camera.position.x) * 0.1;
+	// }
+
+	// if (betaTilt < 45 && betaTilt > -45) {
+	// 	camera.position.y += (betaTilt * 4 - camera.position.y + camera.targetPoint.y) * 0.1;
+	// }
+}
+
+// window.addEventListener("orientationchange", function() {
+//     alert("the orientation of the device is now " + screen.orientation.angle);
+// });
+
+// GO!
+init();
 
 }());
 
