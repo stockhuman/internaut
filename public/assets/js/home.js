@@ -171,8 +171,8 @@ function onWindowResize(){
 	camera.aspect = windowW / windowH;
 	camera.updateProjectionMatrix();
 
-	copy.style.left = canvas.width / 2 + "px";
-	copy.style.top = canvas.height / 2 + "px";
+	copy.style.left = windowW / 2 + "px";
+	copy.style.top =  windowH / 2 + "px";
 
 	renderer.setSize( windowW, windowH );
 }
@@ -199,6 +199,5 @@ function handleMotion() {
 init();
 
 }());
-
 
 // TODO: simple responsiveness @ ultrawide
