@@ -87,8 +87,9 @@ article.page {
 	}
 	&.no-next {}
 	&.no-prev {
-		.project-nav-next {
-			float: right;
+		margin-left: 25%;
+		.project-nav-next, .project-nav-cat, .project-nav-year {
+			float: left;
 		}
 	}
 }

@@ -3,17 +3,19 @@
 	==
 	run the whole shabang with `$ gulp watch` in the project directory
 	install them all with
-	`$ npm i gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync --save-dev`
+	`$ npm i --save-dev`gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync gulp-imagemin
 */
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
+const browserSync = require('browser-sync').create();
 
-var assetDir = "public/assets/";
+// environment variables
+const assetDir = "public/assets/";
 
 // compiles sass files to css
 gulp.task('sass', function () {
@@ -29,10 +31,10 @@ gulp.task('sass', function () {
 		}));
 });
 
-// similarly to the sass tast, scripts compiles and concatinates js files and reloads the browser
+// similarly to the sass task, scripts compiles and concatinates js files and reloads the browser
 gulp.task('scripts', function() {
 	// script paths
-	var jsSources = 'js/*.js',
+	let jsSources = 'js/*.js',
 	    jsDist = assetDir + 'js/';
 
   return gulp.src(jsSources)
@@ -70,3 +72,9 @@ gulp.task('watch', ['browserSync', 'sass'], function () {
 gulp.watch("gulpfile.js").on("change", function () {
 	process.exit(0);
 });
+
+gulp.task('postbuild', () =>
+	gulp.src(assetDir + 'img/**/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest('../../../Desktop/site/assets/img/'))
+);

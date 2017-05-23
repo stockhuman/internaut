@@ -1,0 +1,40 @@
+{
+  "name": "internaut",
+  "version": "1.0.0",
+  "description": "My personal static site, built with Harp.js",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "harp server && gulp watch",
+    "compile": "harp compile ./ ../../../Desktop/site && gulp postbuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelHemingway/internaut.git"
+  },
+  "keywords": [
+    "scss",
+    "harp",
+    "static-site",
+    "html",
+    "ejs",
+    "portfolio"
+  ],
+  "author": "Michael Hemingway",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/MichaelHemingway/internaut/issues"
+  },
+  "homepage": "https://github.com/MichaelHemingway/internaut#readme"
+}

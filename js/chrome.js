@@ -78,4 +78,29 @@
 		c.load(l);
 	});
 
+	// load in low res images and blur up
+	window.addEventListener('load', fucntion () {
+		lazyLoad ();
+	});
+
+	function lazyLoad () {
+		var lazyImages = document.querySelectorAll('.lazy-img');
+
+		lazyImages.forEach(function(image) {
+			let imgUrl = image.getAttribute('data-img-full'),
+					imgTag = image.querySelector('img');
+
+			// begin loading the new high res image
+			imgTag.src = imgUrl;
+
+			// Once the image is loaded, swap out
+			imgTag.addEventListener('load', function () {
+				// swap out with the fully downloaded hi-res pic
+				image.style.backgroundImage = 'url(' + imgUrl + ')';
+				image.classList.add('lazy-loaded');
+			});
+
+		});
+	}
+
 }(jQuery));
