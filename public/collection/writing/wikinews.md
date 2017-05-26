@@ -1,0 +1,3 @@
+I had an idea and subsequently discovered its excecution online not long ago. I imagined a site where, in the distrubuted model of authority that Wikipedia endorses, would cover the news. Lo and behold, searching for that very thing, I found wikinews.org. 
+
+It's a carbon copy of wikipedia, but with news articles. Far less media-house-ish than I imagined. That's likely why I haven't heard of it. And it cites other news orgs. While the editorial process is free, the journalism is second hand. I wish it weren't so. Perhaps I'll do something about that.

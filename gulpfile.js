@@ -3,16 +3,26 @@
 	==
 	run the whole shabang with `$ gulp watch` in the project directory
 	install them all with
-	`$ npm i --save-dev`gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync gulp-imagemin
+	$ npm i --save-dev gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync 
+
+	optionally, for image minification and thumbnail generation, 
+	$ npm i --save-dev gulp-imagemin gulp-responsive gulp-changed concurrent-transform os
 */
 
+// SCSS, HTML, JS development
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
+
+// Image resizing and thumbnail creation
+const imgMinify = require('gulp-imagemin');
+const imgResize = require('gulp-image-resize');
+const changed = require('gulp-changed');
+const parallel = require('concurrent-transform');
+const os = require('os');
 
 // environment variables
 const assetDir = "public/assets/";
@@ -34,7 +44,7 @@ gulp.task('sass', function () {
 // similarly to the sass task, scripts compiles and concatinates js files and reloads the browser
 gulp.task('scripts', function() {
 	// script paths
-	let jsSources = 'js/*.js',
+	let jsSources = 'js/**/*.js',
 	    jsDist = assetDir + 'js/';
 
   return gulp.src(jsSources)
@@ -53,28 +63,43 @@ gulp.task('scripts', function() {
 });
 
 // does browser live-reloading
-// change to appropriate WordPress install directory
-gulp.task('browserSync', function () {
-	browserSync.init({
-		proxy: 'http://localhost:9000/'
-	});
-});
+// change to appropriate WordPress install directory / server configuration
+gulp.task('browserSync', () => 
+	browserSync.init({ proxy: 'http://localhost:9000/' })
+)
+
+// generates extremely low-res thumbnails for fast blur-up
+gulp.task('thumbs', function () {
+	gulp.src(assetDir + 'img/work/**/*.{jpg,png}')
+	.pipe(imgResize({
+		width : 64,
+		format: 'jpeg'
+	}))
+	.pipe(rename(function (path) {
+		path.basename += "-thumb64" // adds a suffix
+	}))
+	.pipe(gulp.dest(assetDir + 'img/thumbs/'))
+})
 
 // watches files for changes, adjust accordingly
-gulp.task('watch', ['browserSync', 'sass'], function () {
+gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
 	gulp.watch('scss/**/*.scss', ['sass']);
-	gulp.watch('js/*.js', ['scripts']);
-	gulp.watch('public/**/**/*.ejs', browserSync.reload);
-	gulp.watch('public/**/**/*.json', browserSync.reload);
-});
+	gulp.watch('js/**/*.js', ['scripts']);
+	gulp.watch('public/**/**/*.ejs', browserSync.reload);  // pages
+	gulp.watch('public/**/**/*.json', browserSync.reload); // site data
+})
 
 // stop old version of gulp watch from running when you modify the gulpfile
-gulp.watch("gulpfile.js").on("change", function () {
-	process.exit(0);
-});
+gulp.watch("gulpfile.js").on( "change", () => process.exit(0) )
 
-gulp.task('postbuild', () =>
+// compresses images and outputs them into the folder defined in package.json
+gulp.task('postbuild', function () {
 	gulp.src(assetDir + 'img/**/*')
-	.pipe(imagemin())
+	.pipe(parallel( imgMinify(), os.cpus().length ))
 	.pipe(gulp.dest('../../../Desktop/site/assets/img/'))
-);
+
+	// minify images in the collection's img folder, too
+	gulp.src('public/collection/img/*')
+	.pipe(parallel( imgMinify(), os.cpus().length ))
+	.pipe(gulp.dest('../../../Desktop/site/collection/img/'))
+})

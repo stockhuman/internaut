@@ -9,5 +9,7 @@
 	"roguelike" 					: { "title" : "Permalife" },
 	"bathesda" 						: { "title" : "Bathesda" },
 	"assorted-ideas" 			: { "title" : "Assorted Ideas" },
-	"cold-sticks" 				: { "title" : "The Straight, Cold Sticks" }
+	"cold-sticks" 				: { "title" : "The Straight, Cold Sticks" },
+	"wikinews"						: { "title" : "Wikinews"},
+	"bubbleteakeys"				: { "title" : "Bubble Tea Mechanical Keyboard Keycaps"}
 }
