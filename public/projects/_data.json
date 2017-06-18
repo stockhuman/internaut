@@ -23,6 +23,15 @@
 		"category"       : "web",
 		"year"           : "2016"
 	},
+	"opcm" : {
+		"title"          : "The OPCM",
+		"description"    : "",
+		"data_base"      : "#880015",
+		"data_highlight" : "#ffffff",
+		"cover"          : "opcm.png",
+		"category"       : "web",
+		"year"           : "2017"
+	},
 	"intervals-ii" : {
 		"title"          : "Intervals II",
 		"description"    : "",
@@ -68,13 +77,31 @@
 		"category"       : "audio",
 		"year"           : "2017"
 	},
+	"mikemingway" : {
+		"title"          : "Mikemingway",
+		"description"    : "My personal photography page, blog and brand identity.",
+		"data_base"      : "#000000",
+		"data_highlight" : "#ffffff",
+		"cover"          : "mikemingway.png",
+		"category"       : "web",
+		"year"           : "2015"
+	},
+	"bass-camp-fridays": {
+		"title"          : "Bass Camp Fridays",
+		"description"    : "Graphic design work for Bass Camp Fridays & Bar Backstage, Montreal.",
+		"data_base"      : "#000000",
+		"data_highlight" : "#FFFFFF",
+		"cover"          : "bcf.png",
+		"category"       : "print",
+		"year"           : "2014"
+	},
 	"spain" : {
 		"title"          : "Spain & Back Again",
 		"description"    : "Images from San Fermin, Bilbao and elesewhere. My photography from that most beautiful country.",
 		"data_base"      : "#000000",
 		"data_highlight" : "#FFFFFF",
 		"cover"          : "spain.png",
-		"category"       : "photography",
+		"category"       : "photo",
 		"year"           : "2014"
 	},
 	"moon" : {

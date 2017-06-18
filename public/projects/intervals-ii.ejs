@@ -4,19 +4,18 @@
 </header>
 <article class="page">
 		<h1 class="page-title">intervals II</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ex, doloremque, inventore cupiditate ducimus ad obcaecati, corrupti eaque delectus, quasi nesciunt facilis. Odit pariatur vitae possimus assumenda dolorum, deserunt ullam!</p>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>A little collection of reaction-diffusion experiementation, with just a few shots of Processing code on the side.</p>
 
 		<figure>
-		  <img src="/assets/img/home/archcover.jpg" alt="hess">
+			<img src="/assets/img/work/intervals/1.jpg" alt="Looping 00">
+			<img src="/assets/img/work/intervals/2.jpg" alt="Looping 00">
+			<img src="/assets/img/work/intervals/3.jpg" alt="Looping 00">
+			<img src="/assets/img/work/intervals/4.jpg" alt="Looping 00">
+			<img src="/assets/img/work/intervals/5.jpg" alt="Looping 00">
+			<img src="/assets/img/work/intervals/6.jpg" alt="Looping 00">
 		</figure>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>By the time you scrolled here, something cool should've happened up <a href="#">top</a>!</p>
 		
 	</article>
 
@@ -27,10 +26,10 @@ var dipRect = canvas.getBoundingClientRect();
 
 var c = {}
 var cw = canvas.width = Math.round(devicePixelRatio * dipRect.right)
-                - Math.round(devicePixelRatio * dipRect.left);;
+								- Math.round(devicePixelRatio * dipRect.left);;
 c.x = cw / 2;
 var ch = canvas.height = Math.round(devicePixelRatio * dipRect.bottom)
-                - Math.round(devicePixelRatio * dipRect.top);
+								- Math.round(devicePixelRatio * dipRect.top);
 
 canvas.style.width = "100%";
 canvas.style.height = "100%";
@@ -46,41 +45,41 @@ var t = 1;
 var dA = .8;
 var dB = .35;
 var feed = .055,
-  k = .062; // k == kill rate
+	k = .062; // k == kill rate
 
 for (var x = 0; x < cw; x += 1) {
-  grid[x] = [];
-  next[x] = [];
-  for (var y = 0; y < ch; y += 1) {
-    grid[x][y] = [];
-    grid[x][y][0] = 1;
-    grid[x][y][1] = 0;
+	grid[x] = [];
+	next[x] = [];
+	for (var y = 0; y < ch; y += 1) {
+		grid[x][y] = [];
+		grid[x][y][0] = 1;
+		grid[x][y][1] = 0;
 
-    next[x][y] = [];
-    next[x][y][0] = 1;
-    next[x][y][1] = 0;
-  }
+		next[x][y] = [];
+		next[x][y][0] = 1;
+		next[x][y][1] = 0;
+	}
 }
 
 function Seed() {
  /* var seed = {
-    x: randomIntFromInterval(20, cw-20),
-    y: randomIntFromInterval(20, cw-20)
-  }
-  console.log(seed)
-  for (var i = seed.x; i < seed.x + 10; i += 1) {
-    for (var j = seed.y; j < seed.y + 10; j += 1) {
-      if(grid[i][j]){grid[i][j][1] = 1;}
-    }
-  }
-  */
+		x: randomIntFromInterval(20, cw-20),
+		y: randomIntFromInterval(20, cw-20)
+	}
+	console.log(seed)
+	for (var i = seed.x; i < seed.x + 10; i += 1) {
+		for (var j = seed.y; j < seed.y + 10; j += 1) {
+			if(grid[i][j]){grid[i][j][1] = 1;}
+		}
+	}
+	*/
  
-  for( var i = 0; i < 360; i+=15){
-  for(var j = 40; j < 50; j++){
-  var x = ~~(c.x + j*Math.cos(i*rad));
-  var y = ~~(c.y + j*Math.sin(i*rad));
-  grid[x][y][1] = 1;
-  }
+	for( var i = 0; i < 360; i+=15){
+		for(var j = 40; j < 50; j++){
+		var x = ~~(c.x + j*Math.cos(i*rad));
+		var y = ~~(c.y + j*Math.sin(i*rad));
+		grid[x][y][1] = 1;
+	}
 }
  /* 
  var n = 3;
@@ -95,93 +94,93 @@ for(var i= 0; i< 1260;i++){
 }
 
 for (var r = 0; r < 5; r++) {
-  Seed();
+	Seed();
 }
 
 function Draw() {
-  requestId = window.requestAnimationFrame(Draw);
-  frames++;
+	requestId = window.requestAnimationFrame(Draw);
+	frames++;
 
-  for (var x = 1; x < cw - 1; x += 1) {
-    for (var y = 1; y < ch - 1; y += 1) {
-    
-      var a = grid[x][y][0];
-      var b = grid[x][y][1];
-      next[x][y][0] = (a + (dA * laplace(x, y, 0)) - (a * b * b) + (feed * (1 - a))) * t;
-      next[x][y][1] = (b + (dB * laplace(x, y, 1)) + (a * b * b) - ((k + feed) * b)) * t;
-     
-    }
-  
-  }
+	for (var x = 1; x < cw - 1; x += 1) {
+		for (var y = 1; y < ch - 1; y += 1) {
+		
+			var a = grid[x][y][0];
+			var b = grid[x][y][1];
+			next[x][y][0] = (a + (dA * laplace(x, y, 0)) - (a * b * b) + (feed * (1 - a))) * t;
+			next[x][y][1] = (b + (dB * laplace(x, y, 1)) + (a * b * b) - ((k + feed) * b)) * t;
+		 
+		}
+	
+	}
 
-  var imgData = ctx.createImageData(cw, ch);
-  var pixels = imgData.data;
-  for (var x = 1; x < cw - 1; x += 1) {
-    for (var y = 1; y < ch - 1; y += 1) {
-      var a = next[x][y][0];
-      var b = next[x][y][1];
-      var d = ~~((a - b) * 255);
+	var imgData = ctx.createImageData(cw, ch);
+	var pixels = imgData.data;
+	for (var x = 1; x < cw - 1; x += 1) {
+		for (var y = 1; y < ch - 1; y += 1) {
+			var a = next[x][y][0];
+			var b = next[x][y][1];
+			var d = ~~((a - b) * 255);
 
-      var red = normalizeColor(55 - d);
-      var green = normalizeColor(155 - d);
-      var blue = normalizeColor(255 - d);
+			var red = normalizeColor(55 - d);
+			var green = normalizeColor(155 - d);
+			var blue = normalizeColor(255 - d);
 
-      var pix = (x + y * cw) * 4;
-      pixels[pix + 0] = red;
-      pixels[pix + 1] = green;
-      pixels[pix + 2] = blue;
-      pixels[pix + 3] = 255;
-    }
-  }
-  ctx.putImageData(imgData, 0, 0);
+			var pix = (x + y * cw) * 4;
+			pixels[pix + 0] = red;
+			pixels[pix + 1] = green;
+			pixels[pix + 2] = blue;
+			pixels[pix + 3] = 255;
+		}
+	}
+	ctx.putImageData(imgData, 0, 0);
 
-  swap();
+	swap();
 
 }
 
 requestId = window.requestAnimationFrame(Draw);
 
 function swap() {
-  var temp = grid;
-  grid = next;
-  next = temp;
+	var temp = grid;
+	grid = next;
+	next = temp;
 }
 
 function laplace(x, y, zo) {
-  /*
-  |.05 |.2|.05|
-  | .2 |-1| .2|
-  |.05 |.2|.05|
-  */
+	/*
+	|.05 |.2|.05|
+	| .2 |-1| .2|
+	|.05 |.2|.05|
+	*/
 
-  var m = .2;
-  var r = .05;
-  var sum = 0;
-  sum += grid[x][y][zo] * -1; // the center
-  sum += grid[x - 1][y][zo] * m; // to the left
-  sum += grid[x + 1][y][zo] * m; // to the right
-  sum += grid[x][y + 1][zo] * m; // above
-  sum += grid[x][y - 1][zo] * m; // below
-  sum += grid[x - 1][y - 1][zo] * r; // top left
-  sum += grid[x + 1][y - 1][zo] * r; // top right
-  sum += grid[x - 1][y + 1][zo] * r; // bottom left
-  sum += grid[x + 1][y + 1][zo] * r; // bottom right
+	var m = .2;
+	var r = .05;
+	var sum = 0;
+	sum += grid[x][y][zo] * -1; // the center
+	sum += grid[x - 1][y][zo] * m; // to the left
+	sum += grid[x + 1][y][zo] * m; // to the right
+	sum += grid[x][y + 1][zo] * m; // above
+	sum += grid[x][y - 1][zo] * m; // below
+	sum += grid[x - 1][y - 1][zo] * r; // top left
+	sum += grid[x + 1][y - 1][zo] * r; // top right
+	sum += grid[x - 1][y + 1][zo] * r; // bottom left
+	sum += grid[x + 1][y + 1][zo] * r; // bottom right
 
-  return sum;
+	return sum;
 }
 
 function normalizeColor(c) {
-  if (c < 0) {
-    return 0;
-  } else if (c > 255) {
-    return 255;
-  } else {
-    return ~~c
-  }
+	if (c < 0) {
+		return 0;
+	} else if (c > 255) {
+		return 255;
+	} else {
+		return ~~c
+	}
 }
 
 function randomIntFromInterval(mn, mx) {
-  return ~~(Math.random() * (mx - mn + 1) + mn);
+	return ~~(Math.random() * (mx - mn + 1) + mn);
 }
 
 </script>

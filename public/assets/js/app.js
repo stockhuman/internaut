@@ -2,137 +2,134 @@
  * Michael Hemingway
  * (c) 2017
  *
- *
+ * I'll probably switch everything over to Vue
  */
 
+ // SMOOTHSTATE
+ var body = $('body');
 
-(function () {
-	'use strict';
+ // avoid deprecated synchronous call (http://stackoverflow.com/questions/24639335/)
+ $.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
 
-	// add console text
-	window.addEventListener("load", function (event) {
-		var c = 'color: #bada55; background: #222;';
-		console.log('%c ( ͠° ͟ʖ ͡°)', c);
-		console.log('%c Nothing to see here.', c);
-	});
+// Smoothstate JQ plugin
+$('#container').smoothState({
+	blacklist: '.no-smoothState',
 
-}());
+	onStart : {
+		duration: 450,
+		// Alterations to the page
+		render: function () {
+			// Quickly toggles a class and restarts css animations
+			body.toggleClass('is-exiting');
+		}
+	},
 
+	onAfter: function () {
+		navColors(); // color the nav
+		resetNav(); // hide the transitioner / close the nav
+
+		// fix collection styling
+		if ((window.location.href.indexOf("collection") > -1)) {
+			body.addClass('collection');
+		} else { body.removeClass('collection'); }
+
+		body.toggleClass('is-exiting');
+		// duplicate code :(
+		var projects = $('.isotope').isotope({
+			itemSelector: '.item',
+			columnWidth: '.project',
+			percentPosition: true
+		});
+		filterBtnGroup.on('click', function (e) {
+			e.preventDefault();
+			var filterVal = $(this).attr('data-filter');
+			projects.isotope({filter: filterVal});
+		});
+		projects.imagesLoaded().progress( function() {
+		  projects.isotope('layout');
+		});
+	}
+});
+
+// add nav links to smoothState
+$(".nav-list-item a, #nav-home-icon a").click(function(e) {
+	e.preventDefault();
+	var c = $("#container").smoothState().data("smoothState"),
+			l = $(this).attr("href");
+	c.load(l);
+});
+
+// MISC_____________________________________
+
+// add console text
+window.addEventListener("load", function (event) {
+	var c = 'color: #bada55; background: #222;';
+	console.log('%c ( ͠° ͟ʖ ͡°)', c);
+	console.log('%c Nothing to see here.', c);
+});
 /** 
 	Main navigation interactivity, colors
 	support in IE 10+
 */
 
-(function ($) {
-	'use strict';
+var navToggle = document.getElementById('nav-toggle'),
+		bodyClass = document.body.classList,
+		navIcons  = document.getElementsByClassName('nav-list-container')[0],
+		navIsOpen = false,
+		navMain   = document.getElementById('nav-main'),
+		bg, accent;
 
-	var navToggle = document.getElementById('nav-toggle'),
-			bodyClass = document.body.classList,
-			navIcons  = document.getElementsByClassName('nav-list-container')[0],
-			navIsOpen = false,
-			navMain   = document.getElementById('nav-main'),
-			bg, accent;
+function toggleNav () {
+	// nav is open, close it
+	if (bodyClass.contains('nav-is-open')) {
+		navIsOpen = false;
+		bodyClass.remove('nav-is-open');
+	} else {
+		navIsOpen = true;
+		bodyClass.add('nav-is-open');
+	}
+}
 
-	function toggleNav () {
-		// nav is open, close it
-		if (bodyClass.contains('nav-is-open')) {
-			navIsOpen = false;
-			bodyClass.remove('nav-is-open');
-		} else {
-			navIsOpen = true;
-			bodyClass.add('nav-is-open');
-		}
+function navColors() {
+	if ($('article.page').attr('data-base') != (undefined)) {
+		bg = $('article.page').attr('data-base');
+		accent = $('article.page').attr('data-highlight');
+	} else {
+		bg = '#3b444c';
+		accent = '#fff';
 	}
 
-	function navColors() {
-		if ($('article.page').attr('data-base') != (undefined)) {
-			bg = $('article.page').attr('data-base');
-			accent = $('article.page').attr('data-highlight');
-		} else {
-			bg = '#3b444c';
-			accent = '#fff';
-		}
+	$(navMain).css('background', bg);
+	$('#transitioner').css('background', bg);
+	$(navMain).css('color', accent);
 
-		$(navMain).css('background', bg);
-		$('#transitioner').css('background', bg);
-		$(navMain).css('color', accent);
+	$('#nav-toggle span').each(function() {
+		$(this).css('background', accent);
+	});
 
-		$('#nav-toggle span').each(function() {
-			$(this).css('background', accent);
-		});
+	$('meta[name=theme-color]').remove();
+	$('head').append('<meta name="theme-color" content="'+bg+'">');
+}
 
-		$('meta[name=theme-color]').remove();
-		$('head').append('<meta name="theme-color" content="'+bg+'">');
+function resetNav() {
+	if (navIsOpen) {
+		navIsOpen = false;
+		document.body.classList.remove('nav-is-open');
 	}
+}
 
-	function resetNav() {
-		if (navIsOpen) {
-			navIsOpen = false;
-			document.body.classList.remove('nav-is-open');
-		}
-	}
+// Load the colors on fresh page
+$(document).ready(function() { navColors(); });
 
-	// Load the colors on fresh page
-	$(document).ready(function() { navColors(); });
+// Interaction
+navMain.addEventListener('mouseleave', function() {
+	if (navIsOpen) { toggleNav(); }
+});
+navToggle.addEventListener('click', function () { 
+	toggleNav(); 
+});
 
-	// Interaction
-	navMain.addEventListener('mouseleave', function() {
-		if (navIsOpen) { toggleNav(); }
-	});
-	navToggle.addEventListener('click', function () { 
-		toggleNav(); 
-	});
-
-	window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
-
-}(jQuery));
-/**
-	SmoothState ajax page loading plugin
-*/
-
-(function($) {
-	'use strict';
-
-	var body = $('body');
-
-	// avoid deprecated synchronous call (http://stackoverflow.com/questions/24639335/)
-	$.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
-
-	// Smoothstate JQ plugin
-	$('#container').smoothState({
-		blacklist: '.no-smoothState',
-		onStart : {
-			duration: 450,
-			// Alterations to the page
-			render: function () {
-				// Quickly toggles a class and restarts css animations
-				body.toggleClass('is-exiting');
-			}
-		},
-
-		onAfter: function () {
-			navColors();
-			resetNav();
-			if ((window.location.href.indexOf("collection") > -1)) {
-				body.addClass('collection');
-			} else {
-				body.removeClass('collection');
-			}
-			body.toggleClass('is-exiting');
-			$('.isotope').isotope(); // check for grids to reposition
-		}
-	});
-
-	// add nav links to smoothState
-	$(".nav-list-item a, #nav-home-icon a").click(function(e) {
-		e.preventDefault();
-		var c = $("#container").smoothState().data("smoothState"),
-				l = $(this).attr("href");
-		c.load(l);
-	});
-
-}(jQuery));
-
+window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
 // /**
 //  * @author Michael Hemingway
 //  * 
@@ -334,19 +331,25 @@
 // }());
 
 // // TODO: simple responsiveness @ ultrawide
-	
-(function ($) {
-	'use strict';
+// the projects page
 
-	var url = document.URL, 
-			sort = '*';
+var url = document.URL, 
+		filterBtnGroup = $('#project-filters a');
 
+var projects = $('.isotope').isotope({
+	itemSelector: '.item',
+	columnWidth: '.project',
+	percentPosition: true
+});
 
-	// the projects page
-	$('.isotope').isotope({
-		itemSelector: '.item',
-		columnWidth: '.project',
-		percentPosition: true
-	});
+// filter the isotope layout
+filterBtnGroup.on('click', function (e) {
+	e.preventDefault();
+	var filterVal = $(this).attr('data-filter');
+	projects.isotope({filter: filterVal});
+});
 
-}(jQuery));
+projects.imagesLoaded().progress( function() {
+  projects.isotope('layout');
+});
+

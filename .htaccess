@@ -10,5 +10,10 @@ RewriteRule ^(.+)$ $1.html [L,QSA]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
+# 1 Month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|woff)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+
 
 ErrorDocument 404 /404.html

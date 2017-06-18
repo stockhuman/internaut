@@ -6,7 +6,7 @@
 	$ npm i --save-dev gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync 
 
 	optionally, for image minification and thumbnail generation, 
-	$ npm i --save-dev gulp-imagemin gulp-responsive gulp-changed concurrent-transform os
+	$ npm i --save-dev gulp-imagemin gulp-changed concurrent-transform os
 */
 
 // SCSS, HTML, JS development
@@ -19,7 +19,7 @@ const browserSync = require('browser-sync').create();
 
 // Image resizing and thumbnail creation
 const imgMinify = require('gulp-imagemin');
-const imgResize = require('gulp-image-resize');
+// const imgResize = require('lwip');
 const changed = require('gulp-changed');
 const parallel = require('concurrent-transform');
 const os = require('os');
@@ -68,18 +68,17 @@ gulp.task('browserSync', () =>
 	browserSync.init({ proxy: 'http://localhost:9000/' })
 )
 
-// generates extremely low-res thumbnails for fast blur-up
-gulp.task('thumbs', function () {
-	gulp.src(assetDir + 'img/work/**/*.{jpg,png}')
-	.pipe(imgResize({
-		width : 64,
-		format: 'jpeg'
-	}))
-	.pipe(rename(function (path) {
-		path.basename += "-thumb64" // adds a suffix
-	}))
-	.pipe(gulp.dest(assetDir + 'img/thumbs/'))
-})
+// // generates extremely low-res thumbnails for fast blur-up
+// gulp.task('thumbs', function () {
+
+
+// 	gulp.src(assetDir + 'img/work/**/*.{jpg,png}')
+// 	.pipe(imgResize.open())
+// 	// .pipe(rename(function (path) {
+// 	// 	path.basename += "-thumb64" // adds a suffix
+// 	// }))
+// 	// .pipe(gulp.dest(assetDir + 'img/thumbs/'))
+// })
 
 // watches files for changes, adjust accordingly
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
