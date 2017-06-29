@@ -34,20 +34,8 @@ $('#container').smoothState({
 		} else { body.removeClass('collection'); }
 
 		body.toggleClass('is-exiting');
-		// duplicate code :(
-		var projects = $('.isotope').isotope({
-			itemSelector: '.item',
-			columnWidth: '.project',
-			percentPosition: true
-		});
-		filterBtnGroup.on('click', function (e) {
-			e.preventDefault();
-			var filterVal = $(this).attr('data-filter');
-			projects.isotope({filter: filterVal});
-		});
-		projects.imagesLoaded().progress( function() {
-		  projects.isotope('layout');
-		});
+
+		$.readyFn.execute();
 	}
 });
 

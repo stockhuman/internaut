@@ -14,6 +14,15 @@
 		"category"       : "web",
 		"year"           : "2015"
 	},
+	"arthem" : {
+		"title"          : "Arthem Co.",
+		"description"    : "A little web design buisness, now finding it's purpose.",
+		"data_base"      : "#25aae2",
+		"data_highlight" : "#ffffff",
+		"cover"          : "arthem.png",
+		"category"       : "web",
+		"year"           : "2016"
+	},
 	"5ft25" : {
 		"title"          : "5ft25",
 		"description"    : "A custom photography-centered WordPress theme",
@@ -69,10 +78,10 @@
 		"year"           : "2017"
 	},
 	"vaporwave" : {
-		"title"          : "Bad Samples",
-		"description"    : "",
-		"data_base"      : "",
-		"data_highlight" : "",
+		"title"          : "Vaporwave",
+		"description"    : "A colled assortment of audio and visual of the wavy variety",
+		"data_base"      : "#C774E8",
+		"data_highlight" : "#94D0FF",
 		"cover"          : "vaporwave.png",
 		"category"       : "audio",
 		"year"           : "2017"

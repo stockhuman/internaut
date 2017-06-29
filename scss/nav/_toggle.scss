@@ -54,10 +54,6 @@
 .nav-is-open {
 
   #nav-toggle span {
-    animation-name: none;
-  }
-
-  #nav-toggle span {
     &:nth-child(1) {
       transform: rotate(45deg);
       left: 13px

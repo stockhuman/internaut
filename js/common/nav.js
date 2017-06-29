@@ -15,7 +15,10 @@ function toggleNav () {
 	if (bodyClass.contains('nav-is-open')) {
 		navIsOpen = false;
 		bodyClass.remove('nav-is-open');
+
+	// nav is closed, open it
 	} else {
+		// navAnimOpen();
 		navIsOpen = true;
 		bodyClass.add('nav-is-open');
 	}
@@ -61,3 +64,31 @@ navToggle.addEventListener('click', function () {
 });
 
 window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
+
+
+/** Anime js animation plugin */
+
+// causes too many problems for now
+
+// function navAnimOpen () {
+// 	anime({
+// 		targets: '#nav-inner',
+// 		translateX: -100,
+// 		opacity: 0,
+// 		complete : function() {
+// 			anime({
+// 				targets: '#nav-inner',
+// 				translateX: 0,
+// 				opacity: 1,
+// 			})
+// 		}
+// 	})
+// }
+
+// function navAnimClose () {
+// 	anime({
+// 		targets: '#nav-inner',
+// 		translateX: -100,
+// 		opacity: 0
+// 	})
+// }

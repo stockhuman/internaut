@@ -1,201 +1,412 @@
-// /**
-//  * @author Michael Hemingway
-//  * 
-//  * Implements a lot of knowledge gained from the fine folks at webglfundamentals.org,
-//  * And MrDoob's brilliance in THREE js
-//  */
-// (function () {
+/**
+ * @author Michael Hemingway
+ * 
+ */
 
-// // global canvas and webGL context
-// var canvas, gl;
+$(document).ready(function () {
+	if ($('#home-canvas')) {
+		var canvas = $('#home-canvas'),
+				ctx = canvas[0].getContext('2d'),
+				overlay = $('#home-canvas-overlay');
 
-// // THREE js vars
-// var scene, camera, renderer;
-// var ambientLight;
+		if (window.devicePixelRatio) {
+		    var canvasWidth = $(canvas).attr('width');
+		    var canvasHeight = $(canvas).attr('height');
+		    var canvasCssWidth = canvasWidth;
+		    var canvasCssHeight = canvasHeight;
 
-// // environment variables
-// var windowW = window.innerWidth;
-// var windowH = window.innerHeight;
-// var mx = 0;
-// var my = 0;
-// var mX, mY; // computed half-mouse
+		    $(canvas).attr('width', canvasWidth * window.devicePixelRatio);
+		    $(canvas).attr('height', canvasHeight * window.devicePixelRatio);
+		    $(canvas).css('width', canvasCssWidth);
+		    $(canvas).css('height', canvasCssHeight);
+		    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+		}
 
-// var initialDeviceOrientation;
+	}
+});
 
-// // copy (Hi, I'm Michael text)
-// var copy = document.getElementById('home-canvas-overlay');
+/**
+ * tiltfx.js
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2015, Codrops
+ * http://www.codrops.com
+ */
+;(function(window) {
+	
+	'use strict';
 
+	/**
+	 * **************************************************************************
+	 * utils
+	 * **************************************************************************
+	 */
+	
+	// from https://gist.github.com/desandro/1866474
+	var lastTime = 0;
+	var prefixes = 'webkit moz ms o'.split(' ');
+	// get unprefixed rAF and cAF, if present
+	var requestAnimationFrame = window.requestAnimationFrame;
+	var cancelAnimationFrame = window.cancelAnimationFrame;
+	// loop through vendor prefixes and get prefixed rAF and cAF
+	var prefix;
+	for( var i = 0; i < prefixes.length; i++ ) {
+		if ( requestAnimationFrame && cancelAnimationFrame ) {
+			break;
+		}
+		prefix = prefixes[i];
+		requestAnimationFrame = requestAnimationFrame || window[ prefix + 'RequestAnimationFrame' ];
+		cancelAnimationFrame  = cancelAnimationFrame  || window[ prefix + 'CancelAnimationFrame' ] ||
+		window[ prefix + 'CancelRequestAnimationFrame' ];
+	}
 
-// // sets up the scene
-// function init () {
-// 	canvas = document.getElementById('home-canvas');
-// 	canvas.style.width = '100%';
+	// fallback to setTimeout and clearTimeout if either request/cancel is not supported
+	if ( !requestAnimationFrame || !cancelAnimationFrame ) {
+		requestAnimationFrame = function( callback, element ) {
+			var currTime = new Date().getTime();
+			var timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
+			var id = window.setTimeout( function() {
+				callback( currTime + timeToCall );
+			}, timeToCall );
+			lastTime = currTime + timeToCall;
+			return id;
+		};
 
-// 	// set position here so if js fails, it still looks good.
-// 	copy.style.position = 'absolute';
+		cancelAnimationFrame = function( id ) {
+			window.clearTimeout( id );
+		};
+	}
 
-// 	// Try to grab the standard context. If it fails, fallback to experimental.
-// 	gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+	function extend( a, b ) {
+		for( var key in b ) { 
+			if( b.hasOwnProperty( key ) ) {
+				a[key] = b[key];
+			}
+		}
+		return a;
+	}
 
-// 	// If we don't have a GL context, give up now
-// 	if (!gl) {
-// 		console.warn('Unable to initialize WebGL. Your browser may not support it.');
-// 		return;
+	// from http://www.quirksmode.org/js/events_properties.html#position
+	function getMousePos(e) {
+		var posx = 0;
+		var posy = 0;
+		if (!e) var e = window.event;
+		if (e.pageX || e.pageY) 	{
+			posx = e.pageX;
+			posy = e.pageY;
+		}
+		else if (e.clientX || e.clientY) 	{
+			posx = e.clientX + document.body.scrollLeft
+				+ document.documentElement.scrollLeft;
+			posy = e.clientY + document.body.scrollTop
+				+ document.documentElement.scrollTop;
+		}
+		return {
+			x : posx,
+			y : posy
+		}
+	}
+
+	// from http://www.sberry.me/articles/javascript-event-throttling-debouncing
+	function throttle(fn, delay) {
+		var allowSample = true;
+
+		return function(e) {
+			if (allowSample) {
+				allowSample = false;
+				setTimeout(function() { allowSample = true; }, delay);
+				fn(e);
+			}
+		};
+	}
+
+	/***************************************************************************/
+
+	/**
+	 * TiltFx fn
+	 * @param {HTMLElement} img element
+	 * @param {object} options
+	 */
+	function TiltFx(el, options) {
+		if(el) {
+			this.el = el;
+			this.options = extend( {}, this.options );
+			extend( this.options, options );
+			this._init();
+			this._initEvents();
+		}
+	}
+
+	/**
+	 * TiltFx options.
+	 */
+	TiltFx.prototype.options = {
+		// number of extra image elements (div with background-image) to add to the DOM - min:0, max:64 (for a higher number, it's recommended to remove the transitions of .tilt__front in the stylesheet.
+		extraImgs : 2,
+		// set scale factor - value what use to set scale gradients for each extra img
+		extraImgsScaleGrade: 0,
+		// the opacity value for all the image elements.
+		opacity : 0.7,
+		// when use set array of opacity for each image from bottom to top
+		customImgsOpacity: false,
+		// by default the first layer does not move.
+		bgfixed : true,
+		// use reset style for mouseleave event
+		resetOnLeave: true,
+		// image element's movement configuration
+		movement : {
+			perspective : 1000, // perspective value
+			translateX : -10, // a relative movement of -10px to 10px on the x-axis (setting a negative value reverses the direction)
+			translateY : -10, // a relative movement of -10px to 10px on the y-axis 
+			translateZ : 20, // a relative movement of -20px to 20px on the z-axis (perspective value must be set). Also, this specific translation is done when the mouse moves vertically.
+			rotateX : 2, // a relative rotation of -2deg to 2deg on the x-axis (perspective value must be set)
+			rotateY : 2, // a relative rotation of -2deg to 2deg on the y-axis (perspective value must be set)
+			rotateZ : 0 // z-axis rotation; by default there's no rotation on the z-axis (perspective value must be set)
+		},
+		// element for relative custom position offset
+		element : {
+			// element what will be bind to mousemove
+			mouseMoveWatcher: null,
+			// element for set bounds of mousemove
+			viewWatcher: null
+		}
+	}
+
+	/**
+	 * Initialize: build the necessary structure for the image elements and replace it with the HTML img element.
+	 */
+	TiltFx.prototype._init = function() {
+		this.tiltWrapper = document.createElement('div');
+		this.tiltWrapper.className = 'tilt';
+
+		// main image element.
+		this.tiltImgBack = document.createElement('div');
+		this.tiltImgBack.className = 'tilt__back';
+		this.tiltImgBack.tiltFxType = 'back';
+		this.tiltImgBack.style.backgroundImage = 'url(' + this.el.src + ')';
+		this.tiltWrapper.appendChild(this.tiltImgBack);
+
+		// image elements limit.
+		if( this.options.extraImgs < 1 ) {
+			this.imgCount = 0;
+		}
+		else if( this.options.extraImgs > 64 ) {
+			this.imgCount = 64;
+		}
+		else {
+			this.imgCount = this.options.extraImgs;
+		}
+
+		if( !this.options.movement.perspective ) {
+			this.options.movement.perspective = 0;
+		}
+
+		// add the extra image elements.
+		this.imgElems = [];
+		var frontExtraImagesCount = this.imgCount;
+		var customImgsOpacity = this.options.customImgsOpacity;
+
+		if( !this.options.bgfixed ) {
+			this.imgElems.push(this.tiltImgBack);
+			++this.imgCount;
+		}
+
+		for(var i = 0; i < frontExtraImagesCount; ++i) {
+			var el = document.createElement('div');
+			el.className = 'tilt__front';
+			el.style.backgroundImage = 'url(' + this.el.src + ')';
+			this.tiltWrapper.appendChild(el);
+			this.imgElems.push(el);
+		}
+
+		// set opacity for images
+		this._initSetImagesOpacity();
+
+		// add it to the DOM and remove original img element.
+		this.el.parentNode.insertBefore(this.tiltWrapper, this.el);
+		this.el.parentNode.removeChild(this.el);
+
+		// set mosemove element area and view restrictions
+		this._setViewWatcher(this);
+		this._setMouseMoveWatcher(this);
+
+		// viewWatcher properties: width/height/left/top
+		this._calcView(this);
+	};
+
+	/**
+	 * Set images opacity.
+	 * @private
+	 */
+	TiltFx.prototype._initSetImagesOpacity = function() {
+		if(this.options.customImgsOpacity) {
+			for(var i = 0, len = this.imgElems.length; i < len; ++i) {
+				var opacity = (this.options.customImgsOpacity[i])
+					? this.options.customImgsOpacity[i]
+					: this.options.opacity;
+
+				this.imgElems[i].style.opacity = opacity;
+
+			}
+
+		}
+		else {
+			for(var i = 0, len = this.imgElems.length; i < len; ++i) {
+				if(this.imgElems[i].tiltFxType === 'back') {
+					continue;
+				}
+
+				this.imgElems[i].style.opacity = this.options.opacity;
+			}
+
+		}
+	};
+
+	TiltFx.prototype._calcView = function(self) {
+		self.view = {
+			width : self.viewWatcher.offsetWidth,
+			height : self.viewWatcher.offsetHeight
+		};
+	};
+
+	TiltFx.prototype._setMouseMoveWatcher = function(self) {
+		var isSet = false;
+
+		if(self.options.element && self.options.element.mouseMoveWatcher) {
+			var mouseMoveWatcherElement = document.querySelector(self.options.element.mouseMoveWatcher);
+
+			self.mouseMoveWatcher = mouseMoveWatcherElement;
+			isSet = true;
+		}
+
+		if(!isSet) {
+			self.mouseMoveWatcher = self.viewWatcher;
+		}
+	};
+
+	TiltFx.prototype._setViewWatcher = function(self) {
+		var isSet = false;
+
+		if(self.options.element && self.options.element.viewWatcher) {
+			var customElementRelative = document.querySelector(self.options.element.viewWatcher);
+
+			if(customElementRelative) {
+				self.viewWatcher = customElementRelative;
+				isSet = true;
+			}
+		}
+
+		if(!isSet) {
+			self.viewWatcher = self.tiltWrapper;
+		}
+	};
+
+	/**
+	 * Initialize the events on the main wrapper.
+	 */
+	TiltFx.prototype._initEvents = function() {
+		var self = this,
+			moveOpts = self.options.movement;
+
+		// mousemove event..
+		self.mouseMoveWatcher.addEventListener('mousemove', function(ev) {
+			requestAnimationFrame(function() {
+					// mouse position relative to the document.
+				var mousepos = getMousePos(ev),
+					// document scrolls.
+					docScrolls = {
+						left : document.body.scrollLeft + document.documentElement.scrollLeft,
+						top : document.body.scrollTop + document.documentElement.scrollTop
+					},
+					bounds = self.tiltWrapper.getBoundingClientRect(),
+					// mouse position relative to the main element (tiltWrapper).
+					relmousepos = {
+						x : mousepos.x - bounds.left - docScrolls.left,
+						y : mousepos.y - bounds.top - docScrolls.top
+					};
+
+				// configure the movement for each image element.
+				for(var i = 0, len = self.imgElems.length; i < len; ++i) {
+					var el = self.imgElems[i],
+						rotX = moveOpts.rotateX ? 2 * ((i+1)*moveOpts.rotateX/self.imgCount) / self.view.height * relmousepos.y - ((i+1)*moveOpts.rotateX/self.imgCount) : 0,
+						rotY = moveOpts.rotateY ? 2 * ((i+1)*moveOpts.rotateY/self.imgCount) / self.view.width * relmousepos.x - ((i+1)*moveOpts.rotateY/self.imgCount) : 0,
+						rotZ = moveOpts.rotateZ ? 2 * ((i+1)*moveOpts.rotateZ/self.imgCount) / self.view.width * relmousepos.x - ((i+1)*moveOpts.rotateZ/self.imgCount) : 0,
+						transX = moveOpts.translateX ? 2 * ((i+1)*moveOpts.translateX/self.imgCount) / self.view.width * relmousepos.x - ((i+1)*moveOpts.translateX/self.imgCount) : 0,
+						transY = moveOpts.translateY ? 2 * ((i+1)*moveOpts.translateY/self.imgCount) / self.view.height * relmousepos.y - ((i+1)*moveOpts.translateY/self.imgCount) : 0,
+						transZ = moveOpts.translateZ ? 2 * ((i+1)*moveOpts.translateZ/self.imgCount) / self.view.height * relmousepos.y - ((i+1)*moveOpts.translateZ/self.imgCount) : 0,
+
+						scale = 1 + (self.options.extraImgsScaleGrade * (len - (i+1))),
+						scaleCss = (scale !== 1) ? ' scale(' + scale + ', ' + scale + ')' : '';
+
+					el.style.WebkitTransform =
+						'perspective(' + moveOpts.perspective + 'px)' +
+						' translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px)' +
+						' rotate3d(1,0,0,' + rotX + 'deg)' +
+						' rotate3d(0,1,0,' + rotY + 'deg)' +
+						' rotate3d(0,0,1,' + rotZ + 'deg)' +
+						scaleCss;
+
+					el.style.transform =
+						'perspective(' + moveOpts.perspective + 'px)' +
+						' translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px)' +
+						' rotate3d(1,0,0,' + rotX + 'deg)' +
+						' rotate3d(0,1,0,' + rotY + 'deg)' +
+						' rotate3d(0,0,1,' + rotZ + 'deg)' +
+						scaleCss;
+				}
+			});
+		});
+
+		// reset all when mouse leaves the main wrapper.
+		if(self.options.resetOnLeave) {
+			self.mouseMoveWatcher.addEventListener('mouseleave', function () {
+				setTimeout(function () {
+					for (var i = 0, len = self.imgElems.length; i < len; ++i) {
+						var el = self.imgElems[i];
+						el.style.WebkitTransform = 'perspective(' + moveOpts.perspective + 'px) translate3d(0,0,0) rotate3d(1,1,1,0deg)';
+						el.style.transform = 'perspective(' + moveOpts.perspective + 'px) translate3d(0,0,0) rotate3d(1,1,1,0deg)';
+					}
+				}, 60);
+
+			});
+		}
+
+		// window resize
+		window.addEventListener('resize', throttle(function() {
+			// recalculate viewWatcher properties: width/height/left/top
+			self._calcView(self);
+		}, 50));
+	};
+
+	/**
+	 * Init tiltFx on each imgs with the class "tilt-effect"
+	 */
+	TiltFx.prototype.init = function() {
+		// search for imgs with the class "tilt-effect"
+		[].slice.call(document.querySelectorAll('img.tilt-effect')).forEach(function(img) {
+			new TiltFx(img, JSON.parse(img.getAttribute('data-tilt-options')));
+		});
+	};
+
+	(new TiltFx()).init();
+
+	window.TiltFx = TiltFx;
+
+})(window);
+
+// homeTilt = new TiltFx({
+// 	"extraImgs" : 4,
+// 	"opacity" : 0.5,
+// 	"bgfixed" : true,
+// 	"movement": { 
+// 		"perspective" : 500, 
+// 		"translateX" : -15, 
+// 		"translateY" : -15, 
+// 		"translateZ" : 20, 
+// 		"rotateX" : 15, 
+// 		"rotateY" : 15 
 // 	}
-
-// 	build(); // adds particles, meshes and sets up all of THREE.js
-
-// 	// DJ spin that shit
-// 	window.requestAnimationFrame(render);
-// }
-
-// // ...And renders it
-// function render () {
-
-// 	update();
-
-// 	renderer.render(scene, camera);
-// 	window.requestAnimationFrame(render);
-// }
-
-// // THREE JS
-// // =========================================
-
-// function update () {
-	
-// 	camera.updateMatrix();
-
-// 	// rotate the copy with the surrounding elements
-// 	copy.style.transform = 
-// 			"rotateX(" +       camera.rotation.x
-// 			+"rad) rotateY(" + camera.rotation.y
-// 			+"rad) translate3D(-50%, -50%, 0)";
-
-// }
-
-// function build () {
-
-// 	// set up three js
-// 	scene = new THREE.Scene();
-// 	camera = new THREE.PerspectiveCamera( 75, windowW / windowH, 0.1, 1000 );
-// 	renderer = new THREE.WebGLRenderer( { canvas: canvas, antialias: false } );
-
-// 	renderer.setSize( windowW, windowH );
-// 	renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio : 1);
-// 	copy.style.left = canvas.width / 2 + "px";
-// 	copy.style.top = canvas.height / 2 + "px";
-
-// 	// geometry
-// 	buildShapes();
-// 	buildParticles();
-
-// 	// camera
-// 	camera.position.z = 10;
-// }
-
-// function buildParticles () {
-// 	// create the particle variables
-// 	var particleCount = 420,
-// 			particles = new THREE.Geometry(),
-// 			pMaterial = new THREE.PointsMaterial({ color: 0x000000, size: 1 });
-	
-// 	for(var p = 0; p < particleCount; p++) {
-	
-// 		var pX = (Math.random() - 0.5) * 1000;
-// 				pY = (Math.random() - 0.5) * 1000;
-// 				pZ = (Math.random() - 0.5) * 1000;
-// 				particle = new THREE.Vector3(pX, pY, pZ);
-
-// 		particles.vertices.push(particle);
-// 	}
-	
-// 	var particleSystem = new THREE.Points( particles, pMaterial);
-// 	scene.add(particleSystem);
-// }
-
-// function buildShapes () {
-
-// 	const numIcosahedrons = 15;
-// 	var geometry = new THREE.IcosahedronGeometry(15, 1),
-// 			material = new THREE.MeshBasicMaterial( { color: 0xb4f0e3, wireframe: true } );
-
-// 	for (var i = numIcosahedrons - 1; i >= 0; i--) {
-
-// 		var mesh = new THREE.Mesh(geometry, material);
-// 		mesh.position.x = (Math.random() - 0.5) * 1000;
-// 		mesh.position.y = (Math.random() - 0.5) * 1000;
-// 		mesh.position.z = (Math.random() - 0.5) * 1000;
-
-// 		mesh.updateMatrix();
-
-// 		mesh.matrixAutoUpdate = false;
-// 		scene.add( mesh );
-// 	}
-
-// 	// me
-// 	var planegeo = new THREE.PlaneGeometry(512, 512);
-// 	var planetex = new THREE.TextureLoader().load('/assets/img/ui/me.jpg');
-// 	var planemat = new THREE.MeshBasicMaterial( {map: planetex } );
-// 	var plane = new THREE.Mesh(planegeo, planemat);
-// 	plane.position.z = -990;
-// 	plane.position.y = 400;
-// 	scene.add(plane);
-// }
-
-// // UTILS
-// // ============================================
-
-// function normalize (val, min, max) { return (val - min) / (max - min); }
-
-// document.addEventListener('mousemove', onMouseUpdate, false);
-// document.addEventListener('mouseenter', onMouseUpdate, false);
-// function onMouseUpdate(e) {
-// 	mx = e.pageX;
-// 	my = e.pageY;
-
-// 	mX = mx - windowW;
-// 	mY = my - windowH;
-// }
-
-// function getMouseX() { return x; }
-// function getMouseY() { return y; }
-
-// // Via Shawn Whinnery, stackoverflow.com/questions/20290402/
-// window.addEventListener( 'resize', onWindowResize, false );
-// function onWindowResize() {
-// 	windowW = window.innerWidth;
-// 	windowH = window.innerHeight;
-
-// 	camera.aspect = windowW / windowH;
-// 	camera.updateProjectionMatrix();
-
-// 	copy.style.left = canvas.width / 2 + "px";
-// 	copy.style.top = canvas.height / 2 + "px";
-
-// 	renderer.setSize( windowW, windowH );
-// }
-
-// window.addEventListener("devicemotion", handleMotion, true);
-// function handleMotion() {
-// 	// var betaTilt = initialDeviceOrientation.beta - window.deviceOrientation.beta;
-// 	// var gammaTilt = initialDeviceOrientation.gamma - window.deviceOrientation.gamma;
-
-// 	// if (gammaTilt < 45 && gammaTilt > -45) {
-// 	// 	camera.position.x += (gammaTilt * 4 - camera.position.x) * 0.1;
-// 	// }
-
-// 	// if (betaTilt < 45 && betaTilt > -45) {
-// 	// 	camera.position.y += (betaTilt * 4 - camera.position.y + camera.targetPoint.y) * 0.1;
-// 	// }
-// }
-
-// // window.addEventListener("orientationchange", function() {
-// //     alert("the orientation of the device is now " + screen.orientation.angle);
-// // });
-
-// // GO!
-// init();
-
-// }());
-
-// // TODO: simple responsiveness @ ultrawide
+// })
