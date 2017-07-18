@@ -4,7 +4,16 @@
 		"description" : "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
 		"layout": "_prj-layout"
 	},
-	
+
+	"jars" : {
+		"title"          : "Jars",
+		"description"    : "My personal productivity app",
+		"data_base"      : "#0A0908",
+		"data_highlight" : "#EAE0D5",
+		"cover"          : "jars.png",
+		"category"       : "code",
+		"year"           : "2017"
+	},
 	"the-plant" : {
 		"title"          : "The Plant",
 		"description"    : "Dawson College's Official online student newspaper",

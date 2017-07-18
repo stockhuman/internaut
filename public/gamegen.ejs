@@ -22,7 +22,7 @@
 	<header class="cover">
 			<svg id="doot" viewbox="0 0 100 100"></svg>
 	</header>
-	<article class="page" data-base="#FF8936">
+	<article class="page">
 		<h1>Game Mechanics Generator</h1>
 		<button id="mechBtn">Generate Mechanics</button>
 		<button id="themeBtn">Generate Theme</button>
@@ -105,15 +105,17 @@
 		}
 
 		var mechDict = {
-			action : ["Destroy", "Create", "Navigate", "Seek out", "Explore", "Race", "Break", "Identify", "Protect", "Govern", "Find", "Escape", "Solve puzzles about", "Platform across", "Shoot", "Discover how to communicate with", "Strategically balance", "Endlessly escape", "Terraform", "Escort", "Chase", "Fight", "Question", "Manage scarce resources for"],
-			noun   : ["houses", "spaces", "people", "a ship", "enemies", "the game narrative", "personal histories", "a hidden objective", "your partner", "your lover", "the king", "a common item", "your father", "a strange creature", "an unknown force", "nothing", "planets", "crowds", "a ball pit", "the countryside", "microscopic things", "a hidden mechanic", "frightening experiences", "an NPC", "the base"],
-			adverb : ["as fast as possible", "without sound", "without traditional controls", "under a time limit", "without being seen", "using text commands", "using combos", "with only dialogue", "with sex", "with RNG", "as efficiently as possible", "with excessive force", "forever", "with bad physics", "with only one control", "with a friend", "with an online community", "before the AI does"]
+			action : ["Destroy", "Create", "Navigate", "Seek out", "Explore", "Race", "Break", "Identify", "Protect", "Govern", "Find", "Escape", "Solve puzzles about", "Platform across", "Shoot", "Discover how to communicate with", "Strategically balance", "Endlessly escape", "Terraform", "Escort", "Mimic", "Button mash", "Chase", "Fight", "Question", "Manage scarce resources for", "Brawl"],
+			noun   : ["houses", "spaces", "people", "a ship", "enemies", "the game narrative", "personal histories", "a hidden objective", "your partner", "your lover", "bricks", "hordes of generic enemies", "a stereotype", "the king", "a common item", "your father", "a strange creature", "an unknown force", "nothing", "planets", "crowds", "a ball pit", "the countryside", "microscopic things", "a hidden mechanic", "frightening experiences", "an NPC", "the base", "an RPG questline"],
+			adverb : ["as fast as possible", "without sound", "without traditional controls", "under a time limit", "without being seen", "using text commands", "using combos", "with only dialogue", "with sex", "with RNG", "as efficiently as possible", "with excessive force", "forever", "with bad physics", "with only one control", "with a friend", "with an online community", "before the AI does", "in reverse", "between boss battles"]
 		};
 
 		var themeDict = {
 			adj : ["Large", "Small", "Immaterial", "A Tweet about", "YouTube", "Sad", "Seemingly infinite supplies of", "Strange", "Furry", "Majestic", "Atmospheric", "Eternal", "Inner city", "Moody", "Historical", "Future", "Jewish", "Odd", "Transient", "Mute", "Lonely", "Contemplative", "Immature", "Religious"],
 			noun: ["moths", "giants", "lovers", "feet", "politics", "strife", "small towns", "friends", "music", "cuisine", "extraterrestrials", "ghosts", "liberals", "conservatives", "elves", "anarchists", "animals", "rich people", "losers", "drama", "prisoners", "individuals", "groups", "cooks", "dentists", "politicians", "mothers", "fathers", "brothers", "pets", "armies", "ants", "schools", "rare pokemon", "pop culture", "invasions", "minimalism"]
 		};
+
+		console.warn('Hey! Press the buttons! What are you doing poking around here!')
 	</script>
 
 </div>
