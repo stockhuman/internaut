@@ -18,46 +18,26 @@
 		@include font-size(28);
 	}
 	// article proper
-	article.item {
-		min-height: 100vh;
-		max-width: 100%;
+	#tumblr .item {
+		// min-height: 100vh;
+		// max-width: 100%;
 		margin-bottom: $navPad;
-		padding-top: 4em;
+		// padding-top: 4em;
 		background: #dedede;
 		border-radius: 2px;
-		&>* {
-			max-width: 700px;
-			margin: 0 auto;
+		position: relative;
+		h2, h3, p {
+			padding: 2em;
+			margin-bottom: 0;
 		}
-		p {
-			padding-top: 2em;
+
+		.title {
+			font-size: 24px;
 		}
-	}
-
-	// display list on the front page
-	h3 {
-		color: #dedede;
-		line-height: 1.2;
-		letter-spacing: 0;
-		margin-bottom: 1rem;
-		a {
-			position: relative;
-			&:hover {
-				&::before {
-					max-width: 100%;
-				}
-			}
-			&::before {
-				transition: max-width .2s ease;
-				position: absolute;
-				content: '';
-				background: #dedede;
-				bottom: -1px;
-				height: 2px;
-
-				max-width: 13px;
-				width: 100%;
-			}
+		.date {
+			position: absolute;
+			bottom: 0;
+			right: 0;
 		}
 	}
 }

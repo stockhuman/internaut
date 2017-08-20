@@ -84,6 +84,7 @@ gulp.task('browserSync', () =>
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
 	gulp.watch('scss/**/*.scss', ['sass']);
 	gulp.watch('js/**/*.js', ['scripts']);
+	gulp.watch('public/assets/js/*.js', ['scripts']);
 	gulp.watch('public/**/**/*.ejs', browserSync.reload);  // pages
 	gulp.watch('public/**/**/*.json', browserSync.reload); // site data
 })

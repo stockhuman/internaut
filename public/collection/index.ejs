@@ -6,37 +6,10 @@
 
 <p>The collection is my content graveyard; It's made of the things that didn't quite make it to the projects, or weren't mine and I just wanted to save. It's like a blog, but for more than just writing.</p>
 
-<div class="collection-list">
-	<h4>Text</h4>
+<hr>
 
-	<%# display all posts by category %>
-	<% var i = 0;
+<div id="tumblr" class="collection-list">
 
-	for (var slug in public.collection.writing._data) {
-
-		if (slug != 'index') { // skip the index %>
-
-		<h3><a href="/collection/writing/<%= slug %>"><%= i + " ~~ " + slug %></a></h3>
-
-	<% i += 1; }} // end loop %>
-
-	<h4>Code</h4>
-
-	<% 
-		for (var code in public.collection.code._data) {
-			if (code != 'index') { // skip the index %>
-
-			<h3><a href="/collection/code/<%= code %>"><%= i + " ~~ " + code %></a></h3>
-		
-		<% i += 1; }} // end code loop %>
-
-		<h4>Video</h4>
-
-		<% 
-			for (var video in public.collection.video._data) {
-				if (video != 'index') { // skip the index %>
-
-				<h3><a href="/collection/video/<%= video %>"><%= i + " ~~ " + video %></a></h3>
-			
-			<% i += 1; }} // end video loop %>
 </div>
+
+<script src="/assets/js/tumblr.js" defer></script>
