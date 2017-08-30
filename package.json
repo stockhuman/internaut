@@ -23,8 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "init": "concurrently \"harp server\" \"gulp watch\"",
-    "compile": "harp compile ./ ../../../Desktop/site && gulp postbuild"
+    "dev": "concurrently \"harp server\" \"gulp watch\"",
+    "build": "harp compile ./ ../../../Desktop/site && gulp postbuild"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,155 @@
 /**
+ * Michael Hemingway
+ * (c) 2017
+ *
+ * I'll probably switch everything over to Vue
+ */
+
+ // SMOOTHSTATE
+ var body = $('body');
+
+ // avoid deprecated synchronous call (http://stackoverflow.com/questions/24639335/)
+ $.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
+
+// Smoothstate JQ plugin
+$('#container').smoothState({
+	blacklist: '.no-smoothState',
+
+	onStart : {
+		duration: 450,
+		// Alterations to the page
+		render: function () {
+			// Quickly toggles a class and restarts css animations
+			body.toggleClass('is-exiting');
+		}
+	},
+
+	onAfter: function () {
+		navColors(); // color the nav
+		resetNav(); // hide the transitioner / close the nav
+
+		// fix collection styling
+		if ((window.location.href.indexOf("collection") > -1)) {
+			body.addClass('collection');
+		} else { body.removeClass('collection'); }
+
+		body.toggleClass('is-exiting');
+
+		$.readyFn.execute();
+	}
+});
+
+// add nav links to smoothState
+$(".nav-list-item a, #nav-home-icon a").click(function(e) {
+	e.preventDefault();
+	var c = $("#container").smoothState().data("smoothState"),
+			l = $(this).attr("href");
+	c.load(l);
+});
+
+// MISC_____________________________________
+
+// add console text
+window.addEventListener("load", function (event) {
+	var c = 'color: #bada55; background: #222;';
+	console.log('%c ( ͠° ͟ʖ ͡°)', c);
+	console.log('%c Nothing to see here.', c);
+});
+/** 
+	Main navigation interactivity, colors
+	support in IE 10+
+*/
+
+var navToggle = document.getElementById('nav-toggle'),
+		bodyClass = document.body.classList,
+		navIcons  = document.getElementsByClassName('nav-list-container')[0],
+		navIsOpen = false,
+		navMain   = document.getElementById('nav-main'),
+		bg, accent;
+
+function toggleNav () {
+	// nav is open, close it
+	if (bodyClass.contains('nav-is-open')) {
+		navIsOpen = false;
+		bodyClass.remove('nav-is-open');
+
+	// nav is closed, open it
+	} else {
+		// navAnimOpen();
+		navIsOpen = true;
+		bodyClass.add('nav-is-open');
+	}
+}
+
+function navColors() {
+	if ($('article.page').attr('data-base') != (undefined)) {
+		bg = $('article.page').attr('data-base');
+		accent = $('article.page').attr('data-highlight');
+	} else {
+		bg = '#3b444c';
+		accent = '#fff';
+	}
+
+	$(navMain).css('background', bg);
+	$('#transitioner').css('background', bg);
+	$(navMain).css('color', accent);
+
+	$('#nav-toggle span').each(function() {
+		$(this).css('background', accent);
+	});
+
+	$('meta[name=theme-color]').remove();
+	$('head').append('<meta name="theme-color" content="'+bg+'">');
+}
+
+function resetNav() {
+	if (navIsOpen) {
+		navIsOpen = false;
+		document.body.classList.remove('nav-is-open');
+	}
+}
+
+// Load the colors on fresh page
+$(document).ready(function() { navColors(); });
+
+// Interaction
+navMain.addEventListener('mouseleave', function() {
+	if (navIsOpen) { toggleNav(); }
+});
+navToggle.addEventListener('click', function () { 
+	toggleNav(); 
+});
+
+window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
+
+
+/** Anime js animation plugin */
+
+// causes too many problems for now
+
+// function navAnimOpen () {
+// 	anime({
+// 		targets: '#nav-inner',
+// 		translateX: -100,
+// 		opacity: 0,
+// 		complete : function() {
+// 			anime({
+// 				targets: '#nav-inner',
+// 				translateX: 0,
+// 				opacity: 1,
+// 			})
+// 		}
+// 	})
+// }
+
+// function navAnimClose () {
+// 	anime({
+// 		targets: '#nav-inner',
+// 		translateX: -100,
+// 		opacity: 0
+// 	})
+// }
+/**
  * @author Michael Hemingway
  * 
  */
@@ -171,154 +322,3 @@ $(document).ready(function (){
 	});
 	
 });
-/**
- * Michael Hemingway
- * (c) 2017
- *
- * I'll probably switch everything over to Vue
- */
-
- // SMOOTHSTATE
- var body = $('body');
-
- // avoid deprecated synchronous call (http://stackoverflow.com/questions/24639335/)
- $.ajaxPrefilter(function( options, originalOptions, jqXHR ) { options.async = true; });
-
-// Smoothstate JQ plugin
-$('#container').smoothState({
-	blacklist: '.no-smoothState',
-
-	onStart : {
-		duration: 450,
-		// Alterations to the page
-		render: function () {
-			// Quickly toggles a class and restarts css animations
-			body.toggleClass('is-exiting');
-		}
-	},
-
-	onAfter: function () {
-		navColors(); // color the nav
-		resetNav(); // hide the transitioner / close the nav
-
-		// fix collection styling
-		if ((window.location.href.indexOf("collection") > -1)) {
-			body.addClass('collection');
-		} else { body.removeClass('collection'); }
-
-		body.toggleClass('is-exiting');
-
-		$.readyFn.execute();
-	}
-});
-
-// add nav links to smoothState
-$(".nav-list-item a, #nav-home-icon a").click(function(e) {
-	e.preventDefault();
-	var c = $("#container").smoothState().data("smoothState"),
-			l = $(this).attr("href");
-	c.load(l);
-});
-
-// MISC_____________________________________
-
-// add console text
-window.addEventListener("load", function (event) {
-	var c = 'color: #bada55; background: #222;';
-	console.log('%c ( ͠° ͟ʖ ͡°)', c);
-	console.log('%c Nothing to see here.', c);
-});
-/** 
-	Main navigation interactivity, colors
-	support in IE 10+
-*/
-
-var navToggle = document.getElementById('nav-toggle'),
-		bodyClass = document.body.classList,
-		navIcons  = document.getElementsByClassName('nav-list-container')[0],
-		navIsOpen = false,
-		navMain   = document.getElementById('nav-main'),
-		bg, accent;
-
-function toggleNav () {
-	// nav is open, close it
-	if (bodyClass.contains('nav-is-open')) {
-		navIsOpen = false;
-		bodyClass.remove('nav-is-open');
-
-	// nav is closed, open it
-	} else {
-		// navAnimOpen();
-		navIsOpen = true;
-		bodyClass.add('nav-is-open');
-	}
-}
-
-function navColors() {
-	if ($('article.page').attr('data-base') != (undefined)) {
-		bg = $('article.page').attr('data-base');
-		accent = $('article.page').attr('data-highlight');
-	} else {
-		bg = '#3b444c';
-		accent = '#fff';
-	}
-
-	$(navMain).css('background', bg);
-	$('#transitioner').css('background', bg);
-	$(navMain).css('color', accent);
-
-	$('#nav-toggle span').each(function() {
-		$(this).css('background', accent);
-	});
-
-	$('meta[name=theme-color]').remove();
-	$('head').append('<meta name="theme-color" content="'+bg+'">');
-}
-
-function resetNav() {
-	if (navIsOpen) {
-		navIsOpen = false;
-		document.body.classList.remove('nav-is-open');
-	}
-}
-
-// Load the colors on fresh page
-$(document).ready(function() { navColors(); });
-
-// Interaction
-navMain.addEventListener('mouseleave', function() {
-	if (navIsOpen) { toggleNav(); }
-});
-navToggle.addEventListener('click', function () { 
-	toggleNav(); 
-});
-
-window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
-
-
-/** Anime js animation plugin */
-
-// causes too many problems for now
-
-// function navAnimOpen () {
-// 	anime({
-// 		targets: '#nav-inner',
-// 		translateX: -100,
-// 		opacity: 0,
-// 		complete : function() {
-// 			anime({
-// 				targets: '#nav-inner',
-// 				translateX: 0,
-// 				opacity: 1,
-// 			})
-// 		}
-// 	})
-// }
-
-// function navAnimClose () {
-// 	anime({
-// 		targets: '#nav-inner',
-// 		translateX: -100,
-// 		opacity: 0
-// 	})
-// }

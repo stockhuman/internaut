@@ -8,8 +8,8 @@
 	"jars" : {
 		"title"          : "Jars",
 		"description"    : "My personal productivity app",
-		"data_base"      : "#0A0908",
-		"data_highlight" : "#EAE0D5",
+		"data_base"      : "#00AEEF",
+		"data_highlight" : "#EEEEEE",
 		"cover"          : "jars.png",
 		"category"       : "code",
 		"year"           : "2017"
