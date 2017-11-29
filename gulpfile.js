@@ -6,7 +6,7 @@
 	$ npm i --save-dev gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync 
 
 	optionally, for image minification and thumbnail generation, 
-	$ npm i --save-dev gulp-imagemin gulp-changed concurrent-transform os
+	$ npm i --save-dev gulp-imagemin gulp-changed gulp-jimp-resize concurrent-transform os
 */
 
 // SCSS, HTML, JS development
@@ -19,7 +19,7 @@ const browserSync = require('browser-sync').create();
 
 // Image resizing and thumbnail creation
 const imgMinify = require('gulp-imagemin');
-// const imgResize = require('lwip');
+// const jimp = require('sharp');
 const changed = require('gulp-changed');
 const parallel = require('concurrent-transform');
 const os = require('os');
@@ -45,11 +45,11 @@ gulp.task('sass', function () {
 gulp.task('scripts', function() {
 	// script paths
 	let jsSources = 'js/**/*.js',
-	    jsDist = assetDir + 'js/';
+			jsDist = assetDir + 'js/';
 
-  return gulp.src(jsSources)
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest(jsDist))
+	return gulp.src(jsSources)
+		.pipe(concat('app.js'))
+		.pipe(gulp.dest(jsDist))
 		.pipe(rename('app.min.js'))
 		.pipe(uglify().on('error', function (err) {
 			console.error(err.message);
@@ -68,17 +68,14 @@ gulp.task('browserSync', () =>
 	browserSync.init({ proxy: 'http://localhost:9000/' })
 )
 
-// // generates extremely low-res thumbnails for fast blur-up
-// gulp.task('thumbs', function () {
-
-
-// 	gulp.src(assetDir + 'img/work/**/*.{jpg,png}')
-// 	.pipe(imgResize.open())
-// 	// .pipe(rename(function (path) {
-// 	// 	path.basename += "-thumb64" // adds a suffix
-// 	// }))
-// 	// .pipe(gulp.dest(assetDir + 'img/thumbs/'))
-// })
+// generates extremely low-res thumbnails for fast blur-up
+gulp.task('thumbs', function () {
+	gulp.src(assetDir + 'img/work/covers/**/*.{jpg,png}')
+	.pipe(jimp({
+		sizes: [{"suffix":"tiny", "width": 20}]
+	}))
+	.pipe(gulp.dest(assetDir + 'img/work/covers/tiny/'))
+})
 
 // watches files for changes, adjust accordingly
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
@@ -97,9 +94,4 @@ gulp.task('postbuild', function () {
 	gulp.src(assetDir + 'img/**/*')
 	.pipe(parallel( imgMinify(), os.cpus().length ))
 	.pipe(gulp.dest('../../../Desktop/site/assets/img/'))
-
-	// minify images in the collection's img folder, too
-	gulp.src('public/collection/img/*')
-	.pipe(parallel( imgMinify(), os.cpus().length ))
-	.pipe(gulp.dest('../../../Desktop/site/collection/img/'))
 })
