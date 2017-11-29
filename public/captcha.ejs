@@ -1,0 +1,141 @@
+<main id="content" class="page">
+
+<header class="cover">
+	<div style="min-height: 800px; background: white;">
+		<div class="top">
+			<span id="text">Select all the squares with</span>
+		</div>
+		<div id="bg"></div>
+		<div id="verify">
+			<button class="verify">VERIFY</button>
+		</div>
+	</div>
+
+</header>
+<article class="page" data-base="#2196F3" data-highlight="#ffffff">
+	<input type="text" id="goog-target-acquired" placeholder="What are we looking for?" onchange="updateText();" onkeyup="this.onchange();" />
+	<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+	<label for="file">Choose a file</label>
+<hr>
+	
+	<figure>
+		<img src="https://i.reddituploads.com/b26cabfe279a45bebf1c5faedd5482b3?fit=max&h=1536&w=1536&s=c5074ede0fa107063f080ef438ba7557" alt="">
+		<figcaption>This was almost entirely inspired by this meme</figcaption>
+	</figure>
+</article>
+</main>
+<script>
+
+var srcTxt = document.getElementById("goog-target-acquired");
+		targetTxt = document.getElementById("text");
+
+function updateText () {
+	targetTxt.innerHTML = 'Select all the squares with ' +srcTxt.value;
+}
+
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+    if (this.files && this.files[0]) {
+      document.getElementById("bg").style =
+      'background-image: url(' + URL.createObjectURL(this.files[0]) +')';
+    }
+  });
+});
+
+var inputs = document.querySelectorAll( '.inputfile' );
+Array.prototype.forEach.call( inputs, function( input )
+{
+	var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+	input.addEventListener( 'change', function( e )
+	{
+		var fileName = '';
+		if( this.files && this.files.length > 1 )
+			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+		else
+			fileName = e.target.value.split( '\\' ).pop();
+
+		if( fileName )
+			label.querySelector( 'span' ).innerHTML = fileName;
+		else
+			label.innerHTML = labelVal;
+	});
+});
+
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+	.top {
+		margin: 0 auto;
+		background: #2196F3;
+		color: white;
+		width: 500px;
+		height: 140px;
+		margin-bottom: 10px;
+		font-family: 'Roboto', sans-serif;
+	}
+	#text {
+		padding: 1.2em;
+		display: block;
+		font-weight: bold;
+		font-size: 1.45em;
+	}
+	#bg {
+		margin: 0 auto;
+		width: 500px;
+		height: 539px;
+		background-size: cover;
+		background-position: center center;
+		position: relative;
+	}
+	#bg:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 101%;
+  background: linear-gradient(to bottom, #fff 3px, transparent 3px), linear-gradient(to right, #fff 3px, transparent 3px);
+  background-size: 25%;
+  margin-left: -3px;
+  padding: 1px;
+}
+#verify {
+	margin: 1em auto;
+	width: 500px;
+}
+.verify {
+	float: right;
+	background-color: #2196F3;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	padding: .8em 2em .8em 2em;
+}
+	.inputfile {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+	.inputfile + label {
+	    font-size: .7em;
+	    font-weight: 700;
+	    color: white;
+	    padding: 12px 24px;
+	    background-color: #2196F3;
+	    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	    border-radius: 2px;
+	    display: inline-block;
+	    cursor: pointer;
+	}
+
+	.inputfile:focus + label,
+	.inputfile + label:hover {
+	    background-color: #6ab7ff;
+	}
+	.inputfile:focus + label {
+		outline: 1px solid #005cb2;
+		outline: -webkit-focus-ring-color auto 5px;
+	}
+</style>
