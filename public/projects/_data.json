@@ -4,7 +4,6 @@
 		"description" : "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
 		"layout": "_prj-layout"
 	},
-
 	"jars" : {
 		"title"          : "Jars",
 		"description"    : "My personal productivity app",

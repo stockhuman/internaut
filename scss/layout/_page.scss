@@ -10,6 +10,14 @@ header.cover {
 	}
 }
 
+.cssbg {
+	display: flex;
+	width: 100%;
+	height: 65.5vw;
+	background-size: cover;
+	background-position: 50% 0;
+}
+
 // little ul with descriptors
 .page-title {
 	margin-top: $navWidth;

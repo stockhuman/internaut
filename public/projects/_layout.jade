@@ -7,7 +7,8 @@ body
 		main#content.page
 			if (cover != '')
 				header.cover
-					img(src="/assets/img/work/covers/#{ cover }" alt="")
+					//- img(src="/assets/img/work/covers/#{ cover }" alt="")
+					div(style='background-image: url("/assets/img/work/covers/#{cover}")').cssbg
 					!= partial("../_includes/projectNav")	
 				article(data-base=data_base, data-highlight=data_highlight).page
 					!= yield
