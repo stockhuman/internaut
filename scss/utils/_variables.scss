@@ -36,7 +36,7 @@ $white :        white;
 $black :        black;
 
 $gray-darker:   #181818;
-$gray-dark:     #3b444c;
+$gray-dark:     #292F35;
 $gray:          #616161;
 $gray-light:    #979797;
 $gray-lighter:  #f5f5f5;
@@ -50,7 +50,11 @@ $tertiary:			red;
 // UI Associations
 
 $background-color: $gray-lighter;
-$nav-default-color: $gray-dark;
+// $background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+// $background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
+// $background-image: url("https://www.transparenttextures.com/patterns/tiny-grid.png");
+$background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+$nav-default-color: #292F35;
 
 $border-color:	$gray-light;
 $link-color: 	  $brand;

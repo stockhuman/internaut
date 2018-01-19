@@ -4,6 +4,15 @@
 		"description" : "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
 		"layout": "_prj-layout"
 	},
+	"tellum" : {
+		"title"          : "Tellum",
+		"description"    : "A connected database of sounds",
+		"data_base"      : "#ED254E",
+		"data_highlight" : "#EEEEEE",
+		"cover"          : "tellum.png",
+		"category"       : "code",
+		"year"           : "2017"
+	},
 	"jars" : {
 		"title"          : "Jars",
 		"description"    : "My personal productivity app",

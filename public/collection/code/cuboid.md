@@ -8,4 +8,4 @@ Textures cubes with a video, mouse drag to rotate. <br>
 Footage by Devin Supertramp from Youtube.<br>
 Audio by Mounika.
 
-[Code available here](https://github.com/MichaelHemingway/CART-353/tree/master/random%20video)
+[Code available here](https://github.com/stockhuman/CART-353/tree/master/random%20video)

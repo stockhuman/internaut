@@ -4,8 +4,19 @@
 		"description"  : "This is Michael Hemingway's personal site, and a repository for all those collected digital ideosyncracies.",
 		"items"        : [
 			{
+				"img"  : "/assets/img/home/tellumcover.gif",
+				"link" : "/projects/tellum",
+				"desc" : "Web | 2017",
+				"class" : "tall"
+			},
+			{
+				"img"  : "/assets/img/home/jarscover.png",
+				"link" : "/projects/jars",
+				"desc" : "Code | 2017"
+			},
+			{
 				"img"  : "/assets/img/home/5ft25cover.png",
-			  "link" : "/projects/5ft25",
+				"link" : "/projects/5ft25",
 				"desc" : "Web | 2016"
 			},
 			{

@@ -23,6 +23,10 @@ body {
 	font-weight: $normal;
 	color: $black;
 	background: $background-color;
+	@if variable-exists(background-image) {
+		background-image: $background-image;
+		background-attachment: fixed;
+	}
 	scrollbar-base-color: black;
   touch-action: manipulation;
 	&.disable-scroll {

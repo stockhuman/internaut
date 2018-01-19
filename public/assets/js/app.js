@@ -23,10 +23,17 @@ $('#container').smoothState({
 			body.toggleClass('is-exiting');
 		}
 	},
-
 	onAfter: function () {
+		$.readyFn.execute();
 		navColors(); // color the nav
 		resetNav(); // hide the transitioner / close the nav
+
+
+		if (window.location.origin == window.location.href) {
+			document.getElementById('home-canvas').style.opacity = 1;
+		} else {
+			document.getElementById('home-canvas').style.opacity = 0.2;
+		}
 
 		// fix collection styling
 		if ((window.location.href.indexOf("collection") > -1)) {
@@ -34,8 +41,6 @@ $('#container').smoothState({
 		} else { body.removeClass('collection'); }
 
 		body.toggleClass('is-exiting');
-
-		$.readyFn.execute();
 	}
 });
 
@@ -51,11 +56,92 @@ $(".nav-list-item a, #nav-home-icon a").click(function(e) {
 
 // add console text
 window.addEventListener("load", function (event) {
-	var c = 'color: #bada55; background: #222;';
+	var c = 'color: #bada55;';
 	console.log('%c ( ͠° ͟ʖ ͡°)', c);
 	console.log('%c Nothing to see here.', c);
 });
-/** 
+
+// Me_______________________________________
+
+// Environment
+
+// via https://stackoverflow.com/a/26191207/6929333
+var width = getWidth()
+
+// var canvas = document.getElementById('home-canvas')
+
+var scene = new THREE.Scene();
+var aspect = width / window.innerHeight;
+var camera = new THREE.PerspectiveCamera( 45, aspect, 1, 2000 );
+// var renderer = new THREE.WebGLRenderer( { canvas: canvas, alpha: true } );
+var renderer = new THREE.WebGLRenderer( { alpha: true } );
+var me;
+
+// Setup
+var init = function () {
+
+	// Renderer
+	renderer.setPixelRatio(window.devicePixelRatio > 1 ? window.devicePixelRatio : 1);
+	renderer.setSize( width, window.innerHeight );
+	renderer.domElement.id = 'home-canvas';
+	document.body.appendChild( renderer.domElement );
+
+	camera.position.z = 5;
+
+	// Geometry
+	var loader = new THREE.JSONLoader();
+
+	loader.load( '/assets/js/me.json', function ( geometry ) {
+		// var geo = new THREE.WireframeGeometry( geometry );
+		var material = new THREE.MeshNormalMaterial( { wireframe: true, wireframeLinewidth: 5 } );
+		// var mat = new THREE.LineBasicMaterial( { color: 0xffffff, linewidth: 2 } );
+		me = new THREE.Mesh( geometry, material );
+		scene.add( me );
+		me.position.y = -2;
+		me.position.z = -3;
+	});
+
+	// Events
+	window.addEventListener( 'resize', onWindowResize, false );
+	if (document.getElementById('home')) {
+		console.log('test!')
+		document.getElementById('home-canvas').style.opacity = 1;
+	} else {
+		document.getElementById('home-canvas').style.opacity = 0.2;
+	}
+};
+
+
+function render () {
+	if (me != undefined) me.rotation.y += 0.001;
+	camera.lookAt( scene.position );
+	renderer.render( scene, camera );
+}
+
+function animate () {
+	requestAnimationFrame( animate );
+	render();
+}
+
+function onWindowResize () {
+	width = getWidth();
+	camera.aspect = width / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize( width, window.innerHeight );
+}
+
+function getWidth () {
+	return window.innerWidth && document.documentElement.clientWidth ?
+	Math.min(window.innerWidth, document.documentElement.clientWidth) :
+	window.innerWidth ||
+	document.documentElement.clientWidth ||
+	document.getElementsByTagName('body')[0].clientWidth;
+}
+
+init();
+animate();
+
+/**
 	Main navigation interactivity, colors
 	support in IE 10+
 */
@@ -86,7 +172,7 @@ function navColors() {
 		bg = $('article.page').attr('data-base');
 		accent = $('article.page').attr('data-highlight');
 	} else {
-		bg = '#3b444c';
+		bg = '#292F35';
 		accent = '#fff';
 	}
 
@@ -116,8 +202,8 @@ $(document).ready(function() { navColors(); });
 navMain.addEventListener('mouseleave', function() {
 	if (navIsOpen) { toggleNav(); }
 });
-navToggle.addEventListener('click', function () { 
-	toggleNav(); 
+navToggle.addEventListener('click', function () {
+	toggleNav();
 });
 
 window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
@@ -149,158 +235,10 @@ window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
 // 		opacity: 0
 // 	})
 // }
-/**
- * @author Michael Hemingway
- * 
- */
 
-// $(document).ready(function () {
-// 	if ($('#home-canvas')) {
 
-// 		/**
-// 		 * **************************************************************************
-// 		 * utils
-// 		 * **************************************************************************
-// 		 */
-		
-// 		// from https://gist.github.com/desandro/1866474
-// 		var lastTime = 0;
-// 		var prefixes = 'webkit moz ms o'.split(' ');
-// 		// get unprefixed rAF and cAF, if present
-// 		var requestAnimationFrame = window.requestAnimationFrame;
-// 		var cancelAnimationFrame = window.cancelAnimationFrame;
-// 		// loop through vendor prefixes and get prefixed rAF and cAF
-// 		var prefix;
-// 		for( var i = 0; i < prefixes.length; i++ ) {
-// 			if ( requestAnimationFrame && cancelAnimationFrame ) {
-// 				break;
-// 			}
-// 			prefix = prefixes[i];
-// 			requestAnimationFrame = requestAnimationFrame || window[ prefix + 'RequestAnimationFrame' ];
-// 			cancelAnimationFrame  = cancelAnimationFrame  || window[ prefix + 'CancelAnimationFrame' ] ||
-// 			window[ prefix + 'CancelRequestAnimationFrame' ];
-// 		}
-
-// 		// fallback to setTimeout and clearTimeout if either request/cancel is not supported
-// 		if ( !requestAnimationFrame || !cancelAnimationFrame ) {
-// 			requestAnimationFrame = function( callback, element ) {
-// 				var currTime = new Date().getTime();
-// 				var timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
-// 				var id = window.setTimeout( function() {
-// 					callback( currTime + timeToCall );
-// 				}, timeToCall );
-// 				lastTime = currTime + timeToCall;
-// 				return id;
-// 			};
-
-// 			cancelAnimationFrame = function( id ) {
-// 				window.clearTimeout( id );
-// 			};
-// 		}
-
-// 		function extend( a, b ) {
-// 			for( var key in b ) { 
-// 				if( b.hasOwnProperty( key ) ) {
-// 					a[key] = b[key];
-// 				}
-// 			}
-// 			return a;
-// 		}
-
-// 		// from http://www.quirksmode.org/js/events_properties.html#position
-// 		function getMousePos(e) {
-// 			var posx = 0;
-// 			var posy = 0;
-// 			if (!e) var e = window.event;
-// 			if (e.pageX || e.pageY) 	{
-// 				posx = e.pageX;
-// 				posy = e.pageY;
-// 			}
-// 			else if (e.clientX || e.clientY) 	{
-// 				posx = e.clientX + document.body.scrollLeft
-// 					+ document.documentElement.scrollLeft;
-// 				posy = e.clientY + document.body.scrollTop
-// 					+ document.documentElement.scrollTop;
-// 			}
-// 			return {
-// 				x : posx,
-// 				y : posy
-// 			}
-// 		}
-
-// 		// from http://www.sberry.me/articles/javascript-event-throttling-debouncing
-// 		function throttle(fn, delay) {
-// 			var allowSample = true;
-
-// 			return function(e) {
-// 				if (allowSample) {
-// 					allowSample = false;
-// 					setTimeout(function() { allowSample = true; }, delay);
-// 					fn(e);
-// 				}
-// 			};
-// 		}
-
-// 		/**
-// 		 * **************************************************************************
-// 		 * The Hero
-// 		 * **************************************************************************
-// 		 */
-
-// 		var canvas = $('#home-canvas')[0],
-// 				ctx = canvas.getContext('2d'),
-// 				overlay = $('#home-canvas-overlay')[0];
-
-// 		if (window.devicePixelRatio) {
-// 		    var canvasWidth = $(canvas).attr('width');
-// 		    var canvasHeight = $(canvas).attr('height');
-// 		    var canvasCssWidth = canvasWidth;
-// 		    var canvasCssHeight = canvasHeight;
-
-// 		    $(canvas).attr('width', canvasWidth * window.devicePixelRatio);
-// 		    $(canvas).attr('height', canvasHeight * window.devicePixelRatio);
-// 		    $(canvas).css('width', canvasCssWidth);
-// 		    $(canvas).css('height', canvasCssHeight);
-// 		    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-// 		}
-
-// 		document.addEventListener('mousemove', function(ev) {
-// 			// window.requestAnimationFrame(function() {
-
-// 				// mouse position relative to the document.
-// 				var mousepos = getMousePos(ev),
-// 					// document scrolls.
-// 					docScrolls = {
-// 						left : document.body.scrollLeft + document.documentElement.scrollLeft,
-// 						top : document.body.scrollTop + document.documentElement.scrollTop
-// 					},
-// 					bounds = canvas.getBoundingClientRect(),
-// 					// mouse position relative to the main element (tiltWrapper).
-// 					relmousepos = {
-// 						x : mousepos.x - bounds.left - docScrolls.left,
-// 						y : mousepos.y - bounds.top - docScrolls.top
-// 					},
-
-// 				rotX = overlay.height * relmousepos.y,
-// 				rotY = overlay.width  * relmousepos.x,
-// 				rotZ = overlay.width  * relmousepos.x,
-// 				transX = 2 * relmousepos.x,
-// 				transY = 2 * relmousepos.y,
-// 				transZ = 2 * relmousepos.y;
-
-// 			overlay.style =
-// 				' translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px)' +
-// 				' rotate3d(1,0,0,' + rotX + 'deg)' +
-// 				' rotate3d(0,1,0,' + rotY + 'deg)' +
-// 				' rotate3d(0,0,1,' + rotZ + 'deg)';
-// 			// }
-// 		});
-
-// 	}
-// });
 // the projects page
-$(document).ready(function (){
-
+$(document).ready(function () {
 	var url = document.URL, 
 			filterBtnGroup = $('#project-filters a');
 
@@ -320,5 +258,4 @@ $(document).ready(function (){
 	projects.imagesLoaded().progress( function() {
 	  projects.isotope('layout');
 	});
-	
 });

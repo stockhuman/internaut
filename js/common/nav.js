@@ -1,4 +1,4 @@
-/** 
+/**
 	Main navigation interactivity, colors
 	support in IE 10+
 */
@@ -29,7 +29,7 @@ function navColors() {
 		bg = $('article.page').attr('data-base');
 		accent = $('article.page').attr('data-highlight');
 	} else {
-		bg = '#3b444c';
+		bg = '#292F35';
 		accent = '#fff';
 	}
 
@@ -59,8 +59,8 @@ $(document).ready(function() { navColors(); });
 navMain.addEventListener('mouseleave', function() {
 	if (navIsOpen) { toggleNav(); }
 });
-navToggle.addEventListener('click', function () { 
-	toggleNav(); 
+navToggle.addEventListener('click', function () {
+	toggleNav();
 });
 
 window.onscroll = function () { if (navIsOpen) { toggleNav(); } }

@@ -1,6 +1,5 @@
 // the projects page
-$(document).ready(function (){
-
+$(document).ready(function () {
 	var url = document.URL, 
 			filterBtnGroup = $('#project-filters a');
 
@@ -20,5 +19,4 @@ $(document).ready(function (){
 	projects.imagesLoaded().progress( function() {
 	  projects.isotope('layout');
 	});
-	
 });

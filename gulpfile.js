@@ -19,7 +19,6 @@ const browserSync = require('browser-sync').create();
 
 // Image resizing and thumbnail creation
 const imgMinify = require('gulp-imagemin');
-// const jimp = require('sharp');
 const changed = require('gulp-changed');
 const parallel = require('concurrent-transform');
 const os = require('os');
@@ -68,22 +67,13 @@ gulp.task('browserSync', () =>
 	browserSync.init({ proxy: 'http://localhost:9000/' })
 )
 
-// generates extremely low-res thumbnails for fast blur-up
-gulp.task('thumbs', function () {
-	gulp.src(assetDir + 'img/work/covers/**/*.{jpg,png}')
-	.pipe(jimp({
-		sizes: [{"suffix":"tiny", "width": 20}]
-	}))
-	.pipe(gulp.dest(assetDir + 'img/work/covers/tiny/'))
-})
-
 // watches files for changes, adjust accordingly
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
 	gulp.watch('scss/**/*.scss', ['sass']);
 	gulp.watch('js/**/*.js', ['scripts']);
 	gulp.watch('public/assets/js/*.js', ['scripts']);
-	gulp.watch('public/**/**/*.ejs', browserSync.reload);  // pages
-	gulp.watch('public/**/**/*.json', browserSync.reload); // site data
+	gulp.watch('public/**/*.ejs', browserSync.reload);  // pages
+	gulp.watch('public/**/*.json', browserSync.reload); // site data
 })
 
 // stop old version of gulp watch from running when you modify the gulpfile

@@ -15,8 +15,6 @@
 		var posts = data.response.posts;
 		var body = ''; // avoid printing 'undefined'
 
-		console.log(posts)
-
 		for (var i = 0; i < posts.length; i++) {
 			var p = posts[i];
 			var date = p.date.slice(0, -13); // quick and dirty truncation to YYYY-MM-DD
@@ -27,7 +25,7 @@
 			if (p.title !== undefined) {
 				body += '<h2 class="title"><a href="' + p.slug +'">' + p.title + '</a></h2>'
 			}
-			
+
 
 			// photo posts
 			if (p.type === 'photo') {
@@ -36,7 +34,7 @@
 
 			// video posts
 			if (p.type === 'video') {
-				body += '<div class="video-container">' + 
+				body += '<div class="video-container">' +
 							p.player[0].embed_code +
 							'</div>' +'<p></p>' +
 							p.caption;

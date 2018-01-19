@@ -3,21 +3,18 @@
   "version": "1.0.0",
   "description": "My personal static site, built with Harp.js",
   "main": "gulpfile.js",
-  "dependencies": {
-    "browser-sync": "^2.18.7",
-    "gulp": "^3.9.1",
+  "devDependencies": {
+    "browser-sync": "^2.23.2",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.1"
-  },
-  "devDependencies": {
+    "gulp-uglify": "^2.0.1",
     "concurrent-transform": "^1.0.0",
-    "concurrently": "^3.4.0",
+    "concurrently": "^3.5.1",
     "gulp": "^3.9.1",
-    "gulp-changed": "^3.1.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-jimp-resize": "^2.0.2",
-    "gulp-imagemin": "^3.2.0",
     "os": "^0.1.1",
     "responsive": "^1.0.1"
   },
@@ -28,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MichaelHemingway/internaut.git"
+    "url": "git+https://github.com/stockhuman/internaut.git"
   },
   "keywords": [
     "scss",
@@ -41,7 +38,7 @@
   "author": "Michael Hemingway",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/MichaelHemingway/internaut/issues"
+    "url": "https://github.com/stockhuman/internaut/issues"
   },
-  "homepage": "https://github.com/MichaelHemingway/internaut#readme"
+  "homepage": "https://github.com/stockhuman/internaut#readme"
 }
