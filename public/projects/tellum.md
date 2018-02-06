@@ -30,6 +30,6 @@ The _asethetic_ of this project, a rather emergent one, but one that I'd hoped f
 
 ---
 
-[Try it out for yourself](/projects/tellum/)
+[Try it out for yourself](tellum-app)
 
 [Github](https://github.com/stockHuman/tellum)
