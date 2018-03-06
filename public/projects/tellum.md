@@ -26,7 +26,7 @@ The SQL and PHP backend utilizes a CRUD framework I've grown rather familiar wit
 
 The Desktop component, while barebones at the time of writing, utilizes Mapbox's API to display the map and geolocation data. The colors are my own, meant to match the scheme of the project.
 
-The _asethetic_ of this project, a rather emergent one, but one that I'd hoped for all the same, is that of surprise. When I finally heard a voice other than my own on the platform, and then heard full sturies at that, I was delighted. Truly happy to see and exchange of creative expression, in sound, just like that.
+The _aesthetic_ of this project, a rather emergent one, but one that I'd hoped for all the same, is that of surprise. When I finally heard a voice other than my own on the platform, and then heard full sturies at that, I was delighted. Truly happy to see and exchange of creative expression, in sound, just like that.
 
 ---
 
