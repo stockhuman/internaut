@@ -1,11 +1,11 @@
 /*
-	Arthem (c) 2017
+	Arthem (c) 2018
 	==
 	run the whole shabang with `$ gulp watch` in the project directory
 	install them all with
-	$ npm i --save-dev gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync 
+	$ npm i --save-dev gulp gulp-sass gulp-concat gulp-rename gulp-uglify browser-sync
 
-	optionally, for image minification and thumbnail generation, 
+	optionally, for image minification and thumbnail generation,
 	$ npm i --save-dev gulp-imagemin gulp-changed gulp-jimp-resize concurrent-transform os
 */
 
@@ -63,7 +63,7 @@ gulp.task('scripts', function() {
 
 // does browser live-reloading
 // change to appropriate WordPress install directory / server configuration
-gulp.task('browserSync', () => 
+gulp.task('browserSync', () =>
 	browserSync.init({ proxy: 'http://localhost:9000/' })
 )
 
