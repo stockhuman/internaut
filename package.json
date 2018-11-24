@@ -4,15 +4,15 @@
   "description": "My personal static site, built with Harp.js",
   "main": "gulpfile.js",
   "devDependencies": {
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.26.3",
     "concurrent-transform": "^1.0.0",
-    "concurrently": "^3.5.1",
+    "concurrently": "^3.6.1",
     "gulp": "^4.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-jimp-resize": "^2.0.2",
-    "gulp-rename": "^1.2.3",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^2.0.1",
     "os": "^0.1.1",
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"harp server\" \"gulp watch\"",
+    "start": "concurrently \"harp server\" \"gulp watch\"",
     "build": "harp compile ./ ../../../Desktop/site && gulp postbuild"
   },
   "repository": {
