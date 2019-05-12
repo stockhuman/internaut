@@ -1,3 +1,5 @@
+
+
 <h1 class="page-title text-center"><i class="icon-work"></i></h1>
 
 <div id="project-filters">
@@ -11,12 +13,12 @@
 <div class="projects isotope">
 
 	<%# display all posts by category %>
-	<% for (var slug in public.projects._data) { %>
-		<% if (slug != 'index') { // skip the index%>
+	<% for (let slug in site.projects._data) { %>
+		<% if (slug != 'index') { // skip the index %>
 
 		<a href="/projects/<%= slug %>" class="project item <%= public.projects._data[slug].category %>">
 			<img src="/assets/img/work/thumbs/<%= slug %>.png">
-			<h3><%= public.projects._data[slug].title %></h3>
+			<h3><%= site.projects._data[slug].title %></h3>
 	  </a>
 
 	<% }}; // end loop %>

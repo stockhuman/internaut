@@ -9,9 +9,6 @@
   "author": "Douglas Matoso <dmatoso@outlook.com> (https://dmatoso.com)",
   "license": "MIT",
   "main": "./lib/index.js",
-  "bin": {
-    "nanogen": "./lib/cli.js"
-  },
   "files": [
     "lib"
   ],
@@ -23,8 +20,8 @@
     "prettier:check": "npm run prettier -- -l",
     "lint": "eslint \"./{lib,test}/**/*.js\"",
     "ci": "npm run lint && npm run prettier:check && npm run test:ci",
-    "site:start": "nanogen start",
-    "site:build": "cross-env NODE_ENV=production nanogen build"
+    "start": "node ./lib/cli.js start",
+    "build": "cross-env NODE_ENV=production node ./lib/cli.js build"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -38,7 +35,7 @@
     "glob": "^7.1.3",
     "live-server": "^1.2.0",
     "lodash.debounce": "^4.0.8",
-    "marked": "^0.5.1",
+    "marked": "^0.6.2",
     "meow": "^5.0.0",
     "ora": "^3.0.0"
   },
@@ -49,7 +46,7 @@
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-node": "^7.0.1",
     "mocha": "^5.2.0",
-    "nyc": "^13.0.1",
+    "nyc": "^14.1.1",
     "prettier": "^1.14.3",
     "sinon": "^6.3.5"
   }

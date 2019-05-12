@@ -239,8 +239,7 @@ window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
 
 // the projects page
 $(document).ready(function () {
-	var url = document.URL, 
-			filterBtnGroup = $('#project-filters a');
+	var filterBtnGroup = $('#project-filters a');
 
 	var projects = $('.isotope').isotope({
 		itemSelector: '.item',

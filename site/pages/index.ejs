@@ -4,24 +4,6 @@
 		<p><span class="desc" id="phrase">...</span> ░ <span class="byline"> multidiciplinary artist ░</span> <a href="https://twitter.com/StockHuman">@stockhuman</a></p>
 	</section>
 
-	<section class="grid">
-		<%# Display the curated collection of links %>
-		<% for ( var i = 0; i < items.length; i ++)  { %>
-				<a href="<%= items[i].link %>" class='home-item <%= items[i].class %>'>
-						<div class="hi-img">
-							<img src="<%= items[i].img %>" />
-						</div>
-						<% var srcTit = items[i].link.split("/");
-							 var linkTitle = srcTit.pop();
-							 linkTitle = linkTitle.replace(/-/g, ' '); %>
-						<div class="overlay">
-							<h2><%= linkTitle %></h2>
-							<h4><%= items[i].desc %></h4>
-						</div>
-	      </a>
-		<% } %>
-	</section>
-
 	<article class="page">
 		<p>Hello, I'm glad you've made it here.</p>
 		<p>Make yourself at home. I made this <a href="this-site">site</a> for you. Find in it my <a href="projects/">works</a>, some collected <a href="collection/">things of mine</a>, and <a href="captcha">other</a> <a href="gamegen">stranger</a> <a href="life">stuff</a>.</p>

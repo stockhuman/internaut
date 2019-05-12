@@ -1,11 +1,15 @@
+const projects = require('./site/pages/projects/_data.json')
+
 module.exports = {
   build: {
     srcPath: './site',
-    outputPath: './docs'
+    outputPath: './build'
   },
   site: {
     title: 'MH',
     description: 'Minimalist static site generator in Node.js',
-    basePath: process.env.NODE_ENV === 'production' ? '/nanogen' : ''
+    cover: '',
+    basePath: process.env.NODE_ENV === 'production' ? '/nanogen' : '',
+    projects
   }
-};
+}

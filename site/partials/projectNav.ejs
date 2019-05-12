@@ -1,7 +1,7 @@
 <%
 
 // declare the data array found in ./_data.json
-const data = public.projects._data;
+const data = site.projects;
 
 // traverse the iterable
 for (let prop in data) {
@@ -12,10 +12,10 @@ for (let prop in data) {
 		var prev = Object.keys(data)[i - 1],
 			next = Object.keys(data)[i + 1];
 
-		%> 
+		%>
 
 		<nav class="project-nav<% if (prev == 'index') { %><%- ' no-prev' %><% }
-			 if (!next) { %><%- ' no-next' %><% } %>"> 
+			 if (!next) { %><%- ' no-next' %><% } %>">
 
 		<% // check for and display link to previous page
 			if (prev != 'index') { %>
