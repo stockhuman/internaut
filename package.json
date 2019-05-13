@@ -17,7 +17,7 @@
     "lint": "eslint \"./{lib,test}/**/*.js\"",
     "ci": "npm run lint && npm run prettier:check && npm run test:ci",
     "start": "node ./lib/cli.js start",
-    "build": "cross-env NODE_ENV=production node ./lib/cli.js build"
+    "build": "cross-env NODE_ENV=production node ./lib/cli.js build --cleanUrls=false"
   },
   "engines": {
     "node": ">=12.0.0"
