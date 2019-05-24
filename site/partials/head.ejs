@@ -12,7 +12,7 @@
 		<meta property="og:title" content="<%= page.title || site.title %>">
 		<meta property="og:type" content="website">
 		<meta property="og:description" content="<%= `${page.description} | ${site.description}` || site.description  %>">
-		<meta property="og:image" content="<%= site.basePath %>/img/work/covers/<%= page.cover || site.cover %>">
+		<meta property="og:image" content="<%= site.basePath %>/assets/img/work/covers/<%= page.cover || site.cover %>">
 
 		<meta name="twitter:url" content="https://michaelhemingway.com/">
 		<meta name="twitter:site" content="@stockHuman">
@@ -20,7 +20,7 @@
 		<meta name="pinterest" content="nopin" description="Nah. Don't even try with that bullshit.">
 
 		<link rel="shortcut icon" href="<%= site.basePath %>/favicon.png" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="<%= site.basePath %>/css/style.css?<%= new Date().getTime() %>">
+		<link rel="stylesheet" type="text/css" href="<%= site.basePath %>/assets/css/style.css?<%= new Date().getTime() %>">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 		<title><%= page.title || site.title %></title>
