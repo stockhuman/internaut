@@ -109,7 +109,7 @@ var init = function () {
 	} else {
 		document.getElementById('home-canvas').style.opacity = 0.2;
 	}
-};
+}
 
 
 function render () {
