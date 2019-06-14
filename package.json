@@ -6,7 +6,7 @@
   "keywords": [
     "static site generator"
   ],
-  "author": "Michael Hemingway <dmatoso@outlook.com> (https://dmatoso.com)",
+  "author": "Michael Hemingway (https://michaelhemingway.com)",
   "license": "MIT",
   "scripts": {
     "lint": "eslint \"./{lib,test}/**/*.js\"",
@@ -28,7 +28,6 @@
     "cross-env": "^5.2.0",
     "ejs": "^2.6.1",
     "eslint": "^5.6.1",
-    "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-node": "^9.1.0",
     "front-matter": "^3.0.0",
     "fs-extra": "^8.0.1",

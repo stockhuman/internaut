@@ -2,11 +2,13 @@
 
 export default class Navigation {
 	constructor () {
-		this.navToggle = document.getElementById('nav-toggle')
-		this.bodyClass = document.body.classList
-		this.navIcons = document.getElementsByClassName('nav-list-container')[0]
+		this.navToggle = null
+		this.bodyClass = null
+		this.navIcons = null
 		this.navIsOpen = false
-		this.navMain = document.getElementById('nav-main')
+		this.navMain = null
+
+		this.mount = this.mount.bind(this)
 	}
 
 	reset () {
@@ -56,22 +58,27 @@ export default class Navigation {
 	}
 
 	mount () {
-		document.addEventListener('DOMContentLoaded', this.colors)
+		// Load the colors on fresh page
+		document.addEventListener('DOMContentLoaded', () => {
+			this.bodyClass = document.body.classList
+			this.navMain = document.getElementById('nav-main')
+			this.navToggle = document.getElementById('nav-toggle')
+			this.navIcons = document.getElementsByClassName('nav-list-container')[0]
+			this.colors()
+
+			// Interaction
+			this.navToggle.addEventListener('click', this.toggle)
+			this.navMain.addEventListener('mouseleave', () => {
+				if (this.navIsOpen) { this.toggle() }
+			})
+
+			window.onscroll = () => { if (this.navIsOpen) { this.toggle() } }
+		})
 	}
 }
 
 
 
-// // Load the colors on fresh page
-// $(document).ready(function() { navColors(); });
 
-// // Interaction
-// navMain.addEventListener('mouseleave', function() {
-// 	if (navIsOpen) { toggleNav(); }
-// });
-// navToggle.addEventListener('click', function () {
-// 	toggleNav();
-// });
 
-// window.onscroll = function () { if (navIsOpen) { toggleNav(); } }
 
