@@ -1,4 +1,15 @@
-<h1 class="page-title">Tellum</h1>
+---
+layout: project
+description: A connected database of sounds
+cover: tellum.png
+slug: tellum
+category: code
+year: 2017
+bg: '#ED254E'
+fg: "#EEEEEE"
+---
+
+# Tellum
 
 The story behind this app begins with an experience I had of an item exchange box some five years ago.
 

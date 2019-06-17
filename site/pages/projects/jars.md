@@ -1,4 +1,14 @@
-<h1 class="page-title">The organization app</h1>
+---
+layout: project
+description: 'My personal productivity app'
+data_base: '#00AEEF'
+data_highlight: '#EEEEEE'
+cover: 'jars.png'
+category: 'code'
+year: '2017'
+---
+
+# The organization app
 
 <p>Jars is an ongoing, under-development project of mine built with the foremost goal of replacing and streamlining the three markdown documents I currently organize my life with.</p>
 

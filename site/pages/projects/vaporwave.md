@@ -1,4 +1,4 @@
-<h1 class="page-title">bad samples</h1>
+# bad samples
 
 <p>A collection of my vaporwave aesthetics. I while back, a few friends and I made a little music collective. We called it Bismuth MTL.</p>
 
