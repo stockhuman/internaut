@@ -1,19 +1,44 @@
 <main id="content" class="page contact">
 	<header class="cover">
-			<svg viewBox="0 0 100 100"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><circle class="cls-1" cx="35" cy="65" r="9"/><circle class="cls-1" cx="65" cy="35" r="9"/><line class="cls-1" x1="41" y1="59" x2="58.5" y2="41.5"/></svg>
+			☍
 	</header>
 	<article class="page contact" data-base="darkblue" data-highlight="#ffffff">
-
-		<p></p>
-
-		<form id="contact-form" class="no-smoothState" action="" method="post">
-			<textarea id="form-message" name="message" rows="8" placeholder="Message" required></textarea>
-			<input id="form-name" name="name" type="text" placeholder="Name">
-			<input id="form-email" name="email" type="email" placeholder="Email" required>
-			<button id="form-submit" type="submit">Send me an email</button>
-		</form>
-
-		<div class="form-info"></div>
+		<div id="reveal">
+			<label for="volume">Slide all the way to contact</label>
+			<input type="range" id="start" name="volume" min="0" max="10" step="any" value='0'>
+		</div>
 	</article>
 
-</div>
+</main>
+
+<script>
+	function reveal () {
+		let r = document.getElementById('reveal')
+		r.classList = 'revealing'
+		setTimeout(() => {
+			r.innerHTML = `<a href="mailto:${'mpghemingway'}@gmail.com">Email me</a>`
+			r.classList = 'revealed'
+		}, 700);
+	}
+	document.addEventListener('DOMContentLoaded', () => {
+		let s = document.getElementById('start')
+		s.addEventListener('change', event => {
+			if (event.explicitOriginalTarget.value === event.explicitOriginalTarget.max) {
+				console.log('hey there, human')
+				reveal()
+			}
+		})
+	})
+</script>
+<style>
+	#reveal {
+		transition: opacity .3s ease;
+		text-align: center;
+	}
+	.revealing {
+		opacity: 0;
+	}
+	.revealed {
+		opacity: 1;
+	}
+</style>
