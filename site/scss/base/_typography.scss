@@ -27,3 +27,7 @@ h6 { @include font-size($font-size-h6); line-height: 1.6;  letter-spacing: 0;   
 p {
   margin-top: 0;
 }
+
+hr {
+  color: $border-color;
+}

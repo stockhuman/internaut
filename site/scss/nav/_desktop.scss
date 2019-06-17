@@ -7,7 +7,7 @@
 		bottom: $navPad;
 		top: $navPad;
 		width: $navWidth;
-		border-radius: 2px;
+		border-radius: $global-radius;
 	}
 
 	#nav-inner {
@@ -84,7 +84,7 @@
 			width: 50%;
 			margin-left: 0;
 			float: left;
-			a i {
+			a span {
 				font-size: $navIconSize*3;
 			}
 			.nav-link-text {

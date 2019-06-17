@@ -1,5 +1,6 @@
 img {
 	width: 100%;
+	border-radius: $global-radius;
 }
 
 figcaption {
@@ -13,7 +14,7 @@ figcaption {
 	padding-bottom: 56.25%;
 	padding-top: 25px;
 	height: 0;
-	
+
 	iframe {
 		position: absolute;
 		top: 0;

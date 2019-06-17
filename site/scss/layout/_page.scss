@@ -17,6 +17,7 @@ header.cover {
 	height: 65.5vw;
 	background-size: cover;
 	background-position: 50% 0;
+	border-radius: $global-radius;
 }
 
 // little ul with descriptors
@@ -33,9 +34,6 @@ article.page {
 	color: lighten($black, 17%);
 	line-height: 1.5;
 	padding-bottom: $navWidth;
-	p {
-		background: #f5f5f5;
-	}
 
 	// images
 	figure {
@@ -101,7 +99,7 @@ article.page {
 		border-right: 1px darken($gray-lighter, 5%) solid;
 		border-left:  1px darken($gray-lighter, 5%) solid;
 	}
-	&.no-next {}
+	// &.no-next {}
 	&.no-prev {
 		margin-left: 25%;
 		.project-nav-next, .project-nav-cat, .project-nav-year {

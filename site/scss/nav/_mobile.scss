@@ -6,7 +6,7 @@
 	box-shadow: 0 0 10px 2px rgba(0,0,0,0.15);
 
 	transition-property: height, width, background, color;
-	transition-duration: 0.45s, 0.5s, 1s, 2s;
+	transition-duration: $navTimings;
 
 	height: $navWidth;
 	bottom: 0;
@@ -16,7 +16,9 @@
 
 #nav-home-icon {
 	position: absolute;
-	padding: 0 $navPad $navPad $navPad;
+	padding: $navPad;
+	text-align: center;
+	width: $navWidth;
 	svg {
 		max-width: $navWidth - ($navPad * 2);
 		max-height: $navWidth;
@@ -54,7 +56,7 @@
 	a {
 		text-decoration: none;
 
-		i { // img?
+		span { // img?
 			display: block;
 			font-size: $navIconSize;
 		}
@@ -71,8 +73,9 @@
 
 // individual blocks
 .nav-list-item {
+	transition: background 0.4s ease-in-out;
 	&:hover {
-		background: rgba(20,20,20,0.1);
+		background: rgba(20,20,20,0.3);
 	}
 
 	a {

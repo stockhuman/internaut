@@ -1,15 +1,18 @@
-
-
-
 // NAVIGATION
 $navPad   : 0.5rem;
 $navWidth : 3.6rem; // 55px
+
+$navSpeedHeight: 0.45s;
+$navSpeedWidth: 0.5s;
+$navSpeedBG: 1s;
+$navSpeedFG: 2s;
+$navTimings: $navSpeedHeight, $navSpeedWidth, $navSpeedBG, $navSpeedFG;
 
 // ---
 $navWidthExpanded : 30rem;
 
 // computed
-$navIconSize : $navWidth/2;
+$navIconSize : $navWidth/2.3;
 
 
 // Z-Index
@@ -39,7 +42,7 @@ $gray-darker:   #181818;
 $gray-dark:     #292F35;
 $gray:          #616161;
 $gray-light:    #979797;
-$gray-lighter:  #f5f5f5;
+$gray-lighter:  #f7f7f7;
 
 // Brand Colors
 
@@ -49,14 +52,14 @@ $tertiary:			red;
 
 // UI Associations
 
-$background-color: $gray-lighter;
+$background-color: #fffefc; //$gray-lighter;
 // $background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 // $background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
 // $background-image: url("https://www.transparenttextures.com/patterns/tiny-grid.png");
-$background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+// $background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
 $nav-default-color: #292F35;
 
-$border-color:	$gray-light;
+$border-color:	#efefef;
 $link-color: 	  $brand;
 $font-color: 		#222;
 
@@ -127,7 +130,7 @@ $easeInOutBack:  cubic-bezier(0.680, 0, 0.265, 1);
 // Misc
 // -------------------------
 
-$global-radius: 1px !default;
+$global-radius: 2px !default;
 $global-padding: 2rem;
 
 // Breakpoints
