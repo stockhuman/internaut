@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+<body>
+  <%- include('partials/nav') %>
+  <div id="container" class="container">
+		<main id="content" class="page">
+			<% if (page.cover != '') { %>
+				<header class="cover">
+					<div style='background-image: url("/assets/img/work/covers/<%= page.cover %>")' class="cssbg">
+					<%- include('partials/projectNav') %>
+				</header>
+				<article data-base="<%= page.bg %>" data-highlight="<%= page.fg %>" class="page">
+					<%- body %>
+				</article>
+			<% } else { %>
+				<%- body %>
+			<% }; %>
+		</main>
+  	<%- include('partials/footer') %>
+  </div>
+  <%- include('partials/scripts') %>
+</body>
+</html>
