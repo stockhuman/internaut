@@ -7,7 +7,10 @@ import Navigation from './components/nav'
 
 const nav = new Navigation()
 
-nav.mount()
+nav.mount(() => {
+	nav.colors()
+})
+
 
 // // Smoothstate JQ plugin
 // $('#container').smoothState({
