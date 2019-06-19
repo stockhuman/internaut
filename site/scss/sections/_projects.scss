@@ -2,12 +2,22 @@
 
 .projects {
 	margin: $navWidth;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 // this is an a tag
-.project { 
+.project {
 	width: 100%;
 	// padding-right: $navWidth;
+}
+
+.card {
+	max-height: 33vh;
+	display: flex;
+}
+
+.card-image {
 }
 
 #project-filters {

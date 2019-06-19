@@ -9,13 +9,13 @@
 	<a href="#print" data-filter=".print">Print Design</a>
 </div>
 
-<div class="projects isotope">
+<div class="projects">
 	<%# display all posts by category %>
 	<% for (let slug in site.projects) { %>
 		<% if (slug != 'index') { // skip the index %>
 
-		<a href="/projects/<%= slug %>" class="project item <%= site.projects[slug].category %>">
-			<img src="/assets/img/work/thumbs/<%= slug %>.png">
+		<a href="/projects/<%= slug %>" class="project card <%= site.projects[slug].category %>">
+			<div class="card-image" style="background-image: url('/assets/img/work/thumbs/<%= slug %>.png')"></div>
 			<h3><%= site.projects[slug].title %></h3>
 	  </a>
 

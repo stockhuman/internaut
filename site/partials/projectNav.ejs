@@ -8,8 +8,6 @@ for (let prop in data) {
 
 	let i = Object.keys(data).indexOf(prop)
 
-	console.log(prop)
-
 	if (page.slug == prop) {
 		prev = Object.keys(data)[i - 1],
 		next = Object.keys(data)[i + 1];
