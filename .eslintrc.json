@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "plugins": ["node"],
+  "extends": [
+    "eslint:recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-console": 0
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "amd": true
+  }
+}
