@@ -38,7 +38,7 @@ $z-index:(
 $white :        white;
 $black :        black;
 
-$gray-darker:   #181818;
+$gray-darker:   #222;
 $gray-dark:     #292F35;
 $gray:          #616161;
 $gray-light:    #979797;
@@ -61,7 +61,7 @@ $nav-default-color: #292F35;
 
 $border-color:	#efefef;
 $link-color: 	  $brand;
-$font-color: 		#222;
+$font-color: 		$gray-darker;
 
 // social colors
 
