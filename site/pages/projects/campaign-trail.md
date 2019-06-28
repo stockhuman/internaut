@@ -6,7 +6,7 @@ fg: ffffff
 cover: dither-campaign-trail.png.png
 category: game
 year: 2016
-tags: ''
+tags:
 ---
 
 # Ah, this guy

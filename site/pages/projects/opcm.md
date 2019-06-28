@@ -6,8 +6,7 @@ fg: ffffff
 cover: dither-opcm.png.png
 category: web
 year: 2017
-tags:
-	client
+tags: [client]
 ---
 # The OPCM
 

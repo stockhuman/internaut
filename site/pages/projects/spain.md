@@ -6,9 +6,8 @@ cover: dither-spain.png.png
 category: photo
 bg: 000000
 fg: ffffff
-tags:
-	client
-	dsds
+tags: [client]
+
 ---
 
 # Spain & Back Again

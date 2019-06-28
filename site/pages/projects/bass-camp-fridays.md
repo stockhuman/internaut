@@ -6,7 +6,7 @@ fg: ffffff
 cover: dither-bcf.png.png
 category: print
 year: 2014
-tags: 'client'
+tags: [client]
 ---
 # Bass Camp Fridays
 

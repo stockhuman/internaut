@@ -6,7 +6,7 @@ fg: ffffff
 cover: dither-arthem.png.png
 category: web
 year: 2016
-tags: ''
+tags:
 ---
 # Arthem
 
