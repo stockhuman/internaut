@@ -14,7 +14,7 @@
 		padding: 0;
 		.nav-list-item {
 			// in closed form
-			height: 4rem;
+			height: $navWidth;
 			width: $navWidth;
 		}
 

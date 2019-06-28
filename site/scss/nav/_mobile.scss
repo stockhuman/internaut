@@ -74,6 +74,8 @@
 // individual blocks
 .nav-list-item {
 	transition: background 0.4s ease-in-out;
+	display: flex;
+	flex-direction: column;
 	&:hover {
 		background: rgba(20,20,20,0.3);
 	}
@@ -85,7 +87,7 @@
 
 	.nav-link-text {
 		display: none;
-		margin-bottom: 1rem;
+		margin-top: 1rem;
 	}
 }
 
@@ -108,7 +110,7 @@
 
 .nav-social-link {
 	flex-grow: 1;
-	a i {
+	a span {
 		font-size: $navIconSize/1.2;
 	}
 }
@@ -135,7 +137,7 @@
 		width: 50%;
 		float: left;
 
-		a i {
+		a span {
 			font-size: $navIconSize*3;
 		}
 	}
