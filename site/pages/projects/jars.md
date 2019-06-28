@@ -1,11 +1,12 @@
 ---
 layout: project
-description: 'My personal productivity app'
-data_base: '#00AEEF'
-data_highlight: '#EEEEEE'
-cover: 'jars.png'
-category: 'code'
-year: '2017'
+description: My personal productivity app
+bg: 00AEEF
+fg: EEEEEE
+cover: dither-jars.png.png
+category: code
+year: 2017
+tags:
 ---
 
 # The organization app
@@ -15,7 +16,7 @@ year: '2017'
 <p>It started as a way to formalize and keep record of the markdown documents that precede it: today.md, week.md &amp; notes.md among others.</p>
 
 <figure>
-	<img src="/assets/img/work/jars/NYE-build.png" alt="">
+	<img src="/assets/img/work/jars/dither-NYE-build.png.png" alt="">
 	<figcaption>NYE Build 2017 build, pre-refactor</figcaption>
 </figure>
 
@@ -28,18 +29,17 @@ year: '2017'
 
 <figure>
 	<h3>Early Design</h3>
-	<img src="/assets/img/work/jars/good-evening.png" alt="">
+	<img src="/assets/img/work/jars/dither-good-evening.png.png" alt="">
 	<figcaption>The header detail, which incorporates code from <a href="/life">life</a>.</figcaption>
 	<br>
-	<img src="/assets/img/work/jars/readme-1.png" alt="">
+	<img src="/assets/img/work/jars/dither-readme-1.png.png" alt="">
 	<figcaption>The app homepage, v.0.0.2</figcaption>
 </figure>
 
 <figure>
-	<img src="/assets/img/work/jars/alpha-01.png" alt="early alpha">
+	<img src="/assets/img/work/jars/dither-alpha-01.png.png" alt="early alpha">
 	<figcaption>Progress has come a long way</figcaption>
 </figure>
 
 
 <p>The project is <a href="https://github.com/stockHuman/Jars">available here on Github.</a></p>
-

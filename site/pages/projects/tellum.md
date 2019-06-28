@@ -1,12 +1,13 @@
 ---
 layout: project
 description: A connected database of sounds
-cover: tellum.png
+cover: dither-tellum.png.png
 slug: tellum
 category: code
+tags:
 year: 2017
-bg: '#ED254E'
-fg: "#EEEEEE"
+bg: ED254E
+fg: EEEEEE
 ---
 
 # Tellum
