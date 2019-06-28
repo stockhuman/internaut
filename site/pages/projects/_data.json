@@ -58,15 +58,6 @@
 		"category"       : "web",
 		"year"           : "2017"
 	},
-	"intervals-ii" : {
-		"title"          : "Intervals II",
-		"description"    : "",
-		"data_base"      : "#f0f0f0",
-		"data_highlight" : "#000000",
-		"cover"          : "",
-		"category"       : "web",
-		"year"           : "2016"
-	},
 	"campaign-trail" : {
 		"title"          : "Campaign Trail",
 		"description"    : "",
