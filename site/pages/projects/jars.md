@@ -25,7 +25,7 @@ tags:
 
 <p>Current efforts are now focused on integrating Google Calendar, and altering the user interface to reflect a focus on impromptu logging instead of after-the-fact commits.</p>
 
-<p>Inspiration for the project in it's current form borrows from <a href="https://joshavanier.github.io/">John Avanier's</a> <a href="https://joshavanier.github.io/wiki/log/">log</a>. And other similar works.</p>
+<p>Inspiration for the project in it's current form borrows from <a href="https://joshavanier.github.io/">Josh Avanier's</a> <a href="https://joshavanier.github.io/wiki/log/">log</a>. And other similar works.</p>
 
 <figure>
 	<h3>Early Design</h3>
