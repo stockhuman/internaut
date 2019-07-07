@@ -1,7 +1,7 @@
 ---
 layout: project
 description: My personal photography page, blog and brand identity.
-bg: 000000
+bg: 101010
 fg: ffffff
 cover: dither-mikemingway.png.png
 category: web
