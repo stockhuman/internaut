@@ -38,8 +38,9 @@ export default class Navigation {
 		let page = document.querySelector('article.page'), bg, fg
 
 		if (page && page.attributes) {
-			bg = page.attributes['data-base'].value
-			fg = page.attributes['data-highlight'].value
+			let p = page.attributes
+			bg = p['data-base'] ? '#' + p['data-base'].value : '#292F35'
+			fg = p['data-highlight'] ? '#' + p['data-highlight'].value : '#fff'
 		} else {
 			bg = '#292F35'
 			fg = '#fff'
@@ -77,9 +78,3 @@ export default class Navigation {
 		})
 	}
 }
-
-
-
-
-
-
