@@ -5,6 +5,9 @@
   top: $navPad;
   right: $navPad;
   left: $navPad;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 
   color: inherit;
 }

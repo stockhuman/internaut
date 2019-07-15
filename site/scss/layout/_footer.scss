@@ -1,8 +1,8 @@
 footer {
 	background: darken($gray-lighter, 5%);
-	border-radius: 2px;
+	border-radius: $global-radius;
 	padding: $navWidth;
-	margin-bottom: $navPad + $navWidth;
+	margin-bottom: $navPad * 2 + $navWidth;
 	color: $gray;
 }
 
