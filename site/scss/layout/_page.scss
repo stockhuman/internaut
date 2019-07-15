@@ -42,7 +42,7 @@ article.page {
 		overflow: hidden;
 		padding: $navWidth 0 $navWidth 0;
 		margin: 0 -1.6rem 0 -1.6rem; // magic number...
-		img {
+		img.dithered {
 			background-blend-mode: hard-light;
 			mix-blend-mode: multiply;
 		}

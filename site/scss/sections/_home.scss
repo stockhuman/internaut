@@ -1,103 +1,57 @@
 .home {
-
-	padding-bottom: $navWidth;
+	padding-bottom: $navPad;
 	margin-top: 50vh;
+
 	.header {
-		margin-bottom: 2em;
+		max-width: 740px;
+    padding: 0 20px 0 20px;
+    padding-bottom: 0px;
+    margin: 0 auto 2rem auto;
 		h1 { margin-bottom: 2px; }
 		p {
 			font-size: 18px;
 			font-family: monospace;
-			background: white;
 			display: inline;
 		}
 		.desc {
 			color: rgba($font-color, 0.6);
 		}
+	}
 
+	.stats {
+		// background: rgba(darken($gray-lighter, 5%), 0.2);
+		border: 1px solid rgba($font-color, 0.2);
+		border-radius: $global-radius;
+		max-width: 1600px;
+		margin: 0 auto;
+		padding: $navWidth;
 	}
 
 	.grid {
+		max-width: 1600px;
+		margin: 0 auto;
 		margin-bottom: 2em;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
- 		grid-auto-rows: minmax(180px, auto);
+		grid-template-columns: 1fr;
  		grid-gap: $navPad;
 	}
-
-	// via https://tobiasahlin.com/blog/masonry-with-css/
-	// 	.container {
-	//   display: flex;
-	//   flex-flow: column wrap;
-	// }
-
-	// /* Re-order items into rows */
-	// .item:nth-child(3n+1) { order: 1; }
-	// .item:nth-child(3n+2) { order: 2; }
-	// .item:nth-child(3n)   { order: 3; }
-
-	// /* Force new columns */
-	// .container::before,
-	// .container::after {
-	//   content: "";
-	//   flex-basis: 100%;
-	//   width: 0;
-	//   order: 2;
-	// }
 }
 
 .home-item {
-	position: relative;
-	transition: filter .5s ease;
-	img { border-radius: 2px;}
-	&.tall {
-		grid-row-end: span 2;
+	// background: $white;
+	// padding: $navPad;
+	border-radius: $global-radius;
+
+	img {
+		background-blend-mode: hard-light;
+		mix-blend-mode: multiply;
 	}
 
-	.overlay {
-		text-align: center;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		opacity: 0;
-		background: rgba($gray-dark, 0.5);
-		transition: .2s opacity;
-		color: $white;
-		h2, h4 {
-			position: relative;
-			top: 20%;
-		}
-	}
-
-	&:hover {
-		img {filter: hue-rotate(130deg);}
-		.overlay {
-			opacity: 1;
-		}
-
-	}
-
-}
-
-
-@include media('>tablet') {
-	.home-item {
-
+	h2, p {
+		margin: $navPad
 	}
 }
 
-@include media('>ultrawide') {
-	.home-item {
-	}
-}
-
-#home-canvas {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
+@include media('>phablet') {
+	.home .grid { grid-template-columns: 1fr 1fr; }
 }

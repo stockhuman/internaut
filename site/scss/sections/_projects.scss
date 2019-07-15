@@ -3,7 +3,8 @@
 .projects {
 	margin: $navWidth;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+	gap: $navPad;
 }
 
 // this is an a tag
@@ -18,6 +19,12 @@
 }
 
 .card-image {
+	height: 300px;
+	width: 100%;
+	border-radius: $global-radius;
+	background-position: center center;
+	background-blend-mode: hard-light;
+	mix-blend-mode: multiply;
 }
 
 #project-filters {
@@ -30,21 +37,21 @@
 	}
 }
 
-@include media('>phablet') {
-	.project {
-		width: 50%;
-		padding-right: $navPad;
-	}
-}
 
 @include media('>tablet') {
-	.project {
-		width: 33%;
+	.projects {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
 @include media('>desktop') {
-	.project {
-		width: 25%;
+	.projects {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@include media('>ultrawide') {
+	.projects {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }

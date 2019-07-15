@@ -46,6 +46,8 @@
 				height:auto;
 				width: 50%;
 				margin-left: 0;
+				animation-duration: 1s;
+				animation-name: slidein;
 			}
 
 			.nav-link-text {
@@ -84,11 +86,12 @@
 			width: 50%;
 			margin-left: 0;
 			float: left;
+
 			a span {
 				font-size: $navIconSize*3;
 			}
 			.nav-link-text {
-				display: block;
+				opacity: 1;
 			}
 		}
 	}
@@ -101,4 +104,20 @@
 	#nav-toggle {
 		display: none;
 	}
+}
+
+
+@keyframes slidein {
+  0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	50% {
+		transform: translateX(0px);
+	}
+
+  100% {
+		opacity: 1;
+  }
 }
