@@ -5,27 +5,28 @@ bg: 00AEEF
 fg: EEEEEE
 cover: dither-jars.png.png
 category: code
-year: 2017
+year: 2017 & 2019
 tags:
 ---
 
 # The organization app
 
-<p>Jars is an ongoing, under-development project of mine built with the foremost goal of replacing and streamlining the three markdown documents I currently organize my life with.</p>
+Jars was the longest-running under-development app I've made to date by technicality:
 
-<p>It started as a way to formalize and keep record of the markdown documents that precede it: today.md, week.md &amp; notes.md among others.</p>
+Jars is an ongoing, under-development project of mine built with the foremost goal of replacing and streamlining the three markdown documents I currently organize my life with.
+
+It started as a way to formalize and keep record of the markdown documents that precede it: today.md, week.md &amp; notes.md among others.
 
 <figure>
 	<img src="/assets/img/work/jars/dither-NYE-build.png.png" alt="">
 	<figcaption>NYE Build 2017 build, pre-refactor</figcaption>
 </figure>
 
-<p>I started development with a Cue and Electron framework hybrid, to teach myself both. I think in that regrad it's been a wild succes, and I learned ES6 along the way as well.</p>
+I started development with a Vue and Electron framework hybrid, to teach myself both. I think in that regard it's been a wild succes, and I learned ES6 along the way as well.
 
+Current efforts are now focused on integrating Google Calendar, and altering the user interface to reflect a focus on impromptu logging instead of after-the-fact commits.
 
-<p>Current efforts are now focused on integrating Google Calendar, and altering the user interface to reflect a focus on impromptu logging instead of after-the-fact commits.</p>
-
-<p>Inspiration for the project in it's current form borrows from <a href="https://joshavanier.github.io/">Josh Avanier's</a> <a href="https://joshavanier.github.io/wiki/log/">log</a>. And other similar works.</p>
+Inspiration for the project in it's current form borrows from <a href="https://joshavanier.github.io/">Josh Avanier's</a> <a href="https://joshavanier.github.io/wiki/log/">log</a>. And other similar works.
 
 <figure>
 	<h3>Early Design</h3>
@@ -41,5 +42,4 @@ tags:
 	<figcaption>Progress has come a long way</figcaption>
 </figure>
 
-
-<p>The project is <a href="https://github.com/stockHuman/Jars">available here on Github.</a></p>
+The project is [available here on Github](https://github.com/stockHuman/Jars).

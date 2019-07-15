@@ -33,7 +33,7 @@
 
 		<p>Quite the adventure, isn't it?</p>
 
-		<p>This site is built using the now-abandoned static site generator <a href="http://harpjs.com">harp</a>. Thankfully, it still works! I can write all my pages in markdown, or ejs, jade, stylus and a bunch of other preprocessors. I compile the whole thing into a folder and bingo. The entire site in a folder. No live anything.</p>
+		<p>This site was built using the now-abandoned static site generator <a href="http://harpjs.com">harp</a>. I've since moved to what I could call a fork of [Nanogen](https://github.com/doug2k1/nanogen) Thankfully, it still works! I can write all my pages in markdown, or ejs, jade, stylus and a bunch of other preprocessors. I compile the whole thing into a folder and bingo. The entire site in a folder. No live anything.</p>
 
 		<p>The idea to go for a static site build was mostly born of curiosity, and I'd also grown a little tired with the needless complexity introduced by wordpress as a CMS for something so simple as a portfolio site.</p>
 
