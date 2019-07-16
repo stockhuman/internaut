@@ -1,4 +1,4 @@
-On the morning of April 26th, 2017 I sent an inordinate amount of time looking up how to build my own airplane.
+On the morning of April 26th, 2017 I spent an inordinate amount of time looking up how to build my own airplane.
 This proved to be a difficult task, both learning of how to go about this, and the excecution of such a feat proper.
 
 In my web excursions, beggining with the Po-2 Soviet reconnaisance vehicle turned nuissance night attack thing, I moved into the history of DIY aircraft. Self mades, with the Spirit of St. Louis my starting gun to my eventual Catalina trail.
@@ -12,7 +12,7 @@ The original craft, [whose images I've rehosted here](https://www.pinterest.com/
 	![the converted interior](../img/catalina-2.jpg)
 </figure>
 
-Another great write-up can be found [here](http://www.artificialowl.net/2009/07/abandoned-catalina-seaplane-50-years.html), nad it uses many of Ken's images. 
+Another great write-up can be found [here](http://www.artificialowl.net/2009/07/abandoned-catalina-seaplane-50-years.html), nad it uses many of Ken's images.
 
 <figure>
 	<div class="full-width-video">
