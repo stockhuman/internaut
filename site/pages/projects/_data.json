@@ -4,6 +4,15 @@
 		"description" : "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
 		"layout": "_prj-layout"
 	},
+	"heraldry": {
+		"title"					 : "Heraldry",
+		"description"		 : "Blazonry and coat-of-arms generation for the UTF-8 generation",
+		"data_base"			 : "",
+		"data_highlight" : "#e5e500",
+		"cover"					 : "heraldry.png",
+		"category"			 : "code",
+		"year"					 : "2019"
+	},
 	"tellum" : {
 		"title"          : "Tellum",
 		"description"    : "A connected database of sounds",

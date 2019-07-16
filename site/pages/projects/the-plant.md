@@ -1,7 +1,7 @@
 ---
 layout: project
 description: A connected database of sounds
-cover: dither-tellum.png.png
+cover: dither-the-plant.png.png
 slug: tellum
 category: code
 tags:

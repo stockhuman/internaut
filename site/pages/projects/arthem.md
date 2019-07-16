@@ -15,14 +15,14 @@ Arthem started as an idea to solve a personal problem of mine long ago. I'd appl
 I realised that I ought to just go my own way, and I started this little company with a friend of mine with the goal of building niche websites for creative types in Montreal. I registered the company and we got to buisness.
 
 <figure>
-	![WTC 1, or the freedom tower.](/assets/img/work/arthem/dither-building.jpg.png)
+	<img alt="WTC 1, or the freedom tower." src="/assets/img/work/arthem/dither-building.jpg.png">
 	<figcaption>WTC 1, taken on a trip to new york some years ago, became the pseudo-image of Arthem's visual appeal.</figcaption>
 </figure>
 
 Arthem is portmanteau of _Art_ and _Hemingway_. I considered other names, but really not much else. While it isn't strictly speaking my art made under this brand, it later came to largely mean that.
 
 <figure>
-	![bare logo typographic design](/assets/img/work/arthem/dither-logo.png.png)
+	<img alt="bare logo typographic design" src="/assets/img/work/arthem/dither-logo.png.png">
 </figure>
 
 <figure>
