@@ -105,7 +105,7 @@ export default class Logger {
 		// most commonly entered time of day for work
 		const modalTod = document.createElement('p')
 		modalTod.innerHTML =
-			`Scale: 2 Months. Mode: ${mode(data.records.map(item => item.tod))}.`
+			`Scale: 2 Months. Mode: ${mode(data.records.map(item => item.tod))}. Showing logs for '${this.project}'`
 
 		this.root.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 105">${svg}</svg>`
 		this.root.appendChild(modalTod)
