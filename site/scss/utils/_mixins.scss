@@ -25,11 +25,8 @@
 	transition: ($transition);
 }
 
+// deprecated! :D
 @mixin transform($transform) {
-	-webkit-transform: ($transform);
-	-moz-transform: ($transform);
-	-ms-transform: ($transform);
-	-o-transform: ($transform);
 	transform: ($transform);
 }
 

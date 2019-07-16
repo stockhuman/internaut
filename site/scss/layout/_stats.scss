@@ -1,8 +1,7 @@
 .stats {
 	background: rgba(lighten($tertiary, 5%), 0.4);
-	border-radius: $global-radius;
-	max-width: 1600px;
-	margin: 0 auto;
+	@extend %radius;
+	@extend %block;
 	padding: $navWidth;
 
 	text {

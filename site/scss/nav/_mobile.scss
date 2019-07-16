@@ -12,7 +12,7 @@
 	bottom: $navPad;
 	left: $navPad;
 	right: $navPad;
-	border-radius: $global-radius;
+	@extend %radius;
 }
 
 #nav-home-icon {

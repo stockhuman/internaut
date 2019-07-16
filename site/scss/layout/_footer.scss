@@ -1,6 +1,7 @@
 footer {
+	@extend %radius;
+	@extend %block;
 	background: darken($gray-lighter, 5%);
-	border-radius: $global-radius;
 	padding: $navWidth;
 	margin-bottom: $navPad * 2 + $navWidth;
 	color: $gray;

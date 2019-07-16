@@ -19,8 +19,7 @@
 	}
 
 	.grid {
-		max-width: 1600px;
-		margin: 0 auto;
+		@extend %block;
 		margin-bottom: $navPad;
 		display: grid;
 		grid-template-columns: 1fr;
@@ -29,9 +28,7 @@
 }
 
 .home-item {
-	// background: $white;
-	// padding: $navPad;
-	border-radius: $global-radius;
+	@extend %radius;
 	position: relative;
 	line-height: 0;
 
