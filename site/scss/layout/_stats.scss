@@ -1,0 +1,22 @@
+.stats {
+	background: rgba(lighten($tertiary, 5%), 0.4);
+	border-radius: $global-radius;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: $navWidth;
+
+	text {
+		font-size: 9px;
+		opacity: 0.3;
+		font-family: monospace;
+	}
+	.docs {
+		fill: $brand;
+	}
+	.read {
+		fill: $tertiary;
+	}
+	.code {
+		fill: $white;
+	}
+}
