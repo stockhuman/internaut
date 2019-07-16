@@ -75,9 +75,10 @@
 
 // individual blocks
 .nav-list-item {
-	transition: background 0.2s ease-in-out;
+	transition: background 0.1s ease-in-out;
 	display: flex;
 	flex-direction: column;
+	border-radius: $global-radius;
 	&:hover {
 		background: rgba(20,20,20,0.3);
 	}
