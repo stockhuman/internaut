@@ -1,4 +1,8 @@
+const path = require('path')
 const fse = require('fs-extra')
+const frontMatter = require('front-matter')
+
+const collection = []
 
 // via this excellent gist: https://gist.github.com/kethinov/6658166
 const walk = (dir, fileList = []) => {
@@ -13,25 +17,12 @@ const walk = (dir, fileList = []) => {
 
 const collectionData = walk(`./site/pages/collection/`)
 collectionData.forEach(page => {
-  // const data = fse.readFileSync(`${this.srcPath}/pages/${file}`, 'utf-8')
+  const data = fse.readFileSync(page, 'utf-8')
   const pageData = frontMatter(data)
-  const templateConfig = {
-    site: this.site,
-    page: pageData.attributes
-  }
+  collection.push({ path: page, page: pageData.attributes})
 })
 
-
-// render page
-
-
 const projects = require('./site/pages/projects/_data.json')
-const collection = {
-  code: require('./site/pages/collection/code/_data.json'),
-  video: require('./site/pages/collection/video/_data.json'),
-  writing: require('./site/pages/collection/writing/_data.json')
-}
-
 
 module.exports = {
   build: {
