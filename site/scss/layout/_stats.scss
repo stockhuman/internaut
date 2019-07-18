@@ -18,4 +18,8 @@
 	.code {
 		fill: $white;
 	}
+	rect:hover {
+		stroke: black;
+		cursor: crosshair
+	}
 }
