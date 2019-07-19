@@ -23,10 +23,16 @@
 
 // small mobile screens
 @media screen and (max-height: 480px) {
+	.nav-list-item {
+		opacity: 0;
+	}
 
 	.nav-is-open {
-		.nav-list-item a span {
-	    font-size: 3rem;
+		.nav-list-item {
+			opacity: 1;
+			a span {
+				font-size: 1rem;
+			}
 		}
 	}
 
@@ -35,6 +41,9 @@
 	}
 	#nav-toggle {
 	  bottom:-5px;
-  }
+	}
+	#nav-home-icon {
+		display: none;
+	}
 }
 
