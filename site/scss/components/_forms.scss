@@ -11,11 +11,18 @@ textarea {
   resize: vertical;
 }
 
-input, textarea, button {
+input, textarea, button, .button {
 	padding: 1rem;
 	margin: 0.5em 0;
-	border-radius: $global-radius;
-	border: 1px transparent solid;
+	@extend %radius;
+}
+
+.button, button {
+  border: 1px $gray-dark solid;
+  background: rgba(0,0,0,0.1);
+  &:hover {
+    background: rgba(0,0,0,0.3);
+  }
 }
 
 // via https://github.com/darlanrod/input-range-scss/
