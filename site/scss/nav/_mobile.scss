@@ -21,7 +21,8 @@
 	text-align: center;
 	width: $navWidth;
 	height:$navWidth;
-	canvas {
+	a {
+		font-size: $navWidth / 1.5;
 		width: 100%;
 		height: 100%;
 	}

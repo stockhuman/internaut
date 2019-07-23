@@ -11,7 +11,6 @@ import { allImages } from './components/upres'
 const nav = new Navigation()
 
 nav.mount(() => {
-	nav.icon()
 	nav.colors()
 })
 

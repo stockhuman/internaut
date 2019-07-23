@@ -55,24 +55,6 @@ export default class Navigation {
 		})
 	}
 
-	icon () {
-		const canvas = document.getElementById('nav-canvas')
-		const symbols = ['🖑', '֍', '∻', '℈', '⌘', '⌬',]
-		const ctx = canvas.getContext('2d')
-
-		canvas.width = canvas.offsetWidth
-		canvas.height = canvas.offsetHeight
-
-		ctx.fillStyle = 'white'
-		ctx.textAlign = 'center'
-		ctx.textBaseline = 'middle'
-		ctx.font = '25px serif'
-		ctx.fillText(
-			symbols[Math.floor(Math.random() * symbols.length)],
-			canvas.width / 2,
-			canvas.height / 2)
-	}
-
 	mount (callback) {
 		// Load the colors on fresh page
 		document.addEventListener('DOMContentLoaded', () => {
