@@ -5,8 +5,22 @@ export default class Logger {
 		this.project = root.attributes['data-project'].nodeValue
 		this.query = this.makeQuery()
 
-
+		this.events()
 		this.request()
+	}
+
+	// truncates the SVG to half the view
+	events () {
+		window.addEventListener('resize', () => {
+			const svg = this.root.querySelector('svg')
+			if (svg) {
+				if (window.innerWidth < 500) {
+					svg.setAttributeNS(null, 'viewBox', '300 0 300 105')
+				} else {
+					svg.setAttributeNS(null, 'viewBox', '0 0 600 105')
+				}
+			}
+		})
 	}
 
 	_date (date) {
@@ -103,11 +117,12 @@ export default class Logger {
 		}
 
 		// most commonly entered time of day for work
-		const modalTod = document.createElement('p')
-		modalTod.innerHTML =
-			`Scale: 2 Months. Mode: ${mode(data.records.map(item => item.tod))}. Showing logs for '${this.project}'`
+		const modalTod =
+			`<p>Scale: 2 Months. Mode: ${mode(data.records.map(item => item.tod))}. Showing logs for '${this.project}'</p>`
 
-		this.root.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 105">${svg}</svg>`
-		this.root.appendChild(modalTod)
+		this.root.innerHTML =
+		`<h3><span class="jars-logo">◐</span> Logs</h3>` +
+		`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 105">${svg}</svg>`
+		+ modalTod
 	}
 }
