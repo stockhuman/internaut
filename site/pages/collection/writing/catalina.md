@@ -1,3 +1,10 @@
+---
+title: Catalina
+type: writing
+date:
+tags: [misc]
+---
+
 On the morning of April 26th, 2017 I spent an inordinate amount of time looking up how to build my own airplane.
 This proved to be a difficult task, both learning of how to go about this, and the excecution of such a feat proper.
 

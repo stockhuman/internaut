@@ -1,3 +1,9 @@
+---
+title: Assorted Ideas
+type: writing
+date:
+tags: [misc]
+---
 
 * LDS (lil' Display Show) - Airbnb for art show w/ specific reqs.
 * The democracy app, where people build a platform and support and endorse others, in a mock political election.

@@ -7,7 +7,12 @@
 
 	<p>The collection is my content graveyard; It's made of the things that didn't quite make it to the projects, or weren't mine and I just wanted to save. It's like a blog, but for more than just writing.</p>
 
-	<% for (let i = 0; i < site.collection.length; i++) { %>
-		<%= site.collection %>
+	<% for (let i = 0; i < site.collection.length; i++) {
+		let p = site.collection[i] %>
+		<article class="card">
+			<a href="<%= `${p.page.type}/${p.path}` %>"><%= p.page.title %></a>
+
+		</article>
+
 	<% } %>
 </article>

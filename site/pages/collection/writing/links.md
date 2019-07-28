@@ -1,3 +1,9 @@
+---
+title: Links
+type: writing
+date:
+tags: [misc]
+---
 [![thumbnail](http://lernertandsander.com/wp-content/uploads/2017/02/LS_Lernertandsander.jpg)](http://lernertandsander.com/ "Lerner and Sander")
 
 [AAF.NYC](http://aaf.nyc/)
@@ -35,4 +41,3 @@
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/C7HL5wYqAbU" frameborder="0" allowfullscreen></iframe>
 	</div>
 </figure>
-

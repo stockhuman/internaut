@@ -1,3 +1,9 @@
+---
+title: Roguelike
+type: writing
+date:
+tags: [misc]
+---
 "My first ever rogue-like game:
 
 Idea: keep a list of all creatures, always put the player on the first spot on that list, allow the player to control the first spot on the list and have AI control the rest. If a creature dies, remove it from the list.

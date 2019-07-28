@@ -1,3 +1,9 @@
+---
+title: Cuboid
+type: code
+date:
+tags: [misc]
+---
 # Cuboid
 
 <figure>
