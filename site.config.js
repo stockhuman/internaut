@@ -17,9 +17,11 @@ const walk = (dir, fileList = []) => {
 
 const collectionData = walk(`./site/pages/collection/`)
 collectionData.forEach(page => {
-  const data = fse.readFileSync(page, 'utf-8')
-  const pageData = frontMatter(data)
-  collection.push({ path: page, page: pageData.attributes})
+  if (page.endsWith('.md')) {
+    const data = fse.readFileSync(page, 'utf-8')
+    const pageData = frontMatter(data)
+    collection.push({ path: path.basename(page, '.md'), page: pageData.attributes })
+  }
 })
 
 const projects = require('./site/pages/projects/_data.json')
