@@ -24,6 +24,7 @@ collectionData.forEach(page => {
   }
 })
 
+// allows for custom ordering of projects, and omission from project page
 const projects = require('./site/pages/projects/_data.json')
 
 module.exports = {
