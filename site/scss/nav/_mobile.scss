@@ -17,32 +17,32 @@
 
 #nav-home-icon {
 	position: absolute;
-	padding: $navPad;
 	text-align: center;
-	width: $navWidth;
-	height: $navWidth;
-	font-size: $navIconSize;
+	transition: background 0.1s ease-in-out;
+
+	a span {
+		width: $navWidth;
+		height: $navWidth;
+		font-size: $navIconSize;
+		padding: $navPad;
+		display: block;
+		line-height: 1.7;
+	}
 	&:hover {
 		background: rgba(20,20,20,0.3);
 	}
 	.nav-link-text {
+		position: absolute;
+		top: $navPad*2.1;
+		left: $navWidth;
+		transition: opacity .1s ease;
 		opacity: 0;
 	}
 }
 
-#nav-social,
-#nav-title {
+#nav-social{
 	width: 100%;
 	z-index: 2;
-}
-
-#nav-title {
-	position: absolute;
-	top: $navPad*2.1;
-	font-weight: 200;
-	left: 65px; // width of logo - parameterize
-	transition: opacity .3s ease;
-	opacity: 0;
 }
 
 #nav-inner {
@@ -60,6 +60,7 @@
 
 	a {
 		text-decoration: none;
+		overflow: hidden;
 
 		span { // UTF8 Icon
 			display: block;

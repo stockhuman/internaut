@@ -11,7 +11,7 @@
     position: absolute;
     height: 2px;
     width: $navWidth/3.4;
-    background: $white;
+    background: currentColor;
     transition: transform .1s $easeOutQuint, position .1s $easeOutQuint;
 
     &:nth-child(1) {
