@@ -34,7 +34,7 @@
 	"the-plant" : {
 		"title"          : "The Plant",
 		"description"    : "Dawson College's Official online student newspaper",
-		"data_base"      : "#ffffff",
+		"data_base"      : "#3cc47c",
 		"data_highlight" : "#18422e",
 		"cover"          : "the-plant.png",
 		"category"       : "web",
@@ -85,10 +85,10 @@
 		"category"       : "code",
 		"year"           : "2017"
 	},
-	"pasta" : {
-		"title"          : "Pasta",
+	"amore" : {
+		"title"          : "Amore",
 		"description"    : "",
-		"data_base"      : "#191900",
+		"data_base"      : "#ffff00",
 		"data_highlight" : "#999900",
 		"cover"          : "pasta.jpg",
 		"category"       : "game",
@@ -124,7 +124,7 @@
 	"spain" : {
 		"title"          : "Spain & Back Again",
 		"description"    : "Images from San Fermin, Bilbao and elesewhere. My photography from that most beautiful country.",
-		"data_base"      : "#000000",
+		"data_base"      : "#ff8000",
 		"data_highlight" : "#FFFFFF",
 		"cover"          : "spain.png",
 		"category"       : "photo",
@@ -133,7 +133,7 @@
 	"moon" : {
 		"title"          : "Moon",
 		"description"    : "Collected illustrations from my brief stint as a Photoshop painter.",
-		"data_base"      : "",
+		"data_base"      : "#B2D9FF",
 		"data_highlight" : "",
 		"cover"          : "moon.png",
 		"category"       : "illustration",
