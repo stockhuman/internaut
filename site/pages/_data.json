@@ -25,9 +25,5 @@
 	"gamegen" : {
 		"title"        : "Game Mechanics Generator",
 		"description"  : "Generate game mechanics, for FLOP and other game dev projects"
-	},
-	"captcha" : {
-		"title"        : "Captcha",
-		"description"  : "Select all the squares that match"
 	}
 }
