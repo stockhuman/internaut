@@ -22,16 +22,11 @@ header.cover {
 	border-radius: $global-radius;
 }
 
-// little ul with descriptors
-.page-title {
-	margin-top: $navWidth;
-	margin-bottom: $navWidth;
-}
 
 article.page {
 	max-width: 740px;
 	padding: 0 20px 0 20px;
-	margin: 0 auto;
+	margin: $navWidth auto;
 	@include font-size(28);
 	color: lighten($black, 17%);
 	line-height: 1.5;
@@ -53,21 +48,17 @@ article.page {
 }
 
 .project-nav {
-	width: 100%;
-	height: 4em;
+	margin-top: $navPad;
 	position: relative;
 	text-align: center;
-	color: darken($gray-lighter, 20%);
-	background: $gray-lighter;
+	font-family: monospace;
 
 	a[class^='project-nav-'] {
 		padding: $navWidth/3;
 		width: 50%;
-		// border-left: 1px solid $gray-light;
-		margin-bottom: 0;
-		border-bottom: 1px darken($gray-lighter, 5%) solid;
 		transition: color .2s;
 		float: left;
+		@extend %radius;
 		&:hover {
 			color: $gray;
 		}
@@ -83,14 +74,14 @@ article.page {
 	.project-nav-next {
 		&::after {
 			float: right;
-			content: ">";
+			content: "⇀";
 		}
 	}
 
 	.project-nav-prev {
 		&::before {
 			float: left;
-			content: "<";
+			content: "↽";
 		}
 	}
 
@@ -98,13 +89,6 @@ article.page {
 		display: none;
 	}
 
-	.project-nav-year {
-		border-right: 1px darken($gray-lighter, 5%) solid;
-	}
-	.project-nav-cat {
-		border-right: 1px darken($gray-lighter, 5%) solid;
-		border-left:  1px darken($gray-lighter, 5%) solid;
-	}
 	// &.no-next {}
 	&.no-prev {
 		margin-left: 25%;
