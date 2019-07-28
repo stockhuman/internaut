@@ -6,4 +6,18 @@
 			color: rgba($font-color, 0.6);
 		}
 	}
+
+	.card {
+
+		a {
+			background: $white;
+			margin: $navPad 0;
+			padding: 1rem;
+			@extend %radius;
+			display: block;
+		}
+		&:hover, &:focus {
+			mix-blend-mode: exclusion;
+		}
+	}
 }
