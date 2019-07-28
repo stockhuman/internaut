@@ -1,13 +1,15 @@
 ---
 layout: project
 description: Glitched and processed images, done in Processing & the like
+cover: dither-bitmap.png.png
+slug: bitmap
+category: code
+tags: []
+year: 2017
 bg: 0000ff
 fg: ffffff
-cover: dither-bitmap.png.png
-category: code
-year: 2017
-tags: ''
 ---
+
 # bitmap
 
 A collection of glitched & datamoshed imagery done in Processing, Wordpad and Audacity.

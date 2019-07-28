@@ -1,13 +1,15 @@
 ---
 layout: project
 description: A little web design buisness, now finding it's purpose.
+cover: dither-arthem.png.png
+slug: arthem
+category: web
+tags: []
+year: 2016
 bg: 25aae2
 fg: ffffff
-cover: dither-arthem.png.png
-category: web
-year: 2016
-tags:
 ---
+
 # Arthem
 
 Arthem started as an idea to solve a personal problem of mine long ago. I'd applied to a job in web design during college and aced the interview, but the person doing the hiring was away, so all that was left to assess me in the end were my credentials on paper.
@@ -22,11 +24,11 @@ I realised that I ought to just go my own way, and I started this little company
 Arthem is portmanteau of _Art_ and _Hemingway_. I considered other names, but really not much else. While it isn't strictly speaking my art made under this brand, it later came to largely mean that.
 
 <figure>
-	<img alt="bare logo typographic design" src="/assets/img/work/arthem/dither-logo.png.png">
+	<img alt="bare logo typographic design" src="/assets/img/work/arthem/logo.png">
 </figure>
 
 <figure>
-	![early design](/assets/img/work/arthem/earlyDesign.jpg)
+	<img alt="early design" src="/assets/img/work/arthem/earlyDesign.jpg" />
 	<figcaption>Low poly art was trendy (and still is with the resurgence of VR), and some imagery took that to heart.</figcaption>
 </figure>
 
@@ -35,15 +37,15 @@ In the early design seen above, the logographic representation came before the n
 As a brand identity, Arthem needed to tow the line between authoritatively respectable and being the people's choice. Conveying the digital-first approach and our sensitivity to a world mediated through code, the brand became an intersection between timeless modernism and the monospaced programming world..
 
 <figure>
-	![typography example with 'hack bold'](/assets/img/work/arthem/typography.jpg)
+	<img alt="typography example with 'hack bold'" src="/assets/img/work/arthem/typography.jpg" />
 	<figcaption>Hack Bold, _[link.](https://github.com/chrissimpkins/Hack)_</figcaption>
 </figure>
 
 In terms of typeface, Hack was chosen as an extensible fit to the spec. Imposing, a programmer's typeface, and approachably cool. Monospaced was an odd fit at first, but it provided a unique presence other considered options just didn't have.
 
 <figure>
-	![Ghuggenheim](/assets/img/work/arthem/typographic-single.jpg)
-	![](/assets/img/work/arthem/logographic.jpg)
+	<img alt="Ghuggenheim" src="/assets/img/work/arthem/typographic-single.jpg" />
+	<img src="/assets/img/work/arthem/logographic.jpg" />
 	<figcaption>Brand identity imagery</figcaption>
 </figure>
 

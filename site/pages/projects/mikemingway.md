@@ -1,12 +1,13 @@
 ---
 layout: project
 description: My personal photography page, blog and brand identity.
+cover: dither-mikemingway.png.png
+slug: mikemingway
+category: web
+tags: []
+year: 2015
 bg: 101010
 fg: ffffff
-cover: dither-mikemingway.png.png
-category: web
-year: 2015
-tags:
 ---
 # MKWY
 

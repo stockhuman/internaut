@@ -2,11 +2,12 @@
 layout: project
 description: A coat of arms generator for the 21st century
 cover: dither-heraldry.png.png
+slug: heraldry
 category: code
+tags: []
 year: 2019
 bg: 282c34
 fg: e5e500
-tags:
 ---
 
 # Heraldry

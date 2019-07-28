@@ -1,13 +1,15 @@
 ---
 layout: project
 description:
+cover: dither-opcm.png.png
+slug: opcm
+category: web
+tags: [client]
+year: 2017
 bg: 880015
 fg: ffffff
-cover: dither-opcm.png.png
-category: web
-year: 2017
-tags: [client]
 ---
+
 # The OPCM
 
 The _Orchestre Philharmonique et Choeur des Mélomanes_, or the OPCM for short, is a Montreal-based youth orchestra and choir.

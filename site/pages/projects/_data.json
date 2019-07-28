@@ -13,6 +13,14 @@
 		"category"			 : "code",
 		"year"					 : "2019"
 	},
+	"datamosh": {
+		"title"          : "Datam0sh",
+		"description"    : "A WiFi-enabled digital guitar pedal",
+		"data_base"      : "#F52DE7",
+		"data_highlight" : "#EEEEEE",
+		"category"       : "hardware",
+		"year"           : "2018"
+	},
 	"tellum" : {
 		"title"          : "Tellum",
 		"description"    : "A connected database of sounds",
@@ -106,8 +114,8 @@
 	"mikemingway" : {
 		"title"          : "Mikemingway",
 		"description"    : "My personal photography page, blog and brand identity.",
-		"data_base"      : "#000000",
-		"data_highlight" : "#ffffff",
+		"data_base"      : "#FFF",
+		"data_highlight" : "#000",
 		"cover"          : "mikemingway.png",
 		"category"       : "web",
 		"year"           : "2015"
@@ -115,8 +123,8 @@
 	"bass-camp-fridays": {
 		"title"          : "Bass Camp Fridays",
 		"description"    : "Graphic design work for Bass Camp Fridays & Bar Backstage, Montreal.",
-		"data_base"      : "#000000",
-		"data_highlight" : "#FFFFFF",
+		"data_base"      : "#FFF",
+		"data_highlight" : "#000",
 		"cover"          : "bcf.png",
 		"category"       : "print",
 		"year"           : "2014"

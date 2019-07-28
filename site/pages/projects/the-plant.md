@@ -2,7 +2,7 @@
 layout: project
 description: A connected database of sounds
 cover: dither-the-plant.png.png
-slug: tellum
+slug: the-plant
 category: code
 tags:
 year: 2017
