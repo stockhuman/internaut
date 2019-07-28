@@ -19,7 +19,7 @@ I loved the idea of the box; it was this little wooden thing affixed to a wall a
 And yet, people would only fill it with trash. The most dubiously useful item in there of value was a flavoured condom. The value proposition of giving up physical possessions to strangers simply wasn't there. And so it failed. The box fell into disrepair and was eventually taken down.
 
 <figure>
-	![The map](/assets/img/work/tellum/map.jpg)
+	<img alt="The map" src="/assets/img/work/tellum/map.jpg">
 </figure>
 
 So came to me the inspiration and driving motive behind Tellum. It was to be an item exchange box, but networked around the city for that same sense of community, and it was to exchange audio instead of items; sound is far easier to give and receive, and still holds that possibility for kindness and expression.

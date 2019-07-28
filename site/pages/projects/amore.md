@@ -10,12 +10,12 @@ bg: FFFF00
 fg: 999900
 ---
 
-# pasta
+# Amore
 
 A small UE4 game made for FLOP, available for a quip spin [here](https://flopmtl.itch.io/amore).
 
 <figure>
-	<img src="/assets/img/work/pasta/pasta-1.png" />
-	<img src="/assets/img/work/pasta/pasta-2.png" />
-	<img src="/assets/img/work/pasta/pasta-3.png" />
+	<img src="/assets/img/work/pasta/dither-pasta-1.png.png" />
+	<img src="/assets/img/work/pasta/dither-pasta-2.png.png" />
+	<img src="/assets/img/work/pasta/dither-pasta-3.png.png" />
 </figure>

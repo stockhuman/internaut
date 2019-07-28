@@ -4,6 +4,7 @@ description: My personal productivity app
 cover: dither-jars.png.png
 slug: jars
 category: code
+statsfor: Jars
 tags: []
 year: [2017, 2019]
 bg: 00AEEF
