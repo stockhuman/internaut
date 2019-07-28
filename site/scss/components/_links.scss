@@ -1,6 +1,14 @@
 a {
 	color: inherit;
 	text-decoration: none;
+	&:focus {
+		background: rgba(20,20,20,0.3);
+		outline: inset;
+	}
+}
+
+.mn a:focus {
+	outline: none;
 }
 
 // external links
@@ -30,4 +38,3 @@ article p > a[href^="http"] {
 		background: black;
 	}
 }
-

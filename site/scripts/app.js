@@ -9,10 +9,14 @@ import Logger from './components/logger'
 import { allImages } from './components/upres'
 
 const nav = new Navigation()
+nav.mount(() => nav.colors())
 
-nav.mount(() => {
-	nav.colors()
-})
+let mm = () => {
+	document.body.classList.add('mn')
+	document.removeEventListener('mousemove', mm)
+}
+
+document.addEventListener('mousemove', mm)
 
 const logroot = document.querySelector('.stats')
 
