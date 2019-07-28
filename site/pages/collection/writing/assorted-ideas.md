@@ -1,6 +1,7 @@
 ---
 title: Assorted Ideas
 type: writing
+layout: collection
 date:
 tags: [misc]
 ---

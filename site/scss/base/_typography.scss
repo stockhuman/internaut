@@ -30,5 +30,8 @@ p {
 }
 
 hr {
-  color: $border-color;
+  border: 0;
+  height: 1px;
+  background: $border-color;
+  margin: $navWidth;
 }

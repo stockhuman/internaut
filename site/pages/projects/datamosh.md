@@ -2,11 +2,12 @@
 layout: project
 description: A colled assortment of audio and visual of the wavy variety
 cover: dither-datamosh.png.png
+slug: datamosh
 category: hardware
+tags: []
 year: 2018
 bg: F52DE7
 fg: EEEEEE
-tags:
 ---
 
 # Datam0sh / Air Guitar

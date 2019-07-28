@@ -1,6 +1,7 @@
 ---
 title: Links
 type: writing
+layout: collection
 date:
 tags: [misc]
 ---

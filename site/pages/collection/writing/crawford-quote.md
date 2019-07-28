@@ -1,6 +1,7 @@
 ---
 title: Crawford Quote
 type: writing
+layout: collection
 date:
 tags: [misc]
 ---

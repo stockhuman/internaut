@@ -22,11 +22,15 @@ header.cover {
 	border-radius: $global-radius;
 }
 
+// icons as headers
+.page-title {
+	margin-top: $navWidth;
+}
 
 article.page {
 	max-width: 740px;
 	padding: 0 20px 0 20px;
-	margin: $navWidth auto;
+	margin: 0 auto;
 	@include font-size(28);
 	color: lighten($black, 17%);
 	line-height: 1.5;

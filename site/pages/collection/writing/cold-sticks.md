@@ -1,6 +1,7 @@
 ---
 title: Cold Sticks
 type: writing
+layout: collection
 date:
 tags: [misc]
 ---

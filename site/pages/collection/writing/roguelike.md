@@ -1,6 +1,7 @@
 ---
 title: Roguelike
 type: writing
+layout: collection
 date:
 tags: [misc]
 ---

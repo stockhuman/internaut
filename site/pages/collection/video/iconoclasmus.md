@@ -1,11 +1,10 @@
 ---
 title: Iconoclasmus
 type: video
-date:
+layout: collection
+date: 2017
 tags: [misc]
 ---
-# Iconoclasmus Trailer
-
 <figure>
 	<div class="full-width-video">
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/Ue6IldR0SFs" frameborder="0" allowfullscreen></iframe>

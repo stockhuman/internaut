@@ -1,6 +1,7 @@
 ---
 title: Bathesda
 type: writing
+layout: collection
 date:
 tags: [misc]
 ---

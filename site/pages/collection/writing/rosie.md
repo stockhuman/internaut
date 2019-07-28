@@ -1,8 +1,8 @@
 ---
-title: Rosie
+title: Rosie Senarios
 type: writing
+layout: collection
 date:
 tags: [misc]
 ---
-# Rosie Senarios
 The lady with wild economic forecasts
