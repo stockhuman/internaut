@@ -5,6 +5,24 @@ footer {
 	padding: $navWidth;
 	margin-bottom: $navPad * 2 + $navWidth;
 	color: $gray;
+	display: flex;
+	gap: $navWidth
+}
+
+.colophon {
+	flex-grow: 1;
+}
+
+.footer-settings {
+	justify-self: end;
+	font-family: monospace;
+	.footer-setting {
+		display: flex;
+		margin-bottom: $navPad;
+		p {
+			margin: $navPad
+		}
+	}
 }
 
 // adjust for the nav being at the bottom in mobile

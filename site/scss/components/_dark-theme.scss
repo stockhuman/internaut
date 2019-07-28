@@ -1,0 +1,27 @@
+.dark-theme {
+	background: $gray-darker;
+	color: $gray-lighter;
+
+	.home .header .desc {
+		color: $gray-lighter
+	}
+
+	article.page {
+		color: $gray-lighter;
+	}
+
+	footer {
+		background: $black;
+	}
+
+	.tgl-light:checked + .tgl-btn {
+		background: $gray-darker;
+	}
+
+	.collection .card a {
+		background: $black;
+	}
+	article p > a[href^="http"]::before {
+		background: $brand;
+	}
+}
