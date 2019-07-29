@@ -8,16 +8,18 @@
 	}
 
 	.card {
-
+		background: $white;
+		@extend %radius;
 		a {
-			background: $white;
+
 			margin: $navPad 0;
 			padding: 1rem;
-			@extend %radius;
+
 			display: block;
 		}
 		&:hover, &:focus {
 			mix-blend-mode: exclusion;
+			background: khaki;
 		}
 	}
 }
