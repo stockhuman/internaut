@@ -2,7 +2,8 @@
 	background: $gray-darker;
 	color: $gray-lighter;
 
-	.home .header .desc {
+	.home .header .desc,
+	.button, button {
 		color: $gray-lighter
 	}
 
@@ -23,5 +24,15 @@
 	}
 	article p > a[href^="http"]::before {
 		background: $brand;
+	}
+
+	::-moz-selection {
+		background: $white;
+		color: $brand;
+	}
+
+	::selection {
+		background: $black;
+		color: $brand;
 	}
 }
