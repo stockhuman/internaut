@@ -1,33 +1,38 @@
-// import {Renderer, Camera, Transform,  Program, Geometry, Mesh, Vec3 } from './lib/ogl/Core.js'
-// import ParticlesShader from './lib/ogl/shaders/ParticlesShader.js'
-// import { Orbit } from './lib/ogl/Extras.js'
+// setup
+const canvas = document.body.appendChild(
+	document.createElement("canvas")
+)
+const context = canvas.getContext("2d")
 
-// const renderer = new Renderer({depth: false})
-// const gl = renderer.gl
+window.addEventListener('resize', size)
+document.addEventListener('mousedown', draw)
+size()
 
-// document.body.appendChild(gl.canvas)
-// gl.clearColor(0.5019607, 0.81176470, 0.66274509, 0)
+// use these alignment properties for "better" positioning
+context.textAlign = "center";
+context.textBaseline = "middle";
+// draw the emoji
 
-// const camera = new Camera(gl, {fov: 15})
-// camera.position.z = 15
 
-// const controls = new Orbit(camera, {
-// 	target: new Vec3(0, 0.7, 0),
-// })
+setInterval(() => {
+	draw({
+		pageX: Math.random() * window.innerWidth,
+		pageY: Math.random() * document.documentElement.scrollHeight
+	})
+}, 1300 * Math.random() + 100);
 
-// function resize() {
-// 	renderer.setSize(window.innerWidth, window.innerHeight)
-// 	renderer.gl.canvas.style = 'width: 100%; height: 100%;'
-// 	camera.perspective({aspect: gl.canvas.width / gl.canvas.height})
-// }
+function draw (e) {
+	let emoji = ['😜','😂','😍']
+	let d = emoji[Math.floor(Math.random() * emoji.length)]
 
-// window.addEventListener('resize', resize, false)
-// resize()
+	context.font = Math.random() * 100 + 'px serif'
+	context.fillText(d, e.pageX, e.pageY)
+}
 
-// requestAnimationFrame(update)
+function size () {
+	canvas.width = window.innerWidth
+	canvas.height = document.documentElement.scrollHeight
 
-// function update(t) {
-// 	requestAnimationFrame(update)
-// 	renderer.render({camera})
-// 	controls.update()
-// }
+	canvas.style.height = '100%'
+	canvas.style.width = '100%'
+}
