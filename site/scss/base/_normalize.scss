@@ -25,14 +25,6 @@ body {
 }
 
 /**
- * Render the `main` element consistently in IE.
- */
-
-main {
-  display: block;
-}
-
-/**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
@@ -53,7 +45,6 @@ h1 {
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
-  overflow: visible; /* 2 */
 }
 
 /**
@@ -69,13 +60,6 @@ pre {
 /* Text-level semantics
    ========================================================================== */
 
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-  background-color: transparent;
-}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -138,17 +122,6 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
-img {
-  border-style: none;
-}
-
 /* Forms
    ========================================================================== */
 
@@ -167,17 +140,6 @@ textarea {
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-button,
-input { /* 1 */
-  overflow: visible;
-}
-
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -238,12 +200,7 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
   padding: 0; /* 3 */
-  white-space: normal; /* 1 */
 }
 
 /**
@@ -252,25 +209,6 @@ legend {
 
 progress {
   vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
 }
 
 /**
@@ -327,23 +265,4 @@ details {
 
 summary {
   display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-
-[hidden] {
-  display: none;
 }
