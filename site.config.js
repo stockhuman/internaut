@@ -36,7 +36,7 @@ module.exports = {
     title: 'MH',
     description: 'Minimalist static site generator in Node.js',
     cover: '',
-    basePath: process.env.NODE_ENV === 'production' ? '/nanogen' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '' : '',
     projects,
     collection
   }

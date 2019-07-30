@@ -18,16 +18,16 @@ for (let prop in data) {
 
 		<% // check for and display link to previous page
 			if (prev != 'index') { %>
-				<a href="/projects/<%= prev %>" class="project-nav-prev">
+				<a href="<%= site.basePath %>/projects/<%= prev %>" class="project-nav-prev">
 					<%= data[prev].title %>
 				</a>
 			<% } %>
-				<a href="/projects/?cat=<%= page.category %>" class="project-nav-cat"><%= page.category %></a>
-				<a href="/projects/?year=<%= page.year %>" class="project-nav-year"><%= page.year %></a>
+				<a href="<%= site.basePath %>/projects/?cat=<%= page.category %>" class="project-nav-cat"><%= page.category %></a>
+				<a href="<%= site.basePath %>/projects/?year=<%= page.year %>" class="project-nav-year"><%= page.year %></a>
 			<%
 			// check for and display link to next page
 			if (next) { %>
-				<a href="/projects/<%= next %>" class="project-nav-next">
+				<a href="<%= site.basePath %>/projects/<%= next %>" class="project-nav-next">
 					<%= data[next].title %>
 				</a>
 			<% } %>
