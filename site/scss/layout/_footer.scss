@@ -6,6 +6,7 @@ footer {
 	margin-bottom: $navPad * 2 + $navWidth;
 	color: $gray;
 	display: flex;
+	flex-wrap: wrap;
 	gap: $navWidth
 }
 
@@ -20,7 +21,7 @@ footer {
 		display: flex;
 		margin-bottom: $navPad;
 		p {
-			margin: $navPad
+			margin: $navPad $navPad $navPad $navPad * 3
 		}
 	}
 }
