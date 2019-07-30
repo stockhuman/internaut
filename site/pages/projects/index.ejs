@@ -2,11 +2,11 @@
 
 <div id="project-filters">
 	<a href="#" data-filter="*">All</a>
-	<a href="#web" data-filter=".web">Web Design</a>
-	<a href="#code" data-filter=".code">Programming</a>
-	<a href="#game" data-filter=".game">Game Design</a>
-	<a href="#photo" data-filter=".photo">Photography</a>
-	<a href="#print" data-filter=".print">Print Design</a>
+	<a href="#web" data-filter="web">Web Design</a>
+	<a href="#code" data-filter="code">Programming</a>
+	<a href="#game" data-filter="game">Game Design</a>
+	<a href="#photo" data-filter="photo">Photography</a>
+	<a href="#print" data-filter="print">Print Design</a>
 </div>
 
 <div class="projects">
@@ -26,3 +26,35 @@
 
 	<% }} // end loop %>
 </div>
+
+<script>
+const items = document.querySelectorAll('.project')
+const filters = document.getElementById('project-filters').querySelectorAll('a')
+let currentFilter = '*'
+
+filters.forEach(filter => {
+	filter.addEventListener('click', () => {
+		currentFilter = filter.attributes['data-filter'].value
+		show()
+	})
+});
+
+function show () {
+	if (currentFilter == '*') {
+		Array.from(items).forEach(item => {
+			item.style.display = 'block'
+		})
+	} else {
+		Array.from(items).forEach(item => {
+			item.style.display = 'block'
+		})
+		const res = Array.from(items).filter(item =>
+			!item.classList.contains(currentFilter)
+		)
+		res.forEach(item => {
+			item.style.display = 'none'
+		});
+
+	}
+}
+</script>

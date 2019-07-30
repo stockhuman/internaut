@@ -13,6 +13,14 @@
 		"category"			 : "code",
 		"year"					 : "2019"
 	},
+	"milieux": {
+		"title"          : "Milieux",
+		"description"    : "Site redesign and implementation for the Milieux Institute at Concordia University",
+		"data_base"      : "#2211fb",
+		"data_highlight" : "#EEEEEE",
+		"category"       : "web",
+		"year"           : "2018"
+	},
 	"datamosh": {
 		"title"          : "Datam0sh",
 		"description"    : "A WiFi-enabled digital guitar pedal",
