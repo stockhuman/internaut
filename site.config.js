@@ -34,8 +34,8 @@ module.exports = {
   },
   site: {
     title: 'MH',
-    description: 'Minimalist static site generator in Node.js',
-    cover: '',
+    description: 'Michael Hemingway is online',
+    cover: 'default.png',
     basePath: process.env.NODE_ENV === 'production' ? '' : '',
     projects,
     collection
