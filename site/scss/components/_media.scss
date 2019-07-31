@@ -23,3 +23,9 @@ figcaption {
 		height: 100%;
 	}
 }
+
+img[src*='dither'], .cssbg[style*='dither'] {
+	background-blend-mode: hard-light;
+	mix-blend-mode: multiply;
+	&:hover { cursor: pointer; }
+}

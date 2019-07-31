@@ -17,8 +17,6 @@ header.cover {
 	height: 65.5vw;
 	background-size: cover;
 	background-position: 50% 0;
-	background-blend-mode: hard-light;
-	mix-blend-mode: multiply;
 	border-radius: $global-radius;
 }
 
@@ -39,14 +37,10 @@ article.page {
 	// images
 	figure {
 		overflow: hidden;
-		padding: $navWidth 0 $navWidth 0;
+		padding: $navWidth $navPad $navWidth $navPad;
 		margin: 0 -1.6rem 0 -1.6rem; // magic number...
-		img.dithered {
-			background-blend-mode: hard-light;
-			mix-blend-mode: multiply;
-		}
 		iframe {
-			border-radius: 4px;
+			border-radius: $global-radius;
 		}
 	}
 }

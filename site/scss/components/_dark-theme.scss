@@ -35,4 +35,8 @@
 		background: $black;
 		color: $brand;
 	}
+	header.cover {
+		background-color: #aaa;
+		border-radius: $global-radius;
+	}
 }
