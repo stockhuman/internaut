@@ -74,3 +74,11 @@
 @include media('>phablet') {
 	.home .grid { grid-template-columns: 1fr 1fr; }
 }
+
+canvas {
+	transition: opacity 0.4s ease-in-out;
+}
+
+canvas.fade {
+	opacity: 0;
+}
