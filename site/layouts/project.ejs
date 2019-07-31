@@ -11,7 +11,9 @@
 				<article data-base="<%= page.bg %>" data-highlight="<%= page.fg %>" class="page">
 					<%- body %>
 					<% if (page.statsfor) { %>
-   					<div class="stats" data-project="<%= page.statsfor %>"></div>
+						<figure>
+							<div class="stats" data-project="<%= page.statsfor %>"></div>
+						</figure>
 					<% } %>
 				</article>
 			<% } else { %>
