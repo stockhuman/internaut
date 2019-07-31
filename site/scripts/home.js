@@ -5,14 +5,20 @@ const canvas = document.body.appendChild(
 const context = canvas.getContext("2d")
 
 window.addEventListener('resize', size)
-document.addEventListener('click', size)
+document.addEventListener('click', () => {
+	canvas.classList = 'fade'
+	setTimeout(() => {
+		size()
+		canvas.classList = ''
+	}, 1500);
+})
 size()
 
 // use these alignment properties for "better" positioning
 context.textAlign = "center";
 context.textBaseline = "middle";
 context.font = 20 + Math.random() * 100 + 'px serif'
-setTimeout(() => { context.fillText('😍', window.innerWidth/2, 200)}, 400)
+setTimeout(() => { context.fillText('😍', window.innerWidth/2, 200)}, 500)
 
 // give some time to read intro copy
 setTimeout(() => {
@@ -21,8 +27,8 @@ setTimeout(() => {
 			pageX: Math.random() * window.innerWidth,
 			pageY: Math.random() * document.documentElement.scrollHeight
 		})
-	}, 1300 * Math.random() + 100);
-}, 2000);
+	}, 1000 * Math.random() + 100);
+}, 1000);
 
 // draw the emoji
 function draw (e) {
@@ -35,9 +41,12 @@ function draw (e) {
 
 // resize canvas
 function size () {
-	canvas.width = window.innerWidth
-	canvas.height = document.documentElement.scrollHeight
+	let dpr = window.devicePixelRatio || 1
+	canvas.width = window.innerWidth * dpr
+	canvas.height = document.documentElement.scrollHeight * dpr
 
 	canvas.style.height = '100%'
 	canvas.style.width = '100%'
+
+	context.scale(dpr, dpr)
 }
