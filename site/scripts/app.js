@@ -9,25 +9,26 @@ import Logger from './components/logger'
 import { allImages } from './components/upres'
 
 const nav = new Navigation()
-nav.mount(() => nav.colors())
-
-// Footer settings
+const pictures = allImages(document)
+const logroot = document.querySelector('.stats')
 const tgl_darkmode = document.getElementById('tgl-dark-mode')
 const tgl_fullcolor = document.getElementById('tgl-full-color')
 
 let theme = localStorage.getItem('theme')
 let fullcolor = localStorage.getItem('fullcolor')
 
+nav.mount(() => nav.colors())
+if (logroot) new Logger(logroot) // initialises logger
+
 if (!theme) localStorage.setItem('theme', 'light')
 if (!fullcolor) localStorage.setItem('fullcolor', false)
-
 tgl_darkmode.checked = theme === 'light' ? false : true
 tgl_fullcolor.checked = fullcolor === 'true' ? true : false
-
 
 const toggleColor = () => {
 	if (tgl_fullcolor.checked) {
 		localStorage.setItem('fullcolor', true)
+		pictures.forEach(image => undither(image))
 	} else {
 		localStorage.setItem('fullcolor', false)
 	}
@@ -43,23 +44,6 @@ const toggleDarkTheme = () => {
 	}
 }
 
-tgl_darkmode.addEventListener('change', toggleDarkTheme)
-tgl_fullcolor.addEventListener('change', toggleColor)
-
-// Class for mouse movement, hides thick border used for tabbing
-let mm = () => {
-	document.body.classList.add('mn')
-	document.removeEventListener('mousemove', mm)
-}
-document.addEventListener('mousemove', mm)
-
-// initialises logger
-const logroot = document.querySelector('.stats')
-if (logroot) {
-	new Logger(logroot)
-}
-
-const pictures = allImages(document)
 const undither = image => {
 	if (image.src.includes('dither-')) {
 		let undithered = image.src.replace('dither-', '').replace('.png', '')
@@ -88,3 +72,13 @@ if (theme == 'dark') {
 } else {
 	document.body.classList.remove('dark-theme')
 }
+
+// Class for mouse movement, hides thick border used for tabbing
+let mm = () => {
+	document.body.classList.add('mn')
+	document.removeEventListener('mousemove', mm)
+}
+
+tgl_darkmode.addEventListener('change', toggleDarkTheme)
+tgl_fullcolor.addEventListener('change', toggleColor)
+document.addEventListener('mousemove', mm)
