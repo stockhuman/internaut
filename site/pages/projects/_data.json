@@ -7,8 +7,8 @@
 	"heraldry": {
 		"title"					 : "Heraldry",
 		"description"		 : "Blazonry and coat-of-arms generation for the UTF-8 generation",
-		"data_base"			 : "",
-		"data_highlight" : "#e5e500",
+		"data_base"			 : "#e5e500",
+		"data_highlight" : "#282c34",
 		"cover"					 : "heraldry.png",
 		"category"			 : "code",
 		"year"					 : "2019"
