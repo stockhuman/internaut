@@ -1,0 +1,67 @@
+<main id="content" class="home" id="home">
+	<section class="header">
+		<h1>Michael Hemingway</h1>
+		<p><span class="desc" id="phrase">...</span> ░ <a href="https://twitter.com/StockHuman">@stockhuman</a></p>
+	</section>
+
+	<article class="page">
+		<p>Hello visitor! Make yourself at home.<br> I made this <a href="this-site">site</a> for you. Find in it my <a href="projects">works</a>, some collected <a href="collection">writings and programs of mine</a>, notes on <a href="about">myself</a>, a way to <a href="contact">contact</a> me, <a href="https://photo.michaelhemingway.com">my photo work</a>, <a href="#footer">some odd settings</a>, and more.</p>
+		<p>- Mike</p>
+	</article>
+	<section class="grid">
+		<a href="projects/jars" class="home-item" style="background:#00AEEF">
+			<img src="assets/img/work/jars/dither-readme.png.png" alt="jars dithered">
+			<div class="overlay">
+				<h2>Jars</h2>
+				<p>A personal timekeeper</p>
+			</div>
+		</a>
+		<a href="projects/heraldry" class="home-item" style="background:#f5e342">
+			<img src="assets/img/work/covers/dither-heraldry.png.png" alt="jars dithered">
+			<div class="overlay">
+				<h2>Heraldry</h2>
+				<p>For the nobility of the emoji generation</p>
+			</div>
+		</a>		<a href="projects/tellum" class="home-item" style="background:#ED254E">
+			<img src="assets/img/work/tellum/dither-map.jpg.png" alt="tellum cover dithered">
+			<div class="overlay">
+				<h2>Tellum</h2>
+				<p>A networked game of telephone</p>
+			</div>
+		</a>
+		<a href="projects/milieux" class="home-item" style="background:#FFA">
+			<img src="assets/img/work/covers/dither-milieux.png.png" alt="jars dithered">
+			<div class="overlay">
+				<h2>Milieux</h2>
+				<p>Complete site redesign and implementation</p>
+			</div>
+		</a>
+
+	</section>
+
+	<section class="stats" data-project="*">
+		<p>No logs</p>
+		<noscript>This section fetches logs remotely</noscript>
+	</section>
+	<script>
+		(function () {
+			const phrases = [
+				'not an AI',
+				'likes dogs',
+				'just woke up',
+				'still plays with lego',
+				'knows arrow functions!',
+				'more than an emoji',
+				'just sipped on some coffee',
+				'ran with the bulls',
+				'habla Castellano',
+				'is never done',
+				'',
+				'compiles to markdown'
+			]
+			let phrase = phrases[Math.floor(Math.random() * phrases.length)]
+			document.getElementById('phrase').innerHTML = '... ' + phrase;
+		}())
+	</script>
+	<script src="assets/js/home.min.js"></script>
+</main>

@@ -1,0 +1,18 @@
+<% page.title = 'Collection' %>
+<article class="page collection">
+	<h1 class="page-title text-center" aria-hidden="true">
+		<span class="icon-blog" aria-hidden="true">☷</span>
+	</h1>
+
+	<h1>The Collection</h1>
+
+	<p>The collection is my content graveyard; It's made of the things that didn't quite make it to the projects, or weren't mine and I just wanted to save. It's like a blog, but for more than just writing.</p>
+
+	<% for (let i = 0; i < site.collection.length; i++) {
+		let p = site.collection[i] %>
+		<article class="card">
+			<a href="<%= `${p.page.type}/${p.path}` %>"><%= p.page.title %></a>
+		</article>
+
+	<% } %>
+</article>

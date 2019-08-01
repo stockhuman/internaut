@@ -1,1 +1,0 @@
-An app where people share ideals, political, moral and otherwise, in an effort to gain traction and common ground.

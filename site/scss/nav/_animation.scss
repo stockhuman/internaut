@@ -1,0 +1,27 @@
+#transitioner {
+	position: fixed;
+
+	z-index: map-get($z-index, 'nav');
+	background: $white; // change for currentColor?
+
+	transition-property: transform;
+	transition-duration: .31s;
+	transform-origin: 100% 100%;
+
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	transform: scaleX(0);
+
+	display: none;
+	@include media('>tablet') {
+		display: block;
+	}
+}
+
+.is-exiting {
+	#transitioner {
+		transform: scaleX(1);
+	}
+}

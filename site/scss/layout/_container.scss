@@ -1,0 +1,29 @@
+
+
+.container {
+  position: absolute;
+  top: $navPad;
+  right: $navPad;
+  left: $navPad;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  color: inherit;
+}
+
+@include media('>tablet') {
+  .container {
+    left: $navWidth + $navPad*2;
+  }
+}
+
+@include media('>ultrawide') {
+  .container {
+    left: $navWidthExpanded + $navPad*2;
+  }
+}
+
+#content {
+  min-height: 100vh;
+}

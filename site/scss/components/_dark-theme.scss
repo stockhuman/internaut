@@ -1,0 +1,42 @@
+.dark-theme {
+	background: $gray-darker;
+	color: $gray-lighter;
+
+	.home .header .desc,
+	.button, button {
+		color: $gray-lighter
+	}
+
+	article.page {
+		color: $gray-lighter;
+	}
+
+	footer {
+		background: $black;
+	}
+
+	.tgl-light:checked + .tgl-btn {
+		background: $gray-darker;
+	}
+
+	.collection .card a {
+		background: $black;
+	}
+	article p > a[href^="http"]::before {
+		background: $brand;
+	}
+
+	::-moz-selection {
+		background: $white;
+		color: $brand;
+	}
+
+	::selection {
+		background: $black;
+		color: $brand;
+	}
+	header.cover {
+		background-color: #aaa;
+		border-radius: $global-radius;
+	}
+}

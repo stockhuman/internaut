@@ -1,0 +1,47 @@
+<% page.title = 'Contact' %>
+<main id="content" class="page contact">
+	<h1 class="page-title text-center">
+	  <span class="icon-contact">☍</span>
+	</h1>
+	<article class="page contact" data-base="" data-highlight="ffffff">
+		<p>Howdy!</p>
+		<p>I can be reached on many platforms as @stockhuman, and by email below. I'm generally open to project inquiries, collaborations, and all other sorts of messages.</p>
+		<div id="reveal">
+			<label for="volume">Slide all the way to contact</label>
+			<input type="range" id="start" name="volume" min="0" max="10" step="any" value='0'>
+		</div>
+	</article>
+
+</main>
+
+<script>
+	function reveal () {
+		let r = document.getElementById('reveal')
+		r.classList = 'revealing'
+		setTimeout(() => {
+			r.innerHTML = `<a href="mailto:${'mpghemingway'}@gmail.com">Email me</a>`
+			r.classList = 'button revealed'
+		}, 700);
+	}
+	document.addEventListener('DOMContentLoaded', () => {
+		let s = document.getElementById('start')
+		s.addEventListener('change', event => {
+			if (event.target.value === event.target.max) {
+				console.log('hey there, human')
+				reveal()
+			}
+		})
+	})
+</script>
+<style>
+	#reveal {
+		transition: opacity .3s ease;
+		text-align: center;
+	}
+	.revealing {
+		opacity: 0;
+	}
+	.revealed {
+		opacity: 1;
+	}
+</style>

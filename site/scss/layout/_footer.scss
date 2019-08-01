@@ -1,0 +1,34 @@
+footer {
+	@extend %radius;
+	@extend %block;
+	background: darken($gray-lighter, 5%);
+	padding: $navWidth;
+	margin-bottom: $navPad * 2 + $navWidth;
+	color: $gray;
+	display: flex;
+	flex-wrap: wrap;
+	gap: $navWidth
+}
+
+.colophon {
+	flex-grow: 1;
+}
+
+.footer-settings {
+	justify-self: end;
+	font-family: monospace;
+	.footer-setting {
+		display: flex;
+		margin-bottom: $navPad;
+		p {
+			margin: $navPad $navPad $navPad $navPad * 3
+		}
+	}
+}
+
+// adjust for the nav being at the bottom in mobile
+@include media('>tablet') {
+	footer {
+		margin-bottom: $navPad;
+	}
+}

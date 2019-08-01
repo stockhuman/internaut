@@ -1,0 +1,49 @@
+/* Main navigation */
+@import 'mobile';
+@import 'toggle';
+@import 'desktop';
+@import 'animation';
+
+// mobile portrait (HTC One m8 & common Android devices)
+@media screen
+	and (max-device-width: 360px)
+	and (max-device-height: 640px)
+	and (orientation: portrait) {
+
+	.nav-is-open {
+		.nav-list-item a span {
+	    font-size: 3.7rem;
+		}
+
+		#nav-inner {
+    	padding: 3.5rem 2rem 3.5rem 2rem;
+		}
+	}
+}
+
+// small mobile screens
+@media screen and (max-height: 480px) {
+	.nav-list-item {
+		opacity: 0;
+	}
+
+	.nav-is-open {
+		.nav-list-item {
+			opacity: 1;
+			a span {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	#nav-main {
+  	height: $navWidth/1.2;
+	}
+	#nav-toggle {
+	  bottom:-5px;
+	}
+	#nav-home-icon {
+		display: none;
+	}
+}
+

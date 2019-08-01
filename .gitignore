@@ -1,1 +1,13 @@
-/node_modules
+.idea
+.vscode
+.DS_Store
+node_modules
+
+# build
+build
+test/mock/public
+test/mock/site
+
+# tests
+.nyc_output
+coverage

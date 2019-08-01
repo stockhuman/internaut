@@ -1,0 +1,35 @@
+.stats {
+	background: rgba(lighten($tertiary, 5%), 0.4);
+	@extend %radius;
+	@extend %block;
+	padding: $navWidth;
+	font-family: sans-serif;
+	h3 {
+		font-family: sans-serif;
+		text-transform: uppercase;
+		font-size: 14px;
+		padding-bottom: $navPad;
+		letter-spacing: 2px;
+		border-bottom: rgba(0,0,0,0.4) 1px solid;
+	}
+	p {
+		opacity: 0.6;
+	}
+
+	text {
+		font-size: 9px;
+		opacity: 0.4;
+	}
+	.docs {
+		fill: $brand;
+	}
+	.read {
+		fill: $tertiary;
+	}
+	.code {
+		fill: $white;
+	}
+	rect:hover {
+		stroke: black;
+	}
+}

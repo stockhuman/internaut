@@ -1,0 +1,25 @@
+.collection {
+	header {
+		h1 { margin-bottom: 2px; }
+		p {
+			font-family: monospace;
+			color: rgba($font-color, 0.6);
+		}
+	}
+
+	.card {
+		background: $white;
+		@extend %radius;
+		a {
+
+			margin: $navPad 0;
+			padding: 1rem;
+
+			display: block;
+		}
+		&:hover, &:focus {
+			mix-blend-mode: exclusion;
+			background: khaki;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-![Hola](public/assets/img/home/home.png)
+![Hola](https://raw.githubusercontent.com/stockHuman/internaut/master/public/assets/img/home/home.png)
 
 # It me
 Hey there! there's a much more human-readable version of this up at [michaelhemingway.com](https://michaelhemingway.com)!

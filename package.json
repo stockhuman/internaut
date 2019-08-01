@@ -1,44 +1,45 @@
 {
   "name": "internaut",
-  "version": "1.0.0",
-  "description": "My personal static site, built with Harp.js",
-  "main": "gulpfile.js",
-  "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "concurrent-transform": "^1.0.0",
-    "concurrently": "^3.6.1",
-    "gulp": "^4.0.0",
-    "gulp-changed": "^3.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-jimp-resize": "^2.0.2",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^3.2.1",
-    "gulp-uglify": "^2.0.1",
-    "os": "^0.1.1",
-    "responsive": "^1.0.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"harp server\" \"gulp watch\"",
-    "build": "harp compile ./ ../../../Desktop/site && gulp postbuild"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stockhuman/internaut.git"
-  },
+  "version": "2.0.1",
+  "description": "Minimalist static site generator in Node.js",
+  "repository": "stockhuman/internaut",
   "keywords": [
-    "scss",
-    "harp",
-    "static-site",
-    "html",
-    "ejs",
-    "portfolio"
+    "static site generator"
   ],
-  "author": "Michael Hemingway",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/stockhuman/internaut/issues"
+  "author": "Michael Hemingway (https://michaelhemingway.com)",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"./{lib,test}/**/*.js\"",
+    "start": "node ./lib/cli.js start",
+    "build": "cross-env NODE_ENV=production node ./lib/cli.js build --cleanUrls=false"
   },
-  "homepage": "https://github.com/stockhuman/internaut#readme"
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/runtime": "^7.5.4",
+    "babelify": "^10.0.0",
+    "browserify": "^16.3.0",
+    "chalk": "^2.4.1",
+    "chokidar": "^3.0.2",
+    "cross-env": "^5.2.0",
+    "ejs": "^2.6.2",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "fast-glob": "^3.0.4",
+    "front-matter": "^3.0.0",
+    "fs-extra": "^8.1.0",
+    "live-server": "^1.2.1",
+    "lodash.debounce": "^4.0.8",
+    "marked": "^0.7.0",
+    "meow": "^5.0.0",
+    "sass": "^1.22.4",
+    "sharp": "^0.23.0",
+    "terser": "^4.1.2"
+  },
+  "dependencies": {}
 }

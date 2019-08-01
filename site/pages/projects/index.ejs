@@ -1,0 +1,61 @@
+<% page.title = 'Works' %>
+<h1 class="page-title text-center" aria-hidden="true"><span class="icon-work">⛬</span></h1>
+
+<div id="project-filters">
+	<a href="#" data-filter="*">All</a>
+	<a href="#web" data-filter="web">Web Design</a>
+	<a href="#code" data-filter="code">Programming</a>
+	<a href="#game" data-filter="game">Game Design</a>
+	<a href="#photo" data-filter="photo">Photography</a>
+	<a href="#print" data-filter="print">Print Design</a>
+</div>
+
+<div class="projects">
+	<%# display all posts by category %>
+	<% for (let slug in site.projects) { %>
+		<% if (slug != 'index') { let s = site.projects[slug] // skip the index %>
+
+		<a href="/projects/<%= slug %>" class="project card <%= s.category %>" style="background-color: <%= s.data_base %>">
+			<div class="card-image"
+				style="background-image: url('/assets/img/work/thumbs/dither-<%= slug %>.png.png');"
+			></div>
+			<div class="overlay">
+				<h3><%= s.title %></h3>
+				<p><%= s.description %></p>
+			</div>
+	  </a>
+
+	<% }} // end loop %>
+</div>
+
+<script>
+const items = document.querySelectorAll('.project')
+const filters = document.getElementById('project-filters').querySelectorAll('a')
+let currentFilter = '*'
+
+filters.forEach(filter => {
+	filter.addEventListener('click', () => {
+		currentFilter = filter.attributes['data-filter'].value
+		show()
+	})
+});
+
+function show () {
+	if (currentFilter == '*') {
+		Array.from(items).forEach(item => {
+			item.style.display = 'block'
+		})
+	} else {
+		Array.from(items).forEach(item => {
+			item.style.display = 'block'
+		})
+		const res = Array.from(items).filter(item =>
+			!item.classList.contains(currentFilter)
+		)
+		res.forEach(item => {
+			item.style.display = 'none'
+		});
+
+	}
+}
+</script>
