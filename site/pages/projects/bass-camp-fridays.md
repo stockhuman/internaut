@@ -20,10 +20,11 @@ This project consisted primarily of banner designs for social media to promote t
 
 The challenge largely lay in creating an attractive design in one solution that would work across desktop and mobile social media crops. At different sizes, more or less of the final design would be [visible to the user.](/assets/img/work/BCF/fb.png)
 
-<figure>![](/assets/img/work/BCF/bcf-banner-1.jpg) ![full Bass camp fridays design](/assets/img/work/BCF/bcf.png)
+<figure>
 
+![](/assets/img/work/BCF/dither-bcf-banner-1.jpg.png)
+![full Bass camp fridays design](/assets/img/work/BCF/dither-bcf.png.png)
 <figcaption>Final branding deliverables</figcaption>
-
 </figure>
 
 This was done entirely in illustrator, from concept, iteration, to final deliverable.
