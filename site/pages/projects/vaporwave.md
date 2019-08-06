@@ -14,7 +14,7 @@ fg: 94D0FF
 <p>A collection of my vaporwave aesthetics. I while back, a few friends and I made a little music collective. We called it Bismuth MTL.</p>
 
 <figure>
-	<img src="/assets/img/work/vaporwave/AA.jpg" alt="boudoir">
+	<img src="/assets/img/work/vaporwave/AA.jpg" alt="stereotypical vaporwave imagery">
 	<figcaption>Aesthetic Airship, my debut album.</figcaption>
 </figure>
 
