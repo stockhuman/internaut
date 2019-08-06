@@ -18,7 +18,7 @@ size()
 context.textAlign = "center";
 context.textBaseline = "middle";
 context.font = 20 + Math.random() * 100 + 'px serif'
-setTimeout(() => { context.fillText('😍', window.innerWidth/2, 200)}, 500)
+context.fillText('😍', window.innerWidth/2, 200)
 
 // give some time to read intro copy
 setTimeout(() => {
