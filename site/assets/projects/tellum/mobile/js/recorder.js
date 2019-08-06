@@ -57,7 +57,7 @@ if (navigator.mediaDevices.getUserMedia) {
 			var clipLabel = document.createElement('p');
 			var audio = document.createElement('audio');
 			var deleteButton = document.createElement('button');
-		 
+
 			clipContainer.classList.add('clip');
 			audio.setAttribute('controls', '');
 			deleteButton.textContent = 'Delete';
@@ -92,7 +92,7 @@ if (navigator.mediaDevices.getUserMedia) {
 			dataOut.append('meta', 'test')
 			dataOut.append('datetime', new Date().toISOString().slice(0, 19).replace('T', ' '))
 			dataOut.append('sound', blob, 'test.wav')
-			axios.post('https://localhost/tellum/api.php/sounds', dataOut, {
+			axios.post('https:/tellum.fun/api.php/sounds/', dataOut, {
 				headers: {'content-type': 'multipart/form-data'}
 			}).then(response => {console.log(response)})
 			.catch(error => {console.warn(error)})
@@ -163,7 +163,7 @@ function visualize(stream) {
 
 
 		for(var i = 0; i < bufferLength; i++) {
- 
+
 			var v = dataArray[i] / 128.0;
 			var y = v * HEIGHT/2;
 
@@ -187,4 +187,3 @@ window.onresize = function() {
 }
 
 window.onresize();
-

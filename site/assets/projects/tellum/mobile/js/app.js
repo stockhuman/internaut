@@ -9,7 +9,7 @@
 'use strict'
 
 // Environment
-const server = 'https://c351.michaelhemingway.com/projects/tellum/api.php/sounds/'
+const server = 'https:/tellum.fun/api.php/sounds/'
 let isRecord = false
 let location = ''
 let sndsSent = 0
@@ -41,7 +41,7 @@ function geolocate () {
 			app()
 		}
 
-		let error = error => { 
+		let error = error => {
 			console.log(error)
 		}
 		navigator.geolocation.getCurrentPosition(success, error)
@@ -130,7 +130,7 @@ function visualize (stream) {
 	const mobile = /Mobi/.test(navigator.userAgent)
 
 	// Global Animation Setting
-	window.requestAnimFrame = 
+	window.requestAnimFrame =
 		window.requestAnimationFrame ||
 		window.webkitRequestAnimationFrame ||
 		window.mozRequestAnimationFrame ||
@@ -164,9 +164,9 @@ function visualize (stream) {
 			x: x + this.distance * Math.cos(this.angle),
 			y: y + this.distance * Math.sin(this.angle)
 		};
-		
+
 		this.draw = function() {
-			ctx.fillStyle = isRecord ? 
+			ctx.fillStyle = isRecord ?
 				'rgba(249,220,92,' + this.opacity + ')':
 				'rgba(244,255,253,' + this.opacity + ')';
 			ctx.beginPath();
@@ -175,7 +175,7 @@ function visualize (stream) {
 			ctx.closePath();
 		}
 		this.update = function() {
-			this.angle += this.speed; 
+			this.angle += this.speed;
 			this.position = {
 				x: x + this.distance * Math.cos(this.angle),
 				y: y + this.distance * Math.sin(this.angle)
@@ -192,9 +192,9 @@ function visualize (stream) {
 		} else {
 			this.count = 2000; // was 3000
 		}
-		
+
 		this.particles = [];
-		
+
 		for (let i = 0; i < this.count; i++ ) {
 			this.particles.push(
 				new Particle(
@@ -224,7 +224,7 @@ function visualize (stream) {
 	source.connect(analyser);
 
 	function loop() {
-		
+
 		analyser.getByteTimeDomainData(dataArray);
 
 		ctx.fillStyle = '#011936';
@@ -328,7 +328,7 @@ function fetch () {
  * @author Michael Hemingway
  * Navigation
  *
- * 
+ *
  */
 // (function ($) {
 // 	'use strict'
@@ -337,7 +337,7 @@ function fetch () {
 // 	const	overlayContent = $('.overlay-content')
 // 	const toggleNav = $('.nav-trigger')
 // 	const navigation = $('.primary-nav')
-	 
+
 // 	toggleNav.on('click', function(){
 // 		if(!toggleNav.hasClass('close-nav')) {
 // 			// navigation is not visible yet
@@ -366,11 +366,11 @@ function fetch () {
 // 						scaleX: 0,
 // 						scaleY: 0,
 // 					}, 0, function(){overlayContent.removeClass('is-hidden')});
-	 
+
 // 				});
 // 			});
 // 		}
 // 	});
 
 
-// }(jQuery)); 
+// }(jQuery));

@@ -9,7 +9,7 @@
 	'use strict'
 
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic3RvY2todW1hbiIsImEiOiJjamE4dWxyZTUwMG9zMnFzNDFucHF0ZzdyIn0.DpVSsrPakJynuKVNifh7uA';
-	
+
 	const map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/stockhuman/cja8w6mus0yvc2sqazwtisw9p',
@@ -24,7 +24,7 @@
 	// disable map rotation using touch rotation gesture
 	map.touchZoomRotate.disableRotation();
 
-	const server = 'https://c351.michaelhemingway.com/projects/tellum/api.php/sounds/'
+	const server = 'https:/tellum.fun/api.php/sounds/'
 	let nodes = []
 
 	$(document).ready(function () {
@@ -84,5 +84,3 @@
 		console.log(event)
 	}
 }(jQuery));
-
-
