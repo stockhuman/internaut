@@ -39,4 +39,9 @@
 		background-color: #aaa;
 		border-radius: $global-radius;
 	}
+
+	// makes images less likely to blend into a dark background
+	article.page img[src*="dither"], article.page .cssbg[style*="dither"] {
+		mix-blend-mode: lighten;
+	}
 }
