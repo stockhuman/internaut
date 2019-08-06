@@ -18,7 +18,7 @@ A young non-profit started in 2014 fot Arthem's then-ideal candidate. I, and thu
 
 <figure>
 
-![Early navigation and colors](/assets/img/work/opcm/olddesign.jpg)
+![Early navigation and colors](/assets/img/work/opcm/dither-olddesign.jpg.png)
 <figcaption>The colors and design elements have since evolved to a darker, more traditional scheme</figcaption>
 </figure>
 

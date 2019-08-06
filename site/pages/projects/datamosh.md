@@ -12,12 +12,12 @@ fg: EEEEEE
 
 # Datam0sh / Air Guitar
 
-<img src="/assets/img/work/datamosh/001.png">
-<img src="/assets/img/work/datamosh/002.png">
-<img src="/assets/img/work/datamosh/004.png">
-<img src="/assets/img/work/datamosh/005.png">
-<img src="/assets/img/work/datamosh/006.png">
-<img src="/assets/img/work/datamosh/007.png">
-<img src="/assets/img/work/datamosh/008.png">
+<img src="/assets/img/work/datamosh/dither-001.png.png">
+<img src="/assets/img/work/datamosh/dither-002.png.png">
+<img src="/assets/img/work/datamosh/dither-004.png.png">
+<img src="/assets/img/work/datamosh/dither-005.png.png">
+<img src="/assets/img/work/datamosh/dither-006.png.png">
+<img src="/assets/img/work/datamosh/dither-007.png.png">
+<img src="/assets/img/work/datamosh/dither-008.png.png">
 
-<img src="/assets/img/work/datamosh/Schematic_Air-Guitar_Sheet-1_20181206134818.png">
+<img src="/assets/img/work/datamosh/dither-Schematic_Air-Guitar_Sheet-1_20181206134818.png.png">

@@ -14,7 +14,7 @@ fg: ffffff
 
 Campaign Trail began in earnest in the late summer of 2016, when some friends and I were chatting about and thinking up ideas. The mock game in [this video's](https://www.youtube.com/watch?v=n8yAfHU-0JI) style and pace was something I wanted to emulate, and we all thought it'd be great if that energy could be put into a real game. Games are to be experienced, after all.
 
-<figure><img alt="" src="/assets/img/work/campaigntrail/misc001.png" />
+<figure><img alt="" src="/assets/img/work/campaigntrail/dither-misc001.png.png" />
 
 <figcaption>Screen capture from development. Ivanka (hidden under the bomb) approaches a bernie bot.</figcaption>
 
@@ -50,7 +50,7 @@ In their eyes, we had just joined their numbers, and they were sick seeing more 
 
 <figure>
 	<img alt="" src="/assets/img/work/campaigntrail/icons_of_america_promo.png" />
-	<img alt="" src="/assets/img/work/campaigntrail/banner_trump.png" />
+	<img alt="" src="/assets/img/work/campaigntrail/dither-banner_trump.png.png" />
 	<figcaption>Original promotional material</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ Some criticized the promotional video for inclusion of temporary assets, others 
 
 After running a facebook campaign, building a [dedicated website](http://www.campaigntrail.xyz/), making the trailer, submitting for release, a mountain of promotional material and social media accounts, and effectively having the game ready at the cost of my studies and work, Trump won the election.
 
-<figure><img alt="404 not found trump image surrounded by illegal aliens" src="/assets/img/work/campaigntrail/404.jpg" /></figure>
+<figure><img alt="404 not found trump image surrounded by illegal aliens" src="/assets/img/work/campaigntrail/dither-404.jpg.png" /></figure>
 
 So the humor of the game was wrong, and I was loosing my mind with release schedules and everything else. As detailed on [my last post](http://mikemingway.com/whats-going-on/) on my photography blog, I never did release this game.
 
