@@ -20,7 +20,14 @@ let fullcolor = localStorage.getItem('fullcolor')
 nav.mount(() => nav.colors())
 if (logroot) new Logger(logroot) // initialises logger
 
-if (!theme) localStorage.setItem('theme', 'light')
+// via https://web.dev/prefers-color-scheme/
+if (!theme) {
+	if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		localStorage.setItem('theme', 'dark')
+	} else {
+		localStorage.setItem('theme', 'light')
+	}
+}
 if (!fullcolor) localStorage.setItem('fullcolor', false)
 tgl_darkmode.checked = theme === 'light' ? false : true
 tgl_fullcolor.checked = fullcolor === 'true' ? true : false
