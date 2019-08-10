@@ -11,6 +11,7 @@
   "scripts": {
     "lint": "eslint \"./{lib,test}/**/*.js\"",
     "start": "node ./lib/cli.js start",
+    "push": "node ./lib/cli.js push",
     "build": "cross-env NODE_ENV=production node ./lib/cli.js build --cleanUrls=false"
   },
   "engines": {
@@ -39,6 +40,7 @@
     "meow": "^5.0.0",
     "sass": "^1.22.4",
     "sharp": "^0.23.0",
+    "ssh2-sftp-client": "^2.5.0",
     "terser": "^4.1.2"
   },
   "dependencies": {}
