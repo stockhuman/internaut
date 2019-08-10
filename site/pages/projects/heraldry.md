@@ -5,7 +5,7 @@ cover: dither-heraldry.png.png
 slug: heraldry
 category: code
 statsfor: Heraldry
-tags: []
+tags: [React, Twitter]
 year: 2019
 bg: e5e500
 fg: 282c34
@@ -38,4 +38,4 @@ Find below two real examples of the bot at work
 	</figcaption>
 </figure>
 
-Find it live [here](https://www.michaelhemingway.com/projects/heraldry/), and source code [here](https://github.com/stockhuman/heraldry/)
+Find it live [here](https://heraldry.michaelhemingway.com/), and source code [here](https://github.com/stockhuman/heraldry/)
