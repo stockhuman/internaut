@@ -29,3 +29,7 @@ img[src*='dither'], .cssbg[style*='dither'] {
 	mix-blend-mode: multiply;
 	&:hover { cursor: pointer; }
 }
+
+video {
+	width: 100%;
+}
