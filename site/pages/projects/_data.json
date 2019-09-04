@@ -13,6 +13,24 @@
 		"category"			 : "code",
 		"year"					 : "2019"
 	},
+	"jars" : {
+		"title"          : "Jars",
+		"description"    : "My personal productivity app",
+		"data_base"      : "#00AEEF",
+		"data_highlight" : "#EEEEEE",
+		"cover"          : "jars.png",
+		"category"       : "code",
+		"year"           : "2019"
+	},
+	"wilfrid-pelletier": {
+		"title"					 : "Wilfrid-Pelletier",
+		"description"		 : "An architectural rendering of a real room with a twist",
+		"data_base"			 : "#E9E9EA",
+		"data_highlight" : "#262633",
+		"cover"					 : "pelletier.png",
+		"category"			 : "3D",
+		"year"					 : "2019"
+	},
 	"milieux": {
 		"title"          : "Milieux",
 		"description"    : "Site redesign and implementation for the Milieux Institute at Concordia University",
@@ -38,15 +56,6 @@
 		"category"       : "code",
 		"year"           : "2017"
 	},
-	"jars" : {
-		"title"          : "Jars",
-		"description"    : "My personal productivity app",
-		"data_base"      : "#00AEEF",
-		"data_highlight" : "#EEEEEE",
-		"cover"          : "jars.png",
-		"category"       : "code",
-		"year"           : "2017"
-	},
 	"the-plant" : {
 		"title"          : "The Plant",
 		"description"    : "Dawson College's Official online student newspaper",
@@ -64,6 +73,15 @@
 		"cover"          : "arthem.png",
 		"category"       : "web",
 		"year"           : "2016"
+	},
+	"belly": {
+		"title"					 : "Belly",
+		"description"		 : "An anti-aircraft anti-game",
+		"data_base"			 : "#ADAD7F",
+		"data_highlight" : "#00005B",
+		"cover"					 : "belly.png",
+		"category"			 : "game",
+		"year"					 : "2019"
 	},
 	"5ft25" : {
 		"title"          : "5ft25",

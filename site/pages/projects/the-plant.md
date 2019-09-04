@@ -44,4 +44,4 @@ Through the website, the plant newspaper saw a sixth of the college's population
 	<figcaption>The second iteration of the _submit_ image in the sidebar.</figcaption>
 </figure>
 
-My role in the design and creation of the site, start to finish, has me now as a occasional custodian. I still plan and implement revisions, theme updates and the like. For now, you can get a taste of the admin side of things with the [original editor's guide](/assets/img/work/theplant/the_little_green book_v.2.1.pdf) and by visiting [the plant](http://theplantnewspaper.com) for yourself.
+My role in the design and creation of the site, start to finish, has me now as a occasional custodian. I still plan and implement revisions, theme updates and the like. For now, you can get a taste of the admin side of things with the <a href="/assets/img/work/theplant/the_little_green book_v.2.1.pdf">original editor's guide</a> and by visiting [the plant](http://theplantnewspaper.com) for yourself.
