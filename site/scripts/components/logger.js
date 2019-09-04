@@ -37,12 +37,12 @@ export default class Logger {
 	_fromSQL(date) {
 		if (!date) return new Date()
 
-		date = String(date)
+		date = date.toString()
 
 		return new Date(
 			date.substring(0, 4), // year
-			Number(date.substring(5, 6)) - 1, // month, zero indexed (???)
-			date.substring(7)
+			Number(date.substring(4, 6)) - 1, // month, zero indexed (???)
+			date.substring(6, 8)
 		)
 	}
 
@@ -91,7 +91,7 @@ export default class Logger {
 
 		let svg = ''
 		let fmonth = new Date().getMonth()
-		let furthest = new Date(new Date().getFullYear(), fmonth - 2)
+		let furthest = new Date(new Date().getFullYear(), fmonth - 3)
 
 
 		let ratio = 600 / dist(furthest, new Date())
@@ -118,7 +118,7 @@ export default class Logger {
 
 		// most commonly entered time of day for work
 		const modalTod =
-			`<p>Scale: 2 Months. Mode: ${mode(data.records.map(item => item.tod))}. Showing logs for '${this.project}'</p>`
+			`<p>Scale: 3 Months. Mode: ${mode(data.records.map(item => item.tod))}. Showing logs for '${this.project}'</p>`
 
 		this.root.innerHTML =
 		`<h3><span class="jars-logo">◐</span> Logs</h3>` +
