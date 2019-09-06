@@ -15,7 +15,7 @@ fg: 282c34
 
 Heraldry is a _escutcheon_-generating web-app and [twitter bot](https://twitter.com/EmojiHeraldry), developed on a whim after an intense bout of burning curiosity surrounding the medieval art of heraldry.
 
-I spent quite some time researching the composition, history and idiosyncrasies of the artform, and later another legth of time with the art of blazonry.
+I spent quite some time researching the composition, history and idiosyncrasies of the artform, and later another length of time with the art of blazonry.
 
 I've learnt a great deal and come to a profound appreciation for the poetic terseness of a well-bazoned coat of arms.
 
