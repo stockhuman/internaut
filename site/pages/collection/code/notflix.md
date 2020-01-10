@@ -7,13 +7,13 @@ tags: [joke]
 ---
 <figure>
 
-![main screen](/assets/img/collection/dither-notflix-01.jpg.png)
+![main screen](/assets/img/collection/notflix-01.jpg)
 </figure>
 
 Made in collaboration with Jack Harrison at Concordia University.
 
-![poem](/assets/img/collection/dither-notflix-02.png.png)
-![main screen](/assets/img/collection/dither-notflix-03.png.png)
+![poem](/assets/img/collection/notflix-02.png)
+![main screen](/assets/img/collection/notflix-03.png)
 
 Upon clicking any movie, one's taken to a page with the following poem:
 
