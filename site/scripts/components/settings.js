@@ -39,7 +39,7 @@ export default class Settings {
 
 	test () {
 		if (this.dithered == 'true') {
-			this.pictures.forEach(image => undither(image))
+			this.pictures.forEach(image => this.undither(image))
 		} else {
 			// onclick, change out low-res image for hi-res
 			this.pictures.forEach(image => {
