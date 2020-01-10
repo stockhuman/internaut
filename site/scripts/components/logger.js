@@ -118,7 +118,7 @@ export default class Logger {
 
 		// most commonly entered time of day for work
 		const modalTod =
-			`<p>Scale: 3 Months. Mode: ${mode(data.records.map(item => item.tod))}. Showing logs for '${this.project}'</p>`
+			`<p>Showing logs for <i>${this.project}</i></p>`
 
 		this.root.innerHTML =
 		`<h3><span class="jars-logo">◐</span> Logs</h3>` +
