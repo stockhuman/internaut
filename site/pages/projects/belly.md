@@ -3,6 +3,7 @@ layout: project
 description:
 cover: dither-belly.png.png
 slug: belly
+statsfor: Belly
 category: game
 tags: [Unity]
 year: 2019
