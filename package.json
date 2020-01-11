@@ -31,16 +31,16 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "fast-glob": "^3.1.1",
-    "front-matter": "^3.0.0",
+    "front-matter": "^3.1.0",
     "fs-extra": "^8.1.0",
     "live-server": "^1.2.1",
     "lodash.debounce": "^4.0.8",
     "marked": "^0.8.0",
     "meow": "^6.0.0",
-    "sass": "^1.24.2",
+    "sass": "^1.24.4",
     "sharp": "^0.23.4",
     "ssh2-sftp-client": "^4.3.1",
-    "terser": "^4.6.1"
+    "terser": "^4.6.2"
   },
   "dependencies": {}
 }
