@@ -32,7 +32,7 @@ The bot has enjoyed continued updates to reflect new emoji releases and the occa
 ['🧜‍♀️', 'mermaid# Or vested gules of hair azure, dexter arm raised', azure],
 ```
 
-Using a system of hashes, brackets and some edge-case handlers, I can generate plurals of each emoji, and as of writing plan to finally make the bot tincture-aware with it's chanrges (the heraldic word for the objects & designs placed upon a shield).
+Using a system of hashes, brackets and some edge-case handlers, I can generate plurals of each emoji, and as of writing plan to finally make the bot tincture-aware with it's charges (the heraldic word for the objects & designs placed upon a shield).
 
 <figure>
 	<img src="/assets/img/work/heraldry/dither-001.png.png">
