@@ -24,7 +24,7 @@ This communication link enables the pedal to reconfigure various audio effects a
 
 <img src="/assets/img/work/datamosh/dither-002.png.png">
 
-Driving the development of this machine was a desire to jam with my sister. I don't live with her and I don't play guitar, but I can control effects and tweak tunes with some aethetic sense that all people share to some degree.
+Driving the development of this machine was a desire to jam with my sister. I don't live with her and I don't play guitar, but I can control effects and tweak tunes with some aesthetic sense that all people share to some degree.
 
 <img src="/assets/img/work/datamosh/dither-004.png.png">
 
