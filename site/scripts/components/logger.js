@@ -46,10 +46,19 @@ export default class Logger {
 		)
 	}
 
+	// get most recent records of all activities
 	makeQuery() {
-		// get most recent records of all activities
+		// via Jars codebase
+		const YYYYMMDD = date => {
+			if (!(date instanceof Date)) date = new Date()
+			return date.toLocaleString('fr-ca').replace(/-/g, '').slice(0, 8)
+		}
+
+		let now = new Date()
+		let start = new Date(now.getFullYear(), now.getMonth() - 6, 0)
+
 		if (this.project === '*') {
-			return `date,gt,${this._date()}`
+			return `&filter=date,bt,${YYYYMMDD(start)},${YYYYMMDD()}`
 		} else {
 			return `project,eq,${this.project}`
 		}
@@ -66,11 +75,12 @@ export default class Logger {
 	render (data) {
 		// returns distance in days
 		const dist = (a, b) => Math.abs(Math.round(((a - b) / (1000 * 60 * 60 * 24))))
+		const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2
 
 		// construct a single log <rect />
 		const day = day => {
 			let y = 0
-			let x = ratio * dist(furthest, this._fromSQL(day.date))
+			let x = map(ratio * dist(furthest, this._fromSQL(day.date)), 0, 600, 16, 600)
 			let w = ratio * day.hours
 
 			// determine y given svg viewBox height of 105
@@ -84,16 +94,16 @@ export default class Logger {
 				case 'ln': y = 70; break // well past sundown
 			}
 
-			return `<rect x="${x}" y="${y}" width="${w}" height="3" rx="1.5" class="${day.category}"/>`
+			return `<rect x="${x}" y="${y}" width="${w}" height="3" rx="1.5" class="${day.category}" data="${
+				[day.project, day.date, day.hours, day.tod].join()
+			}" />`
 		}
 
 		const todstrs = ['em','m','md','an','ev','n','ln']
 
 		let svg = ''
-		let fmonth = new Date().getMonth()
-		let furthest = new Date(new Date().getFullYear(), fmonth - 3)
-
-
+		let now = new Date()
+		let furthest = new Date(now.getFullYear(), now.getMonth() - 6, 0)
 		let ratio = 600 / dist(furthest, new Date())
 
 		// create 'time of day' labels
@@ -104,25 +114,33 @@ export default class Logger {
 		// append logs to svg
 		data.records.forEach(el => svg += day(el))
 
-		// discover modal time of day
-		// via https://stackoverflow.com/questions/52898456/
-		const mode = a => {
-			return Object.values(
-				a.reduce((count, e) => {
-					if (!(e in count)) count[e] = [0, e]
-					count[e][0]++
-					return count
-				}, {})
-			).reduce((a, v) => v[0] < a[0] ? a : v, [0, null])[1]
-		}
+		const supplementaryData =
+			this.project === '*'
+			? `since ${ furthest.toLocaleDateString() } (~6 months ago)`
+			: 'total'
+		const meta = `Showing logs for <i>${this.project}</i><br>${data.records.length} records ${supplementaryData}`
 
-		// most commonly entered time of day for work
-		const modalTod =
-			`<p>Showing logs for <i>${this.project}</i></p>`
+		this.root.innerHTML = `<h3><span class="jars-logo">◐</span> Logs</h3>` +
+			`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 105">${svg}</svg>`
 
-		this.root.innerHTML =
-		`<h3><span class="jars-logo">◐</span> Logs</h3>` +
-		`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 105">${svg}</svg>`
-		+ modalTod
+		const p = document.createElement('p')
+		p.innerHTML = meta
+		this.root.appendChild(p)
+
+		svg = this.root.querySelector('svg')
+
+		svg.querySelectorAll('rect').forEach(el => {
+			el.addEventListener('mouseover', e => {
+				const d = e.target.attributes.data.value.split(',')
+				const info = ` <span class="detail">Highlighted: ${this._fromSQL(d[1]).toLocaleDateString()}, ${d[2]}hrs on ${d[0]}</span>`
+				p.innerHTML = meta + info
+			})
+		})
+
+		svg.addEventListener('mouseleave', () => {
+			setTimeout(() => {
+				p.innerHTML = meta
+			}, 1000)
+		})
 	}
 }
