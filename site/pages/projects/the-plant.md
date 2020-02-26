@@ -4,7 +4,7 @@ description: A connected database of sounds
 cover: dither-the-plant.png.png
 slug: the-plant
 category: code
-tags:
+tags: Wordpress
 year: 2017
 bg: ED254E
 fg: EEEEEE
@@ -45,3 +45,19 @@ Through the website, the plant newspaper saw a sixth of the college's population
 </figure>
 
 My role in the design and creation of the site, start to finish, has me now as a occasional custodian. I still plan and implement revisions, theme updates and the like. For now, you can get a taste of the admin side of things with the <a href="/assets/img/work/theplant/the_little_green book_v.2.1.pdf">original editor's guide</a> and by visiting [the plant](http://theplantnewspaper.com) for yourself.
+
+---
+
+**Update, Feb. 2020.** The _theplantnewspaper_ domain went down in November of 2019, a full year after the team at Dawson moved the opration to a new site. I unfortunately don't know to whom the torch passed to this time, but I was glad to see some of the original branding elements and design queues retained in this new iteration. My work in site design remains kept  in the internet crypt that is the [wayback machine](https://web.archive.org/web/20190123023325/https://theplantnewspaper.com/).
+
+The team that first organised the move cited a want for social integration features. This was funny, as the debate around comments was that the engagement with articles was too low (or low quality) to warrant keeping up with anti-spam measures. I suppose things have since changed. All the same, archives of student's work has been preserved and migrated to the new platform, which is now live [here](https://www.theplantnews.com/).
+
+I am absolutely delighted to learn that the curiosities section has lived on in this new iteration. I am even more so thrilled to see that the horoscopes I started have since continued under that banner. However, to my great dismay, my work writing such winning lines as
+
+> Sagittarius: Happy birthday, oh person who had a birthday recently.  Know that if you ever become famous or powerful, your birthday will be celebrated more.
+
+and
+
+> Capricorn: Eugenics and the associated ethical dilemmas will appeal more to you this week as you continue your abandon of morality.
+
+were omitted from the content transfer. Such is life.
