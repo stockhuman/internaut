@@ -13,12 +13,12 @@ fg: EEEEEE
 
 The plant is a long running project and service of mine. It's Dawson College's official student newspaper, publishing bi-weekly over print and daily online.
 
-<figure><img alt="typography" src="/assets/img/work/theplant/brand-identity.png"></figure>
+<figure><img alt="typography" src="/assets/img/work/theplant/dither-brand-identity.png.png"></figure>
 
 The design of the plant was heavily inspired by the sites we (the plant editorial team at the time) identified as those we most wanted to associate with. Wired magazine, Vox and Vice played a heavy stylistic role to the actual design, while I designed the information architecture and backend of the site to suit the needs of the small team.
 
 <figure>
-	<img src="/assets/img/work/theplant/brand-colors.png" alt="colors" >
+	<img src="/assets/img/work/theplant/dither-brand-colors.png.png" alt="colors" >
 </figure>
 
 Early design progressed with these categories in mind, the division of interests amongst the student body led to the creation of separate mini-sites within the plant.
