@@ -19,15 +19,15 @@
 		let r = document.getElementById('reveal')
 		r.classList = 'revealing'
 		setTimeout(() => {
-			r.innerHTML = `<a href="mailto:${'mpghemingway'}@gmail.com">Email me</a>`
-			r.classList = 'button revealed'
+			r.innerHTML = `<a class="button" style="display:block" href="mailto:${'mpghemingway'}@gmail.com">Email me</a>`
+			r.classList = 'revealed'
 		}, 700);
 	}
 	document.addEventListener('DOMContentLoaded', () => {
 		let s = document.getElementById('start')
 		s.addEventListener('change', event => {
 			if (event.target.value === event.target.max) {
-				console.log('hey there, human')
+				console.log('hey there, human :)')
 				reveal()
 			}
 		})
