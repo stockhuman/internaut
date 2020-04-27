@@ -20,9 +20,11 @@
 		<meta name="twitter:url" content="https://michaelhemingway.com/">
 		<meta name="twitter:site" content="@stockHuman">
 
-		<meta name="pinterest" content="nopin" description="Nah. Don't even try with that bullshit.">
+		<meta name="pinterest" content="nopin" description="Nah! No.">
 
 		<link rel="stylesheet" type="text/css" href="<%= site.basePath %>/assets/css/style.css?<%= new Date().getTime() %>">
 
-		<title>📯 | <%= page.title || site.title %></title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📯</text></svg>">
+
+		<title><%= page.title || site.title %></title>
 	</head>
