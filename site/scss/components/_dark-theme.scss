@@ -1,6 +1,15 @@
 .dark-theme {
 	background: $gray-darker;
 	color: $gray-lighter;
+	scrollbar-color: $scrollbar-background $scrollbar-cursor;
+
+	&::-webkit-scrollbar-thumb:vertical {
+  	background-color: $scrollbar-background;
+	}
+
+	&::-webkit-scrollbar {
+		background: $scrollbar-cursor;
+	}
 
 	.home .header .desc,
 	.button, button {
