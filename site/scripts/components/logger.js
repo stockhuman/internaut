@@ -77,6 +77,9 @@ export default class Logger {
 		const dist = (a, b) => Math.abs(Math.round(((a - b) / (1000 * 60 * 60 * 24))))
 		const map = (value, x1, y1, x2, y2) => (value - x1) * (y2 - x2) / (y1 - x1) + x2
 
+		// compute hours total
+		let hours = 0
+
 		// construct a single log <rect />
 		const day = day => {
 			let y = 0
@@ -94,6 +97,8 @@ export default class Logger {
 				case 'ln': y = 70; break // well past sundown
 			}
 
+			hours += parseFloat(day.hours) // update total hour count
+
 			return `<rect x="${x}" y="${y}" width="${w}" height="3" rx="1.5" class="${day.category}" data="${
 				[day.project, day.date, day.hours, day.tod].join()
 			}" />`
@@ -106,6 +111,7 @@ export default class Logger {
 		let furthest = new Date(now.getFullYear(), now.getMonth() - 6, 0)
 		let ratio = 600 / dist(furthest, new Date())
 
+
 		// create 'time of day' labels
 		for (let i = 0; i < 7; i++) {
 			svg += `<text x="0" y="${i * 10 + 15}">${todstrs[i]}</text>`
@@ -115,9 +121,9 @@ export default class Logger {
 		data.records.forEach(el => svg += day(el))
 
 		const supplementaryData =
-			this.project === '*'
+			(this.project === '*'
 			? `since ${ furthest.toLocaleDateString() } (~6 months ago)`
-			: 'total'
+			: 'total') + `, ${hours} hours`
 		const meta = `Showing logs for <i>${this.project}</i><br>${data.records.length} records ${supplementaryData}`
 
 		this.root.innerHTML = `<h3><span class="jars-logo">◐</span> Logs</h3>` +
