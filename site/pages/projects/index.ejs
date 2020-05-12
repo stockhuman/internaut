@@ -41,21 +41,16 @@ filters.forEach(filter => {
 });
 
 function show () {
-	if (currentFilter == '*') {
-		Array.from(items).forEach(item => {
-			item.style.display = 'block'
-		})
-	} else {
-		Array.from(items).forEach(item => {
-			item.style.display = 'block'
-		})
+	Array.from(items).forEach(item => {
+		item.style.display = 'block'
+	})
+	if (currentFilter != '*') {
 		const res = Array.from(items).filter(item =>
 			!item.classList.contains(currentFilter)
 		)
 		res.forEach(item => {
 			item.style.display = 'none'
-		});
-
+		})
 	}
 }
 </script>
