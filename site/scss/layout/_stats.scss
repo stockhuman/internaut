@@ -13,12 +13,14 @@
 		border-bottom: rgba(0,0,0,0.4) 1px solid;
 	}
 	p {
-		opacity: 0.6;
+		opacity: 0.8;
+		font-size: 14px;
 	}
 
 	text {
 		font-size: 9px;
 		opacity: 0.4;
+		user-select: none;
 	}
 	.docs {
 		fill: $brand;
@@ -31,6 +33,7 @@
 	}
 	rect:hover {
 		stroke: black;
+		cursor: crosshair;
 	}
 
 	.detail {

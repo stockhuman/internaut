@@ -10,6 +10,7 @@
 // this is an a tag
 .project {
 	@extend %radius;
+	overflow: hidden;
 	max-height: 40vh;
 	height: 400px;
 	position: relative;
@@ -26,13 +27,14 @@
 		left:0;
 		bottom: 0;
 		right: 0;
-		background: black;
+		background-color: black;
 		color: white;
 		opacity: 0;
 		text-align: center;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		transition: ease-in-out .25s opacity;
 	}
 
 	h3, p {
