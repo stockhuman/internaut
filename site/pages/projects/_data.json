@@ -4,6 +4,15 @@
 		"description" : "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
 		"layout": "_prj-layout"
 	},
+	"data-falls": {
+		"title": "Data Falls",
+		"description": "Visualizing energy use with physics",
+		"data_base": "#add8e6",
+		"data_highlight": "#282c34",
+		"cover": "data-falls.png",
+		"category": "web",
+		"year": "2020"
+	},
 	"heraldry": {
 		"title"					 : "Heraldry",
 		"description"		 : "Blazonry and coat-of-arms generation for the UTF-8 generation",
@@ -16,8 +25,8 @@
 	"jars" : {
 		"title"          : "Jars",
 		"description"    : "My personal productivity app",
-		"data_base"      : "#00AEEF",
-		"data_highlight" : "#EEEEEE",
+		"data_base"      : "#FFCC66",
+		"data_highlight" : "#1F2430",
 		"cover"          : "jars.png",
 		"category"       : "code",
 		"year"           : "2019"
