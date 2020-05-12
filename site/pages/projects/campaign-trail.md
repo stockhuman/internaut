@@ -10,7 +10,7 @@ bg: b20000
 fg: ffffff
 ---
 
-# Ah, this guy
+# A themed _shmup_
 
 Campaign Trail began in earnest in the late summer of 2016, when some friends and I were chatting about and thinking up ideas. The mock game in [this video's](https://www.youtube.com/watch?v=n8yAfHU-0JI) style and pace was something I wanted to emulate, and we all thought it'd be great if that energy could be put into a real game. Games are to be experienced, after all.
 
