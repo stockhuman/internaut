@@ -50,9 +50,9 @@ export default class Settings {
 		}
 
 		if (this.theme == 'dark') {
-			document.body.classList.add('dark-theme')
+			document.documentElement.classList.add('dark-theme')
 		} else {
-			document.body.classList.remove('dark-theme')
+			document.documentElement.classList.remove('dark-theme')
 		}
 	}
 
@@ -68,10 +68,10 @@ export default class Settings {
 	toggleDarkTheme () {
 		if (this.tglTheme.checked) {
 			localStorage.setItem('theme', 'dark')
-			document.body.classList.add('dark-theme')
+			document.documentElement.classList.add('dark-theme')
 		} else {
 			localStorage.setItem('theme', 'light')
-			document.body.classList.remove('dark-theme')
+			document.documentElement.classList.remove('dark-theme')
 		}
 	}
 
