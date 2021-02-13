@@ -14,3 +14,4 @@ coverage
 
 # server
 server.js
+*.log
