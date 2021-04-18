@@ -1,10 +1,11 @@
 /* */
 
 .projects {
-	margin: $navWidth;
+	margin-bottom: $navPad;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: $navPad;
+	@extend %block;
 }
 
 // this is an a tag
