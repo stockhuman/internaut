@@ -1,9 +1,9 @@
 ---
 layout: project
-description: A connected database of sounds
+description: A brand identity for Dawson's student newspaper
 cover: dither-the-plant.png.png
 slug: the-plant
-category: code
+category: web
 tags: Wordpress
 year: 2017
 bg: ED254E
