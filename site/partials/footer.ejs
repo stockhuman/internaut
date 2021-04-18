@@ -1,22 +1,25 @@
-	<footer id="footer">
-		<div class="colophon">
-			<p><a href="<%= site.basePath %>/about">Michael Hemingway</a> © <% let d = new Date;%><%= d.getFullYear() %></p>
-			<p>This site does not track you.<br><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
-			<p style="font-family: monospace;"><a href="https://twitter.com/StockHuman">Twitter</a> * <a href="https://www.instagram.com/stockhuman/">Instagram</a> * <a href="https://github.com/stockhuman">Github</a></p>
+<footer id="footer">
+	<div class="colophon">
+		<p><a href="<%= site.basePath %>/about">Michael Hemingway</a> © <% let d=new Date;%>
+				<%= d.getFullYear() %>
+		</p>
+		<p>This site does not track you.<br><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+		</p>
+		<p style="font-family: monospace;"><a href="https://twitter.com/StockHuman">Twitter</a> * <a
+				href="https://www.instagram.com/stockhuman/">Instagram</a> * <a href="https://github.com/stockhuman">Github</a>
+		</p>
+	</div>
+
+	<div class="footer-settings">
+		<div class="footer-setting">
+			<input class="tgl tgl-light" id="tgl-dark-mode" type="checkbox" />
+			<label class="tgl-btn" for="tgl-dark-mode"></label>
+			<p>Dark mode</p>
 		</div>
-
-		<div class="footer-settings">
-			<div class="footer-setting">
-
-				<input class="tgl tgl-light" id="tgl-dark-mode" type="checkbox"/>
-				<label class="tgl-btn" for="tgl-dark-mode"></label>
-				<p>Dark mode</p>
-			</div>
-			<div class="footer-setting">
-
-				<input class="tgl tgl-light" id="tgl-full-color" type="checkbox"/>
-				<label class="tgl-btn" for="tgl-full-color"></label>
-					<p>HD images</p>
-			</div>
+		<div class="footer-setting">
+			<input class="tgl tgl-light" id="tgl-full-color" type="checkbox" />
+			<label class="tgl-btn" for="tgl-full-color"></label>
+			<p>HD images</p>
 		</div>
-	</footer>
+	</div>
+</footer>
