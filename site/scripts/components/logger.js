@@ -60,13 +60,27 @@ export default class Logger {
 		if (this.project === '*') {
 			return `&filter=date,bt,${YYYYMMDD(start)},${YYYYMMDD()}`
 		} else {
-			return `project,eq,${this.project}`
+			if (this.project.split(',').length > 1) {
+				// more than one term specified (sub projects?), list all
+				const queries = this.project.split(',')
+				console.log(queries);
+
+				let qs = ``
+				for (let i = 1; i < queries.length; i++) {
+					qs += `&filter${i}=project,eq,${queries[i]}`
+				}
+				qs = qs.substring(1, qs.length)
+
+				console.log(qs);
+				return `${qs}`
+			} else return `filter=project,eq,${this.project}`
 		}
 	}
 
 	request () {
 		const api = 'https://api.arthem.co/jars/v1/records/beans/'
-		fetch(`${api}?filter=${this.query}&exclude=ID,task,comment`)
+		console.log(`requested:`, `${api}?${this.query}&exclude=ID,task,comment`)
+		fetch(`${api}?${this.query}&exclude=ID,task,comment`)
 			.then(response => response.json())
 			.then(json => this.render(json))
 	}
