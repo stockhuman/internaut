@@ -1,185 +1,200 @@
 {
-	"index" : {
-		"title" : "MH",
-		"description" : "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
+	"index": {
+		"title": "MH",
+		"description": "Michael Hemingway's collection of projects across disciplines. Examples of web design, photography, programming and music are all here.",
 		"layout": "_prj-layout"
+	},
+	"thepartisanweb": {
+		"title": "The Partisan Web",
+		"description": "An open respository for influence in news organisations",
+		"data_base": "#ffffff",
+		"cover": "tpw.png",
+		"category": "web",
+		"year": "2021"
+	},
+	"pots": {
+		"title": "Pots",
+		"description": "Faces set in stone",
+		"data_base": "#add8e6",
+		"cover": "pots.png",
+		"category": "web",
+		"year": "2021"
+	},
+	"speculative-play": {
+		"title": "Speculative Play",
+		"description": "What if?",
+		"data_base": "#add8e6",
+		"cover": "speculative-play.png",
+		"category": "web",
+		"year": "2021"
 	},
 	"data-falls": {
 		"title": "Data Falls",
 		"description": "Visualizing energy use with physics",
 		"data_base": "#add8e6",
-		"data_highlight": "#282c34",
 		"cover": "data-falls.png",
 		"category": "web",
 		"year": "2020"
 	},
 	"heraldry": {
-		"title"					 : "Heraldry",
-		"description"		 : "Blazonry and coat-of-arms generation for the UTF-8 generation",
-		"data_base"			 : "#e5e500",
-		"data_highlight" : "#282c34",
-		"cover"					 : "heraldry.png",
-		"category"			 : "code",
-		"year"					 : "2019"
+		"title": "Heraldry",
+		"description": "Blazonry and coat-of-arms generation for the UTF-8 generation",
+		"data_base": "#e5e500",
+		"cover": "heraldry.png",
+		"category": "code",
+		"year": "2019"
 	},
-	"jars" : {
-		"title"          : "Jars",
-		"description"    : "My personal productivity app",
-		"data_base"      : "#FFCC66",
-		"data_highlight" : "#1F2430",
-		"cover"          : "jars.png",
-		"category"       : "code",
-		"year"           : "2019"
+	"jars": {
+		"title": "Jars",
+		"description": "My personal productivity app",
+		"data_base": "#FFCC66",
+		"cover": "jars.png",
+		"category": "code",
+		"year": "2019"
 	},
 	"wilfrid-pelletier": {
-		"title"					 : "Wilfrid-Pelletier",
-		"description"		 : "An architectural rendering of a real room with a twist",
-		"data_base"			 : "#E9E9EA",
-		"data_highlight" : "#262633",
-		"cover"					 : "pelletier.png",
-		"category"			 : "3D",
-		"year"					 : "2019"
+		"title": "Wilfrid-Pelletier",
+		"description": "An architectural rendering of a real room with a twist",
+		"data_base": "#E9E9EA",
+		"cover": "pelletier.png",
+		"category": "3D",
+		"year": "2019"
 	},
 	"milieux": {
-		"title"          : "Milieux",
-		"description"    : "Site redesign and implementation for the Milieux Institute at Concordia University",
-		"data_base"      : "#2211fb",
-		"data_highlight" : "#EEEEEE",
-		"category"       : "web",
-		"year"           : "2018"
+		"title": "Milieux",
+		"description": "Site redesign and implementation for the Milieux Institute at Concordia University",
+		"data_base": "#2211fb",
+		"category": "web",
+		"year": "2018"
 	},
 	"datamosh": {
-		"title"          : "Datam0sh",
-		"description"    : "A WiFi-enabled digital guitar pedal",
-		"data_base"      : "#F52DE7",
-		"data_highlight" : "#EEEEEE",
-		"category"       : "hardware",
-		"year"           : "2018"
+		"title": "Datam0sh",
+		"description": "A WiFi-enabled digital guitar pedal",
+		"data_base": "#F52DE7",
+		"category": "hardware",
+		"year": "2018"
 	},
-	"tellum" : {
-		"title"          : "Tellum",
-		"description"    : "A connected database of sounds",
-		"data_base"      : "#ED254E",
-		"data_highlight" : "#EEEEEE",
-		"cover"          : "tellum.png",
-		"category"       : "code",
-		"year"           : "2017"
+	"tellum": {
+		"title": "Tellum",
+		"description": "A connected database of sounds",
+		"data_base": "#ED254E",
+		"cover": "tellum.png",
+		"category": "code",
+		"year": "2017"
 	},
-	"the-plant" : {
-		"title"          : "The Plant",
-		"description"    : "Dawson College's Official online student newspaper",
-		"data_base"      : "#3cc47c",
-		"data_highlight" : "#18422e",
-		"cover"          : "the-plant.png",
-		"category"       : "web",
-		"year"           : "2015"
+	"the-plant": {
+		"title": "The Plant",
+		"description": "Dawson College's Official online student newspaper",
+		"data_base": "#3cc47c",
+		"cover": "the-plant.png",
+		"category": "web",
+		"year": "2015"
 	},
-	"arthem" : {
-		"title"          : "Arthem Co.",
-		"description"    : "A little web design buisness, now finding it's purpose.",
-		"data_base"      : "#25aae2",
-		"data_highlight" : "#ffffff",
-		"cover"          : "arthem.png",
-		"category"       : "web",
-		"year"           : "2016"
+	"arthem": {
+		"title": "Arthem Co.",
+		"description": "A little web design buisness, now finding it's purpose.",
+		"data_base": "#25aae2",
+		"cover": "arthem.png",
+		"category": "web",
+		"year": "2016"
 	},
 	"belly": {
-		"title"					 : "Belly",
-		"description"		 : "An anti-aircraft anti-game",
-		"data_base"			 : "#ADAD7F",
-		"data_highlight" : "#00005B",
-		"cover"					 : "belly.png",
-		"category"			 : "game",
-		"year"					 : "2019"
+		"title": "Belly",
+		"description": "An anti-aircraft anti-game",
+		"data_base": "#ADAD7F",
+		"data_highlight": "#00005B",
+		"cover": "belly.png",
+		"category": "game",
+		"year": "2019"
 	},
-	"5ft25" : {
-		"title"          : "5ft25",
-		"description"    : "A custom photography-centered WordPress theme",
-		"data_base"      : "#f0f0f0",
-		"data_highlight" : "#000000",
-		"cover"          : "5ft25.jpg",
-		"category"       : "web",
-		"year"           : "2016"
+	"5ft25": {
+		"title": "5ft25",
+		"description": "A custom photography-centered WordPress theme",
+		"data_base": "#f0f0f0",
+		"data_highlight": "#000000",
+		"cover": "5ft25.jpg",
+		"category": "web",
+		"year": "2016"
 	},
-	"opcm" : {
-		"title"          : "The OPCM",
-		"description"    : "",
-		"data_base"      : "#880015",
-		"data_highlight" : "#ffffff",
-		"cover"          : "opcm.png",
-		"category"       : "web",
-		"year"           : "2017"
+	"opcm": {
+		"title": "The OPCM",
+		"description": "",
+		"data_base": "#880015",
+		"data_highlight": "#ffffff",
+		"cover": "opcm.png",
+		"category": "web",
+		"year": "2017"
 	},
-	"campaign-trail" : {
-		"title"          : "Campaign Trail",
-		"description"    : "",
-		"data_base"      : "#b20000",
-		"data_highlight" : "#ffffff",
-		"cover"          : "campaign-trail.png",
-		"category"       : "game",
-		"year"           : "2016"
+	"campaign-trail": {
+		"title": "Campaign Trail",
+		"description": "",
+		"data_base": "#b20000",
+		"data_highlight": "#ffffff",
+		"cover": "campaign-trail.png",
+		"category": "game",
+		"year": "2016"
 	},
-	"bitmap" : {
-		"title"          : "Bitmap",
-		"description"    : "Glitched and processed images, done in Processing & the like",
-		"data_base"      : "#0000ff",
-		"data_highlight" : "#ffffff",
-		"cover"          : "bitmap.png",
-		"category"       : "code",
-		"year"           : "2017"
+	"bitmap": {
+		"title": "Bitmap",
+		"description": "Glitched and processed images, done in Processing & the like",
+		"data_base": "#0000ff",
+		"data_highlight": "#ffffff",
+		"cover": "bitmap.png",
+		"category": "code",
+		"year": "2017"
 	},
-	"amore" : {
-		"title"          : "Amore",
-		"description"    : "",
-		"data_base"      : "#ffff00",
-		"data_highlight" : "#999900",
-		"cover"          : "pasta.jpg",
-		"category"       : "game",
-		"year"           : "2017"
+	"amore": {
+		"title": "Amore",
+		"description": "",
+		"data_base": "#ffff00",
+		"data_highlight": "#999900",
+		"cover": "pasta.jpg",
+		"category": "game",
+		"year": "2017"
 	},
-	"vaporwave" : {
-		"title"          : "Vaporwave",
-		"description"    : "A colled assortment of audio and visual of the wavy variety",
-		"data_base"      : "#C774E8",
-		"data_highlight" : "#94D0FF",
-		"cover"          : "vaporwave.png",
-		"category"       : "audio",
-		"year"           : "2017"
+	"vaporwave": {
+		"title": "Vaporwave",
+		"description": "A colled assortment of audio and visual of the wavy variety",
+		"data_base": "#C774E8",
+		"data_highlight": "#94D0FF",
+		"cover": "vaporwave.png",
+		"category": "audio",
+		"year": "2017"
 	},
-	"mikemingway" : {
-		"title"          : "Mikemingway",
-		"description"    : "My personal photography page, blog and brand identity.",
-		"data_base"      : "#FFF",
-		"data_highlight" : "#000",
-		"cover"          : "mikemingway.png",
-		"category"       : "web",
-		"year"           : "2015"
+	"mikemingway": {
+		"title": "Mikemingway",
+		"description": "My personal photography page, blog and brand identity.",
+		"data_base": "#FFF",
+		"data_highlight": "#000",
+		"cover": "mikemingway.png",
+		"category": "web",
+		"year": "2015"
 	},
 	"bass-camp-fridays": {
-		"title"          : "Bass Camp Fridays",
-		"description"    : "Graphic design work for Bass Camp Fridays & Bar Backstage, Montreal.",
-		"data_base"      : "#FFF",
-		"data_highlight" : "#000",
-		"cover"          : "bcf.png",
-		"category"       : "print",
-		"year"           : "2014"
+		"title": "Bass Camp Fridays",
+		"description": "Graphic design work for Bass Camp Fridays & Bar Backstage, Montreal.",
+		"data_base": "#FFF",
+		"data_highlight": "#000",
+		"cover": "bcf.png",
+		"category": "print",
+		"year": "2014"
 	},
-	"spain" : {
-		"title"          : "Spain & Back Again",
-		"description"    : "Images from San Fermin, Bilbao and elesewhere. My photography from that most beautiful country.",
-		"data_base"      : "#ff8000",
-		"data_highlight" : "#FFFFFF",
-		"cover"          : "spain.png",
-		"category"       : "photo",
-		"year"           : "2014"
+	"spain": {
+		"title": "Spain & Back Again",
+		"description": "Images from San Fermin, Bilbao and elesewhere. My photography from that most beautiful country.",
+		"data_base": "#ff8000",
+		"data_highlight": "#FFFFFF",
+		"cover": "spain.png",
+		"category": "photo",
+		"year": "2014"
 	},
-	"moon" : {
-		"title"          : "Moon",
-		"description"    : "Collected illustrations from my brief stint as a Photoshop painter.",
-		"data_base"      : "#B2D9FF",
-		"data_highlight" : "",
-		"cover"          : "moon.png",
-		"category"       : "illustration",
-		"year"           : "2015"
+	"moon": {
+		"title": "Moon",
+		"description": "Collected illustrations from my brief stint as a Photoshop painter.",
+		"data_base": "#B2D9FF",
+		"data_highlight": "",
+		"cover": "moon.png",
+		"category": "illustration",
+		"year": "2015"
 	}
 }
