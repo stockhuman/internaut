@@ -1,6 +1,6 @@
 ---
 layout: project
-description:
+description: An open data repository for political influence in online media
 cover: dither-tpw.png.png
 slug: thepartisanweb
 category: web
@@ -32,7 +32,7 @@ Additionally, many of these projects lack the transparency about themselves and 
 And finally, by storing the data source in an open fashion and providing the API for free, other enterprising individuals may build off of this work without need to negotiate terms, run afoul of copyright, or find API lock-in.
 
 <figure>
-	<img src="/assets/img/work/tpw/dither-page.png.png" alt="screenshot of a organisation page" />
+	<img src="/assets/img/work/tpw/dither-page.png.png" alt="screenshot of an organisation page" />
 	<figcaption>The selected logo, whilst perhaps a little strange, captured to me the ideas of stratified quantities within a network.</figcaption>
 </figure>
 
