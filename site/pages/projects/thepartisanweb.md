@@ -33,7 +33,7 @@ And finally, by storing the data source in an open fashion and providing the API
 
 <figure>
 	<img src="/assets/img/work/tpw/dither-page.png.png" alt="screenshot of an organisation page" />
-	<figcaption>The selected logo, whilst perhaps a little strange, captured to me the ideas of stratified quantities within a network.</figcaption>
+	<figcaption>The sidebar showcases the entirety of the API's data, formatted in the 'reccomended' way, chunked into sections.</figcaption>
 </figure>
 
 ## Does this duplicate Wikipedia?
