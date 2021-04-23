@@ -1,6 +1,6 @@
 {
   "name": "internaut",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Minimalist static site generator in Node.js",
   "repository": "stockhuman/internaut",
   "keywords": [
