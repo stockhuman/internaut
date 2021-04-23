@@ -25,7 +25,7 @@ And yet, people would only fill it with trash. The most dubiously useful item in
 
 So came to me the inspiration and driving motive behind Tellum. It was to be an item exchange box, but networked around the city for that same sense of community, and it was to exchange audio instead of items; sound is far easier to give and receive, and still holds that possibility for kindness and expression.
 
-Tellum was initially conceived with a physical component, a node that would serve as the 'exchange box' and was to have connect to an array of others across the city. The image of [playground telephone tubes](https://i.pinimg.com/originals/33/f0/eb/33f0ebd6ca037f6235bf2acc30c410b9.jpg) came to mind.
+Tellum was initially conceived with a physical component, a node that would serve as the 'exchange box' and was to have connect to an array of others across the city. The image of [playground telephone tubes](/assets/img/work/tellum/tubes.jpg) came to mind.
 
 With parts coming in too late, I built a mobile platform instead, relying heavily on WebAudio APIs and the blob datatype and API. In this arrangement, users capture audio live on their device, and upon completing their message, it is uploaded to the server and the option to listen is made available to them.
 
@@ -43,6 +43,6 @@ The _aesthetic_ of this project, a rather emergent one, but one that I'd hoped f
 
 ---
 
-[Try it out for yourself](/projects/tellum-app/)
+As of 2021 this project's Audio API is no longer online. However, the interface may still be explored [here](/projects/tellum-app/).
 
 [Github](https://github.com/stockHuman/tellum)
