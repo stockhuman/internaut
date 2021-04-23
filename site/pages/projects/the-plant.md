@@ -49,9 +49,9 @@ My role in the design and creation of the site, start to finish, has me now as a
 
 ---
 
-**Update, Feb. 2020.** The _theplantnewspaper_ domain went down in November of 2019, a full year after the team at Dawson moved the opration to a new site. I unfortunately don't know to whom the torch passed to this time, but I was glad to see some of the original branding elements and design queues retained in this new iteration. My work in site design remains kept  in the internet crypt that is the [wayback machine](https://web.archive.org/web/20190123023325/https://theplantnewspaper.com/).
+**Update, Feb. 2020.** The _theplantnewspaper_ domain went down in November of 2019, a full year after the team at Dawson moved the operation to a new site. I unfortunately don't know to whom the torch passed to this time, but I was glad to see some of the original branding elements and design queues retained in this new iteration. My work in site design remains kept in the internet crypt that is the [wayback machine](https://web.archive.org/web/20190123023325/https://theplantnewspaper.com/).
 
-The team that first organised the move cited a want for social integration features. This was funny, as the debate around comments was that the engagement with articles was too low (or low quality) to warrant keeping up with anti-spam measures. I suppose things have since changed. All the same, archives of student's work has been preserved and migrated to the new platform, which is now live [here](https://www.theplantnews.com/).
+The team that first organised the move cited a want for social integration features. This was funny, as the debate around comments was that the engagement with articles was too low (or low quality) to warrant keeping up with anti-spam measures. I suppose things have since changed. All the same, archives of student work has been preserved and migrated to the new platform, which is now live [here](https://www.theplantnews.com/).
 
 I am absolutely delighted to learn that the curiosities section has lived on in this new iteration. I am even more so thrilled to see that the horoscopes I started have since continued under that banner. However, to my great dismay, my work writing such winning lines as
 
