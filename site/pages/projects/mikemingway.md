@@ -1,14 +1,16 @@
 ---
 layout: project
+title: MKWY
 description: My personal photography page, blog and brand identity.
 cover: dither-mikemingway.png.png
-slug: mikemingway
 category: web
 tags: []
 year: 2015
 bg: 101010
 fg: ffffff
+tc: FFF
 ---
+
 # MKWY
 
 Ah, the oldest still-active project under my belt. _Mikemingway,_ a portmanteau of _Mike_ and _Hemingway_ was my first sortie in web design, branding myself, marketing, organized photographic collections, and in figuring out who I am.

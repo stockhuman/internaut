@@ -1,13 +1,14 @@
 ---
 layout: project
-description:
+title: Wilfrid-Pelletier
+description: An architectural rendering of a real room with a twist
 cover: dither-pelletier.png.png
-slug: wilfrid-pelletier
 category: 3D
 tags: [blender, CAD]
 year: 2019
 bg: 262633
 fg: E9E9EA
+tc: E9E9EA
 ---
 
 # Salle Wilfrid-Pelletier

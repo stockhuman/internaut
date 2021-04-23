@@ -1,13 +1,14 @@
 ---
 layout: project
-description:
+title: The OPCM
+description: Site design for a prominent Montreal Choir and orchestra
 cover: dither-opcm.png.png
-slug: opcm
 category: web
 tags: [client]
 year: 2017
 bg: 880015
 fg: ffffff
+tc: 880015
 ---
 
 # The OPCM

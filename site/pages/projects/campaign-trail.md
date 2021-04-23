@@ -1,13 +1,14 @@
 ---
 layout: project
+title: Campaign Trail
 description: A game about an election
 cover: dither-campaign-trail.png.png
-slug: campaign-trail
 category: game
 tags: []
 year: 2016
 bg: b20000
 fg: ffffff
+tc: 880015
 ---
 
 # A themed _shmup_

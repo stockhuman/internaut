@@ -1,13 +1,14 @@
 ---
 layout: project
+title: Spain
 description: Images from San Fermin, Bilbao and elesewhere. My photography from that most beautiful country.
 cover: dither-spain.png.png
-slug: spain
 category: photo
 tags: [client]
 year: 2014
 bg: 000000
 fg: ffffff
+tc: 0a0a0a
 ---
 
 # Spain & Back Again

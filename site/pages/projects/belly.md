@@ -1,14 +1,15 @@
 ---
 layout: project
-description:
+title: Belly
+description: An anti-aircraft anti-game
 cover: dither-belly.png.png
-slug: belly
 statsfor: Belly
 category: game
 tags: [Unity]
 year: 2019
 bg: 00005B
 fg: ADAD7F
+tc: ADAD7F
 ---
 
 # Belly

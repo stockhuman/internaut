@@ -1,13 +1,14 @@
 ---
 layout: project
+title: Arthem Co.
 description: A little web design buisness, now finding it's purpose.
 cover: dither-arthem.png.png
-slug: arthem
 category: web
 tags: []
 year: 2016
 bg: 25aae2
 fg: ffffff
+tc: 25aae2
 ---
 
 # Arthem

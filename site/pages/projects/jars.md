@@ -1,14 +1,15 @@
 ---
 layout: project
+title: Jars
 description: My personal productivity app
 cover: dither-jars.png.png
-slug: jars
 category: code
 statsfor: Jars
 tags: []
-year: [2017, 2019]
+year: [2019]
 bg: 1F2430
 fg: FFCC66
+tc: FFCC66
 ---
 
 # The organization app

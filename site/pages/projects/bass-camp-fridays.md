@@ -1,13 +1,14 @@
 ---
 layout: project
+title: Bass Camp Fridays
 description: Graphic design work for Bass Camp Fridays & Bar Backstage, Montreal.
 cover: dither-bcf.png.png
-slug: bass-camp-fridays
 category: print
 tags: [client]
 year: 2014
 bg: 000000
 fg: ffffff
+tc: fff
 ---
 # Bass Camp Fridays
 

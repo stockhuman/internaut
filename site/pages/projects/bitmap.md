@@ -1,13 +1,14 @@
 ---
 layout: project
+title: Bitmap
 description: Glitched and processed images, done in Processing & the like
 cover: dither-bitmap.png.png
-slug: bitmap
 category: code
 tags: []
 year: 2017
 bg: 0000ff
 fg: ffffff
+tc: 0000ff
 ---
 
 # bitmap

@@ -1,14 +1,15 @@
 ---
 layout: project
+title: The Partisan Web
 description: An open data repository for political influence in online media
 cover: dither-tpw.png.png
-slug: thepartisanweb
 category: web
 statsfor: [tpw-site, tpw-data, tpw, tpw-scraper, TPW]
 tags: [gastby, react, graphql, news]
 year: 2021
 bg: ffea2c
 fg: 0a0a0a
+tc: ffea2c
 ---
 
 # The Partisan Web

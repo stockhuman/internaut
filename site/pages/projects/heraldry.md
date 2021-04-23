@@ -1,14 +1,15 @@
 ---
 layout: project
-description: A coat of arms generator for the 21st century
+title: Heraldry
+description: Blazonry and coat-of-arms generation for the UTF-8 generation
 cover: dither-heraldry.png.png
-slug: heraldry
 category: code
 statsfor: Heraldry
 tags: [React, Twitter]
 year: 2019
 bg: e5e500
 fg: 282c34
+tc: e5e500
 ---
 
 # Heraldry

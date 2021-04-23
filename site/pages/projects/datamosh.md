@@ -1,13 +1,14 @@
 ---
 layout: project
+title: Datam0sh
 description: The world's first WiFi guitar pedal
 cover: dither-datamosh.png.png
-slug: datamosh
 category: hardware
 tags: []
 year: 2018
 bg: F52DE7
 fg: EEEEEE
+tc: 2211fb
 ---
 
 # Datam0sh / Air Guitar

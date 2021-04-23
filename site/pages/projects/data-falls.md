@@ -1,14 +1,15 @@
 ---
 layout: project
+title: Data Falls
 description: Visualizing energy use with physics
 cover: dither-data-falls.png.png
-slug: data-falls
 category: web
 statsfor: C434
 tags: []
 year: 2020
 bg: 323333
 fg: DDDDDD
+tc: add8e6
 ---
 
 # Internet use in kWh

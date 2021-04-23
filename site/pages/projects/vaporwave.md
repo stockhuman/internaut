@@ -1,14 +1,16 @@
 ---
 layout: project
+title: bad samples
 description: A colled assortment of audio and visual of the wavy variety
 cover: dither-vaporwave.png.png
-slug: vaporwave
 category: audio
 tags: []
 year: 2017
 bg: C774E8
 fg: 94D0FF
+tc: C774E8
 ---
+
 # bad samples
 
 <p>A collection of my vaporwave aesthetics. I while back, a few friends and I made a little music collective. We called it Bismuth MTL.</p>

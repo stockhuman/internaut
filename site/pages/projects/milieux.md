@@ -1,8 +1,8 @@
 ---
 layout: project
-description: Complete site redesign and implementation for the Milieux Institute at Concordia University
+title: Milieux
+description: Site redesign and implementation for the Milieux Institute at Concordia University
 cover: dither-milieux.png.png
-slug: milieux
 category: web
 tags: [client, react, wordpress]
 year: 2018

@@ -1,17 +1,17 @@
 ---
 layout: project
+title: Planters
 description:
 cover: dither-pots.png.png
-slug: pots
 category: 3D
 tags: [Kinect]
 year: 2021
 bg: 04115e
 fg: f0f0f0
+tc: 00ff00
 ---
 
 # Planters
-
 
 <figure>
 <img src="/assets/img/work/pots/dither-pots-m0.png.png" alt="">
