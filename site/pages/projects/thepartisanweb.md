@@ -46,3 +46,5 @@ No, although the content license is compatible. Wikipedia provides a great deal 
 This site works with a unidirectional data flow, from the GitHub source files written in human-readable markdown, to a read-only GraphQL representation of that data, and then finally to this site.
 
 This site is built with Gatsby, which makes a "static website." As such, the entries on this site might be delayed from what exists in the source files. This decision was made to facilitate portability of the site itself and improve site speed, with an understanding that the heart of this project is the data itself, and not the site. As this is an open-source project, anyone can build their own representation of the data, or submit requests to alter how this website looks and works.
+
+View the site live [here](https://www.thepartisanweb.com/).
