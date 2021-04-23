@@ -12,20 +12,20 @@
 
 <div class="projects">
 	<%# display all posts by category %>
-	<% for (let slug in site.projects) { %>
-		<% if (slug != 'index') { let s = site.projects[slug] // skip the index %>
-
-		<a href="/projects/<%= slug %>" class="project card <%= s.category %>" style="background-color: <%= s.data_base %>">
+	<% for (let i = 0; i < site.projects.length; i++) {
+		const page = site.projects[i].page
+	%>
+		<a href="/projects/<%= page.slug %>" class="project card <%= page.category %>" style="background-color: #<%= page.tc %>">
 			<div class="card-image"
-				style="background-image: url('/assets/img/work/thumbs/dither-<%= slug %>.png.png');"
+				style="background-image: url('/assets/img/work/thumbs/dither-<%= page.slug %>.png.png');"
 			></div>
 			<div class="overlay">
-				<h3><%= s.title %></h3>
-				<p><%= s.description %></p>
+				<h3><%= page.title %></h3>
+				<p><%= page.description %></p>
 			</div>
 	  </a>
 
-	<% }} // end loop %>
+	<% } // end loop %>
 </div>
 
 <script>

@@ -1,38 +1,33 @@
 <%
 
-// declare the data array found in ./_data.json
 const data = site.projects;
+let prev, next
 
-// traverse the iterable
-for (let prop in data) {
+for (let i = 0; i < data.length; i++) {
 
-	let i = Object.keys(data).indexOf(prop)
-
-	if (page.slug == prop) {
-		prev = Object.keys(data)[i - 1],
-		next = Object.keys(data)[i + 1];
-	%>
-
-		<nav class="project-nav<% if (prev == 'index') { %><%- ' no-prev' %><% }
-			 if (!next) { %><%- ' no-next' %><% } %>">
-
-		<% // check for and display link to previous page
-			if (prev != 'index') { %>
-				<a href="<%= site.basePath %>/projects/<%= prev %>" class="project-nav-prev">
-					<%= data[prev].title %>
-				</a>
-			<% } %>
-				<a href="<%= site.basePath %>/projects/?cat=<%= page.category %>" class="project-nav-cat"><%= page.category %></a>
-				<a href="<%= site.basePath %>/projects/?year=<%= page.year %>" class="project-nav-year"><%= page.year %></a>
-			<%
-			// check for and display link to next page
-			if (next) { %>
-				<a href="<%= site.basePath %>/projects/<%= next %>" class="project-nav-next">
-					<%= data[next].title %>
-				</a>
-			<% } %>
-
-		</nav> <%
+	if (data[i].page.slug == page.slug) {
+		prev = data[i - 1] ? data[i - 1].page : null
+		next = data[i + 1] ? data[i + 1].page : null
 	}
 }
-// end nav %>
+%>
+
+<nav class="project-nav<% if (!prev) { %><%- ' no-prev' %><% }
+		if (!next) { %><%- ' no-next' %><% } %>">
+
+<% // check for and display link to previous page
+	if (prev) { %>
+		<a href="<%= site.basePath %>/projects/<%= prev.slug %>" class="project-nav-prev">
+			<%= prev.title %>
+		</a>
+	<% } %>
+		<a href="<%= site.basePath %>/projects/#<%= page.category %>" class="project-nav-cat"><%= page.category %></a>
+		<a href="<%= site.basePath %>/projects/?year=<%= page.year %>" class="project-nav-year"><%= page.year %></a>
+	<%
+	// check for and display link to next page
+	if (next) { %>
+		<a href="<%= site.basePath %>/projects/<%= next.slug %>" class="project-nav-next">
+			<%= next.title %>
+		</a>
+	<% } %>
+</nav>
