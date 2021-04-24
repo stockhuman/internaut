@@ -8,7 +8,7 @@ tags: [client]
 year: 2014
 bg: 000000
 fg: ffffff
-tc: 0a0a0a
+tc: ffffff
 ---
 
 # Spain & Back Again
