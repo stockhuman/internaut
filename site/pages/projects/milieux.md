@@ -8,6 +8,7 @@ tags: [client, react, wordpress]
 year: 2018
 bg: 101010
 fg: F0F0F0
+tc: F0F0F0
 ---
 
 # Milieux
