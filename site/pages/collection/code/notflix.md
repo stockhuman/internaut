@@ -2,7 +2,7 @@
 title: Notflix
 layout: collection
 type: code
-date: 2017
+date: 2017-10-01
 tags: [joke]
 ---
 <figure>

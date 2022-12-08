@@ -2,9 +2,10 @@
 title: Links
 type: writing
 layout: collection
-date:
+date: 2016-01-01
 tags: [misc]
 ---
+
 [![thumbnail](http://lernertandsander.com/wp-content/uploads/2017/02/LS_Lernertandsander.jpg)](http://lernertandsander.com/ "Lerner and Sander")
 
 [AAF.NYC](http://aaf.nyc/)

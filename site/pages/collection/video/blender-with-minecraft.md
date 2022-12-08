@@ -2,7 +2,7 @@
 title: Blender but with Minecraft sounds
 type: video
 layout: collection
-date: 2019
+date: 2019-01-01
 tags: [misc]
 ---
 <figure>

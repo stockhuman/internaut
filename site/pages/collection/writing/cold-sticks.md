@@ -2,7 +2,7 @@
 title: Cold Sticks
 type: writing
 layout: collection
-date:
+date: 2014-01-01
 tags: [misc]
 ---
 

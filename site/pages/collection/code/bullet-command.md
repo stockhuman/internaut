@@ -2,7 +2,7 @@
 title: Bullet Command
 layout: collection
 type: code
-date: 2017
+date: 2017-11-01
 tags: [game]
 ---
 

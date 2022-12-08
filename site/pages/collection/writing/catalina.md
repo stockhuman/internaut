@@ -2,7 +2,7 @@
 title: Catalina
 type: writing
 layout: collection
-date: 2017
+date: 2017-04-26
 tags: [misc]
 ---
 

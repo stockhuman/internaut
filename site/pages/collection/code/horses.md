@@ -2,7 +2,7 @@
 title: Horse Website
 layout: collection
 type: code
-date: 2019
+date: 2019-01-01
 tags: [joke]
 ---
 

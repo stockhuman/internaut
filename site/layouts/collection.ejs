@@ -6,7 +6,7 @@
 			<article class="page collection">
 				<header>
 					<h1 class="page-title"><a href="/collection">☷</a> / <%= page.title%></h1>
-					<p ><%= page.type +', ' + page.date%></p>
+					<p ><%= page.type +', ' + new Date(page.date).getFullYear()%></p>
 				</header>
 				<%- body %>
 			</article>

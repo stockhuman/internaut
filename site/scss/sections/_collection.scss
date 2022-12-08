@@ -1,25 +1,36 @@
 .collection {
-	header {
-		h1 { margin-bottom: 2px; }
-		p {
-			font-family: monospace;
-			color: rgba($font-color, 0.6);
-		}
-	}
+  header {
+    h1 {
+      margin-bottom: 2px;
+    }
+    p {
+      font-family: monospace;
+      color: rgba($font-color, 0.6);
+    }
+  }
 
-	.card {
-		background: $white;
-		@extend %radius;
-		a {
+  .card {
+    // background: $white;
+    border: $white 1px solid;
+    @extend %radius;
+		margin: $navPad 0;
+		padding: $navPad;
+		line-height: 1;
+    display: block;
 
-			margin: $navPad 0;
-			padding: 1rem;
-
-			display: block;
-		}
-		&:hover, &:focus {
-			mix-blend-mode: exclusion;
-			background: khaki;
-		}
-	}
+    p {
+      margin: 0;
+			font-weight: 900;
+			letter-spacing: 1px;
+    }
+    span {
+			@include font-size($font-size-small);
+			font-family: 'Courier New', Courier, monospace;
+    }
+    &:hover,
+    &:focus {
+      mix-blend-mode: exclusion;
+      background: khaki;
+    }
+  }
 }
