@@ -11,21 +11,27 @@
 </div>
 
 <div class="projects">
-	<%# display all posts by category %>
-	<% for (let i = 0; i < site.projects.length; i++) {
-		const page = site.projects[i].page
-	%>
-		<a href="/projects/<%= page.slug %>" class="project card <%= page.category %>" style="background-color: #<%= page.tc %>">
-			<div class="card-image"
-				style="background-image: url('/assets/img/work/thumbs/dither-<%= page.slug %>.png.png');"
-			></div>
-			<div class="overlay">
-				<h3><%= page.title %></h3>
-				<p><%= page.description %></p>
-			</div>
-	  </a>
+  <%# display all posts by category %>
+  <% for (let i = 0; i < site.projects.length; i++) {
+    const page = site.projects[i].page %>
+  <a
+    href="/projects/<%= page.slug %>"
+    class="project card <%= Array.isArray(page.category) ? page.category.toString().replace(',', ' ') : page.category %>"
+    style="background-color: #<%= page.tc %>"
+    >
+    <div
+      class="card-image"
+      style="
+        background-image: url('/assets/img/work/thumbs/dither-<%= page.slug %>.png.png');
+      "
+    ></div>
+    <div class="overlay">
+      <h3><%= page.title %></h3>
+      <p><%= page.description %></p>
+    </div>
+  </a>
 
-	<% } // end loop %>
+  <% } // end loop %>
 </div>
 
 <script>
