@@ -37,7 +37,7 @@ Design progrssed quiqkly enough, and I managed to get tax stuff sorted out with 
 
 <figure>
 
-<div class="full-width-video"><iframe src="https://www.youtube.com/embed/mUlhX3W2Wz8" allowfullscreen="" width="560" height="315" frameborder="0"></iframe></div>
+<div class="full-width-video"><video src="/assets/video/yt/CAMPAIGN TRAIL - Launch Trailer.mp4" controls></video></div>
 
 </figure>
 
@@ -65,6 +65,4 @@ So the humor of the game was wrong, and I was loosing my mind with release sched
 
 It still sits there, among my files with all the art, the contracts and legal garbage, the cool icons and massive library of sound effects, ready for release.
 
-I think I might, too.
-
-<img alt="" src="/assets/img/work/campaigntrail/BernieHurt.png" style="image-rendering: crisp-edges"/>
+<img alt="" src="/assets/img/work/campaigntrail/BernieHurt.png" style="image-rendering: pixelated; image-rendering: crisp-edges"/>

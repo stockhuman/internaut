@@ -55,7 +55,7 @@ I owe so much of my drive to build to a podcast I was listening to at the time, 
 
 </figure>
 
-By 2016 I had decided on transitioning into a CMS [as detailed](http://photo.michaelhemingway.com/new-site-new-rythm/) in this old post of mine. With that project I taught myself better WordPress, after dipping my toes with the [the plant.](./the-plant)
+By 2016 I had decided on transitioning into a CMS [as detailed](https://photo.michaelhemingway.com/new-site-new-rythm/) in this old post of mine. With that project I taught myself better WordPress, after dipping my toes with the [the plant.](./the-plant)
 
 <figure>
 
@@ -65,4 +65,4 @@ By 2016 I had decided on transitioning into a CMS [as detailed](http://photo.mic
 
 </figure>
 
-A copy of the original site, and a more up-to-date one at that, lives [here](http://photo.michaelhemingway.com) on a subdomain. I invite you to discover it for yourselves.
+A copy of the original site, and a more up-to-date one at that, lives [here](https://photo.michaelhemingway.com) on a subdomain. I invite you to discover it for yourselves.

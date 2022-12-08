@@ -13,7 +13,7 @@ tc: ffff00
 
 # Amore
 
-A small UE4 game made for FLOP, available for a quick spin [here](https://flopmtl.itch.io/amore).
+A small UE4 game made for [FLOP](/projects/flop).
 
 <figure>
 	<img src="/assets/img/work/pasta/dither-pasta-1.png.png" />

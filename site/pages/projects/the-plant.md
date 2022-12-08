@@ -12,7 +12,7 @@ tc: FFFFFF
 ---
 # The Plant
 
-The plant is a long running project and service of mine. It's Dawson College's official student newspaper, publishing bi-weekly over print and daily online.
+The plant was a long running project and service of mine. It's Dawson College's official student newspaper, publishing bi-weekly over print and daily online.
 
 <figure><img alt="typography" src="/assets/img/work/theplant/dither-brand-identity.png.png"></figure>
 
