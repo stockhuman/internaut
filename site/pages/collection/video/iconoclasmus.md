@@ -5,9 +5,10 @@ layout: collection
 date: 2017
 tags: [misc]
 ---
+
 <figure>
 	<div class="full-width-video">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/Ue6IldR0SFs" frameborder="0" allowfullscreen></iframe>
+		<video src="/assets/video/yt/ICONOCLASMUS.mp4" controls>
 	</div>
 </figure>
 
