@@ -19,16 +19,6 @@
 	}
 }
 
-// deprecated! :D
-@mixin transition($transition) {
-	transition: ($transition);
-}
-
-// deprecated! :D
-@mixin transform($transform) {
-	transform: ($transform);
-}
-
 // via http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
 
 // usage:
