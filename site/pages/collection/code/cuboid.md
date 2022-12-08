@@ -2,12 +2,12 @@
 title: Cuboid
 layout: collection
 type: code
-date: 2017
+date: 2017-07-01
 tags: [misc]
 ---
 <figure>
 	<div class="full-width-video">
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/D9PiEJHEoeo" frameborder="0" allowfullscreen></iframe>
+		<video src="/assets/video/yt/Cuboid.mp4" controls></video>
 	</div>
 </figure>
 
