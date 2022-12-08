@@ -1,84 +1,92 @@
 .home {
-	padding-bottom: $navPad;
-	margin-top: 50vh;
+  padding-bottom: $navPad;
+  margin-top: 50vh;
 
-	.header {
-		max-width: 740px;
+  .header {
+    max-width: 740px;
     padding: 0 20px 0 20px;
     padding-bottom: 0px;
     margin: 0 auto 2rem auto;
-		h1 { margin-bottom: 2px; }
-		p {
-			font-size: 18px;
-			font-family: monospace;
-			display: inline;
-		}
-		.desc {
-			color: rgba($font-color, 0.6);
-		}
-	}
+    h1 {
+      margin-bottom: 2px;
+    }
+    p {
+      font-size: 18px;
+      font-family: monospace;
+      display: inline;
+    }
+    .desc {
+      color: rgba($font-color, 0.6);
+    }
+  }
 
-	.grid {
-		@extend %block;
-		margin-bottom: $navPad;
-		display: grid;
-		grid-template-columns: 1fr;
- 		grid-gap: $navPad;
-	}
+  .grid {
+    @extend %block;
+    margin-bottom: $navPad;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $navPad;
+  }
 }
 
 .home-item {
-	@extend %radius;
-	position: relative;
-	line-height: 0;
+  @extend %radius;
+  position: relative;
+  line-height: 0;
 
-	&:hover {
-		img {mix-blend-mode:exclusion}
-		.overlay {
-			opacity: .8;
-		}
-	}
+  &:hover {
+    img {
+      mix-blend-mode: exclusion;
+    }
+    .overlay {
+      opacity: 0.8;
+      @extend %radius;
+    }
+  }
 
-	.overlay {
-		position: absolute;
-		top: 0;
-		left:0;
-		bottom: 0;
-		right: 0;
-		background: black;
-		color: white;
-		opacity: 0;
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    opacity: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-	img {
-		background-blend-mode: hard-light;
-		mix-blend-mode: multiply;
-		object-fit: cover;
-		height: 400px;
-	}
+  img {
+    background-blend-mode: hard-light;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    height: 400px;
+  }
 
-	h2 {
-		font-size: 2rem;
-	}
+  h2 {
+    font-size: 2rem;
+  }
 
-	h2, p {
-		margin: $navPad;
-		line-height: 1.3;
-	}
+  h2,
+  p {
+    margin: $navPad;
+    line-height: 1.3;
+  }
 }
 
-@include media('>phablet') {
-	.home .grid { grid-template-columns: 1fr 1fr; }
+@include media(">phablet") {
+  .home .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 canvas {
-	transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 canvas.fade {
-	opacity: 0;
+  opacity: 0;
 }
