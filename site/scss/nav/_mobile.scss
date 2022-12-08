@@ -66,6 +66,7 @@
 		span { // UTF8 Icon
 			display: block;
 			font-weight: 100;
+			font-family: cursive; // fix chrome rendering issue.
 			font-size: $navIconSize;
 		}
 	}
