@@ -22,7 +22,6 @@ Experiments in 3D scanned faces (using the Microsoft Kinect V2 sensor) integrate
 <figcaption>3D designs of the facial scan integrated into a pot, sliced in two so as to allow for ease of removal once the concrete has been poured. The hoops allow both pieces to be secured externally.</figcaption>
 </figure>
 
-
 <figure>
 <img src="/assets/img/work/pots/dither-pot-01.jpg.png" alt="">
 <img src="/assets/img/work/pots/dither-bub0.jpg.png" alt="">

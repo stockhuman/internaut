@@ -10,6 +10,7 @@ bg: 000000
 fg: ffffff
 tc: fff
 ---
+
 # Bass Camp Fridays
 
 This project consisted primarily of banner designs for social media to promote the Bass Camp Fridays series of events, with sub-designs for each performer and gig.
@@ -25,6 +26,7 @@ The challenge largely lay in creating an attractive design in one solution that 
 
 ![](/assets/img/work/BCF/dither-bcf-banner-1.jpg.png)
 ![full Bass camp fridays design](/assets/img/work/BCF/dither-bcf.png.png)
+
 <figcaption>Final branding deliverables</figcaption>
 </figure>
 

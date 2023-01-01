@@ -5,6 +5,7 @@ type: code
 date: 2017-07-01
 tags: [misc]
 ---
+
 <figure>
 	<div class="full-width-video">
 		<video src="/assets/video/yt/Cuboid.mp4" controls></video>

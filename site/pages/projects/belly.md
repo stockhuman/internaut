@@ -14,7 +14,7 @@ tc: ADAD7F
 
 # Belly
 
-Belly, from *belly gunner*, is a short anti-game about the expectations in games. View the game in it's entirety below.
+Belly, from _belly gunner_, is a short anti-game about the expectations in games. View the game in it's entirety below.
 
 <figure>
 	<video controls>

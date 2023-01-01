@@ -16,10 +16,9 @@ tc: add8e6
 
 The notion that internet browsing has any carbon impact at all is largely completely foreign to your average netizen.
 
-Indeed, online browsing, or other computer-related behavior is   generally thought of as carbon neutral, with perhaps some minor concern for the carbon impact of shipping and manufacturing the initial components.
+Indeed, online browsing, or other computer-related behavior is generally thought of as carbon neutral, with perhaps some minor concern for the carbon impact of shipping and manufacturing the initial components.
 
 This project aims to educate and illustrate in a jovial manner, the electrical costs running major services entails, and how that is affected by local and international power delivery.
-
 
 <figure>
 	<img alt="" src="/assets/img/work/data-falls/dither-df-01.png.png" />

@@ -1,34 +1,34 @@
 body {
-	width: 100%;
-	font-family: 'Source Code Pro', monospace;
-	background:  #010101;
-	color: #F4FFFD;
+  width: 100%;
+  font-family: 'Source Code Pro', monospace;
+  background: #010101;
+  color: #f4fffd;
 }
 
 #logo {
-	width: 100px;
+  width: 100px;
 }
 
 #info {
-	margin-top: 10%;
-	padding: 0.5em;
+  margin-top: 10%;
+  padding: 0.5em;
 }
 
 button {
-	border: 1px solid #F4FFFD;
-	background: transparent;
-	color: #F4FFFD;
-	padding: 10px 30px 10px 30px;
-	margin-right: 10px;
-	border-radius: 2px;
-	cursor: pointer;
+  border: 1px solid #f4fffd;
+  background: transparent;
+  color: #f4fffd;
+  padding: 10px 30px 10px 30px;
+  margin-right: 10px;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 button.primary {
-	color: #010101;
-	background: #F4FFFD;
+  color: #010101;
+  background: #f4fffd;
 }
 
 video {
-	margin: 1em;
+  margin: 1em;
 }

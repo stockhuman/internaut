@@ -21,7 +21,6 @@ TPW was a freely accesible, open-source repository of user-categorised online pu
 	<figcaption>The selected logo, whilst perhaps a little strange, captured to me the ideas of stratified quantities within a network.</figcaption>
 </figure>
 
-
 ## But what about "x"?
 
 A small number of other sites have approached the task of categorizing our digital media landscape with various methodologies and degrees of completeness.

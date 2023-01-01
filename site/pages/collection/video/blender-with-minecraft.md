@@ -5,6 +5,7 @@ layout: collection
 date: 2019-01-01
 tags: [misc]
 ---
+
 <figure>
 	<div class="full-width-video">
 		<video allowfullscreen controls>

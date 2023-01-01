@@ -47,10 +47,10 @@ I found the [speculation as to the plane's origins](http://www.mekshat.com/vb/sh
 
 28°05'27.02"N 34°36'30.93"E - The PBY Catalina N5593V
 
-
 ---
 
 ## Mid-2019 Update
+
 It is now a marked place on google maps! At some point between writing this piece and my research, perhaps somewhere in that Saudi forum, somebody placed a [named pin](https://www.google.com/maps/place/Catalina+Seaplane+Wreckage/@28.0907034,34.6086504,19z/data=!4m8!1m2!3m1!2sCatalina+Seaplane+Wreckage!3m4!1s0x15acae9779777713:0x8477934a276d45da!8m2!3d28.0907712!4d34.6087092), Unfortunately, the condition of the vessel has deteriorated considerably: the tail is no longer attached, and some enterprising Saudi has made off with a wheel. The tail is also curiously very far from the main craft. Erosion is slowly eating this plane, but it's hard to imagine how it would get so far in three short years.
 
 It's now also covered in far more arabic graffiti, which makes for a very odd culture mashup.

@@ -5,9 +5,11 @@ type: code
 date: 2017-10-01
 tags: [joke]
 ---
+
 <figure>
 
 ![main screen](/assets/img/collection/notflix-01.jpg)
+
 </figure>
 
 Made in collaboration with Jack Harrison at Concordia University.
@@ -16,7 +18,6 @@ Made in collaboration with Jack Harrison at Concordia University.
 ![main screen](/assets/img/collection/notflix-03.png)
 
 Upon clicking any movie, one's taken to a page with the following poem:
-
 
 "Sorry.
 

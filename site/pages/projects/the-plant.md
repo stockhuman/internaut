@@ -10,6 +10,7 @@ bg: ED254E
 fg: EEEEEE
 tc: FFFFFF
 ---
+
 # The Plant
 
 The plant was a long running project and service of mine. It's Dawson College's official student newspaper, publishing bi-weekly over print and daily online.
@@ -55,7 +56,7 @@ The team that first organised the move cited a want for social integration featu
 
 I am absolutely delighted to learn that the curiosities section has lived on in this new iteration. I am even more so thrilled to see that the horoscopes I started have since continued under that banner. However, to my great dismay, my work writing such winning lines as
 
-> Sagittarius: Happy birthday, oh person who had a birthday recently.  Know that if you ever become famous or powerful, your birthday will be celebrated more.
+> Sagittarius: Happy birthday, oh person who had a birthday recently. Know that if you ever become famous or powerful, your birthday will be celebrated more.
 
 and
 

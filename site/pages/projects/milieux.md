@@ -21,5 +21,4 @@ On the backend, pain points and server misconfigurations were identified to dram
 
 Additionally, [Milieux-blocks](https://github.com/stockHuman/milieux-blocks) can be found here, showcasing the heavy React & REST API integration of the Gutenberg project and this theme.
 
-
 ![XD mockups](/assets/img/work/milieux/dither-design-all.png.png)
