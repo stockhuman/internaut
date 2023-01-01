@@ -12,34 +12,36 @@
     "lint": "eslint \"./{lib,test}/**/*.js\"",
     "start": "node ./lib/cli.js start",
     "push": "node ./lib/cli.js push",
-    "build": "cross-env NODE_ENV=production node ./lib/cli.js build --cleanUrls=false"
+    "build": "cross-env NODE_ENV=production node ./lib/cli.js build --cleanUrls=false",
+    "format": "prettier --write ."
   },
   "engines": {
     "node": ">=12.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/plugin-transform-runtime": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/runtime": "^7.13.10",
+    "@babel/core": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/runtime": "^7.20.7",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
-    "chalk": "^4.1.0",
-    "chokidar": "^3.5.1",
+    "chalk": "^5.2.0",
+    "chokidar": "^3.5.3",
     "cross-env": "^7.0.3",
-    "ejs": "^3.1.6",
-    "eslint": "^7.24.0",
-    "eslint-config-prettier": "^8.2.0",
-    "fast-glob": "^3.2.5",
+    "ejs": "^3.1.8",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.5.0",
+    "fast-glob": "^3.2.12",
     "front-matter": "^4.0.2",
-    "fs-extra": "^9.1.0",
-    "live-server": "^1.2.2",
+    "fs-extra": "^11.1.0",
+    "live-server": "^1.1.0",
     "lodash.debounce": "^4.0.8",
-    "marked": "^2.0.3",
-    "meow": "^9.0.0",
-    "sass": "^1.32.10",
-    "sharp": "^0.28.1",
-    "ssh2-sftp-client": "^6.0.1",
-    "terser": "^5.6.1"
-  }
+    "marked": "^4.2.5",
+    "meow": "^11.0.0",
+    "prettier": "^2.8.1",
+    "sass": "^1.57.1",
+    "sharp": "^0.31.3",
+    "terser": "^5.16.1"
+  },
+  "type": "module"
 }
