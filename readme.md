@@ -24,7 +24,7 @@ Building steps individually is performed by passing a value to the `only` flag a
 node ./lib/cli.js --only=dither
 ```
 
-Sharp [reccomends](https://sharp.pixelplumbing.com/install#linux-memory-allocator) [swapping malloc](https://github.com/lovell/sharp/issues/1041) implementations as follows, allowing the `dither` step to run as expected.
+Sharp [recommends](https://sharp.pixelplumbing.com/install#linux-memory-allocator) [swapping malloc](https://github.com/lovell/sharp/issues/1041) implementations as follows, allowing the `dither` step to run as expected.
 
 ```sh
 apt-get install libjemalloc2 # as necessary
