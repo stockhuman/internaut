@@ -12,13 +12,13 @@
 
 @include media('>tablet') {
   .container {
-    left: $navWidth + $navPad*2;
+    left: $navWidth + $navPad * 2;
   }
 }
 
 @include media('>ultrawide') {
   .container {
-    left: $navWidthExpanded + $navPad*2;
+    left: $navWidthExpanded + $navPad * 2;
   }
 }
 

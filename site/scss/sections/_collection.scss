@@ -13,19 +13,19 @@
     // background: $white;
     border: $white 1px solid;
     @extend %radius;
-		margin: $navPad 0;
-		padding: $navPad;
-		line-height: 1;
+    margin: $navPad 0;
+    padding: $navPad;
+    line-height: 1;
     display: block;
 
     p {
       margin: 0;
-			font-weight: 900;
-			letter-spacing: 1px;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
     span {
-			@include font-size($font-size-small);
-			font-family: 'Courier New', Courier, monospace;
+      @include font-size($font-size-small);
+      font-family: 'Courier New', Courier, monospace;
     }
     &:hover,
     &:focus {

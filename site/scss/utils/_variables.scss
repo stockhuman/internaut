@@ -1,6 +1,6 @@
 // NAVIGATION
-$navPad   : 0.5rem;
-$navWidth : 3.6rem; // 55px
+$navPad: 0.5rem;
+$navWidth: 3.6rem; // 55px
 
 $navSpeedHeight: 0.35s;
 $navSpeedWidth: 0.5s;
@@ -9,68 +9,67 @@ $navSpeedFG: 2s;
 $navTimings: $navSpeedHeight, $navSpeedWidth, $navSpeedBG, $navSpeedFG;
 
 // ---
-$navWidthExpanded : 30rem;
+$navWidthExpanded: 30rem;
 
 // computed
-$navIconSize : math.div($navWidth, 2.3);
-
+$navIconSize: math.div($navWidth, 2.3);
 
 // Z-Index
 //---------------
 
 // Usage: "z-index: map-get($z-index, 'nav');"
-$z-index:(
-	'base'   : 0,
-	'one'    : 10,
-	'two'    : 20,
-	'three'  : 30,
-	'nav'    : 30,
-	'four'   : 40,
-	'five'   : 60,
-	'super'  : 70
+$z-index: (
+  'base': 0,
+  'one': 10,
+  'two': 20,
+  'three': 30,
+  'nav': 30,
+  'four': 40,
+  'five': 60,
+  'super': 70,
 );
 
 // Colors
 // -------------------------
 
 // General definitions
-$white :        white;
-$black :        black;
+$white: white;
+$black: black;
 
-$gray-darker:   #222;
-$gray-dark:     #292F35;
-$gray:          #616161;
-$gray-light:    #979797;
-$gray-lighter:  #f7f7f7;
+$gray-darker: #222;
+$gray-dark: #292f35;
+$gray: #616161;
+$gray-light: #979797;
+$gray-lighter: #f7f7f7;
 
 // Brand Colors
-$brand:      #004ba8;
-$secondary:  yellow;
-$tertiary:	#022b3a;
+$brand: #004ba8;
+$secondary: yellow;
+$tertiary: #022b3a;
 
 // UI Associations
 $background-color: #94dbb9;
 $nav-default-color: #4c6663;
 
-$border-color:	#efefef;
-$link-color: 	  $brand;
-$font-color: 		#022b3a;
+$border-color: #efefef;
+$link-color: $brand;
+$font-color: #022b3a;
 
 $scrollbar-cursor: $font-color;
 $scrollbar-background: darken($background-color, 10%);
 //$background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
 
 // social media colors
-$twitter-color:  #00aced;
+$twitter-color: #00aced;
 $facebook-color: #3b5998;
-$google-color:   #dd4b39;
+$google-color: #dd4b39;
 
 // Typography
 // -------------------------
 
-$font-stack: 					 sans-serif;
-$font-heading:         'Times New Roman', Times, serif;
-$font-sans-serif:      'Helvetica Neue LT Std', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-stack: sans-serif;
+$font-heading: 'Times New Roman', Times, serif;
+$font-sans-serif: 'Helvetica Neue LT Std', 'Helvetica Neue', 'Helvetica', sans-serif;
 $font-sans-serif-bold: sans-serif;
 
 $ultra-light: 200;
@@ -95,33 +94,33 @@ $font-size-h6: 12;
 // Easing
 // -------------------------
 
-$linear:         cubic-bezier(0.250, 0.250, 0.750, 0.750);
-$easeInQuad:     cubic-bezier(0.550, 0.085, 0.680, 0.530);
-$easeInCubic:    cubic-bezier(0.550, 0.055, 0.675, 0.190);
-$easeInQuart:    cubic-bezier(0.895, 0.030, 0.685, 0.220);
-$easeInQuint:    cubic-bezier(0.755, 0.050, 0.855, 0.060);
-$easeInSine:     cubic-bezier(0.470, 0.000, 0.745, 0.715);
-$easeInExpo:     cubic-bezier(0.950, 0.050, 0.795, 0.035);
-$easeInCirc:     cubic-bezier(0.600, 0.040, 0.980, 0.335);
-$easeInBack:     cubic-bezier(0.600, 0, 0.735, 0.045);
+$linear: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeInBack: cubic-bezier(0.6, 0, 0.735, 0.045);
 
-$easeOutQuad:    cubic-bezier(0.250, 0.460, 0.450, 0.940);
-$easeOutCubic:   cubic-bezier(0.215, 0.610, 0.355, 1.000);
-$easeOutQuart:   cubic-bezier(0.165, 0.840, 0.440, 1.000);
-$easeOutQuint:   cubic-bezier(0.230, 1.000, 0.320, 1.000);
-$easeOutSine:    cubic-bezier(0.390, 0.575, 0.565, 1.000);
-$easeOutExpo:    cubic-bezier(0.190, 1.000, 0.220, 1.000);
-$easeOutCirc:    cubic-bezier(0.075, 0.820, 0.165, 1.000);
-$easeOutBack:    cubic-bezier(0.175, 0.885, 0.320, 1);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1);
 
-$easeInOutQuad:  cubic-bezier(0.455, 0.030, 0.515, 0.955);
-$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
-$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
-$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
-$easeInOutSine:  cubic-bezier(0.445, 0.050, 0.550, 0.950);
-$easeInOutExpo:  cubic-bezier(1.000, 0.000, 0.000, 1.000);
-$easeInOutCirc:  cubic-bezier(0.785, 0.135, 0.150, 0.860);
-$easeInOutBack:  cubic-bezier(0.680, 0, 0.265, 1);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$easeInOutBack: cubic-bezier(0.68, 0, 0.265, 1);
 
 // Misc
 // -------------------------
@@ -134,10 +133,10 @@ $global-padding: 2rem;
 
 $breakpoints: (
   'phone': 320px,
-	'phablet': 550px,
+  'phablet': 550px,
   'tablet': 768px,
   'desktop': 1024px,
-	'ultrawide': 1920px
+  'ultrawide': 1920px,
 ) !default;
 
 $media-expressions: (
@@ -147,7 +146,7 @@ $media-expressions: (
   'landscape': '(orientation: landscape)',
   'portrait': '(orientation: portrait)',
   'retina2x': '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
-  'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)'
+  'retina3x': '(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi)',
 ) !default;
 
 //Grid Variables
@@ -161,7 +160,7 @@ $column-margin: 4% !default; // space between columns
 $unit-intervals: (
   'px': 1,
   'em': 0.01,
-  'rem': 0.1
+  'rem': 0.1,
 ) !default;
 
 $im-media-support: true !default;

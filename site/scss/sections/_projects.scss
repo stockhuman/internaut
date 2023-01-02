@@ -1,83 +1,85 @@
 /* */
 
 .projects {
-	margin-bottom: $navPad;
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: $navPad;
-	@extend %block;
+  margin-bottom: $navPad;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $navPad;
+  @extend %block;
 }
 
 // this is an a tag
 .project {
-	@extend %radius;
-	overflow: hidden;
-	max-height: 40vh;
-	height: 400px;
-	position: relative;
+  @extend %radius;
+  overflow: hidden;
+  max-height: 40vh;
+  height: 400px;
+  position: relative;
 
-	&:hover {
-		.card-image{mix-blend-mode:exclusion}
-		.overlay {
-			opacity: .8;
-		}
-	}
-	.overlay {
-		position: absolute;
-		top: 0;
-		left:0;
-		bottom: 0;
-		right: 0;
-		background-color: black;
-		color: white;
-		opacity: 0;
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		transition: ease-in-out .25s opacity;
-	}
+  &:hover {
+    .card-image {
+      mix-blend-mode: exclusion;
+    }
+    .overlay {
+      opacity: 0.8;
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    opacity: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: ease-in-out 0.25s opacity;
+  }
 
-	h3, p {
-		margin: $navPad;
-	}
+  h3,
+  p {
+    margin: $navPad;
+  }
 }
 
 .card-image {
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-blend-mode: hard-light;
-	mix-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: hard-light;
+  mix-blend-mode: multiply;
 }
 
 #project-filters {
-	text-align: center;
-	margin: 3rem;
-	a {
-		display: inline-block;
-		padding: 8px;
-		margin-bottom: 7px;
-	}
+  text-align: center;
+  margin: 3rem;
+  a {
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 7px;
+  }
 }
 
-
 @include media('>tablet') {
-	.projects {
-		grid-template-columns: 1fr 1fr;
-	}
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @include media('>desktop') {
-	.projects {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @include media('>ultrawide') {
-	.projects {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
+  .projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

@@ -1,56 +1,58 @@
 .dark-theme {
-	background: $gray-darker;
-	color: $gray-lighter;
-	scrollbar-color: $scrollbar-background $scrollbar-cursor;
+  background: $gray-darker;
+  color: $gray-lighter;
+  scrollbar-color: $scrollbar-background $scrollbar-cursor;
 
-	&::-webkit-scrollbar-thumb:vertical {
-  	background-color: $scrollbar-background;
-	}
+  &::-webkit-scrollbar-thumb:vertical {
+    background-color: $scrollbar-background;
+  }
 
-	&::-webkit-scrollbar {
-		background: $scrollbar-cursor;
-	}
+  &::-webkit-scrollbar {
+    background: $scrollbar-cursor;
+  }
 
-	.home .header .desc,
-	.button, button {
-		color: $gray-lighter
-	}
+  .home .header .desc,
+  .button,
+  button {
+    color: $gray-lighter;
+  }
 
-	article.page {
-		color: $gray-lighter;
-	}
+  article.page {
+    color: $gray-lighter;
+  }
 
-	footer {
-		background: $black;
-	}
+  footer {
+    background: $black;
+  }
 
-	.tgl-light:checked + .tgl-btn {
-		background: $gray-darker;
-	}
+  .tgl-light:checked + .tgl-btn {
+    background: $gray-darker;
+  }
 
-	.collection .card a {
-		background: $black;
-	}
-	article p > a[href^="http"]::before {
-		background: $brand;
-	}
+  .collection .card a {
+    background: $black;
+  }
+  article p > a[href^='http']::before {
+    background: $brand;
+  }
 
-	::-moz-selection {
-		background: $white;
-		color: $brand;
-	}
+  ::-moz-selection {
+    background: $white;
+    color: $brand;
+  }
 
-	::selection {
-		background: $black;
-		color: $brand;
-	}
-	header.cover {
-		background-color: #aaa;
-		border-radius: $global-radius;
-	}
+  ::selection {
+    background: $black;
+    color: $brand;
+  }
+  header.cover {
+    background-color: #aaa;
+    border-radius: $global-radius;
+  }
 
-	// makes images less likely to blend into a dark background
-	article.page img[src*="dither"], article.page .cssbg[style*="dither"] {
-		mix-blend-mode: lighten;
-	}
+  // makes images less likely to blend into a dark background
+  article.page img[src*='dither'],
+  article.page .cssbg[style*='dither'] {
+    mix-blend-mode: lighten;
+  }
 }
