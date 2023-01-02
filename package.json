@@ -11,7 +11,6 @@
   "scripts": {
     "lint": "eslint \"./{lib,test}/**/*.js\"",
     "start": "node ./lib/cli.js start",
-    "push": "node ./lib/cli.js push",
     "build": "cross-env NODE_ENV=production node ./lib/cli.js build --cleanUrls=false",
     "format": "prettier --write ."
   },
@@ -31,6 +30,7 @@
     "ejs": "^3.1.8",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
     "fast-glob": "^3.2.12",
     "front-matter": "^4.0.2",
     "fs-extra": "^11.1.0",

@@ -9,5 +9,9 @@
     "es6": true,
     "node": true,
     "amd": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   }
 }
