@@ -30,4 +30,12 @@ Experiments in 3D scanned faces (using the Microsoft Kinect V2 sensor) integrate
 <figcaption>Initial cast ran out of concrete, so was dried at an angle to allow for the face to be fully rendered.</figcaption>
 </figure>
 
+<figure>
+	<div class="full-width-video">
+		<video src="/assets/video/yt/Concrete face reveal.mp4" controls>
+	</div>
+</figure>
+
+
+
 The experiment was a success.
