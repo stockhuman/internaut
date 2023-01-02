@@ -30,7 +30,7 @@ setTimeout(() => {
 
 // draw the emoji
 function draw(e) {
-  let emoji = ['😜', '😂', '😍']
+  let emoji = ['😜', '😊', '😍', '🤨', '😴']
   let d = emoji[Math.floor(Math.random() * emoji.length)]
   context.rotate(Math.PI / Math.random())
   context.font = 6 + Math.random() * 100 + 'px serif'
