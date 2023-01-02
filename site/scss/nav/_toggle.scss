@@ -4,33 +4,33 @@
   height: $navWidth;
   width: $navWidth;
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 0; // change to left for alternate look
-  padding: $navPad*1.5;
+  padding: $navPad * 1.5;
   span {
     position: absolute;
     height: 2px;
-    width: $navWidth/3.4;
+    width: math.div($navWidth, 3.4);
     background: currentColor;
-    transition: transform .1s $easeOutQuint, position .1s $easeOutQuint;
+    transition: transform 0.1s $easeOutQuint, position 0.1s $easeOutQuint;
 
     &:nth-child(1) {
-      top: $navPad*2.7;
+      top: $navPad * 2.7;
     }
 
     &:nth-child(2) {
-      top: $navPad*2.7;
-      left: $navWidth/2;
+      top: $navPad * 2.7;
+      left: math.div($navWidth, 2);
     }
 
     &:nth-child(3) {
-      top: $navPad*4.2;
-      right: $navWidth/2.7;
+      top: $navPad * 4.2;
+      right: math.div($navWidth, 2.7);
     }
 
     &:nth-child(4) {
-      top: $navPad*4.2;
-      left: $navWidth/2;
+      top: $navPad * 4.2;
+      left: math.div($navWidth, 2);
     }
   }
 }
@@ -45,22 +45,21 @@
       }
 
       &:nth-child(4) {
-        left: $navWidth/3.5;
+        left: math.div($navWidth, 3.5);
       }
     }
   }
 }
 
 .nav-is-open {
-
   #nav-toggle span {
     &:nth-child(1) {
       transform: rotate(45deg);
-      left: 13px
+      left: 13px;
     }
     &:nth-child(2) {
       transform: rotate(-45deg);
-      left: $navWidth/2.2
+      left: math.div($navWidth, 2.2);
     }
     &:nth-child(3) {
       transform: rotate(-45deg);
@@ -68,7 +67,7 @@
     }
     &:nth-child(4) {
       transform: rotate(45deg);
-      left: $navWidth/2.2
+      left: math.div($navWidth, 2.2);
     }
   }
 }

@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 #nav-main {
 	position: fixed;
 	z-index: map-get($z-index, 'nav');
@@ -114,7 +116,7 @@
 .nav-social-link {
 	flex-grow: 1;
 	a span {
-		font-size: $navIconSize/1.2;
+		font-size: math.div($navIconSize, 1.2);
 	}
 }
 

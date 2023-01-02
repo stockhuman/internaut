@@ -1,6 +1,6 @@
 // MIXINS
 @mixin font-size($font-size) {
-	font-size: ($font-size / $font-size-base) *1rem; // REM caniuse @ 98%
+	font-size: math.div($font-size, $font-size-base) *1rem; // REM caniuse @ 98%
 }
 
 @mixin center-block {

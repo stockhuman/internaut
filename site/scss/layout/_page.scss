@@ -1,120 +1,125 @@
 // Cover (featured image)
 header.cover {
-	text-align: center;
-	svg {
-		max-height: 80vh;
-		text-align: center; // fix for FF & Edge
-	}
-	canvas {
-		overflow: hidden; // fix weird overflow issue
-	}
+  text-align: center;
+  svg {
+    max-height: 80vh;
+    text-align: center; // fix for FF & Edge
+  }
+  canvas {
+    overflow: hidden; // fix weird overflow issue
+  }
 }
 
 .cssbg {
-	display: flex;
-	width: 100%;
-	height: 65.5vw;
-	background-size: cover;
-	background-position: 50% 0;
-	border-radius: $global-radius;
+  display: flex;
+  width: 100%;
+  height: 65.5vw;
+  background-size: cover;
+  background-position: 50% 0;
+  border-radius: $global-radius;
 }
 
 // icons as headers
 .page-title {
-	margin-top: $navWidth;
-	font-family: 'Arial Unicode MS', sans-serif;
+  margin-top: $navWidth;
+  font-family: 'Arial Unicode MS', sans-serif;
 }
 
 article.page {
-	max-width: 740px;
-	padding: 0 20px 0 20px;
-	margin: 0 auto;
-	@include font-size(28);
-	color: lighten($black, 17%);
-	line-height: 1.5;
-	padding-bottom: $navWidth;
+  max-width: 740px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+  @include font-size(28);
+  color: lighten($black, 17%);
+  line-height: 1.5;
+  padding-bottom: $navWidth;
 
-	// images
-	figure {
-		overflow: hidden;
-		padding: $navWidth $navPad $navWidth $navPad;
-		margin: 0 -1.6rem 0 -1.6rem; // magic number...
-		iframe {
-			border-radius: $global-radius;
-		}
-	}
+  // images
+  figure {
+    overflow: hidden;
+    padding: $navWidth $navPad $navWidth $navPad;
+    margin: 0 -1.6rem 0 -1.6rem; // magic number...
+    iframe {
+      border-radius: $global-radius;
+    }
+  }
 }
 
 .project-nav {
-	margin-top: $navPad;
-	margin-bottom: $navWidth * 2;
-	position: relative;
-	text-align: center;
-	font-family: monospace;
+  margin-top: $navPad;
+  margin-bottom: $navWidth * 2;
+  position: relative;
+  text-align: center;
+  font-family: monospace;
 
-	a[class^='project-nav-'] {
-		padding: $navWidth/3;
-		width: 50%;
-		transition: color .2s;
-		float: left;
-		@extend %radius;
-		&:hover {
-			color: $gray;
-		}
-	}
+  a[class^='project-nav-'] {
+    padding: math.div($navWidth, 3);
+    width: 50%;
+    transition: color 0.2s;
+    float: left;
+    @extend %radius;
+    &:hover {
+      color: $gray;
+    }
+  }
 
-	.project-nav-next, .project-nav-prev {
-		transition: background .2s ease;
-		&:hover {
-			background: darken($gray-lighter, 5%);
-		}
-	}
+  .project-nav-next,
+  .project-nav-prev {
+    transition: background 0.2s ease;
+    &:hover {
+      background: darken($gray-lighter, 5%);
+    }
+  }
 
-	.project-nav-next {
-		&::after {
-			float: right;
-			content: "⇀";
-		}
-	}
+  .project-nav-next {
+    &::after {
+      float: right;
+      content: '⇀';
+    }
+  }
 
-	.project-nav-prev {
-		&::before {
-			float: left;
-			content: "↽";
-		}
-	}
+  .project-nav-prev {
+    &::before {
+      float: left;
+      content: '↽';
+    }
+  }
 
-	.project-nav-year, .project-nav-cat {
-		display: none;
-	}
+  .project-nav-year,
+  .project-nav-cat {
+    display: none;
+  }
 
-	// &.no-next {}
-	&.no-prev {
-		margin-left: 25%;
-		.project-nav-next, .project-nav-cat, .project-nav-year {
-			float: left;
-		}
-	}
+  // &.no-next {}
+  &.no-prev {
+    margin-left: 25%;
+    .project-nav-next,
+    .project-nav-cat,
+    .project-nav-year {
+      float: left;
+    }
+  }
 }
 
 @include media('>tablet') {
-	article.page{
-		figure img {
-			border-radius: 2px; // add a rounded corner when the image doesn't size edge to edge
-		}
-	}
-	.project-nav a[class^='project-nav-'] {
-		width: 25%;
-	}
-	.project-nav .project-nav-year, .project-nav .project-nav-cat {
-		display: block;
-	}
+  article.page {
+    figure img {
+      border-radius: 2px; // add a rounded corner when the image doesn't size edge to edge
+    }
+  }
+  .project-nav a[class^='project-nav-'] {
+    width: 25%;
+  }
+  .project-nav .project-nav-year,
+  .project-nav .project-nav-cat {
+    display: block;
+  }
 }
 
 @include media('>desktop') {
-	article.page{
-		figure {
-			margin: 0 -15% 0 -15%; // magic number...
-		}
-	}
+  article.page {
+    figure {
+      margin: 0 -15% 0 -15%; // magic number...
+    }
+  }
 }

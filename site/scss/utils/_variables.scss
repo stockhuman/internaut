@@ -12,7 +12,7 @@ $navTimings: $navSpeedHeight, $navSpeedWidth, $navSpeedBG, $navSpeedFG;
 $navWidthExpanded : 30rem;
 
 // computed
-$navIconSize : $navWidth/2.3;
+$navIconSize : math.div($navWidth, 2.3);
 
 
 // Z-Index
@@ -155,7 +155,7 @@ $container-width: 960px !default;
 $container-width-larger-than-mobile: 85% !default;
 $container-width-larger-than-phablet: 80% !default;
 $total-columns: 12 !default;
-$column-width: 100 / $total-columns !default;
+$column-width: math.div(100, $total-columns) !default;
 $column-margin: 4% !default; // space between columns
 
 $unit-intervals: (

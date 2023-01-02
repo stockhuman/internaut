@@ -1,27 +1,31 @@
 form {
-	display: flex;
-	flex-flow: wrap;
+  display: flex;
+  flex-flow: wrap;
 }
 
 textarea {
-	flex-grow: 5;
+  flex-grow: 5;
   display: block;
   height: auto;
   width: 100%;
   resize: vertical;
 }
 
-input, textarea, button, .button {
-	padding: 1rem;
-	margin: 0.5em 0;
-	@extend %radius;
+input,
+textarea,
+button,
+.button {
+  padding: 1rem;
+  margin: 0.5em 0;
+  @extend %radius;
 }
 
-.button, button {
+.button,
+button {
   border: 1px $gray-dark solid;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   &:hover {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -48,7 +52,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 @mixin track {
   cursor: default;
   height: $track-height;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   width: $track-width;
 }
 
@@ -68,7 +72,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 [type='range'] {
   -webkit-appearance: none;
   background: transparent;
-  margin: $thumb-height / 2 0;
+  margin: math.div($thumb-height, 2) 0;
   width: $track-width;
 
   &::-moz-focus-outer {
@@ -100,14 +104,14 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   &::-webkit-slider-thumb {
     @include thumb;
     -webkit-appearance: none;
-    margin-top: ((-$track-border-width * 2 + $track-height) / 2 - $thumb-height / 2);
+    margin-top: math.div((-$track-border-width * 2 + $track-height), 2) - math.div($thumb-height, 2);
   }
 
   &::-moz-range-track {
     @include track;
     background: $track-color;
     border-radius: $track-radius;
-    height: $track-height / 2;
+    height: math.div($track-height, 2);
   }
 
   &::-moz-range-thumb {
@@ -118,7 +122,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     @include track;
     background: transparent;
     border-color: transparent;
-    border-width: ($thumb-height / 2) 0;
+    border-width: math.div($thumb-height, 2) 0;
     color: transparent;
   }
 
@@ -134,7 +138,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
   &::-ms-thumb {
     @include thumb(-4);
-    margin-top: $track-height / 4;
+    margin-top: math.div($track-height, 4);
   }
 
   &:disabled {
@@ -164,55 +168,54 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   }
 }
 
-
 .tgl {
-	display: none;
-	+ .tgl-btn {
-		outline: 0;
-		display: block;
-		width: 4em;
-		height: 1.7em;
-		position: relative;
-		cursor: pointer;
+  display: none;
+  + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 1.7em;
+    position: relative;
+    cursor: pointer;
     user-select: none;
-		&:after,
+    &:after,
     &:before {
-			position: relative;
-			display: block;
-			content: "";
-			width: 1.4em;
-			height: 1.4em;
-		}
+      position: relative;
+      display: block;
+      content: '';
+      width: 1.4em;
+      height: 1.4em;
+    }
 
-		&:after {
-			left: 0;
-		}
+    &:after {
+      left: 0;
+    }
 
-		&:before {
-			display: none;
-		}
-	}
+    &:before {
+      display: none;
+    }
+  }
 
-	&:checked + .tgl-btn:after {
-		left: 2.3em;
-	}
+  &:checked + .tgl-btn:after {
+    left: 2.3em;
+  }
 }
 
 // themes
 .tgl-light {
-	+ .tgl-btn {
-		background: $gray-lighter;
-		border-radius: 1.5em;
-		padding: 2px;
-		transition: all .4s ease;
-		&:after {
-			border-radius: 50%;
-			background: $gray-light;
-			transition: all .2s ease;
-		}
-	}
+  + .tgl-btn {
+    background: $gray-lighter;
+    border-radius: 1.5em;
+    padding: 2px;
+    transition: all 0.4s ease;
+    &:after {
+      border-radius: 50%;
+      background: $gray-light;
+      transition: all 0.2s ease;
+    }
+  }
 
-	&:checked + .tgl-btn {
-		background:$black;
-	}
+  &:checked + .tgl-btn {
+    background: $black;
+  }
 }
