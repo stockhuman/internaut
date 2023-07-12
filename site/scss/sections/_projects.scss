@@ -4,6 +4,7 @@
   margin-bottom: $navPad;
   display: grid;
   grid-template-columns: 1fr;
+  flex-grow: 1;
   gap: $navPad;
   @extend %block;
 }
