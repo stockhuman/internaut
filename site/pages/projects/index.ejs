@@ -3,6 +3,7 @@
 
 <div id="project-filters">
 	<a href="#" data-filter="*">All</a>
+	<a href="#hardware" data-filter="hardware">Hardware</a>
 	<a href="#web" data-filter="web">Web Design</a>
 	<a href="#code" data-filter="code">Programming</a>
 	<a href="#game" data-filter="game">Game Design</a>
@@ -37,26 +38,40 @@
 <script>
 const items = document.querySelectorAll('.project')
 const filters = document.getElementById('project-filters').querySelectorAll('a')
-let currentFilter = '*'
+let currentFilter = new URL(document.URL).hash.replace('#', '') || '*'
 
 filters.forEach(filter => {
 	filter.addEventListener('click', () => {
 		currentFilter = filter.attributes['data-filter'].value
 		show()
+		highlight()
 	})
 });
 
+function highlight () {
+	filters.forEach(filter => {
+		if (filter.attributes['data-filter'].value === currentFilter) {
+			filter.style = "text-decoration: underline; font-weight: bold"
+		} else {
+			filter.style = ""
+		}
+	})
+}
+
 function show () {
 	Array.from(items).forEach(item => {
-		item.style.display = 'block'
+		if (currentFilter != '*') {
+			if (!item.classList.contains(currentFilter)) {
+				item.style.display = 'none'
+			} else {
+				item.style.display = 'block'
+			}
+		} else {
+			item.style.display = 'block'
+		}
 	})
-	if (currentFilter != '*') {
-		const res = Array.from(items).filter(item =>
-			!item.classList.contains(currentFilter)
-		)
-		res.forEach(item => {
-			item.style.display = 'none'
-		})
-	}
 }
+
+show()
+highlight()
 </script>
