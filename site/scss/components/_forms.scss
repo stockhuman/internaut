@@ -69,8 +69,9 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   cursor: not-allowed;
 }
 
-[type='range'] {
+[type=range] {
   -webkit-appearance: none;
+  appearance: none;
   background: transparent;
   margin: math.div($thumb-height, 2) 0;
   width: $track-width;
@@ -218,4 +219,37 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   &:checked + .tgl-btn {
     background: $black;
   }
+}
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
 }

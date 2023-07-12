@@ -29,6 +29,13 @@
     background: $gray-darker;
   }
 
+  .collection .card {
+    border: #000 1px solid;
+    &:hover {
+      background: $gray-darker;
+    }
+  }
+
   .collection .card a {
     background: $black;
   }
