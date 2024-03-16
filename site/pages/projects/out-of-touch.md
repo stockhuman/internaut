@@ -16,7 +16,9 @@ tc: 673467
 <noscript>
 <figure>
 	<div class="full-width-video">
-		<video src="/assets/video/yt/OutOfTouch.mp4" controls>
+		<video controls>
+			<source src="/assets/video/yt/OutOfTouch.mp4" type="video/mp4">
+		</video>
 	</div>
 </figure>
 </noscript>
@@ -28,7 +30,6 @@ To my great dismay, a few short days after discovering there were comments on my
 Following that, I removed my content from the platform, deeming it unsafe for storage in any meaningful way.
 
 <small>In the interest of accesibility, it is also available on [Vimeo](https://vimeo.com/763832678).</small>
-
 
 <script>
 let header = document.querySelector('.cssbg')
