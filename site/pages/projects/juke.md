@@ -38,7 +38,7 @@ Initial modelling (the disc is not entirely generated, a base model is first loa
 ## Server-side
 
 <figure style="padding-top: 0px">
-	<img alt="Dark theme, showcasing initial state with a blank disc" src="/assets/img/work/juke/dark.png" />
+	<img alt="Dark theme, showcasing initial state with a blank disc" src="/assets/img/work/juke/dither-dark.png.png" />
 	<figcaption style="text-align: center">Dark theme, showcasing initial state with a blank disc</figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ Further work is necessary to support ranking features, pagination of database re
 Storage has been optimized by encoding the 75 possible notes spaces and 16 possible notes into zero-padded hexadecimal string arrays. Further optimizations are possible at the cost of code legibility. Base64 unfortunately carries too much overhead, but a blob format would be possible.
 
 <figure>
-	<img alt="A screenshot of a figma design concept, showcasing the concentric rings of the logo and the treble cleff interface" src="/assets/img/work/juke/figma.png" />
+	<img alt="A screenshot of a figma design concept, showcasing the concentric rings of the logo and the treble cleff interface" src="/assets/img/work/juke/dither-figma.png.png" />
 	<figcaption>Figma: Initial interface concept, logo, final design concept</figcaption>
 </figure>
 
@@ -58,8 +58,8 @@ Whilst planned from the start, the user catalogue was relatively rushed, as I ha
 User input was planned as a notation app, using conventional Western sheet music. This did not pan out as the differences between individual units (notices by comparing videos to mine) do not reliably produce tones in the way that sheet music would convey. The notches on the disc are instead rough approximations of particular notes.
 
 <figure>
-	<img alt="An array of radio buttons representing the input notches of the software's initial mode of data-entry." src="/assets/img/work/juke/side-a.png" />
-  <img alt="The alternating notch pattern" src="/assets/img/work/juke/detail.png" />
+	<img alt="An array of radio buttons representing the input notches of the software's initial mode of data-entry." src="/assets/img/work/juke/dither-side-a.png.png" />
+  <img alt="The alternating notch pattern" src="/assets/img/work/juke/dither-detail.png.png" />
 	<figcaption>Top: An input panel, with “Side A” and some populated notes visible, Below: The alternating notch pattern</figcaption>
 </figure>
 
@@ -83,10 +83,10 @@ In the process of building this project, I managed to find a bug in the STL Expo
 3D printed discs are highly variable in quality but there is not much I can do from the web interface to account for that. I have tried to optimize for both print speed and ease of printing (without supports on the underside) without sacrificing playability. Given the original toy is meant for children, bad print jobs are tolerated by the rather hardy machine. The FDM printing target (my own printer, the most common) is deliberate, and higher- quality resin printing may break given the shape I chose for the notches (cuboids), when printed at sufficiently high resolution, might create a barrier to the play arm’s needles without the rounding-off effect FDM printing has on fine model geometry.
 
 <figure>
-	<img alt="A 3D printed blank disc" src="/assets/img/work/juke/blank.jpg" />
-  <img alt="The original toy, with a 3D printed disc inserted" src="/assets/img/work/juke/toy.jpg" />
-  <img alt="An original disc that came with the toy" src="/assets/img/work/juke/original.jpg" />
-  <img alt="A test disc with holes drilled in it to account for tolerance issues" src="/assets/img/work/juke/test-2.jpg" />
+	<img alt="A 3D printed blank disc" src="/assets/img/work/juke/dither-blank.jpg.png" />
+  <img alt="The original toy, with a 3D printed disc inserted" src="/assets/img/work/juke/dither-toy.jpg.png" />
+  <img alt="An original disc that came with the toy" src="/assets/img/work/juke/dither-original.jpg.png" />
+  <img alt="A test disc with holes drilled in it to account for tolerance issues" src="/assets/img/work/juke/dither-test-2.png.jpg" />
   <figcaption>1: A blank printed disc</figcaption>
   <figcaption>2: The toy with a 3D printed record obtained via the web interface</figcaption>
   <figcaption>3: A factory Disc “Humpty Dumpty 1”</figcaption>
