@@ -11,6 +11,8 @@ fg: 111111
 tc: 45454a
 ---
 
+# Tellum II
+
 _A Million Missed Calls_ (also known as: _Tellum II_) is an installation piece centering a SouthWestern Bell payphone.
 
 <div style="margin-bottom: 1em">
@@ -27,7 +29,7 @@ Visitors are encouraged to mark locations in coordinate space on the device itse
 
 <figure>
 
-  ![As installed during the vernissage](/assets/img/work/tellum-ii/dither-expo.png.png)
+![As installed during the vernissage](/assets/img/work/tellum-ii/dither-expo.png.png)
 
   <div style="display: flex;gap: 10px;flex-wrap: wrap; margin-bottom: 10px">
   <audio src="/assets/audio/2.wav" controls style="flex-grow: 1;">

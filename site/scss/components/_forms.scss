@@ -69,7 +69,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   cursor: not-allowed;
 }
 
-[type=range] {
+[type='range'] {
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
@@ -221,9 +221,8 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   }
 }
 
-
 /* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
   height: 36px;
@@ -235,7 +234,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   border: 1px solid #000000;
   height: 36px;
   width: 16px;
@@ -245,7 +244,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 /* All the same stuff for IE */
-input[type=range]::-ms-thumb {
+input[type='range']::-ms-thumb {
   border: 1px solid #000000;
   height: 36px;
   width: 16px;

@@ -6,7 +6,6 @@ date: 2015-01-01
 tags: [youtube]
 ---
 
-
 <!-- <figure>
 	<div class="full-width-video">
 		<video src="/assets/video/yt/BBC Bob Boyle 11E.mp4" controls>
@@ -54,7 +53,6 @@ tags: [youtube]
 		<video src="/assets/video/yt/AL-STEP, Volume 2..mp4" controls>
 	</div>
 </figure>
-
 
 <!-- <figure>
 	<div class="full-width-video">

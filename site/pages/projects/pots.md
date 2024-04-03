@@ -36,6 +36,4 @@ Experiments in 3D scanned faces (using the Microsoft Kinect V2 sensor) integrate
 	</div>
 </figure>
 
-
-
 The experiment was a success.
