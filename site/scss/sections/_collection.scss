@@ -10,7 +10,7 @@
   }
 
   .card {
-    // background: $white;
+    background: $white;
     border: $white 1px solid;
     @extend %radius;
     margin: $navPad 0;
@@ -21,6 +21,7 @@
     p {
       margin: 0;
       letter-spacing: 1px;
+      font-weight: 460;
     }
     span {
       @include font-size($font-size-small);

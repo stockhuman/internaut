@@ -14,4 +14,4 @@ tags: [misc]
 	</div>
 </figure>
 
-Does as an odd experiment to eventually set to music.
+An odd "vibe" test of 3D rendered graphics set to music. Animated and rendered in Blender.

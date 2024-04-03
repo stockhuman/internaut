@@ -29,7 +29,7 @@ article.page {
   max-width: 740px;
   padding: 0 20px 0 20px;
   margin: 0 auto;
-  @include font-size(28);
+  @include font-size($font-size-large);
   color: lighten($black, 17%);
   line-height: 1.5;
   padding-bottom: $navWidth;

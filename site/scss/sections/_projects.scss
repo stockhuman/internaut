@@ -63,7 +63,12 @@
   a {
     display: inline-block;
     padding: 8px;
-    margin-bottom: 7px;
+    height: 40px;
+    line-height: 26px;
+    @extend %radius;
+    &:hover {
+      background-color: $secondary;
+    }
   }
 }
 
