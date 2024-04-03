@@ -4,7 +4,7 @@ title: WeatherPi
 description: An e-ink display that tells the weather
 cover: dither-weatherpi.jpg.png
 category: hardware
-tags:
+tags: []
 year: 2021
 bg: daa116
 fg: 222222

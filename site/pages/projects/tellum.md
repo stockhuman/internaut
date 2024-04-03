@@ -4,7 +4,7 @@ title: Tellum
 description: A connected database of sounds
 cover: dither-tellum.png.png
 category: code
-tags:
+tags: []
 year: 2017
 bg: ED254E
 fg: EEEEEE

@@ -4,7 +4,7 @@ title: The Plant
 description: A brand identity for Dawson's student newspaper
 cover: dither-the-plant.png.png
 category: web
-tags: Wordpress
+tags: [Wordpress]
 year: 2017
 bg: ED254E
 fg: EEEEEE
