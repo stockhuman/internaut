@@ -1,3 +1,7 @@
+@use "../base/extends";
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .collection {
   header {
     h1 {
@@ -5,16 +9,16 @@
     }
     p {
       font-family: monospace;
-      color: rgba($font-color, 0.6);
+      color: rgba(variables.$font-color, 0.6);
     }
   }
 
   .card {
-    background: $white;
-    border: $white 1px solid;
+    background: variables.$white;
+    border: variables.$white 1px solid;
     @extend %radius;
-    margin: $navPad 0;
-    padding: $navPad * 2;
+    margin: variables.$navPad 0;
+    padding: variables.$navPad * 2;
     line-height: 1;
     display: block;
 
@@ -24,7 +28,7 @@
       font-weight: 460;
     }
     span {
-      @include font-size($font-size-small);
+      @include mixins.font-size(variables.$font-size-small);
       font-family: 'Courier New', Courier, monospace;
     }
     &:hover,

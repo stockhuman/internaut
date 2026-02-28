@@ -1,8 +1,11 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .container {
   position: absolute;
-  top: $navPad;
-  right: $navPad;
-  left: $navPad;
+  top: variables.$navPad;
+  right: variables.$navPad;
+  left: variables.$navPad;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -10,15 +13,15 @@
   color: inherit;
 }
 
-@include media('>tablet') {
+@include mixins.media('>tablet') {
   .container {
-    left: $navWidth + $navPad * 2;
+    left: variables.$navWidth + variables.$navPad * 2;
   }
 }
 
-@include media('>ultrawide') {
+@include mixins.media('>ultrawide') {
   .container {
-    left: $navWidthExpanded + $navPad * 2;
+    left: variables.$navWidthExpanded + variables.$navPad * 2;
   }
 }
 

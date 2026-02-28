@@ -1,12 +1,12 @@
-@import 'variables';
-@import 'mixins';
-@import 'helpers';
+@use 'variables';
+@use 'mixins';
+@use 'helpers';
 // somehow refused to compile when this was at the end of '_helpers.scss'
 
 @function grid-column-width($n) {
-  @return $column-width * $n - ($column-margin * ($total-columns - $n) / $total-columns);
+  @return variables.$column-width * $n - (variables.$column-margin * (variables.$total-columns - $n) / variables.$total-columns);
 }
 
 @function grid-offset-length($n) {
-  @return grid-column-width($n) + $column-margin;
+  @return grid-column-width($n) + variables.$column-margin;
 }

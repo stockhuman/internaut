@@ -1,41 +1,45 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+@use 'sass:math';
+
 #nav-toggle {
   cursor: pointer;
   z-index: 3;
-  height: $navWidth;
-  width: $navWidth;
+  height: variables.$navWidth;
+  width: variables.$navWidth;
   position: absolute;
   bottom: 0;
   right: 0; // change to left for alternate look
-  padding: $navPad * 1.5;
+  padding: variables.$navPad * 1.5;
   span {
     position: absolute;
     height: 2px;
-    width: math.div($navWidth, 3.4);
+    width: math.div(variables.$navWidth, 3.4);
     background: currentColor;
-    transition: transform 0.1s $easeOutQuint, position 0.1s $easeOutQuint;
+    transition: transform 0.1s variables.$easeOutQuint, position 0.1s variables.$easeOutQuint;
 
     &:nth-child(1) {
-      top: $navPad * 2.7;
+      top: variables.$navPad * 2.7;
     }
 
     &:nth-child(2) {
-      top: $navPad * 2.7;
-      left: math.div($navWidth, 2);
+      top: variables.$navPad * 2.7;
+      left: math.div(variables.$navWidth, 2);
     }
 
     &:nth-child(3) {
-      top: $navPad * 4.2;
-      right: math.div($navWidth, 2.7);
+      top: variables.$navPad * 4.2;
+      right: math.div(variables.$navWidth, 2.7);
     }
 
     &:nth-child(4) {
-      top: $navPad * 4.2;
-      left: math.div($navWidth, 2);
+      top: variables.$navPad * 4.2;
+      left: math.div(variables.$navWidth, 2);
     }
   }
 }
 
-@include media('>tablet') {
+@include mixins.media('>tablet') {
   #nav-toggle {
     left: 0;
 
@@ -45,7 +49,7 @@
       }
 
       &:nth-child(4) {
-        left: math.div($navWidth, 3.5);
+        left: math.div(variables.$navWidth, 3.5);
       }
     }
   }
@@ -59,7 +63,7 @@
     }
     &:nth-child(2) {
       transform: rotate(-45deg);
-      left: math.div($navWidth, 2.2);
+      left: math.div(variables.$navWidth, 2.2);
     }
     &:nth-child(3) {
       transform: rotate(-45deg);
@@ -67,7 +71,7 @@
     }
     &:nth-child(4) {
       transform: rotate(45deg);
-      left: math.div($navWidth, 2.2);
+      left: math.div(variables.$navWidth, 2.2);
     }
   }
 }

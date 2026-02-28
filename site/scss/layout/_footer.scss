@@ -1,13 +1,18 @@
+@use "sass:color";
+@use "../base/extends";
+@use "../utils/mixins";
+@use "../utils/variables";
+
 footer {
   @extend %radius;
   @extend %block;
-  background: darken($gray-lighter, 5%);
-  padding: $navWidth;
-  margin-bottom: $navPad * 2 + $navWidth;
-  color: $gray;
+  background: color.adjust(variables.$gray-lighter, $lightness: -5%);
+  padding: variables.$navWidth;
+  margin-bottom: variables.$navPad * 2 + variables.$navWidth;
+  color: variables.$gray;
   display: flex;
   flex-wrap: wrap;
-  gap: $navWidth;
+  gap: variables.$navWidth;
 }
 
 .colophon {
@@ -19,16 +24,16 @@ footer {
   font-family: monospace;
   .footer-setting {
     display: flex;
-    margin-bottom: $navPad;
+    margin-bottom: variables.$navPad;
     p {
-      margin: $navPad $navPad $navPad $navPad * 3;
+      margin: variables.$navPad variables.$navPad variables.$navPad variables.$navPad * 3;
     }
   }
 }
 
 // adjust for the nav being at the bottom in mobile
-@include media('>tablet') {
+@include mixins.media('>tablet') {
   footer {
-    margin-bottom: $navPad;
+    margin-bottom: variables.$navPad;
   }
 }

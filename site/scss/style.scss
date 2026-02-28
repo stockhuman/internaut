@@ -1,14 +1,22 @@
 @charset 'utf-8';
-@use 'sass:math';
 
-@import 'utils/utilities'; // Grabs all files in folder
+@use 'utils/utilities'; // Grabs all files in folder
 
-@import 'base/normalize', 'base/base', 'base/typography', 'base/extends';
+@use 'base/normalize';
+@use 'base/base';
+@use 'base/typography';
+@use 'base/extends';
 
-@import 'nav/nav';
+@use 'nav/nav';
 
-@import 'layout/layout';
+@use 'layout/layout';
 
-@import 'sections/home', 'sections/projects', 'sections/about', 'sections/collection';
+@use 'sections/home';
+@use 'sections/projects';
+@use 'sections/about';
+@use 'sections/collection';
 
-@import 'components/links', 'components/forms', 'components/media', 'components/dark-theme';
+@use 'components/links';
+@use 'components/forms';
+@use 'components/media';
+@use 'components/dark-theme';

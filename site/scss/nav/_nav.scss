@@ -1,10 +1,11 @@
 @use 'sass:math';
 
 /* Main navigation */
-@import 'mobile';
-@import 'toggle';
-@import 'desktop';
-@import 'animation';
+@use 'mobile';
+@use 'toggle';
+@use 'desktop';
+@use 'animation';
+@use "../utils/variables";
 
 // mobile portrait (HTC One m8 & common Android devices)
 @media screen and (max-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) {
@@ -35,7 +36,7 @@
   }
 
   #nav-main {
-    height: math.div($navWidth, 1.2);
+    height: math.div(variables.$navWidth, 1.2);
   }
   #nav-toggle {
     bottom: -5px;

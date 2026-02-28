@@ -1,5 +1,9 @@
+@use "../base/extends";
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .home {
-  padding-bottom: $navPad;
+  padding-bottom: variables.$navPad;
   margin-top: 50vh;
 
   .header {
@@ -16,16 +20,16 @@
       display: inline;
     }
     .desc {
-      color: rgba($font-color, 0.6);
+      color: rgba(variables.$font-color, 0.6);
     }
   }
 
   .grid {
     @extend %block;
-    margin-bottom: $navPad;
+    margin-bottom: variables.$navPad;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: $navPad;
+    grid-gap: variables.$navPad;
   }
 }
 
@@ -72,12 +76,12 @@
 
   h2,
   p {
-    margin: $navPad;
+    margin: variables.$navPad;
     line-height: 1.3;
   }
 }
 
-@include media('>phablet') {
+@include mixins.media('>phablet') {
   .home .grid {
     grid-template-columns: 1fr 1fr;
   }

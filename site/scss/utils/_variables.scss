@@ -1,3 +1,5 @@
+@use "sass:color";
+@use 'sass:math';
 // NAVIGATION
 $navPad: 0.5rem;
 $navWidth: 3.6rem; // 55px
@@ -56,7 +58,7 @@ $link-color: $brand;
 $font-color: #022b3a;
 
 $scrollbar-cursor: $font-color;
-$scrollbar-background: darken($background-color, 10%);
+$scrollbar-background: color.adjust($background-color, $lightness: -10%);
 //$background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
 
 // social media colors

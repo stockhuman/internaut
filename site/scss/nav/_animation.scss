@@ -1,8 +1,12 @@
+@use "sass:map";
+@use "../utils/mixins";
+@use "../utils/variables";
+
 #transitioner {
   position: fixed;
 
-  z-index: map-get($z-index, 'nav');
-  background: $white; // change for currentColor?
+  z-index: map.get(variables.$z-index, 'nav');
+  background: variables.$white; // change for currentColor?
 
   transition-property: transform;
   transition-duration: 0.31s;
@@ -15,7 +19,7 @@
   transform: scaleX(0);
 
   display: none;
-  @include media('>tablet') {
+  @include mixins.media('>tablet') {
     display: block;
   }
 }

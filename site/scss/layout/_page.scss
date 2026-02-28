@@ -1,3 +1,9 @@
+@use "sass:color";
+@use "sass:math";
+@use "../base/extends";
+@use "../utils/mixins";
+@use "../utils/variables";
+
 // Cover (featured image)
 header.cover {
   text-align: center;
@@ -16,12 +22,12 @@ header.cover {
   height: 65.5vw;
   background-size: cover;
   background-position: 50% 0;
-  border-radius: $global-radius;
+  border-radius: variables.$global-radius;
 }
 
 // icons as headers
 .page-title {
-  margin-top: $navWidth;
+  margin-top: variables.$navWidth;
   font-family: 'Arial Unicode MS', sans-serif;
 }
 
@@ -29,37 +35,37 @@ article.page {
   max-width: 740px;
   padding: 0 20px 0 20px;
   margin: 0 auto;
-  @include font-size($font-size-large);
-  color: lighten($black, 17%);
+  @include mixins.font-size(variables.$font-size-large);
+  color: color.adjust(variables.$black, $lightness: 17%);
   line-height: 1.5;
-  padding-bottom: $navWidth;
+  padding-bottom: variables.$navWidth;
 
   // images
   figure {
     overflow: hidden;
-    padding: $navWidth $navPad $navWidth $navPad;
+    padding: variables.$navWidth variables.$navPad variables.$navWidth variables.$navPad;
     margin: 0 -1.6rem 0 -1.6rem; // magic number...
     iframe {
-      border-radius: $global-radius;
+      border-radius: variables.$global-radius;
     }
   }
 }
 
 .project-nav {
-  margin-top: $navPad;
-  margin-bottom: $navWidth * 2;
+  margin-top: variables.$navPad;
+  margin-bottom: variables.$navWidth * 2;
   position: relative;
   text-align: center;
   font-family: monospace;
 
   a[class^='project-nav-'] {
-    padding: math.div($navWidth, 3);
+    padding: math.div(variables.$navWidth, 3);
     width: 50%;
     transition: color 0.2s;
     float: left;
     @extend %radius;
     &:hover {
-      color: $gray;
+      color: variables.$gray;
     }
   }
 
@@ -67,7 +73,7 @@ article.page {
   .project-nav-prev {
     transition: background 0.2s ease;
     &:hover {
-      background: darken($gray-lighter, 5%);
+      background: color.adjust(variables.$gray-lighter, $lightness: -5%);
     }
   }
 
@@ -101,7 +107,7 @@ article.page {
   }
 }
 
-@include media('>tablet') {
+@include mixins.media('>tablet') {
   article.page {
     figure img {
       border-radius: 2px; // add a rounded corner when the image doesn't size edge to edge
@@ -116,7 +122,7 @@ article.page {
   }
 }
 
-@include media('>desktop') {
+@include mixins.media('>desktop') {
   article.page {
     figure {
       margin: 0 -15% 0 -15%; // magic number...

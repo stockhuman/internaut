@@ -1,60 +1,62 @@
+@use "../utils/variables";
+
 .dark-theme {
-  background: $gray-darker;
-  color: $gray-lighter;
-  scrollbar-color: $scrollbar-background $scrollbar-cursor;
+  background: variables.$gray-darker;
+  color: variables.$gray-lighter;
+  scrollbar-color: variables.$scrollbar-background variables.$scrollbar-cursor;
 
   &::-webkit-scrollbar-thumb:vertical {
-    background-color: $scrollbar-background;
+    background-color: variables.$scrollbar-background;
   }
 
   &::-webkit-scrollbar {
-    background: $scrollbar-cursor;
+    background: variables.$scrollbar-cursor;
   }
 
   .home .header .desc,
   .button,
   button {
-    color: $gray-lighter;
+    color: variables.$gray-lighter;
   }
 
   article.page {
-    color: $gray-lighter;
+    color: variables.$gray-lighter;
   }
 
   footer {
-    background: $black;
+    background: variables.$black;
   }
 
   .tgl-light:checked + .tgl-btn {
-    background: $gray-darker;
+    background: variables.$gray-darker;
   }
 
   .collection .card {
     border: #000 1px solid;
     &:hover {
-      background: $gray-darker;
+      background: variables.$gray-darker;
     }
   }
 
   .collection .card a {
-    background: $black;
+    background: variables.$black;
   }
   article p > a[href^='http']::before {
-    background: $brand;
+    background: variables.$brand;
   }
 
   ::-moz-selection {
-    background: $white;
-    color: $brand;
+    background: variables.$white;
+    color: variables.$brand;
   }
 
   ::selection {
-    background: $black;
-    color: $brand;
+    background: variables.$black;
+    color: variables.$brand;
   }
   header.cover {
     background-color: #aaa;
-    border-radius: $global-radius;
+    border-radius: variables.$global-radius;
   }
 
   // makes images less likely to blend into a dark background

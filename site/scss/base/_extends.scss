@@ -1,5 +1,7 @@
+@use "../utils/variables";
+
 %radius {
-  border-radius: $global-radius;
+  border-radius: variables.$global-radius;
 }
 
 %block {

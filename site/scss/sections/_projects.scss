@@ -1,11 +1,15 @@
+@use "../base/extends";
+@use "../utils/mixins";
+@use "../utils/variables";
+
 /* */
 
 .projects {
-  margin-bottom: $navPad;
+  margin-bottom: variables.$navPad;
   display: grid;
   grid-template-columns: 1fr;
   flex-grow: 1;
-  gap: $navPad;
+  gap: variables.$navPad;
   @extend %block;
 }
 
@@ -43,7 +47,7 @@
 
   h3,
   p {
-    margin: $navPad;
+    margin: variables.$navPad;
   }
 }
 
@@ -67,24 +71,24 @@
     line-height: 26px;
     @extend %radius;
     &:hover {
-      background-color: $secondary;
+      background-color: variables.$secondary;
     }
   }
 }
 
-@include media('>tablet') {
+@include mixins.media('>tablet') {
   .projects {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@include media('>desktop') {
+@include mixins.media('>desktop') {
   .projects {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@include media('>ultrawide') {
+@include mixins.media('>ultrawide') {
   .projects {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
